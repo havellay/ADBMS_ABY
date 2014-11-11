@@ -1,0 +1,20 @@
+#!/bin/sh
+
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeFiles/hpa_aby_test1.dir/build.make
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeFiles/hpa_aby_test1.dir/C.includecache
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeFiles/hpa_aby_test1.dir/cmake_clean.cmake
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeFiles/hpa_aby_test1.dir/DependInfo.cmake
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeFiles/hpa_aby_test1.dir/depend.internal
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeFiles/hpa_aby_test1.dir/depend.make
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeFiles/hpa_aby_test1.dir/link.txt
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeFiles/hpa_aby_test2.dir/build.make
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeFiles/hpa_aby_test2.dir/C.includecache
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeFiles/hpa_aby_test2.dir/cmake_clean.cmake
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeFiles/hpa_aby_test2.dir/DependInfo.cmake
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeFiles/hpa_aby_test2.dir/depend.internal
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeFiles/hpa_aby_test2.dir/depend.make
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeFiles/hpa_aby_test2.dir/link.txt
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CMakeLists.txt
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CTestTestfile.cmake
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g CTestTestfile.cmake
+sed -i -e s/hpa_test/hpa_aby_test/g -e s/HPA_TEST/HPA_ABY_TEST/g hpa_test.c

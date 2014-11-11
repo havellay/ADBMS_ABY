@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adbms/mysqlsrc/mysql-5.6.21/libservices/my_plugin_log_service.c
+service_versions.h
+-
+
+/home/adbms/mysqlsrc/mysql-5.6.21/libservices/my_snprintf_service.c
+service_versions.h
+-
+
+/home/adbms/mysqlsrc/mysql-5.6.21/libservices/my_thread_scheduler_service.c
+service_versions.h
+-
+
+/home/adbms/mysqlsrc/mysql-5.6.21/libservices/mysql_string_service.c
+service_versions.h
+-
+
+/home/adbms/mysqlsrc/mysql-5.6.21/libservices/thd_alloc_service.c
+service_versions.h
+-
+
+/home/adbms/mysqlsrc/mysql-5.6.21/libservices/thd_wait_service.c
+service_versions.h
+-
+
+include/service_versions.h
+
