@@ -1152,7 +1152,6 @@ storage/myisammrg/CMakeFiles/myisammrg.dir/ha_myisammrg.cc.o: sql/sql_string.h
 storage/myisammrg/CMakeFiles/myisammrg.dir/ha_myisammrg.cc.o: sql/sql_table.h
 storage/myisammrg/CMakeFiles/myisammrg.dir/ha_myisammrg.cc.o: sql/sql_trigger.h
 storage/myisammrg/CMakeFiles/myisammrg.dir/ha_myisammrg.cc.o: sql/sql_udf.h
-storage/myisammrg/CMakeFiles/myisammrg.dir/ha_myisammrg.cc.o: sql/sql_yacc.h
 storage/myisammrg/CMakeFiles/myisammrg.dir/ha_myisammrg.cc.o: sql/structs.h
 storage/myisammrg/CMakeFiles/myisammrg.dir/ha_myisammrg.cc.o: sql/table.h
 storage/myisammrg/CMakeFiles/myisammrg.dir/ha_myisammrg.cc.o: sql/table_id.h

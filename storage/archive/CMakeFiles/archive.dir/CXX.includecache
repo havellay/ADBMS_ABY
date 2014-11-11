@@ -1020,8 +1020,6 @@ sql/table.h
 
 sql/sql_udf.h
 
-sql/sql_yacc.h
-
 sql/structs.h
 sql_plugin.h
 sql/sql_plugin.h

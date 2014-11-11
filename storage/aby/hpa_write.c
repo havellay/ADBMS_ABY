@@ -32,6 +32,7 @@ static HASH_INFO *hpa_find_free_hash(HPA_SHARE *info, HPA_BLOCK *block,
 
 int aby_write(HPA_INFO *info, const uchar *record)
 {
+  const char *debug = NULL;
   HPA_KEYDEF *keydef, *end;
   uchar *pos;
   HPA_SHARE *share=info->s;
@@ -50,11 +51,15 @@ int aby_write(HPA_INFO *info, const uchar *record)
   for (keydef = share->keydef, end = keydef + share->keys; keydef < end;
        keydef++)
   {
+    debug = "we have made it into this place";
+    printf(debug, keydef);
     if ((*keydef->write_key)(info, keydef, record, pos))
       goto err;
   }
 
-  memcpy(pos,record,(size_t) share->reclength);
+  memcpy(pos,record,(size_t) share->reclength); /* HARI : This is not the value
+                                                 * that gets written to the cell
+                                                 * */
   pos[share->reclength]=1;		/* Mark record as not deleted */
   if (++share->records == share->blength)
     share->blength+= share->blength;

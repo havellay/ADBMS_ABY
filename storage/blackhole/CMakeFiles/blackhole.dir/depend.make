@@ -132,7 +132,6 @@ storage/blackhole/CMakeFiles/blackhole.dir/ha_blackhole.cc.o: sql/sql_profile.h
 storage/blackhole/CMakeFiles/blackhole.dir/ha_blackhole.cc.o: sql/sql_string.h
 storage/blackhole/CMakeFiles/blackhole.dir/ha_blackhole.cc.o: sql/sql_trigger.h
 storage/blackhole/CMakeFiles/blackhole.dir/ha_blackhole.cc.o: sql/sql_udf.h
-storage/blackhole/CMakeFiles/blackhole.dir/ha_blackhole.cc.o: sql/sql_yacc.h
 storage/blackhole/CMakeFiles/blackhole.dir/ha_blackhole.cc.o: sql/structs.h
 storage/blackhole/CMakeFiles/blackhole.dir/ha_blackhole.cc.o: sql/table.h
 storage/blackhole/CMakeFiles/blackhole.dir/ha_blackhole.cc.o: sql/table_id.h

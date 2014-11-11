@@ -1153,7 +1153,6 @@ storage/myisammrg/CMakeFiles/myisammrg_embedded.dir/ha_myisammrg.cc.o
  sql/sql_table.h
  sql/sql_trigger.h
  sql/sql_udf.h
- sql/sql_yacc.h
  sql/structs.h
  sql/table.h
  sql/table_id.h

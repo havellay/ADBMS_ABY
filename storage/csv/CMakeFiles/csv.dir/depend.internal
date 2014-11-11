@@ -134,7 +134,6 @@ storage/csv/CMakeFiles/csv.dir/ha_tina.cc.o
  sql/sql_string.h
  sql/sql_trigger.h
  sql/sql_udf.h
- sql/sql_yacc.h
  sql/structs.h
  sql/table.h
  sql/table_id.h

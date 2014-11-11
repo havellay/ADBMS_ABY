@@ -400,16 +400,6 @@ binlog.h
 sql_class.h
 /home/adbms/mysqlsrc/mysql-5.6.21/sql/sql_class.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/rpl_tblmap.cc
-sql_priv.h
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/sql_priv.h
-my_global.h
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/my_global.h
-rpl_tblmap.h
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/rpl_tblmap.h
-table.h
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/table.h
-
 /home/adbms/mysqlsrc/mysql-5.6.21/sql/rpl_tblmap.h
 hash.h
 /home/adbms/mysqlsrc/mysql-5.6.21/sql/hash.h

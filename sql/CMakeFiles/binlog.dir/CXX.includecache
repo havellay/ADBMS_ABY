@@ -502,6 +502,42 @@ my_sys.h
 sql_class.h
 /home/adbms/mysqlsrc/mysql-5.6.21/sql/sql_class.h
 
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/rpl_gtid_owned.cc
+rpl_gtid.h
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/rpl_gtid.h
+mysqld_error.h
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/mysqld_error.h
+hash.h
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/hash.h
+
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/rpl_gtid_set.cc
+rpl_gtid.h
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/rpl_gtid.h
+ctype.h
+-
+algorithm
+-
+my_dbug.h
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/my_dbug.h
+mysqld_error.h
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/mysqld_error.h
+algorithm
+-
+
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/rpl_gtid_sid_map.cc
+rpl_gtid.h
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/rpl_gtid.h
+hash.h
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/hash.h
+mysqld_error.h
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/mysqld_error.h
+
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/rpl_gtid_specification.cc
+rpl_gtid.h
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/rpl_gtid.h
+mysqld.h
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/mysqld.h
+
 /home/adbms/mysqlsrc/mysql-5.6.21/sql/rpl_gtid_state.cc
 rpl_gtid.h
 /home/adbms/mysqlsrc/mysql-5.6.21/sql/rpl_gtid.h
@@ -1133,6 +1169,10 @@ sql_list.h
 /home/adbms/mysqlsrc/mysql-5.6.21/sql/sql_list.h
 field.h
 /home/adbms/mysqlsrc/mysql-5.6.21/sql/field.h
+
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/uuid.cc
+rpl_gtid.h
+/home/adbms/mysqlsrc/mysql-5.6.21/sql/rpl_gtid.h
 
 extra/yassl/include/openssl/err.h
 
