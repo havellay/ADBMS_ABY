@@ -25,7 +25,6 @@ int aby_update(HPA_INFO *info, const uchar *old, const uchar *aby_new)
   my_bool auto_key_changed= 0;
   HPA_SHARE *share= info->s;
   DBUG_ENTER("aby_update");
-  HDBE("aby_update");
 
   test_active(info);
   pos=info->current_ptr;

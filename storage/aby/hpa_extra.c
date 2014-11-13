@@ -30,7 +30,6 @@ static void aby_extra_keyflag(register HPA_INFO *info,
 int aby_extra(register HPA_INFO *info, enum ha_extra_function function)
 {
   DBUG_ENTER("aby_extra");
-  HDBE("aby_extra");
 
   switch (function) {
   case HA_EXTRA_RESET_STATE:

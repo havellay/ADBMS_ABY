@@ -23,26 +23,55 @@ static int aby_check_one_key(HPA_KEYDEF *keydef, uint keynr, ulong records,
 static int aby_check_one_rb_key(HPA_INFO *info, uint keynr, ulong records,
 			    my_bool print_status);
 
+static volatile int exclusion = 0;
+
+void aby_log_lock() {
+  while (__sync_lock_test_and_set(&exclusion, 1)) {
+    // Do nothing. This GCC builtin instruction
+    // ensures memory barrier.
+    // the wasted cycles here is sort of tolerable
+    // about 100 or so for 500 threads
+  }
+}
+
+void aby_log_unlock() {
+  __sync_synchronize(); // Memory barrier.
+  exclusion = 0;
+}
+
 int log_this(const char *str)
 {
-    // static FILE *fp = NULL;
-    // static int lock = 0;
+  int to_file = 0;
+  static FILE *fp = NULL;
+  static int uncommitted_ops = 0;
 
-    // if(lock == 0)
-    // {
-    //     lock = 1;
-    //     if(fp == NULL)
-    //         fp = fopen("/tmp/hari.log", "a");
-    //     if(fp == NULL)
-    //         return -1;                  /* this is a problem */
+  aby_log_lock();
+  if(to_file == 1)
+  {
+    if(fp == NULL)
+    {
+      fp = fopen("/tmp/hari.log", "a");
+      if(fp == NULL)
+        return -1;                  /* this is a problem */
+    }
 
-    //     fprintf(fp, str, fp);
-    //     fclose(fp);
-    //     fp = NULL;
-    //     lock = 0;
-    // }
+    fprintf(fp, str, fp);
+    uncommitted_ops++;
 
-    return strlen(str);
+    if(uncommitted_ops == 5)
+    {
+      uncommitted_ops = 0;
+      fclose(fp);
+      fp = NULL;
+    }
+  }
+  else
+  {
+    fprintf(stdout, "ABY:DEBUG: %s\n",str);
+  }
+  aby_log_unlock();
+
+  return strlen(str);
 }
 
 /*
@@ -69,7 +98,6 @@ int aby_check_aby(HPA_INFO *info, my_bool print_status)
   HPA_SHARE *share=info->s;
   HPA_INFO save_info= *info;			/* Needed because scan_init */
   DBUG_ENTER("aby_check_aby");
-  HDBE("aby_check_aby");
 
   for (error=key= 0 ; key < share->keys ; key++)
   {

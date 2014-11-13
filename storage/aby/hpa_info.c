@@ -46,7 +46,6 @@ ulong aby_position_old(HPA_INFO *info)
 int aby_info(reg1 HPA_INFO *info,reg2 ABYINFO *x, int flag )
 {
   DBUG_ENTER("aby_info");
-  HDBE("aby_info");
   x->records         = info->s->records;
   x->deleted         = info->s->deleted;
   x->reclength       = info->s->reclength;

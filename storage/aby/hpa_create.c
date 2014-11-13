@@ -33,7 +33,6 @@ int aby_create(const char *name, HPA_CREATE_INFO *create_info,
   ulong min_records= create_info->min_records;
   ulong max_records= create_info->max_records;
   DBUG_ENTER("aby_create");
-  HDBE("aby_create");
 
   if (!create_info->internal_table)
   {
@@ -270,7 +269,6 @@ int aby_delete_table(const char *name)
   int result;
   reg1 HPA_SHARE *share;
   DBUG_ENTER("aby_delete_table");
-  HDBE("aby_delete_table");
 
   mysql_mutex_lock(&THR_LOCK_heap);
   if ((share= hpa_find_named_aby(name)))
@@ -290,7 +288,6 @@ int aby_delete_table(const char *name)
 void aby_drop_table(HPA_INFO *info)
 {
   DBUG_ENTER("aby_drop_table");
-  HDBE("aby_drop_table");
   mysql_mutex_lock(&THR_LOCK_heap);
   aby_try_free(info->s);
   mysql_mutex_unlock(&THR_LOCK_heap);

@@ -23,7 +23,6 @@ int hpa_panic(enum ha_panic_function flag)
 {
   LIST *element,*next_open;
   DBUG_ENTER("hpa_panic");
-  HDBE("hpa_panic");
 
   mysql_mutex_lock(&THR_LOCK_heap);
   for (element=aby_open_list ; element ; element=next_open)

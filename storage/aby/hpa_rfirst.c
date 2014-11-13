@@ -24,7 +24,6 @@ int aby_rfirst(HPA_INFO *info, uchar *record, int inx)
   HPA_KEYDEF *keyinfo = share->keydef + inx;
   
   DBUG_ENTER("aby_rfirst");
-  HDBE("aby_rfirst");
   info->lastinx= inx;
   if (keyinfo->algorithm == HA_KEY_ALG_BTREE)
   {

@@ -30,7 +30,6 @@ int aby_rsame(register HPA_INFO *info, uchar *record, int inx)
 {
   HPA_SHARE *share=info->s;
   DBUG_ENTER("aby_rsame");
-  HDBE("aby_rsame");
 
   test_active(info);
   if (info->current_ptr[share->reclength])

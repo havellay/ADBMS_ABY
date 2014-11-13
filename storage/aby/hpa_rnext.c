@@ -24,7 +24,6 @@ int aby_rnext(HPA_INFO *info, uchar *record)
   HPA_SHARE *share=info->s;
   HPA_KEYDEF *keyinfo;
   DBUG_ENTER("aby_rnext");
-  HDBE("aby_rnext");
   
   if (info->lastinx < 0)
     DBUG_RETURN(my_errno=HA_ERR_WRONG_INDEX);

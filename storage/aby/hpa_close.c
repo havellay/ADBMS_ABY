@@ -24,7 +24,6 @@ int aby_close(HPA_INFO *info)
 {
   int tmp;
   DBUG_ENTER("aby_close");
-  HDBE("aby_close");
   mysql_mutex_lock(&THR_LOCK_heap);
   tmp= hpa_close(info);
   mysql_mutex_unlock(&THR_LOCK_heap);
@@ -36,7 +35,6 @@ int hpa_close(register HPA_INFO *info)
 {
   int error=0;
   DBUG_ENTER("hpa_close");
-  HDBE("hpa_close");
 #ifndef DBUG_OFF
   if (info->s->changed && aby_check_aby(info,0))
   {

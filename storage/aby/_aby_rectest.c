@@ -22,7 +22,6 @@
 int hpa_rectest(register HPA_INFO *info, register const uchar *old)
 {
   DBUG_ENTER("hpa_rectest");
-  HDBE("hpa_rectest");
 
   if (memcmp(info->current_ptr,old,(size_t) info->s->reclength))
   {

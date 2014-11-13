@@ -23,7 +23,6 @@ int aby_delete(HPA_INFO *info, const uchar *record)
   HPA_SHARE *share=info->s;
   HPA_KEYDEF *keydef, *end, *p_lastinx;
   DBUG_ENTER("aby_delete");
-  HDBE("aby_delete");
   DBUG_PRINT("enter",("info: 0x%lx  record: 0x%lx", (long) info, (long) record));
 
   test_active(info);
@@ -109,7 +108,6 @@ int hpa_delete_key(HPA_INFO *info, register HPA_KEYDEF *keyinfo,
   HASH_INFO *lastpos,*gpos,*pos,*pos3,*empty,*last_ptr;
   HPA_SHARE *share=info->s;
   DBUG_ENTER("hpa_delete_key");
-  HDBE("hpa_delete_key");
 
   blength=share->blength;
   if (share->records+1 == blength)

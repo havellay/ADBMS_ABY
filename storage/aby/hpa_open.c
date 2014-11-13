@@ -29,7 +29,6 @@ HPA_INFO *aby_open_from_share(HPA_SHARE *share, int mode)
 {
   HPA_INFO *info;
   DBUG_ENTER("aby_open_from_share");
-  HDBE("aby_open_from_share");
 
   if (!(info= (HPA_INFO*) my_malloc((uint) sizeof(HPA_INFO) +
 				  2 * share->max_key_length,
@@ -63,7 +62,6 @@ HPA_INFO *aby_open_from_share_and_register(HPA_SHARE *share, int mode)
 {
   HPA_INFO *info;
   DBUG_ENTER("aby_open_from_share_and_register");
-  HDBE("aby_open_from_share_and_register");
 
   mysql_mutex_lock(&THR_LOCK_heap);
   if ((info= aby_open_from_share(share, mode)))
@@ -110,7 +108,6 @@ HPA_INFO *aby_open(const char *name, int mode)
   HPA_INFO *info;
   HPA_SHARE *share;
   DBUG_ENTER("aby_open");
-  HDBE("aby_open");
 
   mysql_mutex_lock(&THR_LOCK_heap);
   if (!(share= hpa_find_named_aby(name)))
@@ -136,7 +133,6 @@ HPA_SHARE *hpa_find_named_aby(const char *name)
   LIST *pos;
   HPA_SHARE *info;
   DBUG_ENTER("aby_find");
-  HDBE("aby_find");
   DBUG_PRINT("enter",("name: %s",name));
 
   for (pos= aby_share_list; pos; pos= pos->next)

@@ -1,3 +1,5 @@
+*.swp
+
 *.o
 *.a
 
@@ -92,4 +94,26 @@ unittest/examples/skip-t
 unittest/examples/skip_all-t
 unittest/examples/todo-t
 unittest/mytap/t/basic-t
+
+
+Docs/INFO_BIN
+storage/aby/CMakeFiles/aby.dir/C.includecache
+storage/aby/CMakeFiles/aby.dir/CXX.includecache
+storage/aby/CMakeFiles/aby_embedded.dir/C.includecache
+
+cmd-line-utils/libedit/common.h
+cmd-line-utils/libedit/emacs.h
+cmd-line-utils/libedit/fcns.c
+cmd-line-utils/libedit/fcns.h
+cmd-line-utils/libedit/help.c
+cmd-line-utils/libedit/help.h
+cmd-line-utils/libedit/vi.h
+include/mysqld_error.h
+libmysql/mysqlclient_depends.c
+libmysqld/mysqlserver_depends.c
+scripts/mysql_fix_privilege_tables_sql.c
+sql/lex_hash.h
+sql/sql_yacc.cc
+sql/sql_yacc.h
+storage/perfschema/pfs_lex_token.h
 

@@ -29,7 +29,6 @@ int aby_rrnd(register HPA_INFO *info, uchar *record, uchar *pos)
 {
   HPA_SHARE *share=info->s;
   DBUG_ENTER("aby_rrnd");
-  HDBE("aby_rrnd");
   DBUG_PRINT("enter",("info: 0x%lx  pos: %lx",(long) info, (long) pos));
 
   info->lastinx= -1;
@@ -65,7 +64,6 @@ int aby_rrnd_old(register HPA_INFO *info, uchar *record, ulong pos)
 {
   HPA_SHARE *share=info->s;
   DBUG_ENTER("aby_rrnd");
-  HDBE("aby_rrnd");
   DBUG_PRINT("enter",("info: 0x%lx  pos: %ld",info,pos));
 
   info->lastinx= -1;

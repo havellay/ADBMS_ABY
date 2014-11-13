@@ -38,7 +38,7 @@ int aby_panic(handlerton *hton, ha_panic_function flag)
 
 int aby_init(void *p)
 {
-  HDBE("we are here\n");
+  HDBE("storage engine initialized");
 
   handlerton *aby_hton;
 
@@ -80,6 +80,7 @@ static const char *ha_aby_exts[] = {
 
 const char **ha_aby::bas_ext() const
 {
+  HDBE("bas_ext called -- not sure what this does");
   return ha_aby_exts;
 }
 
@@ -98,6 +99,7 @@ const char **ha_aby::bas_ext() const
 
 int ha_aby::open(const char *name, int mode, uint test_if_locked)
 {
+  HDBE("ha_aby.open() called; not sure what this does");
   internal_table= MY_TEST(test_if_locked & HA_OPEN_INTERNAL_TABLE);
   if (internal_table || (!(file= aby_open(name, mode)) && my_errno == ENOENT))
   {
@@ -145,6 +147,7 @@ end:
 
 int ha_aby::close(void)
 {
+  HDBE("ha_aby.close called; not sure what this does");
   return internal_table ? hpa_close(file) : aby_close(file);
 }
 
@@ -161,6 +164,7 @@ int ha_aby::close(void)
 
 handler *ha_aby::clone(const char *name, MEM_ROOT *mem_root)
 {
+  HDBE("ha_aby.clone() called; this shouldn't get called");
   handler *new_handler= get_new_handler(table->s, mem_root, table->s->db_type());
   if (new_handler && !new_handler->ha_open(table, file->s->name, table->db_stat,
                                            HA_OPEN_IGNORE_IF_LOCKED))
@@ -187,6 +191,7 @@ handler *ha_aby::clone(const char *name, MEM_ROOT *mem_root)
 
 void ha_aby::set_keys_for_scanning(void)
 {
+  HDBE("ha_aby.set_keys_for_scanning called");
   btree_keys.clear_all();
   for (uint i= 0 ; i < table->s->keys ; i++)
   {
@@ -198,6 +203,7 @@ void ha_aby::set_keys_for_scanning(void)
 
 void ha_aby::update_key_stats()
 {
+  HDBE("ha_aby.update_key_stats called");
   for (uint i= 0; i < table->s->keys; i++)
   {
     KEY *key=table->key_info+i;
@@ -225,6 +231,7 @@ void ha_aby::update_key_stats()
 
 int ha_aby::write_row(uchar * buf)
 {
+  HDBE("ha_aby.write_row() called");
   int res;
   ha_statistic_increment(&SSV::ha_write_count);
   if (table->next_number_field && buf == table->record[0])
@@ -247,6 +254,7 @@ int ha_aby::write_row(uchar * buf)
 
 int ha_aby::update_row(const uchar * old_data, uchar * new_data)
 {
+  HDBE("ha_aby.update_row() called");
   int res;
   ha_statistic_increment(&SSV::ha_update_count);
   res= aby_update(file,old_data,new_data);
@@ -264,6 +272,7 @@ int ha_aby::update_row(const uchar * old_data, uchar * new_data)
 
 int ha_aby::delete_row(const uchar * buf)
 {
+  HDBE("ha_aby.delete_row() called");
   int res;
   ha_statistic_increment(&SSV::ha_delete_count);
   res= aby_delete(file,buf);
@@ -283,6 +292,7 @@ int ha_aby::index_read_map(uchar *buf, const uchar *key,
                             key_part_map keypart_map,
                             enum ha_rkey_function find_flag)
 {
+  HDBE("ha_aby.index_read_map() called");
   MYSQL_INDEX_READ_ROW_START(table_share->db.str, table_share->table_name.str);
   DBUG_ASSERT(inited==INDEX);
   ha_statistic_increment(&SSV::ha_read_key_count);
@@ -295,6 +305,7 @@ int ha_aby::index_read_map(uchar *buf, const uchar *key,
 int ha_aby::index_read_last_map(uchar *buf, const uchar *key,
                                  key_part_map keypart_map)
 {
+  HDBE("ha_aby.index_read_last_map() called");
   MYSQL_INDEX_READ_ROW_START(table_share->db.str, table_share->table_name.str);
   DBUG_ASSERT(inited==INDEX);
   ha_statistic_increment(&SSV::ha_read_key_count);
@@ -309,6 +320,7 @@ int ha_aby::index_read_idx_map(uchar *buf, uint index, const uchar *key,
                                 key_part_map keypart_map,
                                 enum ha_rkey_function find_flag)
 {
+  HDBE("ha_aby.index_read_idx_map() called");
   MYSQL_INDEX_READ_ROW_START(table_share->db.str, table_share->table_name.str);
   ha_statistic_increment(&SSV::ha_read_key_count);
   int error = aby_rkey(file, buf, index, key, keypart_map, find_flag);
@@ -319,6 +331,7 @@ int ha_aby::index_read_idx_map(uchar *buf, uint index, const uchar *key,
 
 int ha_aby::index_next(uchar * buf)
 {
+  HDBE("ha_aby.index_next() called");
   MYSQL_INDEX_READ_ROW_START(table_share->db.str, table_share->table_name.str);
   DBUG_ASSERT(inited==INDEX);
   ha_statistic_increment(&SSV::ha_read_next_count);
@@ -330,6 +343,7 @@ int ha_aby::index_next(uchar * buf)
 
 int ha_aby::index_prev(uchar * buf)
 {
+  HDBE("ha_aby.index_prev() called");
   MYSQL_INDEX_READ_ROW_START(table_share->db.str, table_share->table_name.str);
   DBUG_ASSERT(inited==INDEX);
   ha_statistic_increment(&SSV::ha_read_prev_count);
@@ -341,6 +355,7 @@ int ha_aby::index_prev(uchar * buf)
 
 int ha_aby::index_first(uchar * buf)
 {
+  HDBE("ha_aby.index_first() called");
   MYSQL_INDEX_READ_ROW_START(table_share->db.str, table_share->table_name.str);
   DBUG_ASSERT(inited==INDEX);
   ha_statistic_increment(&SSV::ha_read_first_count);
@@ -352,6 +367,7 @@ int ha_aby::index_first(uchar * buf)
 
 int ha_aby::index_last(uchar * buf)
 {
+  HDBE("ha_aby.index_last() called");
   MYSQL_INDEX_READ_ROW_START(table_share->db.str, table_share->table_name.str);
   DBUG_ASSERT(inited==INDEX);
   ha_statistic_increment(&SSV::ha_read_last_count);
@@ -363,11 +379,13 @@ int ha_aby::index_last(uchar * buf)
 
 int ha_aby::rnd_init(bool scan)
 {
+  HDBE("ha_aby.rnd_init() called");
   return scan ? aby_scan_init(file) : 0;
 }
 
 int ha_aby::rnd_next(uchar *buf)
 {
+  HDBE("ha_aby.rnd_next() called");
   MYSQL_READ_ROW_START(table_share->db.str, table_share->table_name.str,
                        TRUE);
   ha_statistic_increment(&SSV::ha_read_rnd_next_count);
@@ -379,6 +397,7 @@ int ha_aby::rnd_next(uchar *buf)
 
 int ha_aby::rnd_pos(uchar * buf, uchar *pos)
 {
+  HDBE("ha_aby.rnd_pos() called");
   int error;
   ABY_PTR aby_position;
   MYSQL_READ_ROW_START(table_share->db.str, table_share->table_name.str,
@@ -393,11 +412,13 @@ int ha_aby::rnd_pos(uchar * buf, uchar *pos)
 
 void ha_aby::position(const uchar *record)
 {
+  HDBE("ha_aby.position() called");
   *(ABY_PTR*) ref= aby_position(file);	// Ref is aligned
 }
 
 int ha_aby::info(uint flag)
 {
+  HDBE("ha_aby.info() called");
   ABYINFO hpa_info;
   (void) aby_info(file,&hpa_info,flag);
 
@@ -425,18 +446,21 @@ int ha_aby::info(uint flag)
 
 int ha_aby::extra(enum ha_extra_function operation)
 {
+  HDBE("ha_aby.extra() called");
   return aby_extra(file,operation);
 }
 
 
 int ha_aby::reset()
 {
+  HDBE("ha_aby.reset() called");
   return aby_reset(file);
 }
 
 
 int ha_aby::delete_all_rows()
 {
+  HDBE("ha_aby.delete_all_rows() called");
   aby_clear(file);
   if (table->s->tmp_table == NO_TMP_TABLE)
   {
@@ -452,6 +476,7 @@ int ha_aby::delete_all_rows()
 
 int ha_aby::truncate()
 {
+  HDBE("ha_aby.truncate() called");
   int error= delete_all_rows();
   return error ? error : reset_auto_increment(0);
 }
@@ -459,6 +484,7 @@ int ha_aby::truncate()
 
 int ha_aby::reset_auto_increment(ulonglong value)
 {
+  HDBE("ha_aby.reset_auto_increment() called");
   file->s->auto_increment= value;
   return 0;
 }
@@ -466,6 +492,7 @@ int ha_aby::reset_auto_increment(ulonglong value)
 
 int ha_aby::external_lock(THD *thd, int lock_type)
 {
+  HDBE("ha_aby.external_lock() called");
   return 0;					// No external locking
 }
 
@@ -496,6 +523,7 @@ int ha_aby::external_lock(THD *thd, int lock_type)
 
 int ha_aby::disable_indexes(uint mode)
 {
+  HDBE("ha_aby.disable_indexes() called");
   int error;
 
   if (mode == HA_KEY_SWITCH_ALL)
@@ -543,6 +571,7 @@ int ha_aby::disable_indexes(uint mode)
 
 int ha_aby::enable_indexes(uint mode)
 {
+  HDBE("ha_aby.enable_indexes() called");
   int error;
 
   if (mode == HA_KEY_SWITCH_ALL)
@@ -574,6 +603,7 @@ int ha_aby::enable_indexes(uint mode)
 
 int ha_aby::indexes_are_disabled(void)
 {
+  HDBE("ha_aby.indexes_are_disabled() called");
   return aby_indexes_are_disabled(file);
 }
 
@@ -581,6 +611,7 @@ THR_LOCK_DATA **ha_aby::store_lock(THD *thd,
 				    THR_LOCK_DATA **to,
 				    enum thr_lock_type lock_type)
 {
+  HDBE("ha_aby.store_lock() called");
   if (lock_type != TL_IGNORE && file->lock.type == TL_UNLOCK)
     file->lock.type=lock_type;
   *to++= &file->lock;
@@ -594,6 +625,7 @@ THR_LOCK_DATA **ha_aby::store_lock(THD *thd,
 
 int ha_aby::delete_table(const char *name)
 {
+  HDBE("ha_aby.delete_table() called");
   int error= aby_delete_table(name);
   return error == ENOENT ? 0 : error;
 }
@@ -601,6 +633,7 @@ int ha_aby::delete_table(const char *name)
 
 void ha_aby::drop_table(const char *name)
 {
+  HDBE("ha_aby.drop_table() called");
   file->s->delete_on_close= 1;
   close();
 }
@@ -608,6 +641,7 @@ void ha_aby::drop_table(const char *name)
 
 int ha_aby::rename_table(const char * from, const char * to)
 {
+  HDBE("ha_aby.aby_rename() called");
   return aby_rename(from,to);
 }
 
@@ -615,6 +649,7 @@ int ha_aby::rename_table(const char * from, const char * to)
 ha_rows ha_aby::records_in_range(uint inx, key_range *min_key,
                                   key_range *max_key)
 {
+  HDBE("ha_aby.records_in_range() called");
   KEY *key=table->key_info+inx;
   if (key->algorithm == HA_KEY_ALG_BTREE)
     return hpa_rb_records_in_range(file, inx, min_key, max_key);
@@ -639,6 +674,7 @@ static int
 aby_prepare_hpa_create_info(TABLE *table_arg, bool internal_table,
                             HPA_CREATE_INFO *hpa_create_info)
 {
+  HDBE("aby_prepare_hpa_create_info() called");
   uint key, parts, mem_per_row= 0, keys= table_arg->s->keys;
   uint auto_key= 0, auto_key_type= 0;
   ha_rows max_rows;
@@ -755,6 +791,7 @@ aby_prepare_hpa_create_info(TABLE *table_arg, bool internal_table,
 int ha_aby::create(const char *name, TABLE *table_arg,
 		    HA_CREATE_INFO *create_info)
 {
+  HDBE("ha_aby.create() called");
   int error;
   my_bool created;
   HPA_CREATE_INFO hpa_create_info;
@@ -774,6 +811,7 @@ int ha_aby::create(const char *name, TABLE *table_arg,
 
 void ha_aby::update_create_info(HA_CREATE_INFO *create_info)
 {
+  HDBE("ha_aby.update_create_info() called");
   table->file->info(HA_STATUS_AUTO);
   if (!(create_info->used_fields & HA_CREATE_USED_AUTO))
     create_info->auto_increment_value= stats.auto_increment_value;
@@ -784,6 +822,7 @@ void ha_aby::get_auto_increment(ulonglong offset, ulonglong increment,
                                  ulonglong *first_value,
                                  ulonglong *nb_reserved_values)
 {
+  HDBE("ha_aby.get_auto_increment() called");
   ha_aby::info(HA_STATUS_AUTO);
   *first_value= stats.auto_increment_value;
   /* such table has only table-level locking so reserves up to +inf */
@@ -794,6 +833,7 @@ void ha_aby::get_auto_increment(ulonglong offset, ulonglong increment,
 bool ha_aby::check_if_incompatible_data(HA_CREATE_INFO *info,
 					 uint table_changes)
 {
+  HDBE("ha_aby.check_if_incompatible_data() called");
   /* Check that auto_increment value was not changed */
   if ((info->used_fields & HA_CREATE_USED_AUTO &&
        info->auto_increment_value != 0) ||

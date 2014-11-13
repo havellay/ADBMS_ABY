@@ -22,7 +22,6 @@ int aby_rkey(HPA_INFO *info, uchar *record, int inx, const uchar *key,
   HPA_SHARE *share= info->s;
   HPA_KEYDEF *keyinfo= share->keydef + inx;
   DBUG_ENTER("aby_rkey");
-  HDBE("aby_rkey");
   DBUG_PRINT("enter",("info: 0x%lx  inx: %d", (long) info, inx));
 
   if ((uint) inx >= share->keys)

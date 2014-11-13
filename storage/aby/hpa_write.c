@@ -32,18 +32,35 @@ static HASH_INFO *hpa_find_free_hash(HPA_SHARE *info, HPA_BLOCK *block,
 
 int aby_write(HPA_INFO *info, const uchar *record)
 {
-  const char *debug = NULL;
+  /* HARI : Writing data:
+   *  examined record using '(gdb) x/4xb record'
+   *  when inserting value 5 : record was 0xfd    0x05    0x00    0x00
+   *  when inserting value 12: record was 0xfd    0x0c    0x00    0x00
+   *  when inserting value 19: record was 0xfd    0x13    0x00    0x00
+   *  for 200000 : record was 0xfd    0x40    0x0d    0x03    0x00    0x8f    0x8f    0x8f
+   *        this case, (x/8xb record) and storage is little endian
+   *
+   *  So, it is the second byte that contains the data;
+   */
+
+  /* HARI :
+   * We may not need to acquire locks when writing - no one can
+   * perform conflicting operations when writing?
+   */
+
   HPA_KEYDEF *keydef, *end;
   uchar *pos;
   HPA_SHARE *share=info->s;
   DBUG_ENTER("aby_write");
-  HDBE("aby_write");
 #ifndef DBUG_OFF
   if (info->mode & O_RDONLY)
   {
     DBUG_RETURN(my_errno=EACCES);
   }
 #endif
+  /* HARI : once a new position is found, it can be locked so
+   * that the request is thread safe
+   */
   if (!(pos=next_free_record_pos_aby(share)))
     DBUG_RETURN(my_errno);
   share->changed=1;
@@ -51,8 +68,6 @@ int aby_write(HPA_INFO *info, const uchar *record)
   for (keydef = share->keydef, end = keydef + share->keys; keydef < end;
        keydef++)
   {
-    debug = "we have made it into this place";
-    printf(debug, keydef);
     if ((*keydef->write_key)(info, keydef, record, pos))
       goto err;
   }
@@ -136,14 +151,16 @@ int hpa_rb_write_key(HPA_INFO *info, HPA_KEYDEF *keyinfo, const uchar *record,
 }
 
 	/* Find where to place new record */
-
 static uchar *next_free_record_pos_aby(HPA_SHARE *info)
 {
+/* HARI : This method may not be thread safe;
+ * a common lock can be acquired on this
+ **/
+
   int block_pos;
   uchar *pos;
   size_t length;
   DBUG_ENTER("next_free_record_pos_aby");
-  HDBE("next_free_record_pos_aby");
 
   if (info->del_link)
   {
@@ -201,13 +218,17 @@ static uchar *next_free_record_pos_aby(HPA_SHARE *info)
 int hpa_write_key(HPA_INFO *info, HPA_KEYDEF *keyinfo,
 		 const uchar *record, uchar *recpos)
 {
+
+  /* this method writes a hash key for the corresponding row;
+   * it is only called if a hash is enabled on the column using
+   * the 'create index i_idx on t_aby (i) using hash;' command etc. */
+
   HPA_SHARE *share = info->s;
   int flag;
   ulong halfbuff,hashnr,first_index;
   uchar *UNINIT_VAR(ptr_to_rec),*UNINIT_VAR(ptr_to_rec2);
   HASH_INFO *empty,*UNINIT_VAR(gpos),*UNINIT_VAR(gpos2),*pos;
   DBUG_ENTER("hpa_write_key");
-  HDBE("hpa_write_key");
 
   flag=0;
   if (!(empty= hpa_find_free_hash(share,&keyinfo->block,share->records)))

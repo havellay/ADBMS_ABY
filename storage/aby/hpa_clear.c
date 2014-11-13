@@ -30,7 +30,6 @@ void aby_clear(HPA_INFO *info)
 void hpa_clear(HPA_SHARE *info)
 {
   DBUG_ENTER("hpa_clear");
-  HDBE("hpa_clear");
 
   if (info->block.levels)
     (void) hpa_free_level(&info->block,info->block.levels,info->block.root,
@@ -84,7 +83,6 @@ void hpa_clear_keys(HPA_SHARE *info)
 {
   uint key;
   DBUG_ENTER("hpa_clear_keys");
-  HDBE("hpa_clear_keys");
 
   for (key=0 ; key < info->keys ; key++)
   {

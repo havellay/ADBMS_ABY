@@ -54,7 +54,6 @@ ha_rows hpa_rb_records_in_range(HPA_INFO *info, int inx,  key_range *min_key,
   TREE *rb_tree = &keyinfo->rb_tree;
   aby_rb_param custom_arg;
   DBUG_ENTER("hpa_rb_records_in_range");
-  HDBE("hpa_rb_records_in_range");
 
   info->lastinx= inx;
   custom_arg.keyseg= keyinfo->seg;
@@ -106,7 +105,6 @@ uchar *hpa_search(HPA_INFO *info, HPA_KEYDEF *keyinfo, const uchar *key,
   uint old_nextflag;
   HPA_SHARE *share=info->s;
   DBUG_ENTER("hpa_search");
-  HDBE("hpa_search");
   old_nextflag=nextflag;
   flag=1;
   prev_ptr=0;
@@ -181,7 +179,6 @@ uchar *hpa_search_next(HPA_INFO *info, HPA_KEYDEF *keyinfo, const uchar *key,
 		      HASH_INFO *pos)
 {
   DBUG_ENTER("hpa_search_next");
-  HDBE("hpa_search_next");
 
   while ((pos= pos->next_key))
   {

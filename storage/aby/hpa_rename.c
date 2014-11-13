@@ -24,7 +24,6 @@ int aby_rename(const char *old_name, const char *new_name)
   reg1 HPA_SHARE *info;
   char *name_buff;
   DBUG_ENTER("aby_rename");
-  HDBE("aby_rename");
 
   mysql_mutex_lock(&THR_LOCK_heap);
   if ((info = hpa_find_named_aby(old_name)))

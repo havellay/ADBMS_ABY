@@ -28,7 +28,6 @@
 int aby_scan_init(register HPA_INFO *info)
 {
   DBUG_ENTER("aby_scan_init");
-  HDBE("aby_scan_init");
   info->lastinx= -1;
   info->current_record= (ulong) ~0L;		/* No current record */
   info->update=0;
@@ -41,7 +40,6 @@ int aby_scan(register HPA_INFO *info, uchar *record)
   HPA_SHARE *share=info->s;
   ulong pos;
   DBUG_ENTER("aby_scan");
-  HDBE("aby_scan");
 
   pos= ++info->current_record;
   if (pos < info->next_block)
