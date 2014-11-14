@@ -21,6 +21,8 @@
 #include "sql_plugin.h"
 #include "ha_aby.h"
 #include "abydef.h"
+#include <pthread.h>
+#include <unistd.h>
 #include "sql_base.h"                    // enum_tdc_remove_table_type
 
 static handler *aby_create_handler(handlerton *hton,
@@ -99,7 +101,11 @@ const char **ha_aby::bas_ext() const
 
 int ha_aby::open(const char *name, int mode, uint test_if_locked)
 {
-  HDBE("ha_aby.open() called; not sure what this does");
+  pthread_t tid = pthread_self();
+  char buff[512];
+  sprintf(buff, "ha_aby.open() called; not sure what this does   tid is %ld", (long int)tid);
+  HDBE(buff);
+
   internal_table= MY_TEST(test_if_locked & HA_OPEN_INTERNAL_TABLE);
   if (internal_table || (!(file= aby_open(name, mode)) && my_errno == ENOENT))
   {
@@ -254,7 +260,15 @@ int ha_aby::write_row(uchar * buf)
 
 int ha_aby::update_row(const uchar * old_data, uchar * new_data)
 {
-  HDBE("ha_aby.update_row() called");
+  static int count = 0;
+
+  count++;
+
+  /* try and make processes sleep here until we get 8 processes */
+  if(count < 8)
+    usleep(10);
+
+  log_this("ha_aby.update_row() called", 1);
   int res;
   ha_statistic_increment(&SSV::ha_update_count);
   res= aby_update(file,old_data,new_data);
@@ -267,6 +281,9 @@ int ha_aby::update_row(const uchar * old_data, uchar * new_data)
     */
     file->s->key_stat_version++;
   }
+
+  count--;
+
   return res;
 }
 
@@ -613,7 +630,21 @@ THR_LOCK_DATA **ha_aby::store_lock(THD *thd,
 {
   HDBE("ha_aby.store_lock() called");
   if (lock_type != TL_IGNORE && file->lock.type == TL_UNLOCK)
+  {
     file->lock.type=lock_type;
+    // ^ this is the line that was originally here
+
+    // allowing concurrent write operations on table
+    /* if (lock_type >= TL_WRITE_CONCURRENT_INSERT && lock_type <= TL_WRITE) {
+      if (!thd->in_lock_tables && !thd->tablespace_op)
+        lock_type = TL_WRITE_ALLOW_WRITE;
+    }
+    // allow write operations on tables currently read from
+    else if (lock_type == TL_READ_NO_INSERT && !thd->in_lock_tables) {
+      lock_type = TL_READ;
+    } */
+    file->lock.type = lock_type;
+  }
   *to++= &file->lock;
   return to;
 }

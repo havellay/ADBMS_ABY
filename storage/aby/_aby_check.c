@@ -39,11 +39,15 @@ void aby_log_unlock() {
   exclusion = 0;
 }
 
-int log_this(const char *str)
+int log_this(const char *str, int priority)
 {
+  int to_print = 100;
   int to_file = 0;
   static FILE *fp = NULL;
   static int uncommitted_ops = 0;
+
+  if(priority < to_print)
+    return 0;
 
   aby_log_lock();
   if(to_file == 1)

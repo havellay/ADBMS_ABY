@@ -30,10 +30,9 @@ C_MODE_START
 */
 
 /* this is for logging - HARI */
-int log_this(const char*);
-
+int log_this(const char*, int);
 #ifndef HDBE
-#define HDBE(a) log_this(a);
+#define HDBE(a) log_this(a, 1);
 #endif
 /* end of logging - HARI */
 
