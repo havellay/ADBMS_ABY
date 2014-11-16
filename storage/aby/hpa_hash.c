@@ -18,7 +18,9 @@
 #include "abydef.h"
 #include <m_ctype.h>
 
-
+#ifdef BAD_PROGRAMMING_FOR_HPA_RRND
+#define current_ptr current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]
+#endif
 
 /*
   Find out how many rows there is in the given range

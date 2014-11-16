@@ -25,6 +25,10 @@
 	   HA_ERR_END_OF_FILE = EOF.
 */
 
+#ifdef BAD_PROGRAMMING_FOR_HPA_RRND
+#define current_ptr current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]
+#endif
+
 int aby_rrnd(register HPA_INFO *info, uchar *record, uchar *pos)
 {
   HPA_SHARE *share=info->s;

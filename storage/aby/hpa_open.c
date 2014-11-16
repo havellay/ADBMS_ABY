@@ -63,7 +63,9 @@ HPA_INFO *aby_open_from_share_and_register(HPA_SHARE *share, int mode)
   HPA_INFO *info;
   DBUG_ENTER("aby_open_from_share_and_register");
 
-  mysql_mutex_lock(&THR_LOCK_heap);
+  if (ABY_LOCK == ABY_HEAP)
+    mysql_mutex_lock(&THR_LOCK_heap);
+
   if ((info= aby_open_from_share(share, mode)))
   {
     info->open_list.data= (void*) info;
@@ -71,7 +73,8 @@ HPA_INFO *aby_open_from_share_and_register(HPA_SHARE *share, int mode)
     /* Unpin the share, it is now pinned by the file. */
     share->open_count--;
   }
-  mysql_mutex_unlock(&THR_LOCK_heap);
+  if (ABY_LOCK == ABY_HEAP)
+    mysql_mutex_unlock(&THR_LOCK_heap);
   DBUG_RETURN(info);
 }
 
@@ -88,10 +91,13 @@ void aby_release_share(HPA_SHARE *share, my_bool internal_table)
     hpa_free(share);
   else
   {
-    mysql_mutex_lock(&THR_LOCK_heap);
+    if (ABY_LOCK == ABY_HEAP)
+      mysql_mutex_lock(&THR_LOCK_heap);
+
     if (--share->open_count == 0)
       hpa_free(share);
-    mysql_mutex_unlock(&THR_LOCK_heap);
+    if (ABY_LOCK == ABY_HEAP)
+      mysql_mutex_unlock(&THR_LOCK_heap);
   }
 }
 
@@ -109,11 +115,13 @@ HPA_INFO *aby_open(const char *name, int mode)
   HPA_SHARE *share;
   DBUG_ENTER("aby_open");
 
-  mysql_mutex_lock(&THR_LOCK_heap);
+  if (ABY_LOCK == ABY_HEAP)
+    mysql_mutex_lock(&THR_LOCK_heap);
   if (!(share= hpa_find_named_aby(name)))
   {
     my_errno= ENOENT;
-    mysql_mutex_unlock(&THR_LOCK_heap);
+    if (ABY_LOCK == ABY_HEAP)
+      mysql_mutex_unlock(&THR_LOCK_heap);
     DBUG_RETURN(0);
   }
   if ((info= aby_open_from_share(share, mode)))
@@ -121,7 +129,8 @@ HPA_INFO *aby_open(const char *name, int mode)
     info->open_list.data= (void*) info;
     aby_open_list= list_add(aby_open_list,&info->open_list);
   }
-  mysql_mutex_unlock(&THR_LOCK_heap);
+  if (ABY_LOCK == ABY_HEAP)
+    mysql_mutex_unlock(&THR_LOCK_heap);
   DBUG_RETURN(info);
 }
 

@@ -24,7 +24,7 @@ int aby_rnext(HPA_INFO *info, uchar *record)
   HPA_SHARE *share=info->s;
   HPA_KEYDEF *keyinfo;
   DBUG_ENTER("aby_rnext");
-  
+
   if (info->lastinx < 0)
     DBUG_RETURN(my_errno=HA_ERR_WRONG_INDEX);
 
@@ -36,49 +36,52 @@ int aby_rnext(HPA_INFO *info, uchar *record)
     if (info->last_pos)
     {
       /*
-        We enter this branch for non-DELETE queries after aby_rkey()
-        or aby_rfirst(). As last key position (info->last_pos) is available,
-        we only need to climb the tree using tree_search_next().
-      */
+         We enter this branch for non-DELETE queries after aby_rkey()
+         or aby_rfirst(). As last key position (info->last_pos) is available,
+         we only need to climb the tree using tree_search_next().
+         */
       pos = tree_search_next(&keyinfo->rb_tree, &info->last_pos,
-                             offsetof(TREE_ELEMENT, left),
-                             offsetof(TREE_ELEMENT, right));
+          offsetof(TREE_ELEMENT, left),
+          offsetof(TREE_ELEMENT, right));
     }
     else if (!info->lastkey_len)
     {
       /*
-        We enter this branch only for DELETE queries after aby_rfirst(). E.g.
-        DELETE FROM t1 WHERE a<10. As last key position is not available
-        (last key is removed by aby_delete()), we must restart search as it
-        is done in aby_rfirst().
+         We enter this branch only for DELETE queries after aby_rfirst(). E.g.
+         DELETE FROM t1 WHERE a<10. As last key position is not available
+         (last key is removed by aby_delete()), we must restart search as it
+         is done in aby_rfirst().
 
-        It should be safe to handle this situation without this branch. That is
-        branch below should find smallest element in a tree as lastkey_len is
-        zero. tree_search_edge() is a kind of optimisation here as it should be
-        faster than tree_search_key().
-      */
+         It should be safe to handle this situation without this branch. That is
+         branch below should find smallest element in a tree as lastkey_len is
+         zero. tree_search_edge() is a kind of optimisation here as it should be
+         faster than tree_search_key().
+         */
       pos= tree_search_edge(&keyinfo->rb_tree, info->parents,
-                            &info->last_pos, offsetof(TREE_ELEMENT, left));
+          &info->last_pos, offsetof(TREE_ELEMENT, left));
     }
     else
     {
       /*
-        We enter this branch only for DELETE queries after aby_rkey(). E.g.
-        DELETE FROM t1 WHERE a=10. As last key position is not available
-        (last key is removed by aby_delete()), we must restart search as it
-        is done in aby_rkey().
-      */
+         We enter this branch only for DELETE queries after aby_rkey(). E.g.
+         DELETE FROM t1 WHERE a=10. As last key position is not available
+         (last key is removed by aby_delete()), we must restart search as it
+         is done in aby_rkey().
+         */
       custom_arg.keyseg = keyinfo->seg;
       custom_arg.key_length = info->lastkey_len;
       custom_arg.search_flag = SEARCH_SAME | SEARCH_FIND;
       pos = tree_search_key(&keyinfo->rb_tree, info->lastkey, info->parents, 
-                           &info->last_pos, info->last_find_flag, &custom_arg);
+          &info->last_pos, info->last_find_flag, &custom_arg);
     }
     if (pos)
     {
       memcpy(&pos, pos + (*keyinfo->get_key_length)(keyinfo, pos), 
-	     sizeof(uchar*));
-      info->current_ptr = pos;
+          sizeof(uchar*));
+      if (ABY_LOCK == ABY_HEAP)
+        info->current_ptr = pos;
+      else if (ABY_LOCK == ABY_ROW)
+        info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS] = pos;
     }
     else
     {
@@ -89,18 +92,38 @@ int aby_rnext(HPA_INFO *info, uchar *record)
   {
     if (info->current_hash_ptr)
       pos= hpa_search_next(info, keyinfo, info->lastkey,
-			   info->current_hash_ptr);
+          info->current_hash_ptr);
     else
     {
-      if (!info->current_ptr && (info->update & HA_STATE_NEXT_FOUND))
+      if (ABY_LOCK == ABY_HEAP)
       {
-	pos=0;					/* Read next after last */
-	my_errno=HA_ERR_KEY_NOT_FOUND;
+        if (!info->current_ptr && (info->update & HA_STATE_NEXT_FOUND))
+        {
+          pos=0;					/* Read next after last */
+          my_errno=HA_ERR_KEY_NOT_FOUND;
+        }
       }
-      else if (!info->current_ptr)		/* Deleted or first call */
-	pos= hpa_search(info, keyinfo, info->lastkey, 0);
+      else if (ABY_LOCK == ABY_ROW)
+      {
+        if (!info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]
+            && (info->update & HA_STATE_NEXT_FOUND))
+        {
+          pos=0;					/* Read next after last */
+          my_errno=HA_ERR_KEY_NOT_FOUND;
+        }
+      }
+
+      else if (ABY_LOCK == ABY_HEAP && !info->current_ptr)		/* Deleted or first call */
+      {
+          pos= hpa_search(info, keyinfo, info->lastkey, 0);
+      }
+      else if (ABY_LOCK == ABY_ROW
+          && !info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS])		/* Deleted or first call */
+      {
+          pos= hpa_search(info, keyinfo, info->lastkey, 0);
+      }
       else
-	pos= hpa_search(info, keyinfo, info->lastkey, 1);
+        pos= hpa_search(info, keyinfo, info->lastkey, 1);
     }
   }
   if (!pos)

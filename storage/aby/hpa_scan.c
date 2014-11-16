@@ -39,12 +39,22 @@ int aby_scan(register HPA_INFO *info, uchar *record)
 {
   HPA_SHARE *share=info->s;
   ulong pos;
+  char buff[512];
   DBUG_ENTER("aby_scan");
+
+  sprintf(buff, "tid is %d ", (pid_t)syscall(SYS_gettid));
+  log_this(buff, 110);
 
   pos= ++info->current_record;
   if (pos < info->next_block)
   {
-    info->current_ptr+=share->block.recbuffer;
+    if (ABY_LOCK == ABY_HEAP)
+      info->current_ptr+=share->block.recbuffer;
+    else if (ABY_LOCK == ABY_ROW)
+    {
+      info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]+=
+        share->block.recbuffer;
+    }
   }
   else
   {
@@ -60,14 +70,32 @@ int aby_scan(register HPA_INFO *info, uchar *record)
     }
     hpa_find_record(info, pos);
   }
-  if (!info->current_ptr[share->reclength])
+  if (ABY_LOCK == ABY_HEAP)
   {
-    DBUG_PRINT("warning",("Found deleted record"));
-    info->update= HA_STATE_PREV_FOUND | HA_STATE_NEXT_FOUND;
-    DBUG_RETURN(my_errno=HA_ERR_RECORD_DELETED);
+    if (!info->current_ptr[share->reclength])
+    {
+      DBUG_PRINT("warning",("Found deleted record"));
+      info->update= HA_STATE_PREV_FOUND | HA_STATE_NEXT_FOUND;
+      DBUG_RETURN(my_errno=HA_ERR_RECORD_DELETED);
+    }
+  }
+  else if (ABY_LOCK == ABY_ROW)
+  {
+    if (!info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS][share->reclength])
+    {
+      DBUG_PRINT("warning",("Found deleted record"));
+      info->update= HA_STATE_PREV_FOUND | HA_STATE_NEXT_FOUND;
+      DBUG_RETURN(my_errno=HA_ERR_RECORD_DELETED);
+    }
   }
   info->update= HA_STATE_PREV_FOUND | HA_STATE_NEXT_FOUND | HA_STATE_AKTIV;
-  memcpy(record,info->current_ptr,(size_t) share->reclength);
+  if (ABY_LOCK == ABY_HEAP)
+    memcpy(record,info->current_ptr,(size_t) share->reclength);
+  else if (ABY_LOCK == ABY_ROW)
+  {
+    memcpy(record,info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS],
+        (size_t) share->reclength);
+  }
   info->current_hash_ptr=0;			/* Can't use read_next */
   DBUG_RETURN(0);
 } /* aby_scan */

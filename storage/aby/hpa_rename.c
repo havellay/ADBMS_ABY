@@ -25,17 +25,20 @@ int aby_rename(const char *old_name, const char *new_name)
   char *name_buff;
   DBUG_ENTER("aby_rename");
 
-  mysql_mutex_lock(&THR_LOCK_heap);
+  if(ABY_LOCK == ABY_HEAP)
+    mysql_mutex_lock(&THR_LOCK_heap);
   if ((info = hpa_find_named_aby(old_name)))
   {
     if (!(name_buff=(char*) my_strdup(new_name,MYF(MY_WME))))
     {
-      mysql_mutex_unlock(&THR_LOCK_heap);
+      if(ABY_LOCK == ABY_HEAP)
+        mysql_mutex_unlock(&THR_LOCK_heap);
       DBUG_RETURN(my_errno);
     }
     my_free(info->name);
     info->name=name_buff;
   }
-  mysql_mutex_unlock(&THR_LOCK_heap);
+  if(ABY_LOCK == ABY_HEAP)
+    mysql_mutex_unlock(&THR_LOCK_heap);
   DBUG_RETURN(0);
 }

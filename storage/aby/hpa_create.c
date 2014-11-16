@@ -36,7 +36,9 @@ int aby_create(const char *name, HPA_CREATE_INFO *create_info,
 
   if (!create_info->internal_table)
   {
-    mysql_mutex_lock(&THR_LOCK_heap);
+    if (ABY_LOCK == ABY_HEAP)
+      mysql_mutex_lock(&THR_LOCK_heap);
+
     share= hpa_find_named_aby(name);
     if (share && share->open_count == 0)
     {
@@ -208,7 +210,8 @@ int aby_create(const char *name, HPA_CREATE_INFO *create_info,
   {
     if (create_info->pin_share)
       ++share->open_count;
-    mysql_mutex_unlock(&THR_LOCK_heap);
+    if (ABY_LOCK == ABY_HEAP)
+      mysql_mutex_unlock(&THR_LOCK_heap);
   }
 
   *res= share;
@@ -216,7 +219,8 @@ int aby_create(const char *name, HPA_CREATE_INFO *create_info,
 
 err:
   if (!create_info->internal_table)
-    mysql_mutex_unlock(&THR_LOCK_heap);
+    if (ABY_LOCK == ABY_HEAP)
+      mysql_mutex_unlock(&THR_LOCK_heap);
   DBUG_RETURN(1);
 } /* aby_create */
 
@@ -270,7 +274,8 @@ int aby_delete_table(const char *name)
   reg1 HPA_SHARE *share;
   DBUG_ENTER("aby_delete_table");
 
-  mysql_mutex_lock(&THR_LOCK_heap);
+  if (ABY_LOCK == ABY_HEAP)
+    mysql_mutex_lock(&THR_LOCK_heap);
   if ((share= hpa_find_named_aby(name)))
   {
     aby_try_free(share);
@@ -280,7 +285,8 @@ int aby_delete_table(const char *name)
   {
     result= my_errno=ENOENT;
   }
-  mysql_mutex_unlock(&THR_LOCK_heap);
+  if (ABY_LOCK == ABY_HEAP)
+    mysql_mutex_unlock(&THR_LOCK_heap);
   DBUG_RETURN(result);
 }
 
@@ -288,9 +294,11 @@ int aby_delete_table(const char *name)
 void aby_drop_table(HPA_INFO *info)
 {
   DBUG_ENTER("aby_drop_table");
-  mysql_mutex_lock(&THR_LOCK_heap);
+  if (ABY_LOCK == ABY_HEAP)
+    mysql_mutex_lock(&THR_LOCK_heap);
   aby_try_free(info->s);
-  mysql_mutex_unlock(&THR_LOCK_heap);
+  if (ABY_LOCK == ABY_HEAP)
+    mysql_mutex_unlock(&THR_LOCK_heap);
   DBUG_VOID_RETURN;
 }
 

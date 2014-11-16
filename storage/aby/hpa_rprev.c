@@ -49,7 +49,10 @@ int aby_rprev(HPA_INFO *info, uchar *record)
     {
       memcpy(&pos, pos + (*keyinfo->get_key_length)(keyinfo, pos),
 	     sizeof(uchar*));
-      info->current_ptr = pos;
+      if (ABY_LOCK == ABY_HEAP)
+        info->current_ptr = pos;
+      else if (ABY_LOCK == ABY_ROW)
+        info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS] = pos;
     }
     else
     {
@@ -58,17 +61,36 @@ int aby_rprev(HPA_INFO *info, uchar *record)
   }
   else
   {
-    if (info->current_ptr || (info->update & HA_STATE_NEXT_FOUND))
+    if (ABY_LOCK == ABY_HEAP)
     {
-      if ((info->update & HA_STATE_DELETED))
-        pos= hpa_search(info, share->keydef + info->lastinx, info->lastkey, 3);
+      if (info->current_ptr || (info->update & HA_STATE_NEXT_FOUND))
+      {
+        if ((info->update & HA_STATE_DELETED))
+          pos= hpa_search(info, share->keydef + info->lastinx, info->lastkey, 3);
+        else
+          pos= hpa_search(info, share->keydef + info->lastinx, info->lastkey, 2);
+      }
       else
-        pos= hpa_search(info, share->keydef + info->lastinx, info->lastkey, 2);
+      {
+        pos=0;					/* Read next after last */
+        my_errno=HA_ERR_KEY_NOT_FOUND;
+      }
     }
-    else
+    else if (ABY_LOCK == ABY_ROW)
     {
-      pos=0;					/* Read next after last */
-      my_errno=HA_ERR_KEY_NOT_FOUND;
+      if (info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]
+          || (info->update & HA_STATE_NEXT_FOUND))
+      {
+        if ((info->update & HA_STATE_DELETED))
+          pos= hpa_search(info, share->keydef + info->lastinx, info->lastkey, 3);
+        else
+          pos= hpa_search(info, share->keydef + info->lastinx, info->lastkey, 2);
+      }
+      else
+      {
+        pos=0;					/* Read next after last */
+        my_errno=HA_ERR_KEY_NOT_FOUND;
+      }
     }
   }
   if (!pos)

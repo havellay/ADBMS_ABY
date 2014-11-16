@@ -19,9 +19,9 @@
 #include "abydef.h"
 
 static int aby_check_one_key(HPA_KEYDEF *keydef, uint keynr, ulong records,
-			 ulong blength, my_bool print_status);
+    ulong blength, my_bool print_status);
 static int aby_check_one_rb_key(HPA_INFO *info, uint keynr, ulong records,
-			    my_bool print_status);
+    my_bool print_status);
 
 static volatile int exclusion = 0;
 
@@ -79,20 +79,20 @@ int log_this(const char *str, int priority)
 }
 
 /*
-  Check if keys and rows are ok in a aby table
+   Check if keys and rows are ok in a aby table
 
-  SYNOPSIS
-    aby_check_aby()
-    info		Table handler
-    print_status	Prints some extra status
+   SYNOPSIS
+   aby_check_aby()
+   info		Table handler
+   print_status	Prints some extra status
 
-  NOTES
-    Doesn't change the state of the table handler
+   NOTES
+   Doesn't change the state of the table handler
 
-  RETURN VALUES
-    0	ok
-    1 error
-*/
+   RETURN VALUES
+   0	ok
+   1 error
+   */
 
 int aby_check_aby(HPA_INFO *info, my_bool print_status)
 {
@@ -109,41 +109,54 @@ int aby_check_aby(HPA_INFO *info, my_bool print_status)
       error|= aby_check_one_rb_key(info, key, share->records, print_status);
     else
       error|= aby_check_one_key(share->keydef + key, key, share->records,
-			    share->blength, print_status);
+          share->blength, print_status);
   }
   /*
-    This is basicly the same code as in hpa_scan, but we repeat it here to
-    get shorter DBUG log file.
-  */
+     This is basicly the same code as in hpa_scan, but we repeat it here to
+     get shorter DBUG log file.
+     */
   for (pos=next_block= 0 ; ; pos++)
   {
     if (pos < next_block)
     {
-      info->current_ptr+= share->block.recbuffer;
+      if (ABY_LOCK == ABY_HEAP)
+        info->current_ptr+= share->block.recbuffer;
+      else if (ABY_LOCK == ABY_ROW)
+        info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]+= share->block.recbuffer;
     }
     else
     {
       next_block+= share->block.records_in_block;
       if (next_block >= share->records+share->deleted)
       {
-	next_block= share->records+share->deleted;
-	if (pos >= next_block)
-	  break;				/* End of file */
+        next_block= share->records+share->deleted;
+        if (pos >= next_block)
+          break;				/* End of file */
       }
     }
     hpa_find_record(info,pos);
 
-    if (!info->current_ptr[share->reclength])
-      deleted++;
-    else
-      records++;
+    if (ABY_LOCK == ABY_HEAP)
+    {
+      if (!info->current_ptr[share->reclength])
+        deleted++;
+      else
+        records++;
+    }
+    else if (ABY_LOCK == ABY_ROW)
+    {
+      if (!info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS][share->reclength])
+        deleted++;
+      else
+        records++;
+    }
   }
 
   if (records != share->records || deleted != share->deleted)
   {
     DBUG_PRINT("error",("Found rows: %lu (%lu)  deleted %lu (%lu)",
-			records, (ulong) share->records,
-                        deleted, (ulong) share->deleted));
+          records, (ulong) share->records,
+          deleted, (ulong) share->deleted));
     error= 1;
   }
   *info= save_info;
@@ -152,7 +165,7 @@ int aby_check_aby(HPA_INFO *info, my_bool print_status)
 
 
 static int aby_check_one_key(HPA_KEYDEF *keydef, uint keynr, ulong records,
-			 ulong blength, my_bool print_status)
+    ulong blength, my_bool print_status)
 {
   int error;
   ulong i,found,max_links,seek,links;
@@ -166,25 +179,25 @@ static int aby_check_one_key(HPA_KEYDEF *keydef, uint keynr, ulong records,
   {
     hash_info=hpa_find_hash(&keydef->block,i);
     if (hpa_mask(hpa_rec_hashnr(keydef, hash_info->ptr_to_rec),
-		blength,records) == i)
+          blength,records) == i)
     {
       found++;
       seek++;
       links=1;
       while ((hash_info=hash_info->next_key) && found < records + 1)
       {
-	seek+= ++links;
-	if ((rec_link = hpa_mask(hpa_rec_hashnr(keydef, hash_info->ptr_to_rec),
-			        blength, records))
-	    != i)
-	{
-	  DBUG_PRINT("error",
-                     ("Record in wrong link: Link %lu  Record: 0x%lx  Record-link %lu",
-                      i, (long) hash_info->ptr_to_rec, rec_link));
-	  error=1;
-	}
-	else
-	  found++;
+        seek+= ++links;
+        if ((rec_link = hpa_mask(hpa_rec_hashnr(keydef, hash_info->ptr_to_rec),
+                blength, records))
+            != i)
+        {
+          DBUG_PRINT("error",
+              ("Record in wrong link: Link %lu  Record: 0x%lx  Record-link %lu",
+               i, (long) hash_info->ptr_to_rec, rec_link));
+          error=1;
+        }
+        else
+          found++;
       }
       if (links > max_links) max_links=links;
       hash_buckets_found++;
@@ -198,26 +211,26 @@ static int aby_check_one_key(HPA_KEYDEF *keydef, uint keynr, ulong records,
   if (keydef->hash_buckets != hash_buckets_found)
   {
     DBUG_PRINT("error",("Found %ld buckets, stats shows %ld buckets",
-                        hash_buckets_found, (long) keydef->hash_buckets));
+          hash_buckets_found, (long) keydef->hash_buckets));
     error=1;
   }
   DBUG_PRINT("info",
-	     ("records: %ld   seeks: %lu   max links: %lu   hitrate: %.2f   "
-              "buckets: %lu",
-	      records,seek,max_links,
-	      (float) seek / (float) (records ? records : 1), 
-              hash_buckets_found));
+      ("records: %ld   seeks: %lu   max links: %lu   hitrate: %.2f   "
+       "buckets: %lu",
+       records,seek,max_links,
+       (float) seek / (float) (records ? records : 1), 
+       hash_buckets_found));
   if (print_status)
     printf("Key: %d  records: %ld   seeks: %lu   max links: %lu   "
-           "hitrate: %.2f   buckets: %lu\n",
-	   keynr, records, seek, max_links,
-	   (float) seek / (float) (records ? records : 1), 
-           hash_buckets_found);
+        "hitrate: %.2f   buckets: %lu\n",
+        keynr, records, seek, max_links,
+        (float) seek / (float) (records ? records : 1), 
+        hash_buckets_found);
   return error;
 }
 
 static int aby_check_one_rb_key(HPA_INFO *info, uint keynr, ulong records,
-			    my_bool print_status)
+    my_bool print_status)
 {
   HPA_KEYDEF *keydef= info->s->keydef + keynr;
   int error= 0;
@@ -225,26 +238,26 @@ static int aby_check_one_rb_key(HPA_INFO *info, uint keynr, ulong records,
   uchar *key, *recpos;
   uint key_length;
   uint not_used[2];
-  
+
   if ((key= tree_search_edge(&keydef->rb_tree, info->parents,
-			     &info->last_pos, offsetof(TREE_ELEMENT, left))))
+          &info->last_pos, offsetof(TREE_ELEMENT, left))))
   {
     do
     {
       memcpy(&recpos, key + (*keydef->get_key_length)(keydef,key), sizeof(uchar*));
       key_length= hpa_rb_make_key(keydef, info->recbuf, recpos, 0);
       if (ha_key_cmp(keydef->seg, (uchar*) info->recbuf, (uchar*) key,
-		     key_length, SEARCH_FIND | SEARCH_SAME, not_used))
+            key_length, SEARCH_FIND | SEARCH_SAME, not_used))
       {
-	error= 1;
-	DBUG_PRINT("error",("Record in wrong link:  key: %u  Record: 0x%lx\n", 
-			    keynr, (long) recpos));
+        error= 1;
+        DBUG_PRINT("error",("Record in wrong link:  key: %u  Record: 0x%lx\n", 
+              keynr, (long) recpos));
       }
       else
-	found++;
+        found++;
       key= tree_search_next(&keydef->rb_tree, &info->last_pos,
-			    offsetof(TREE_ELEMENT, left), 
-			    offsetof(TREE_ELEMENT, right));
+          offsetof(TREE_ELEMENT, left), 
+          offsetof(TREE_ELEMENT, right));
     } while (key);
   }
   if (found != records)

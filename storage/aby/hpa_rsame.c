@@ -26,6 +26,11 @@
 	   HA_ERR_KEY_NOT_FOUND = Record not found with key
 	*/
 
+#ifdef BAD_PROGRAMMING_FOR_HPA_RRND
+#define current_ptr current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]
+#endif
+
+
 int aby_rsame(register HPA_INFO *info, uchar *record, int inx)
 {
   HPA_SHARE *share=info->s;

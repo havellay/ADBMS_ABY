@@ -20,8 +20,13 @@
 
 uchar *aby_position(HPA_INFO *info)
 {
-  return ((info->update & HA_STATE_AKTIV) ? info->current_ptr :
-	  (ABY_PTR) 0);
+  if (ABY_LOCK == ABY_HEAP)
+    return ((info->update & HA_STATE_AKTIV) ? info->current_ptr :
+      (ABY_PTR) 0);
+  else if (ABY_LOCK == ABY_ROW)
+    return ((info->update & HA_STATE_AKTIV) ?
+        info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS] :
+      (ABY_PTR) 0);
 }
 
 

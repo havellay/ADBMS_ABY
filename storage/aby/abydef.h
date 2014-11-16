@@ -20,6 +20,7 @@ C_MODE_START
 #include <my_pthread.h>
 #include "aby.h"			/* Structs & some defines */
 #include "my_tree.h"
+#include <sys/syscall.h>
 
 /*
   When allocating keys /rows in the internal block structure, do it
@@ -28,6 +29,19 @@ C_MODE_START
   The challenge is to find the balance between allocate as few blocks
   as possible and keep memory consumption down.
 */
+
+/* HARI - a toggle for heap or row locking */
+#ifndef ABY_LOCK
+#define BAD_PROGRAMMING_FOR_HPA_RRND
+#define ROWTHRDS 1000
+#define ABY_HEAP  1
+#define ABY_ROW   0
+#define ABY_LOCK  0   // 1 -> heap and 0 -> row-level
+                      // this is a toggle to control whether
+                      // the storage engine uses the default
+                      // lock or the one we have defined
+#endif
+/* /HARI - a toggle for heap or row locking */
 
 /* this is for logging - HARI */
 int log_this(const char*, int);
@@ -49,7 +63,13 @@ if (!(info->update & HA_STATE_AKTIV))\
 #define hpa_find_hash(A,B) ((HASH_INFO*) hpa_find_block((A),(B)))
 
 	/* Find pos for record and update it in info->current_ptr */
+#ifndef BAD_PROGRAMMING_FOR_HPA_RRND
 #define hpa_find_record(info,pos) (info)->current_ptr= hpa_find_block(&(info)->s->block,pos)
+#endif
+
+#ifdef BAD_PROGRAMMING_FOR_HPA_RRND
+#define hpa_find_record(info,pos) (info)->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]= hpa_find_block(&(info)->s->block,pos)
+#endif
 
 typedef struct st_hpa_hash_info
 {

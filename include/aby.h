@@ -164,6 +164,7 @@ typedef struct st_aby_info
 {
   HPA_SHARE *s;
   uchar *current_ptr;
+  uchar *current_ptr_array[100];
   struct st_hpa_hash_info *current_hash_ptr;
   ulong current_record,next_block;
   int lastinx,errkey;

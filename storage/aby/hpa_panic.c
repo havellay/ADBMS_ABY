@@ -24,7 +24,8 @@ int hpa_panic(enum ha_panic_function flag)
   LIST *element,*next_open;
   DBUG_ENTER("hpa_panic");
 
-  mysql_mutex_lock(&THR_LOCK_heap);
+  if(ABY_LOCK == ABY_HEAP)
+    mysql_mutex_lock(&THR_LOCK_heap);
   for (element=aby_open_list ; element ; element=next_open)
   {
     HPA_INFO *info=(HPA_INFO*) element->data;
@@ -52,6 +53,7 @@ int hpa_panic(enum ha_panic_function flag)
       break;
     }
   }
-  mysql_mutex_unlock(&THR_LOCK_heap);
+  if(ABY_LOCK == ABY_HEAP)
+    mysql_mutex_unlock(&THR_LOCK_heap);
   DBUG_RETURN(0);
 } /* hpa_panic */

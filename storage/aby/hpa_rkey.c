@@ -54,7 +54,10 @@ int aby_rkey(HPA_INFO *info, uchar *record, int inx, const uchar *key,
       DBUG_RETURN(my_errno= HA_ERR_KEY_NOT_FOUND);
     }
     memcpy(&pos, pos + (*keyinfo->get_key_length)(keyinfo, pos), sizeof(uchar*));
-    info->current_ptr= pos;
+    if (ABY_LOCK == ABY_HEAP)
+      info->current_ptr= pos;
+    else if (ABY_LOCK == ABY_ROW)
+      info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS] = pos;
   }
   else
   {

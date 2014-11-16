@@ -24,9 +24,11 @@ int aby_close(HPA_INFO *info)
 {
   int tmp;
   DBUG_ENTER("aby_close");
-  mysql_mutex_lock(&THR_LOCK_heap);
+  if(ABY_LOCK == ABY_HEAP)
+    mysql_mutex_lock(&THR_LOCK_heap);
   tmp= hpa_close(info);
-  mysql_mutex_unlock(&THR_LOCK_heap);
+  if(ABY_LOCK == ABY_HEAP)
+    mysql_mutex_unlock(&THR_LOCK_heap);
   DBUG_RETURN(tmp);
 }
 

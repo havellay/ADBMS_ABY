@@ -261,12 +261,21 @@ int ha_aby::write_row(uchar * buf)
 int ha_aby::update_row(const uchar * old_data, uchar * new_data)
 {
   static int count = 0;
+  int ihavewaited = 0;
 
-  count++;
+  /* atomic increment of count */
+  __sync_fetch_and_add(&count, 1);
 
-  /* try and make processes sleep here until we get 8 processes */
-  if(count < 8)
+  /* try and make processes sleep here until we get 8 processes
+   * count's comparison is not atomic; but that should be taken
+   * care of later */
+  if(count < 8 && ihavewaited < 100000)
+  {
+    ihavewaited++;
+    log_this("going to sleep", 110);
     usleep(10);
+  }
+  ihavewaited = 0;
 
   log_this("ha_aby.update_row() called", 1);
   int res;
@@ -282,7 +291,8 @@ int ha_aby::update_row(const uchar * old_data, uchar * new_data)
     file->s->key_stat_version++;
   }
 
-  count--;
+  /* atomic of decrement count */
+  __sync_fetch_and_add(&count, -1);
 
   return res;
 }
@@ -628,21 +638,26 @@ THR_LOCK_DATA **ha_aby::store_lock(THD *thd,
 				    THR_LOCK_DATA **to,
 				    enum thr_lock_type lock_type)
 {
+  int default_store_lock = 0; // 1 -> we are using the default store_lock
+
   HDBE("ha_aby.store_lock() called");
   if (lock_type != TL_IGNORE && file->lock.type == TL_UNLOCK)
   {
-    file->lock.type=lock_type;
-    // ^ this is the line that was originally here
-
-    // allowing concurrent write operations on table
-    /* if (lock_type >= TL_WRITE_CONCURRENT_INSERT && lock_type <= TL_WRITE) {
-      if (!thd->in_lock_tables && !thd->tablespace_op)
-        lock_type = TL_WRITE_ALLOW_WRITE;
+    if(default_store_lock)
+      file->lock.type=lock_type;
+      // ^ this is the line that was originally here
+    else
+    {
+      // allowing concurrent write operations on table
+      if (lock_type >= TL_WRITE_CONCURRENT_INSERT && lock_type <= TL_WRITE) {
+        if (!thd->in_lock_tables && !thd->tablespace_op)
+          lock_type = TL_WRITE_ALLOW_WRITE;
+      }
+      // allow write operations on tables currently read from
+      else if (lock_type == TL_READ_NO_INSERT && !thd->in_lock_tables) {
+        lock_type = TL_READ;
+      }
     }
-    // allow write operations on tables currently read from
-    else if (lock_type == TL_READ_NO_INSERT && !thd->in_lock_tables) {
-      lock_type = TL_READ;
-    } */
     file->lock.type = lock_type;
   }
   *to++= &file->lock;
