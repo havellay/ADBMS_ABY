@@ -32,10 +32,11 @@ int aby_delete(HPA_INFO *info, const uchar *record)
   share->changed=1;
 
   if ( --(share->records) < share->blength >> 1) share->blength>>=1;
+
   if (ABY_LOCK == ABY_HEAP)
     pos=info->current_ptr;
   else if (ABY_LOCK == ABY_ROW)
-    pos=info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS];
+    pos=info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS];
 
   p_lastinx = share->keydef + info->lastinx;
   for (keydef = share->keydef, end = keydef + share->keys; keydef < end; 
@@ -149,9 +150,10 @@ int hpa_delete_key(HPA_INFO *info, register HPA_KEYDEF *keyinfo,
     }
     else if (ABY_LOCK == ABY_ROW)
     {
-      info->current_ptr_array[(pid_t)syscall(SYS_gettid)%100] = last_ptr ? last_ptr->ptr_to_rec : 0;
+      info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]
+        = last_ptr ? last_ptr->ptr_to_rec : 0;
       DBUG_PRINT("info",("Corrected current_ptr to point at: 0x%lx",
-             (long) info->current_ptr_array[(pid_t)syscall(SYS_gettid)%100]));
+             (long) info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]));
     }
   }
   empty=pos;
@@ -210,7 +212,7 @@ int hpa_delete_key(HPA_INFO *info, register HPA_KEYDEF *keyinfo,
       if (ABY_LOCK == ABY_HEAP)
         info->current_ptr= 0;
       else if (ABY_LOCK == ABY_ROW)
-        info->current_ptr_array[(pid_t)syscall(SYS_gettid)%100] = 0;
+        info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS] = 0;
       info->current_hash_ptr= 0;
     }
   }

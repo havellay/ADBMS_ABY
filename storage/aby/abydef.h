@@ -68,7 +68,7 @@ if (!(info->update & HA_STATE_AKTIV))\
 #endif
 
 #ifdef BAD_PROGRAMMING_FOR_HPA_RRND
-#define hpa_find_record(info,pos) (info)->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]= hpa_find_block(&(info)->s->block,pos)
+#define hpa_find_record(info,pos) (info)->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]= hpa_find_block(&(info)->s->block,pos)
 #endif
 
 typedef struct st_hpa_hash_info

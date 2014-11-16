@@ -57,7 +57,7 @@ int aby_rkey(HPA_INFO *info, uchar *record, int inx, const uchar *key,
     if (ABY_LOCK == ABY_HEAP)
       info->current_ptr= pos;
     else if (ABY_LOCK == ABY_ROW)
-      info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS] = pos;
+      info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS] = pos;
   }
   else
   {

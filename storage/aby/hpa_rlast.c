@@ -38,7 +38,7 @@ int aby_rlast(HPA_INFO *info, uchar *record, int inx)
       if (ABY_LOCK == ABY_HEAP)
         info->current_ptr = pos;
       else if (ABY_LOCK == ABY_ROW)
-        info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS] = pos;
+        info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS] = pos;
       memcpy(record, pos, (size_t)share->reclength);
       info->update = HA_STATE_AKTIV;
     }
@@ -54,7 +54,7 @@ int aby_rlast(HPA_INFO *info, uchar *record, int inx)
     if (ABY_LOCK == ABY_HEAP)
       info->current_ptr=0;
     else if (ABY_LOCK == ABY_ROW)
-      info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]=0;
+      info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]=0;
     info->current_hash_ptr=0;
     info->update=HA_STATE_NEXT_FOUND;
     DBUG_RETURN(aby_rprev(info,record));

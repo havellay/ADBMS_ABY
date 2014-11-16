@@ -118,7 +118,6 @@ sql/sql_yacc.h
 storage/perfschema/pfs_lex_token.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/CXX.includecache
-storage/aby/test/
 tags
 storage/aby/CMakeFiles/hpa_aby_test2.dir/C.includecache
 storage/aby/tags

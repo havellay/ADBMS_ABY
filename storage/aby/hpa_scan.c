@@ -52,7 +52,7 @@ int aby_scan(register HPA_INFO *info, uchar *record)
       info->current_ptr+=share->block.recbuffer;
     else if (ABY_LOCK == ABY_ROW)
     {
-      info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]+=
+      info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]+=
         share->block.recbuffer;
     }
   }
@@ -81,7 +81,7 @@ int aby_scan(register HPA_INFO *info, uchar *record)
   }
   else if (ABY_LOCK == ABY_ROW)
   {
-    if (!info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS][share->reclength])
+    if (!info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS][share->reclength])
     {
       DBUG_PRINT("warning",("Found deleted record"));
       info->update= HA_STATE_PREV_FOUND | HA_STATE_NEXT_FOUND;
@@ -93,7 +93,7 @@ int aby_scan(register HPA_INFO *info, uchar *record)
     memcpy(record,info->current_ptr,(size_t) share->reclength);
   else if (ABY_LOCK == ABY_ROW)
   {
-    memcpy(record,info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS],
+    memcpy(record,info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
         (size_t) share->reclength);
   }
   info->current_hash_ptr=0;			/* Can't use read_next */

@@ -32,7 +32,9 @@ int hpa_rectest(register HPA_INFO *info, register const uchar *old)
   }
   else if (ABY_LOCK == ABY_ROW)
   {
-    if (memcmp(info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS],old,(size_t) info->s->reclength))
+    if (memcmp(
+          info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
+          old,(size_t) info->s->reclength))
     {
       DBUG_RETURN((my_errno=HA_ERR_RECORD_CHANGED)); /* Record have changed */
     }

@@ -122,7 +122,10 @@ int aby_check_aby(HPA_INFO *info, my_bool print_status)
       if (ABY_LOCK == ABY_HEAP)
         info->current_ptr+= share->block.recbuffer;
       else if (ABY_LOCK == ABY_ROW)
-        info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]+= share->block.recbuffer;
+      {
+        info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]
+          += share->block.recbuffer;
+      }
     }
     else
     {
@@ -145,7 +148,7 @@ int aby_check_aby(HPA_INFO *info, my_bool print_status)
     }
     else if (ABY_LOCK == ABY_ROW)
     {
-      if (!info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS][share->reclength])
+      if (!info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS][share->reclength])
         deleted++;
       else
         records++;

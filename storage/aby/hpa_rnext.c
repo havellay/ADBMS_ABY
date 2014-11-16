@@ -81,7 +81,7 @@ int aby_rnext(HPA_INFO *info, uchar *record)
       if (ABY_LOCK == ABY_HEAP)
         info->current_ptr = pos;
       else if (ABY_LOCK == ABY_ROW)
-        info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS] = pos;
+        info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS] = pos;
     }
     else
     {
@@ -105,7 +105,7 @@ int aby_rnext(HPA_INFO *info, uchar *record)
       }
       else if (ABY_LOCK == ABY_ROW)
       {
-        if (!info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]
+        if (!info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]
             && (info->update & HA_STATE_NEXT_FOUND))
         {
           pos=0;					/* Read next after last */
@@ -118,7 +118,7 @@ int aby_rnext(HPA_INFO *info, uchar *record)
           pos= hpa_search(info, keyinfo, info->lastkey, 0);
       }
       else if (ABY_LOCK == ABY_ROW
-          && !info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS])		/* Deleted or first call */
+          && !info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS])		/* Deleted or first call */
       {
           pos= hpa_search(info, keyinfo, info->lastkey, 0);
       }

@@ -81,7 +81,7 @@ int aby_write(HPA_INFO *info, const uchar *record)
   if (ABY_LOCK == ABY_HEAP)
     info->current_ptr=pos;
   else if (ABY_LOCK == ABY_ROW)
-    info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS] = pos;
+    info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS] = pos;
   info->current_hash_ptr=0;
   info->update|=HA_STATE_AKTIV;
 #if !defined(DBUG_OFF) && defined(EXTRA_ABY_DEBUG)

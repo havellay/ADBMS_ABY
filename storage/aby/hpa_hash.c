@@ -19,7 +19,7 @@
 #include <m_ctype.h>
 
 #ifdef BAD_PROGRAMMING_FOR_HPA_RRND
-#define current_ptr current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]
+#define current_ptr current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]
 #endif
 
 /*
