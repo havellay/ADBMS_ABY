@@ -41,7 +41,7 @@ void aby_log_unlock() {
 
 int log_this(const char *str, int priority)
 {
-  int to_print = 100;
+  int to_print = 1000; // logging effectively disabled
   int to_file = 0;
   static FILE *fp = NULL;
   static int uncommitted_ops = 0;
@@ -77,6 +77,15 @@ int log_this(const char *str, int priority)
 
   return strlen(str);
 }
+
+int store_address_in(void* ptr, void* heap_addr, pid_t tid)
+{
+}
+
+
+
+
+
 
 /*
    Check if keys and rows are ok in a aby table
@@ -125,6 +134,13 @@ int aby_check_aby(HPA_INFO *info, my_bool print_status)
       {
         info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]
           += share->block.recbuffer;
+        /* 
+         * insert_addr_into(
+         *     share->block.recbuffer,
+         *     current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
+         *     ((pid_t)syscall(SYS_gettid))
+         *   );
+         */
       }
     }
     else

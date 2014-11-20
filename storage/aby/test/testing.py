@@ -31,7 +31,7 @@ if input_data == 1 :
             con.commit()
 
 perform_update  = 1      # 1 -> perform update on the data
-update_by       = str(5) # all the values are incremented by this number
+update_by       = str(1) # all the values are incremented by this number
 threads         = number_of_rows*50
 maximum_id      = 0
 
