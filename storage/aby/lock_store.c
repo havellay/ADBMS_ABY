@@ -1,11 +1,4 @@
-
-typedef struct node_t {
-  pid_t   tid;
-  void    *add;
-  node_t  *next;
-} node_t;
-
-node_t *table[100];
+#include "lock_store.h"
 
 /*
  * method : init_table
@@ -19,14 +12,15 @@ int init_table()
   {
     *idx = calloc(sizeof(node_t));
     if (idx == NULL)
-      return -1;
+      return ERROR;
   }
   return 0;
 }
 
-// we need a hash table that stores addresses with
-// the tid of the thread that has currently locked
-// the address
+/*
+ * method : insert_to_hash_table
+ * params :
+ */
 int insert_to_hash_table(pid_t tid, void *addr)
 {
   int idx = ((long int)addr) % 100;
@@ -36,13 +30,19 @@ int insert_to_hash_table(pid_t tid, void *addr)
       table[idx]->tid=tid;  
       table[idx]->add=addr;
   }
-  // find the end of the linked list at table[idx] and add the new address there
+
   for (node_t *idx= table[idx]; idx->next!= NULL; idx= idx->next);
-  node_t *temp=malloc(sizeof *temp);
-  temp->tid=tid;
-  temp->add=addr;
-  temp->next=NULL;
-  idx->next=temp;
+
+  node_t *temp= malloc(sizeof(node_t));
+  if (temp== NULL)
+    return ERROR;
+
+  temp->tid   = tid;
+  temp->addr  = addr;
+  temp->next  = NULL;
+  idx->next = temp;
+
+  return SUCCESS;
 }
 
 /*
