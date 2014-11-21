@@ -1,4 +1,4 @@
-
+/* */
 typedef struct node_t {
   pid_t   tid;
   void    *add;
