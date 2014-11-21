@@ -7,10 +7,21 @@ typedef struct node_t {
 
 node_t *table[100];
 
+/*
+ * method : init_table
+ * params :
+ *  Allocates memory for each cell in the element of the 
+ *  'table' array 
+ */
 int init_table()
 {
-  // bunch of malloc calls to initialize the first
-  // element in each linked list in table
+  for (node_t *idx= table; idx<= &table[99]; idx++)
+  {
+    *idx = calloc(sizeof(node_t));
+    if (idx == NULL)
+      return -1;
+  }
+  return 0;
 }
 
 // we need a hash table that stores addresses with
