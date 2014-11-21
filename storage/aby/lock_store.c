@@ -1,4 +1,4 @@
-/* */
+
 typedef struct node_t {
   pid_t   tid;
   void    *add;
@@ -39,9 +39,14 @@ int insert_to_hash_table(pid_t tid, void *addr)
 
 }
 
+/*
+ * method : store_address_in
+ * params :
+ *    void *ptr       - stores the address where 'heap_mem' will be stored
+ *    void *heap_mem  - an address to a memory location in the heap
+ *    pid_t tid       - thread that will hold the lock on 'heap_mem'
+ */
 int store_address_in(void* ptr, void* heap_mem, pid_t tid)
 {
-  // check whether the address is already present in the hash table
-  // if yes, make the thread sleep for soemtime
-  // how to resume the thread once the address is unlocked
+  
 }
