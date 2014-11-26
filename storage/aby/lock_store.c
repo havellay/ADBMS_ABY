@@ -8,6 +8,25 @@
 
 node_t *htab[HTABSIZE];
 
+static volatile int _aby_ls_lock = 0;
+
+/*
+ * method : aby_ls_lock
+ *  serializes execution using the _aby_ls_lock lock
+ */
+void aby_ls_lock() {
+  while (__sync_lock_test_and_set(&_aby_ls_lock, 1)) {
+  }
+}
+
+/*
+ * method : aby_ls_unlock
+ */
+void aby_ls_unlock() {
+  __sync_synchronize(); // Memory barrier.
+  _aby_ls_lock = 0;
+}
+
 /*
  * method : init_htab
  * params :
@@ -81,6 +100,10 @@ node_t* htab_lookup(void*addr)
  */
 int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
 {
+  // this method can change the structure of the hash table;
+  // so, secure a lock before doing anything
+  aby_ls_lock();
+
   // check whether the address is already locked;
   // for this, a lookup is done on the hashtable
   // for a node that contains the particular address
@@ -88,16 +111,18 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
   if (exists_at == NULL)
   {
     // the address doesn't exist in the heap and so,
-    // it can be secured by thread 'tid' ......(1)
+    // it can be acquired by thread 'tid' ......(1)
     if (insert_into_htab(tid, heap_mem) == SUCCESS)
     {
-      // check for correctness
-      // the following line may be wrong
-      *des_ptr = heap_mem;
+      *des_ptr = heap_mem;        // check whether this line is correct
+      aby_ls_unlock();
       return SUCCESS;
     }
     else
+    {
+      aby_ls_unlock();
       return ERROR;
+    }
   }
   else
   {
@@ -106,21 +131,29 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
     {
       // the thread already owns this memory; just let it continue
       // perform the storage here similar to ......(1)
+      aby_ls_unlock();
       return SUCCESS;
     }
     else
     {
       // the following section has to be protected by a lock
       while (exists_at->tid != 0 && exists_at->addr == heap_mem)
+      {
+        aby_ls_unlock();
         usleep(10);
+        aby_ls_lock();
+      }
       if (insert_into_htab(tid, heap_mem) == SUCCESS)
       {
-        // storage similar to ......(1)
-        *des_ptr = heap_mem;
+        *des_ptr = heap_mem;    // check whether this line is correct
+        aby_ls_unlock();
         return SUCCESS;
       }
       else
+      {
+        aby_ls_unlock();
         return ERROR;
+      }
     }
   }
 }

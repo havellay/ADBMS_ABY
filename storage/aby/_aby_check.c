@@ -23,10 +23,10 @@ static int aby_check_one_key(HPA_KEYDEF *keydef, uint keynr, ulong records,
 static int aby_check_one_rb_key(HPA_INFO *info, uint keynr, ulong records,
     my_bool print_status);
 
-static volatile int exclusion = 0;
+static volatile int _aby_log_lock = 0;
 
 void aby_log_lock() {
-  while (__sync_lock_test_and_set(&exclusion, 1)) {
+  while (__sync_lock_test_and_set(&_aby_log_lock, 1)) {
     // Do nothing. This GCC builtin instruction
     // ensures memory barrier.
     // the wasted cycles here is sort of tolerable
@@ -36,7 +36,7 @@ void aby_log_lock() {
 
 void aby_log_unlock() {
   __sync_synchronize(); // Memory barrier.
-  exclusion = 0;
+  _aby_log_lock = 0;
 }
 
 int log_this(const char *str, int priority)
