@@ -78,14 +78,6 @@ int log_this(const char *str, int priority)
   return strlen(str);
 }
 
-int store_address_in(void* ptr, void* heap_addr, pid_t tid)
-{
-}
-
-
-
-
-
 
 /*
    Check if keys and rows are ok in a aby table

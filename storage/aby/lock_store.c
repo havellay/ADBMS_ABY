@@ -88,9 +88,11 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
   if (exists_at == NULL)
   {
     // the address doesn't exist in the heap and so,
-    // it can be secured by thread 'tid'
+    // it can be secured by thread 'tid' ......(1)
     if (insert_into_htab(tid, heap_mem) == SUCCESS)
     {
+      // check for correctness
+      // the following line may be wrong
       *des_ptr = heap_mem;
       return SUCCESS;
     }
@@ -103,14 +105,17 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
     if (exists_at->tid == tid)
     {
       // the thread already owns this memory; just let it continue
+      // perform the storage here similar to ......(1)
       return SUCCESS;
     }
     else
     {
+      // the following section has to be protected by a lock
       while (exists_at->tid != 0 && exists_at->addr == heap_mem)
         usleep(10);
       if (insert_into_htab(tid, heap_mem) == SUCCESS)
       {
+        // storage similar to ......(1)
         *des_ptr = heap_mem;
         return SUCCESS;
       }
