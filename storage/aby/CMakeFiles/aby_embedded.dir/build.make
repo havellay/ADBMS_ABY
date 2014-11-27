@@ -624,6 +624,29 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o.provides: storage/aby/CMak
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o.provides.build: storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o
 
+storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o: storage/aby/CMakeFiles/aby_embedded.dir/flags.make
+storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o: storage/aby/lock_store.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_26)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o"
+	cd /home/adbms/mysqlsrc/mysql-5.6.21/storage/aby && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/aby_embedded.dir/lock_store.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/storage/aby/lock_store.c
+
+storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/aby_embedded.dir/lock_store.c.i"
+	cd /home/adbms/mysqlsrc/mysql-5.6.21/storage/aby && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/storage/aby/lock_store.c > CMakeFiles/aby_embedded.dir/lock_store.c.i
+
+storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/aby_embedded.dir/lock_store.c.s"
+	cd /home/adbms/mysqlsrc/mysql-5.6.21/storage/aby && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/storage/aby/lock_store.c -o CMakeFiles/aby_embedded.dir/lock_store.c.s
+
+storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o.requires:
+.PHONY : storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o.requires
+
+storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o.provides: storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o.requires
+	$(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o.provides.build
+.PHONY : storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o.provides
+
+storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o.provides.build: storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o
+
 # Object files for target aby_embedded
 aby_embedded_OBJECTS = \
 "CMakeFiles/aby_embedded.dir/_aby_check.c.o" \
@@ -650,7 +673,8 @@ aby_embedded_OBJECTS = \
 "CMakeFiles/aby_embedded.dir/hpa_scan.c.o" \
 "CMakeFiles/aby_embedded.dir/hpa_static.c.o" \
 "CMakeFiles/aby_embedded.dir/hpa_update.c.o" \
-"CMakeFiles/aby_embedded.dir/hpa_write.c.o"
+"CMakeFiles/aby_embedded.dir/hpa_write.c.o" \
+"CMakeFiles/aby_embedded.dir/lock_store.c.o"
 
 # External object files for target aby_embedded
 aby_embedded_EXTERNAL_OBJECTS =
@@ -680,6 +704,7 @@ storage/aby/libaby_embedded.a: storage/aby/CMakeFiles/aby_embedded.dir/hpa_scan.
 storage/aby/libaby_embedded.a: storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.o
 storage/aby/libaby_embedded.a: storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.o
 storage/aby/libaby_embedded.a: storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o
+storage/aby/libaby_embedded.a: storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o
 storage/aby/libaby_embedded.a: storage/aby/CMakeFiles/aby_embedded.dir/build.make
 storage/aby/libaby_embedded.a: storage/aby/CMakeFiles/aby_embedded.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libaby_embedded.a"
@@ -715,6 +740,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/requires: storage/aby/CMakeFiles/aby_emb
 storage/aby/CMakeFiles/aby_embedded.dir/requires: storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.o.requires
 storage/aby/CMakeFiles/aby_embedded.dir/requires: storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.o.requires
 storage/aby/CMakeFiles/aby_embedded.dir/requires: storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o.requires
+storage/aby/CMakeFiles/aby_embedded.dir/requires: storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o.requires
 .PHONY : storage/aby/CMakeFiles/aby_embedded.dir/requires
 
 storage/aby/CMakeFiles/aby_embedded.dir/clean:

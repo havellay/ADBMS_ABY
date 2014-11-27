@@ -948,6 +948,33 @@ hpa_write.c.s:
 	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.s
 .PHONY : hpa_write.c.s
 
+lock_store.o: lock_store.c.o
+.PHONY : lock_store.o
+
+# target to build an object file
+lock_store.c.o:
+	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/lock_store.c.o
+	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o
+.PHONY : lock_store.c.o
+
+lock_store.i: lock_store.c.i
+.PHONY : lock_store.i
+
+# target to preprocess a source file
+lock_store.c.i:
+	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/lock_store.c.i
+	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.i
+.PHONY : lock_store.c.i
+
+lock_store.s: lock_store.c.s
+.PHONY : lock_store.s
+
+# target to generate assembly for a file
+lock_store.c.s:
+	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/lock_store.c.s
+	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.s
+.PHONY : lock_store.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1048,6 +1075,9 @@ help:
 	@echo "... hpa_write.o"
 	@echo "... hpa_write.i"
 	@echo "... hpa_write.s"
+	@echo "... lock_store.o"
+	@echo "... lock_store.i"
+	@echo "... lock_store.s"
 .PHONY : help
 
 

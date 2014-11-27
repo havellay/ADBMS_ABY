@@ -21,6 +21,7 @@ C_MODE_START
 #include "aby.h"			/* Structs & some defines */
 #include "my_tree.h"
 #include <sys/syscall.h>
+#include "lock_store.h"
 
 /*
   When allocating keys /rows in the internal block structure, do it

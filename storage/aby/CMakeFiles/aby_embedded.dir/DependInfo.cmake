@@ -29,6 +29,7 @@ SET(CMAKE_DEPENDS_CHECK_C
   "/home/adbms/mysqlsrc/mysql-5.6.21/storage/aby/hpa_static.c" "/home/adbms/mysqlsrc/mysql-5.6.21/storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.o"
   "/home/adbms/mysqlsrc/mysql-5.6.21/storage/aby/hpa_update.c" "/home/adbms/mysqlsrc/mysql-5.6.21/storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.o"
   "/home/adbms/mysqlsrc/mysql-5.6.21/storage/aby/hpa_write.c" "/home/adbms/mysqlsrc/mysql-5.6.21/storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o"
+  "/home/adbms/mysqlsrc/mysql-5.6.21/storage/aby/lock_store.c" "/home/adbms/mysqlsrc/mysql-5.6.21/storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 SET(CMAKE_DEPENDS_CHECK_CXX

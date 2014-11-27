@@ -66,7 +66,7 @@ libmysqld/mysqlserver_depends.c: storage/myisammrg/libmyisammrg_embedded.a
 libmysqld/mysqlserver_depends.c: storage/perfschema/libperfschema.a
 libmysqld/mysqlserver_depends.c: storage/innobase/libinnobase.a
 libmysqld/mysqlserver_depends.c: zlib/libzlib.a
-libmysqld/mysqlserver_depends.c: storage/aby/libaby.a
+libmysqld/mysqlserver_depends.c: storage/aby/libaby_embedded.a
 libmysqld/mysqlserver_depends.c: storage/federated/libfederated.a
 libmysqld/mysqlserver_depends.c: storage/myisam/libmyisam_embedded.a
 libmysqld/mysqlserver_depends.c: storage/heap/libheap_embedded.a

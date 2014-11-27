@@ -1,4 +1,5 @@
 #include "lock_store.h"
+#include <unistd.h>
 
 // TO DO:
 // * instead of an array of hashtables, this
@@ -6,7 +7,7 @@
 //   nodes for quicker retrieval
 // * 
 
-node_t *htab[HTABSIZE];
+node_t htab[HTABSIZE];
 
 static volatile int _aby_ls_lock = 0;
 
@@ -33,16 +34,18 @@ void aby_ls_unlock() {
  *  Allocates memory for each cell in the element of the 
  *  'htab' array 
  */
-int init_htab()
-{
-  for (node_t *idx = htab; idx <= &htab[HTABSIZE-1]; idx++)
-  {
-    *idx = calloc(sizeof(node_t));
-    if (idx == NULL)
-      return ERROR;
-  }
-  return 0;
-}
+/*
+ * int init_htab()
+ * {
+ *   for (node_t *idx = htab[0]; idx <= &htab[HTABSIZE-1]; idx++)
+ *   {
+ *     *idx = calloc(sizeof(node_t));
+ *     if (idx == NULL)
+ *       return ERROR;
+ *   }
+ *   return 0;
+ * }
+ */
 
 /*
  * method : insert_into_htab
@@ -52,17 +55,19 @@ int init_htab()
  */
 int insert_into_htab(pid_t tid, void *addr)
 {
-  int idx = ((long int)addr) % HTABSIZE;
+  int idx   = ((long int)addr) % HTABSIZE;
+  node_t *hd  = NULL;
+  node_t *temp = NULL;
 
-  if (htab[idx]->next == NULL)
+  if (htab[idx].next == NULL)
   {
-      htab[idx]->tid  = tid;  
-      htab[idx]->addr = addr;
+    htab[idx].tid  = tid;  
+    htab[idx].addr = addr;
   }
 
-  for (node_t *hd = &htab[idx]; hd->next != NULL; hd = hd->next);
+  for (hd = &htab[idx]; hd->next != NULL; hd = hd->next);
 
-  node_t *temp= malloc(sizeof(node_t));
+  temp= malloc(sizeof(node_t));
   if (temp== NULL)
     return ERROR;
 
@@ -83,9 +88,10 @@ int insert_into_htab(pid_t tid, void *addr)
  */
 node_t* htab_lookup(void*addr)
 {
-  int idx = ((long int)addr) % HTABSIZE;
+  int idx     = ((long int)addr) % HTABSIZE;
+  node_t *hd  = NULL;
 
-  for (node_t *hd = &htab[idx]; hd != NULL; hd = hd->next)
+  for (hd = &htab[idx]; hd != NULL; hd = hd->next)
     if (hd->addr == addr) return hd;
 
   return NULL;
@@ -100,6 +106,7 @@ node_t* htab_lookup(void*addr)
  */
 int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
 {
+  node_t *exists_at = NULL;
   // this method can change the structure of the hash table;
   // so, secure a lock before doing anything
   aby_ls_lock();
@@ -107,14 +114,14 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
   // check whether the address is already locked;
   // for this, a lookup is done on the hashtable
   // for a node that contains the particular address
-  node_t *exists_at = htab_lookup(heap_mem);
+  exists_at = htab_lookup(heap_mem);
   if (exists_at == NULL)
   {
     // the address doesn't exist in the heap and so,
     // it can be acquired by thread 'tid' ......(1)
     if (insert_into_htab(tid, heap_mem) == SUCCESS)
     {
-      *des_ptr = heap_mem;        // check whether this line is correct
+      *(int**)des_ptr = (int*)heap_mem;        // check whether this line is correct
       aby_ls_unlock();
       return SUCCESS;
     }
@@ -145,7 +152,7 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
       }
       if (insert_into_htab(tid, heap_mem) == SUCCESS)
       {
-        *des_ptr = heap_mem;    // check whether this line is correct
+        *(int**)des_ptr = (int*)heap_mem;        // check whether this line is correct
         aby_ls_unlock();
         return SUCCESS;
       }
@@ -158,27 +165,42 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
   }
 }
 
+/*
+ * method : remove_from_htab
+ * params :
+ *    void *heap_mem  - an address to a memory location in the heap
+ *    pid_t tid       - thread that will hold the lock on 'heap_mem'
+ */
 int remove_from_htab(void* heap_mem, pid_t tid)
 {
-   int idx = ((long int)heap_mem) % HTABSIZE;
-   node_t * hd=htab_lookup(heap_mem);
-   if(hd!=NULL && hd->tid==tid)
-   {
-       hd->tid=0;
-   }
-   else
+  int idx = 0;
+  node_t *hd = NULL;
+  node_t *hd_prev = NULL;
+
+  aby_ls_lock();
+
+  idx = ((long int)heap_mem) % HTABSIZE;
+  hd      = htab_lookup(heap_mem);
+  hd_prev = NULL;
+
+  if(hd!=NULL && hd->tid==tid)
+    hd->tid=0;
+  else
+  {
+    aby_ls_unlock();
     return ERROR;
-   for (node_t *hdprev = &htab[idx]; hdprev != NULL; hdprev = hdprev->next)
-   if(hdprev->next == hd)
-   {
-       hdprev->next=hd->next;
-       free(hd);
-       return SUCCESS;
-   }
-   return ERROR;
+  }
+
+  for (*hd_prev = htab[idx]; hd_prev != NULL; hd_prev = hd_prev->next)
+    if(hd_prev->next == hd)
+    {
+      hd_prev->next=hd->next;
+      free(hd);
+      aby_ls_unlock();
+      return SUCCESS;
+    }
+  aby_ls_unlock();
+  return ERROR;
 }
-
-
-
 
 

@@ -3,6 +3,7 @@
 
 storage/aby/CMakeFiles/aby_embedded.dir/_aby_check.c.o: storage/aby/_aby_check.c
 storage/aby/CMakeFiles/aby_embedded.dir/_aby_check.c.o: storage/aby/abydef.h
+storage/aby/CMakeFiles/aby_embedded.dir/_aby_check.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/_aby_check.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/_aby_check.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/_aby_check.c.o: include/byte_order_generic.h
@@ -43,6 +44,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/_aby_check.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/_aby_rectest.c.o: storage/aby/_aby_rectest.c
 storage/aby/CMakeFiles/aby_embedded.dir/_aby_rectest.c.o: storage/aby/abydef.h
+storage/aby/CMakeFiles/aby_embedded.dir/_aby_rectest.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/_aby_rectest.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/_aby_rectest.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/_aby_rectest.c.o: include/byte_order_generic.h
@@ -83,6 +85,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/_aby_rectest.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_block.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_block.c.o: storage/aby/hpa_block.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_block.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_block.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_block.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_block.c.o: include/byte_order_generic.h
@@ -123,6 +126,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_block.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_clear.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_clear.c.o: storage/aby/hpa_clear.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_clear.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_clear.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_clear.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_clear.c.o: include/byte_order_generic.h
@@ -163,6 +167,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_clear.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_close.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_close.c.o: storage/aby/hpa_close.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_close.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_close.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_close.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_close.c.o: include/byte_order_generic.h
@@ -203,6 +208,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_close.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_create.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_create.c.o: storage/aby/hpa_create.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_create.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_create.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_create.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_create.c.o: include/byte_order_generic.h
@@ -243,6 +249,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_create.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_delete.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_delete.c.o: storage/aby/hpa_delete.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_delete.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_delete.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_delete.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_delete.c.o: include/byte_order_generic.h
@@ -283,6 +290,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_delete.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_extra.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_extra.c.o: storage/aby/hpa_extra.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_extra.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_extra.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_extra.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_extra.c.o: include/byte_order_generic.h
@@ -323,6 +331,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_extra.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_hash.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_hash.c.o: storage/aby/hpa_hash.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_hash.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_hash.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_hash.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_hash.c.o: include/byte_order_generic.h
@@ -363,6 +372,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_hash.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_info.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_info.c.o: storage/aby/hpa_info.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_info.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_info.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_info.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_info.c.o: include/byte_order_generic.h
@@ -403,6 +413,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_info.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_open.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_open.c.o: storage/aby/hpa_open.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_open.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_open.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_open.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_open.c.o: include/byte_order_generic.h
@@ -443,6 +454,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_open.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_panic.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_panic.c.o: storage/aby/hpa_panic.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_panic.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_panic.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_panic.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_panic.c.o: include/byte_order_generic.h
@@ -483,6 +495,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_panic.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rename.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rename.c.o: storage/aby/hpa_rename.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_rename.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rename.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rename.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rename.c.o: include/byte_order_generic.h
@@ -523,6 +536,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_rename.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rfirst.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rfirst.c.o: storage/aby/hpa_rfirst.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_rfirst.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rfirst.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rfirst.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rfirst.c.o: include/byte_order_generic.h
@@ -563,6 +577,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_rfirst.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rkey.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rkey.c.o: storage/aby/hpa_rkey.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_rkey.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rkey.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rkey.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rkey.c.o: include/byte_order_generic.h
@@ -603,6 +618,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_rkey.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rlast.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rlast.c.o: storage/aby/hpa_rlast.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_rlast.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rlast.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rlast.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rlast.c.o: include/byte_order_generic.h
@@ -643,6 +659,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_rlast.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rnext.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rnext.c.o: storage/aby/hpa_rnext.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_rnext.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rnext.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rnext.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rnext.c.o: include/byte_order_generic.h
@@ -683,6 +700,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_rnext.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rprev.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rprev.c.o: storage/aby/hpa_rprev.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_rprev.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rprev.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rprev.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rprev.c.o: include/byte_order_generic.h
@@ -723,6 +741,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_rprev.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rrnd.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rrnd.c.o: storage/aby/hpa_rrnd.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_rrnd.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rrnd.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rrnd.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rrnd.c.o: include/byte_order_generic.h
@@ -763,6 +782,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_rrnd.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rsame.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rsame.c.o: storage/aby/hpa_rsame.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_rsame.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rsame.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rsame.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_rsame.c.o: include/byte_order_generic.h
@@ -803,6 +823,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_rsame.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_scan.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_scan.c.o: storage/aby/hpa_scan.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_scan.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_scan.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_scan.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_scan.c.o: include/byte_order_generic.h
@@ -843,6 +864,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_scan.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.o: storage/aby/hpa_static.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.o: include/byte_order_generic.h
@@ -883,6 +905,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.o: storage/aby/hpa_update.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.o: include/byte_order_generic.h
@@ -923,6 +946,7 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.o: include/typelib.h
 
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o: storage/aby/hpa_write.c
+storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o: include/aby.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o: include/big_endian.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o: include/byte_order_generic.h
@@ -961,9 +985,13 @@ storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o: include/t_ctype.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o: include/thr_lock.h
 storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o: include/typelib.h
 
+storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o: storage/aby/lock_store.c
+storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o: storage/aby/lock_store.h
+
 storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: storage/aby/ha_aby.cc
 storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: storage/aby/ha_aby.h
+storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: extra/yassl/include/openssl/err.h
 storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: extra/yassl/include/openssl/opensslv.h
 storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: extra/yassl/include/openssl/prefix_ssl.h

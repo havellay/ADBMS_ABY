@@ -20,7 +20,8 @@ SET(ABY_SOURCES  _aby_check.c _aby_rectest.c hpa_block.c hpa_clear.c hpa_close.c
 				ha_aby.cc
 				hpa_delete.c hpa_extra.c hpa_hash.c hpa_info.c hpa_open.c hpa_panic.c
 				hpa_rename.c hpa_rfirst.c hpa_rkey.c hpa_rlast.c hpa_rnext.c hpa_rprev.c
-				hpa_rrnd.c hpa_rsame.c hpa_scan.c hpa_static.c hpa_update.c hpa_write.c)
+				hpa_rrnd.c hpa_rsame.c hpa_scan.c hpa_static.c hpa_update.c hpa_write.c
+        lock_store.c)
 
 MYSQL_ADD_PLUGIN(aby ${ABY_SOURCES} STORAGE_ENGINE MANDATORY RECOMPILE_FOR_EMBEDDED)
 

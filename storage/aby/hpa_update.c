@@ -30,7 +30,14 @@ int aby_update(HPA_INFO *info, const uchar *old, const uchar *aby_new)
   if (ABY_LOCK == ABY_HEAP)
     pos=info->current_ptr;
   else if (ABY_LOCK == ABY_ROW)
-    pos=info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS];
+  {
+    // pos=info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS];
+    store_address_in(
+        &pos,
+        info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
+        ((pid_t)syscall(SYS_gettid))
+      );
+  }
 
   if (info->opt_flag & READ_CHECK_USED && hpa_rectest(info,old))
     DBUG_RETURN(my_errno);				/* Record changed */

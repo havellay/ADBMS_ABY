@@ -3,6 +3,7 @@
 
 storage/aby/CMakeFiles/hpa_aby_test2.dir/hpa_aby_test2.c.o: storage/aby/abydef.h
 storage/aby/CMakeFiles/hpa_aby_test2.dir/hpa_aby_test2.c.o: storage/aby/hpa_aby_test2.c
+storage/aby/CMakeFiles/hpa_aby_test2.dir/hpa_aby_test2.c.o: storage/aby/lock_store.h
 storage/aby/CMakeFiles/hpa_aby_test2.dir/hpa_aby_test2.c.o: include/aby.h
 storage/aby/CMakeFiles/hpa_aby_test2.dir/hpa_aby_test2.c.o: include/big_endian.h
 storage/aby/CMakeFiles/hpa_aby_test2.dir/hpa_aby_test2.c.o: include/byte_order_generic.h

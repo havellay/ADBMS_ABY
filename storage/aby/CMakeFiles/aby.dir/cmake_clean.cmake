@@ -24,6 +24,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/aby.dir/hpa_static.c.o"
   "CMakeFiles/aby.dir/hpa_update.c.o"
   "CMakeFiles/aby.dir/hpa_write.c.o"
+  "CMakeFiles/aby.dir/lock_store.c.o"
   "libaby.pdb"
   "libaby.a"
 )

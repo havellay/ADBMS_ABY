@@ -3,8 +3,8 @@
 
 typedef struct node_t {
   pid_t   tid;
-  void    *add;
-  node_t  *next;
+  void    *addr;
+  struct node_t  *next;
 } node_t;
 
 
