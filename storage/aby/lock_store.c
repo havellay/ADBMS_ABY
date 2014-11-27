@@ -127,9 +127,23 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
 
 int remove_from_htab(void* heap_mem, pid_t tid)
 {
+   int idx = ((long int)heap_mem) % HTABSIZE;
+   node_t * hd=htab_lookup(heap_mem);
+   if(hd!=NULL && hd->tid==tid)
+   {
+       hd->tid=0;
+   }
+   else
+    return ERROR;
+   for (node_t *hdprev = &htab[idx]; hdprev != NULL; hdprev = hdprev->next)
+   if(hdprev->next == hd)
+   {
+       hdprev->next=hd->next;
+       free(hd);
+       return SUCCESS;
+   }
+   return ERROR;
 }
-
-
 
 
 
