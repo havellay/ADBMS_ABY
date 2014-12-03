@@ -203,4 +203,41 @@ int remove_from_htab(void* heap_mem, pid_t tid)
   return ERROR;
 }
 
+/*
+ * method : thread_says_bye
+ * params :
+ *  pid_t tid   - id of thread that is saying bye
+ */
+int thread_says_bye(pid_t tid)
+{
+  // traverse through the hashtable and remove any nodes
+  // that contain this thread's tid.
+  node_t *htab_ptr = NULL;
+  node_t *hd_prev = NULL, *hd = NULL;
 
+  aby_ls_lock();
+
+  for (htab_ptr = htab; htab_ptr < htab+HTABSIZE; htab_ptr++)
+  {
+    hd_prev = NULL;
+    for (hd = htab_ptr; hd != NULL; hd_prev = hd, hd = hd->next)
+      if (hd->tid == tid)
+      {
+        if (hd_prev == NULL)
+        {
+          // this is the first node in this
+          // bucket and has to be removed
+          hd->tid  = 0;
+          hd->addr = 0;
+          hd->next = NULL;
+        }
+        else
+        {
+          hd_prev->next = hd->next;
+          free(hd);
+        }
+      }
+  }
+  aby_ls_unlock();
+  return SUCCESS;
+}

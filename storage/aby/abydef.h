@@ -63,6 +63,13 @@ if (!(info->update & HA_STATE_AKTIV))\
 { my_errno=HA_ERR_NO_ACTIVE_RECORD; DBUG_RETURN(-1); }
 #define hpa_find_hash(A,B) ((HASH_INFO*) hpa_find_block((A),(B)))
 
+// for hpa_find_record; assuming now that all calls to
+// hpa_find_record are for scanning the tables. In these
+// cases, if the address is locked, other threads wouldn't
+// be ablet to perform a sequential scan and that would
+// be bad.
+// vvvvvvv - for below macros
+
 	/* Find pos for record and update it in info->current_ptr */
 #ifndef BAD_PROGRAMMING_FOR_HPA_RRND
 #define hpa_find_record(info,pos) (info)->current_ptr= hpa_find_block(&(info)->s->block,pos)

@@ -21,7 +21,7 @@
 int aby_update(HPA_INFO *info, const uchar *old, const uchar *aby_new)
 {
   HPA_KEYDEF *keydef, *end, *p_lastinx;
-  uchar *pos;
+  uchar *pos, *pos1;
   my_bool auto_key_changed= 0;
   HPA_SHARE *share= info->s;
   DBUG_ENTER("aby_update");
@@ -31,12 +31,16 @@ int aby_update(HPA_INFO *info, const uchar *old, const uchar *aby_new)
     pos=info->current_ptr;
   else if (ABY_LOCK == ABY_ROW)
   {
-    // pos=info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS];
+    pos1=info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS];
     store_address_in(
         &pos,
         info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
         ((pid_t)syscall(SYS_gettid))
       );
+    if (pos1!=pos)
+    {
+      pos = pos1;
+    }
   }
 
   if (info->opt_flag & READ_CHECK_USED && hpa_rectest(info,old))

@@ -37,7 +37,12 @@ int aby_rfirst(HPA_INFO *info, uchar *record, int inx)
       if (ABY_LOCK == ABY_HEAP)
         info->current_ptr = pos;
       else if (ABY_LOCK == ABY_ROW)
+      {
+        // not editing the following now; will have to make sure that the operations
+        // here are thread safe by deciding when to use write_row and update_row for
+        // these operations
         info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS] = pos;
+      }
       memcpy(record, pos, (size_t)share->reclength);
       /*
         If we're performing index_first on a table that was taken from

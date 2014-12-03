@@ -58,6 +58,7 @@ int aby_reset(HPA_INFO *info)
   info->current_hash_ptr=0;
   info->update=0;
   info->next_block=0;
+  thread_says_bye((pid_t)syscall(SYS_gettid));
   return 0;
 }
 

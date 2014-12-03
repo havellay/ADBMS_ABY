@@ -480,6 +480,7 @@ int ha_aby::extra(enum ha_extra_function operation)
 
 int ha_aby::reset()
 {
+  // think about what to do with current_ptr here
   // current_ptr_array
   HDBE("ha_aby.reset() called");
   return aby_reset(file);

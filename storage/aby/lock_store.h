@@ -13,6 +13,5 @@ typedef struct node_t {
 
 #define HTABSIZE   100
 
-int init_table();
-int insert_into_htab(pid_t, void*);
 int store_address_in(void*, void*, pid_t);
+int thread_says_bye(pid_t);

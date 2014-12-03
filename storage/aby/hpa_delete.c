@@ -36,7 +36,14 @@ int aby_delete(HPA_INFO *info, const uchar *record)
   if (ABY_LOCK == ABY_HEAP)
     pos=info->current_ptr;
   else if (ABY_LOCK == ABY_ROW)
-    pos=info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS];
+  {
+    // pos=info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS];
+    store_address_in(
+        &pos,
+        info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
+        ((pid_t)syscall(SYS_gettid))
+    );
+  }
 
   p_lastinx = share->keydef + info->lastinx;
   for (keydef = share->keydef, end = keydef + share->keys; keydef < end; 

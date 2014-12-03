@@ -125,12 +125,13 @@ int aby_check_aby(HPA_INFO *info, my_bool print_status)
       else if (ABY_LOCK == ABY_ROW)
       {
         /* info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]
-          += share->block.recbuffer; */
-        void *addr = info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]
-                      +share->block.recbuffer;
+           += share->block.recbuffer; */
         store_address_in(
-              info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
-              addr, ((pid_t)syscall(SYS_gettid)));
+            &info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
+            info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]+
+              share->block.recbuffer,
+            ((pid_t)syscall(SYS_gettid))
+        );
       }
     }
     else

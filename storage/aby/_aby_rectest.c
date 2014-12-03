@@ -32,6 +32,9 @@ int hpa_rectest(register HPA_INFO *info, register const uchar *old)
   }
   else if (ABY_LOCK == ABY_ROW)
   {
+    // apparently, this is used only when debugging; this shouldn't
+    // cause a lot of confusion in the scope of this project.
+
     if (memcmp(
           info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
           old,(size_t) info->s->reclength))
