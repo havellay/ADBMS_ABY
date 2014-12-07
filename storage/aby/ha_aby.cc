@@ -260,6 +260,19 @@ int ha_aby::write_row(uchar * buf)
 
 int ha_aby::update_row(const uchar * old_data, uchar * new_data)
 {
+  static int force_parallelism = 0;
+                                    /* now, force_parallelism = 1 will cause
+                                     * the operations on our table to look thread
+                                     * unsafe.
+                                     * This is strange. Though this causes threads
+                                     * to wait and compete with eachother, the locks
+                                     * in lock_store should take care of maintaining
+                                     * correct parallelism. But that doesn't happen.
+                                     * When force_parallelism is 1, the output looks
+                                     * thread unsafe. When it is 0, output looks okay.
+                                     * This is probably some bug in lock_store
+                                     * that will become visible for high parallelism.
+                                     */
   static int count = 0;
   int ihavewaited = 0;
 
@@ -269,7 +282,7 @@ int ha_aby::update_row(const uchar * old_data, uchar * new_data)
   /* try and make processes sleep here until we get 8 processes
    * count's comparison is not atomic; but that should be taken
    * care of later */
-  if(count < 8 && ihavewaited < 100000)
+  if(force_parallelism && count < 8 && ihavewaited < 100000)
   {
     ihavewaited++;
     log_this("going to sleep", 110);

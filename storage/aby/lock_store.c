@@ -146,6 +146,7 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
       // the following section has to be protected by a lock
       while (exists_at->tid != 0 && exists_at->addr == heap_mem)
       {
+        log_this("a thread is going to sleep", 110);
         aby_ls_unlock();
         usleep(10);
         aby_ls_lock();

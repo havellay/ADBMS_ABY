@@ -15,3 +15,5 @@ typedef struct node_t {
 
 int store_address_in(void*, void*, pid_t);
 int thread_says_bye(pid_t);
+
+extern int log_this(const char*, int);
