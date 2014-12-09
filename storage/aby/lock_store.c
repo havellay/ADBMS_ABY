@@ -1,12 +1,6 @@
 #include "lock_store.h"
 #include <unistd.h>
 
-// TO DO:
-// * instead of an array of hashtables, this
-//   can be made an array of red-black tree
-//   nodes for quicker retrieval
-// * 
-
 node_t htab[HTABSIZE];
 
 static volatile int _aby_ls_lock = 0;
@@ -29,45 +23,34 @@ void aby_ls_unlock() {
 }
 
 /*
- * method : init_htab
- * params :
- *  Allocates memory for each cell in the element of the 
- *  'htab' array 
- */
-/*
- * int init_htab()
- * {
- *   for (node_t *idx = htab[0]; idx <= &htab[HTABSIZE-1]; idx++)
- *   {
- *     *idx = calloc(sizeof(node_t));
- *     if (idx == NULL)
- *       return ERROR;
- *   }
- *   return 0;
- * }
- */
-
-/*
  * method : insert_into_htab
  * params :
  *    pid_t tid     - tid field of node_t
  *    void *addr    - addr field of node_t
+ *    int flag      - exclusive lock or read only
  */
-int insert_into_htab(pid_t tid, void *addr)
+int insert_into_htab(pid_t tid, void *addr, int flag)
 {
   int idx   = ((long int)addr) % HTABSIZE;
-  node_t *hd  = NULL;
+  node_t *hd   = NULL;
   node_t *temp = NULL;
 
-  if (htab[idx].next == NULL)
+  // if the htab[idx] is uninitialized ie., it
+  // doesn't represent any address right now
+  if (htab[idx].addr == 0)
   {
-    htab[idx].tid  = tid;  
-    htab[idx].addr = addr;
+    htab[idx].tid   = tid;  
+    htab[idx].addr  = addr;
+    htab[idx].flag  = flag;
+    htab[idx].count = 1;
+    htab[idx].next  = NULL; // obselete statement
+
+    return SUCCESS;
   }
 
   for (hd = &htab[idx]; hd->next != NULL; hd = hd->next);
 
-  temp= malloc(sizeof(node_t));
+  temp = malloc(sizeof(node_t));
   if (temp== NULL)
     return ERROR;
 
@@ -75,7 +58,10 @@ int insert_into_htab(pid_t tid, void *addr)
   // atomic operations
   temp->tid   = tid;
   temp->addr  = addr;
+  temp->flag  = flag;
+  temp->count = 1;
   temp->next  = NULL;
+
   hd->next    = temp;
 
   return SUCCESS;
@@ -103,10 +89,14 @@ node_t* htab_lookup(void*addr)
  *    void *ptr       - stores the address where 'heap_mem' will be stored
  *    void *heap_mem  - an address to a memory location in the heap
  *    pid_t tid       - thread that will hold the lock on 'heap_mem'
+ *    int flag        - tells whether the mode is a read only or an exclusive
+ *                       1 is EXCL is Exclusive
+ *                       0 is RONL is Read Only
  */
-int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
+int store_address_in(void* des_ptr, void* heap_mem, pid_t tid, int flag)
 {
   node_t *exists_at = NULL;
+
   // this method can change the structure of the hash table;
   // so, secure a lock before doing anything
   aby_ls_lock();
@@ -115,11 +105,12 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
   // for this, a lookup is done on the hashtable
   // for a node that contains the particular address
   exists_at = htab_lookup(heap_mem);
+
   if (exists_at == NULL)
   {
     // the address doesn't exist in the heap and so,
     // it can be acquired by thread 'tid' ......(1)
-    if (insert_into_htab(tid, heap_mem) == SUCCESS)
+    if (insert_into_htab(tid, heap_mem, flag) == SUCCESS)
     {
       *(int**)des_ptr = (int*)heap_mem;        // check whether this line is correct
       aby_ls_unlock();
@@ -133,37 +124,106 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
   }
   else
   {
-    // tid has to sleep for sometime
     if (exists_at->tid == tid)
     {
-      // the thread already owns this memory; just let it continue
-      // perform the storage here similar to ......(1)
-      aby_ls_unlock();
-      return SUCCESS;
-    }
-    else
-    {
-      // the following section has to be protected by a lock
-      while (exists_at->tid != 0 && exists_at->addr == heap_mem)
+      if (exists_at->flag == flag)
       {
-        log_this("a thread is going to sleep", 110);
-        aby_ls_unlock();
-        usleep(10);
-        aby_ls_lock();
-      }
-      if (insert_into_htab(tid, heap_mem) == SUCCESS)
-      {
+        // this thread holds the lock and in the same
+        // mode that it is requesting now
         *(int**)des_ptr = (int*)heap_mem;        // check whether this line is correct
         aby_ls_unlock();
         return SUCCESS;
       }
-      else
+      else if (exists_at->flag == RONL && flag == EXCL)
       {
+        // the address is currently secured with
+        // a read only lock; it has to be promoted
+        // to an exclusive lock
+        if (exists_at->count > 1)
+        {
+          // this tread needs to sleep and check whether
+          // it can promote preiodically.
+          while (exists_at->tid != 0 && exists_at->addr == heap_mem)
+          {
+            log_this("a thread is going to sleep", 1100);
+            aby_ls_unlock();
+            usleep(10);
+            aby_ls_lock();
+          }
+          if (insert_into_htab(tid, heap_mem, flag) == SUCCESS)
+          {
+            *(int**)des_ptr = (int*)heap_mem;        // check whether this line is correct
+            aby_ls_unlock();
+            return SUCCESS;
+          }
+          else
+          {
+            aby_ls_unlock();
+            return ERROR;
+          }
+        }
+        else if (exists_at->count == 1)
+        {
+          // simple promotion, just change the mode of
+          // the lock
+          exists_at->flag = flag;
+
+          *(int**)des_ptr = (int*)heap_mem;        // check whether this line is correct
+          aby_ls_unlock();
+          return SUCCESS;
+        }
+        else
+        {
+          // something has messed with the node - investigate
+        }
+      }
+      else if (exists_at->flag == EXCL && flag == RONL)
+      {
+        // just let it be an exclusive lock for now
+        *(int**)des_ptr = (int*)heap_mem;        // check whether this line is correct
         aby_ls_unlock();
-        return ERROR;
+        return SUCCESS;
+      }
+    }
+    else
+    {
+      if (exists_at->flag == RONL && flag == RONL)
+      {
+        // some other thread was the first to acquire the lock, but
+        // this thread can share it
+        exists_at->count++;
+        if (exists_at->tid == 1)
+          exists_at->tid = tid;
+
+        *(int**)des_ptr = (int*)heap_mem;        // check whether this line is correct
+        aby_ls_unlock();
+        return SUCCESS;
+      }
+      else 
+      {
+        while (exists_at->tid != 0 && exists_at->addr == heap_mem)
+        {
+          log_this("a thread is going to sleep", 1100);
+          aby_ls_unlock();
+          usleep(20);
+          aby_ls_lock();
+        }
+        if (insert_into_htab(tid, heap_mem, flag) == SUCCESS)
+        {
+          *(int**)des_ptr = (int*)heap_mem;        // check whether this line is correct
+          aby_ls_unlock();
+          return SUCCESS;
+        }
+        else
+        {
+          aby_ls_unlock();
+          return ERROR;
+        }
       }
     }
   }
+  aby_ls_unlock();
+  return ERROR;
 }
 
 /*
@@ -172,11 +232,16 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid)
  *    void *heap_mem  - an address to a memory location in the heap
  *    pid_t tid       - thread that will hold the lock on 'heap_mem'
  */
+// HARI : not using this method right now, when this is used,
+// find out what it should do with the flag
 int remove_from_htab(void* heap_mem, pid_t tid)
 {
   int idx = 0;
   node_t *hd = NULL;
   node_t *hd_prev = NULL;
+
+  return ERROR; // when you figure out what to do with this method,
+                // remove this statement.
 
   aby_ls_lock();
 
@@ -209,14 +274,17 @@ int remove_from_htab(void* heap_mem, pid_t tid)
  * params :
  *  pid_t tid   - id of thread that is saying bye
  */
-int thread_says_bye(pid_t tid)
+int thread_says_bye (pid_t tid)
 {
   // traverse through the hashtable and remove any nodes
   // that contain this thread's tid.
   node_t *htab_ptr = NULL;
   node_t *hd_prev = NULL, *hd = NULL;
+  static int rubbish_count = 0;
 
   aby_ls_lock();
+
+  rubbish_count++;
 
   for (htab_ptr = htab; htab_ptr < htab+HTABSIZE; htab_ptr++)
   {
@@ -224,21 +292,60 @@ int thread_says_bye(pid_t tid)
     for (hd = htab_ptr; hd != NULL; hd_prev = hd, hd = hd->next)
       if (hd->tid == tid)
       {
-        if (hd_prev == NULL)
+        // hd is now a node that has to be removed
+        if (hd->flag == RONL)
         {
-          // this is the first node in this
-          // bucket and has to be removed
-          hd->tid  = 0;
-          hd->addr = 0;
-          hd->next = NULL;
+          if (hd->tid != 1 && hd->count > 1)
+          {
+            hd->tid   = 1;
+            hd->count--;
+          }
+          else if (hd->count <= 1)
+          {
+            if (hd_prev == NULL)
+            {
+              // this is the first node in this
+              // bucket and has to be removed
+              hd->tid  = 0;
+              hd->addr = 0;
+              hd->next = NULL;
+            }
+            else
+            {
+              hd_prev->next = hd->next;
+              free(hd);
+            }
+          }
         }
-        else
+        else if (hd->flag == EXCL)
         {
-          hd_prev->next = hd->next;
-          free(hd);
+          if (hd_prev == NULL)
+          {
+            // this is the first node in this
+            // bucket and has to be removed
+            hd->tid  = 0;
+            hd->addr = 0;
+            hd->next = NULL;
+          }
+          else
+          {
+            hd_prev->next = hd->next;
+            free(hd);
+          }
         }
       }
   }
   aby_ls_unlock();
+
+  if (rubbish_count == 20)
+  {
+    thread_says_bye(1);
+    rubbish_count = 0;
+    // once in a while, clean all nodes
+    // that have a thread id 1 and count 0
+    // for this, we should be just able to
+    // use this same method's definition
+  }
+
   return SUCCESS;
 }

@@ -130,7 +130,8 @@ int aby_check_aby(HPA_INFO *info, my_bool print_status)
             &info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
             info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]+
               share->block.recbuffer,
-            ((pid_t)syscall(SYS_gettid))
+            ((pid_t)syscall(SYS_gettid)),
+            RONL
         );
       }
     }

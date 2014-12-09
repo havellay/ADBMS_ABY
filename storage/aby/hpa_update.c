@@ -35,7 +35,8 @@ int aby_update(HPA_INFO *info, const uchar *old, const uchar *aby_new)
     store_address_in(
         &pos,
         info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
-        ((pid_t)syscall(SYS_gettid))
+        ((pid_t)syscall(SYS_gettid)),
+        EXCL
       );
     if (pos1!=pos)
     {

@@ -41,7 +41,8 @@ int aby_delete(HPA_INFO *info, const uchar *record)
     store_address_in(
         &pos,
         info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
-        ((pid_t)syscall(SYS_gettid))
+        ((pid_t)syscall(SYS_gettid)),
+        EXCL
     );
   }
 
