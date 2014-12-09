@@ -14,7 +14,7 @@ con = mdb.connect(
 # prepare a cursor object using cursor() method
 cursor = con.cursor ()
 
-table = 'new_tab_heap'
+table = 'new_tab_aby'
 
 input_data      = 1     # 1 -> input data;
                         # 0 -> use data that already exists

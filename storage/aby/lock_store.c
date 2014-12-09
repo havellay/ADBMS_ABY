@@ -1,7 +1,15 @@
 #include "lock_store.h"
 #include <unistd.h>
+#include <pthread.h>
 
 node_t htab[HTABSIZE];
+
+pthread_mutex_t mutex[HTABSIZE];      
+pthread_cond_t  condition[HTABSIZE] ; 
+
+#define YES 1
+#define NO  0
+static int init, use_mutex = YES;
 
 static volatile int _aby_ls_lock = 0;
 
@@ -95,11 +103,24 @@ node_t* htab_lookup(void*addr)
  */
 int store_address_in(void* des_ptr, void* heap_mem, pid_t tid, int flag)
 {
+  int idx   = ((long int)heap_mem) % HTABSIZE;
   node_t *exists_at = NULL;
 
   // this method can change the structure of the hash table;
   // so, secure a lock before doing anything
   aby_ls_lock();
+
+  if(!init)                                    
+  {                                              
+    int i;
+
+    init=1;                                    
+    for(i=0; i<HTABSIZE; i++)                    
+    {                                          
+      pthread_mutex_init(&mutex[i], NULL);   
+      pthread_cond_init(&condition[i], NULL);
+    }                                          
+  }                                              
 
   // check whether the address is already locked;
   // for this, a lookup is done on the hashtable
@@ -147,7 +168,18 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid, int flag)
           {
             log_this("a thread is going to sleep", 1100);
             aby_ls_unlock();
-            usleep(10);
+
+            if (use_mutex == YES)
+            {
+              pthread_mutex_lock(&mutex[idx]);
+              pthread_cond_wait(&condition[idx], &mutex[idx]);
+              pthread_mutex_unlock(&mutex[idx]);
+            }
+            else
+            {
+              usleep(10);
+            }
+
             aby_ls_lock();
           }
           if (insert_into_htab(tid, heap_mem, flag) == SUCCESS)
@@ -205,7 +237,16 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid, int flag)
         {
           log_this("a thread is going to sleep", 1100);
           aby_ls_unlock();
-          usleep(20);
+          if (use_mutex == YES)
+          {
+            pthread_mutex_lock(&mutex[idx]);
+            pthread_cond_wait(&condition[idx], &mutex[idx]);
+            pthread_mutex_unlock(&mutex[idx]);
+          }
+          else
+          {
+            usleep(20);
+          }
           aby_ls_lock();
         }
         if (insert_into_htab(tid, heap_mem, flag) == SUCCESS)
@@ -253,6 +294,10 @@ int remove_from_htab(void* heap_mem, pid_t tid)
     hd->tid=0;
   else
   {
+    if (use_mutex == YES)
+    {
+      pthread_cond_signal( &condition[idx] );
+    }
     aby_ls_unlock();
     return ERROR;
   }
@@ -262,6 +307,10 @@ int remove_from_htab(void* heap_mem, pid_t tid)
     {
       hd_prev->next=hd->next;
       free(hd);
+      if (use_mutex == YES)
+      {
+        pthread_cond_signal( &condition[idx] );
+      }
       aby_ls_unlock();
       return SUCCESS;
     }
@@ -288,6 +337,7 @@ int thread_says_bye (pid_t tid)
 
   for (htab_ptr = htab; htab_ptr < htab+HTABSIZE; htab_ptr++)
   {
+    long int addr = (long int) htab_ptr->addr;
     hd_prev = NULL;
     for (hd = htab_ptr; hd != NULL; hd_prev = hd, hd = hd->next)
       if (hd->tid == tid)
@@ -309,11 +359,13 @@ int thread_says_bye (pid_t tid)
               hd->tid  = 0;
               hd->addr = 0;
               hd->next = NULL;
+              pthread_cond_signal(&condition[addr % HTABSIZE]);
             }
             else
             {
               hd_prev->next = hd->next;
               free(hd);
+              pthread_cond_signal(&condition[addr % HTABSIZE]);
             }
           }
         }
@@ -326,11 +378,13 @@ int thread_says_bye (pid_t tid)
             hd->tid  = 0;
             hd->addr = 0;
             hd->next = NULL;
+            pthread_cond_signal(&condition[addr % HTABSIZE]);
           }
           else
           {
             hd_prev->next = hd->next;
             free(hd);
+            pthread_cond_signal(&condition[addr % HTABSIZE]);
           }
         }
       }
