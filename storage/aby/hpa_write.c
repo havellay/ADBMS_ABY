@@ -81,7 +81,15 @@ int aby_write(HPA_INFO *info, const uchar *record)
   if (ABY_LOCK == ABY_HEAP)
     info->current_ptr=pos;
   else if (ABY_LOCK == ABY_ROW)
-    info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS] = pos;
+  {
+    // info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS] = pos;
+    store_address_in(
+        &info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
+        pos,
+        ((pid_t)syscall(SYS_gettid)),
+        EXCL
+    );
+  }
   info->current_hash_ptr=0;
   info->update|=HA_STATE_AKTIV;
 #if !defined(DBUG_OFF) && defined(EXTRA_ABY_DEBUG)
@@ -92,6 +100,10 @@ int aby_write(HPA_INFO *info, const uchar *record)
   DBUG_RETURN(0);
 
 err:
+  // HARI : we probably get here if there is a failed insertion
+  // this may not go to the reset() method and so, the element may
+  // remain locked for ever
+
   if (my_errno == HA_ERR_FOUND_DUPP_KEY)
     DBUG_PRINT("info",("Duplicate key: %d", (int) (keydef - share->keydef)));
   info->errkey= (int) (keydef - share->keydef);

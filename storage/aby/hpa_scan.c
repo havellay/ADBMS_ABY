@@ -19,11 +19,11 @@
 #include "abydef.h"
 
 /*
-	   Returns one of following values:
-	   0 = Ok.
-	   HA_ERR_RECORD_DELETED = Record is deleted.
-	   HA_ERR_END_OF_FILE = EOF.
-*/
+   Returns one of following values:
+   0 = Ok.
+   HA_ERR_RECORD_DELETED = Record is deleted.
+   HA_ERR_END_OF_FILE = EOF.
+   */
 
 int aby_scan_init(register HPA_INFO *info)
 {
@@ -52,8 +52,16 @@ int aby_scan(register HPA_INFO *info, uchar *record)
       info->current_ptr+=share->block.recbuffer;
     else if (ABY_LOCK == ABY_ROW)
     {
-      info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]+=
-        share->block.recbuffer;
+      void *addr = info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]
+        + share->block.recbuffer;
+
+      /* info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]+=
+         share->block.recbuffer; */
+
+      store_address_in(
+          &info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
+          addr, ((pid_t)syscall(SYS_gettid)), RONL
+          );
     }
   }
   else
@@ -64,8 +72,8 @@ int aby_scan(register HPA_INFO *info, uchar *record)
       info->next_block= share->records+share->deleted;
       if (pos >= info->next_block)
       {
-	info->update= 0;
-	DBUG_RETURN(my_errno= HA_ERR_END_OF_FILE);
+        info->update= 0;
+        DBUG_RETURN(my_errno= HA_ERR_END_OF_FILE);
       }
     }
     hpa_find_record(info, pos);

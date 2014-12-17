@@ -3,6 +3,7 @@
 import MySQLdb as mdb
 import sys
 import threading
+import random
 
 # open a database connection
 con = mdb.connect(
@@ -18,7 +19,7 @@ table = 'new_tab_aby'
 
 input_data      = 1     # 1 -> input data;
                         # 0 -> use data that already exists
-number_of_rows  = 4
+number_of_rows  = 3
 commit_after    = number_of_rows
 
 if input_data == 1 :
@@ -32,7 +33,7 @@ if input_data == 1 :
 
 perform_update  = 1      # 1 -> perform update on the data
 update_by       = str(1) # all the values are incremented by this number
-threads         = number_of_rows*80
+threads         = number_of_rows*50
 maximum_id      = 0
 
 def update_method():
@@ -51,6 +52,15 @@ def update_method():
     for x in xrange(int(maximum_id)+1):
         query = 'update '+table+' set id=id+'+update_by+' where s = '+str(x)
         small_cursor.execute(query)
+
+        rand_row = random.randint(0, maximum_id)
+        query = 'select s, id from '+table+' where s = '+str(rand_row)
+        small_cursor.execute(query)
+
+        # if x%100 == 0:
+        #     print data
+        #     print small_cursor.fetchall()
+
         if x%10 == 0:
             small_con.commit()
 

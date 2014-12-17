@@ -38,6 +38,7 @@ int aby_delete(HPA_INFO *info, const uchar *record)
   else if (ABY_LOCK == ABY_ROW)
   {
     // pos=info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS];
+    // this code is probably never tested by the testing.py code
     store_address_in(
         &pos,
         info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS],
@@ -158,8 +159,16 @@ int hpa_delete_key(HPA_INFO *info, register HPA_KEYDEF *keyinfo,
     }
     else if (ABY_LOCK == ABY_ROW)
     {
-      info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS]
-        = last_ptr ? last_ptr->ptr_to_rec : 0;
+      if (last_ptr)
+        store_address_in(
+          &info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS],
+          last_ptr->ptr_to_rec,
+          (pid_t)syscall(SYS_gettid),
+          RONL
+        );
+      else
+        info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS] = 0;
+
       DBUG_PRINT("info",("Corrected current_ptr to point at: 0x%lx",
              (long) info->current_ptr_array[((pid_t)syscall(SYS_gettid))%ROWTHRDS]));
     }
@@ -221,6 +230,7 @@ int hpa_delete_key(HPA_INFO *info, register HPA_KEYDEF *keyinfo,
         info->current_ptr= 0;
       else if (ABY_LOCK == ABY_ROW)
         info->current_ptr_array[(pid_t)syscall(SYS_gettid)%ROWTHRDS] = 0;
+
       info->current_hash_ptr= 0;
     }
   }
