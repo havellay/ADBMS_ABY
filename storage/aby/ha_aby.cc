@@ -260,7 +260,7 @@ int ha_aby::write_row(uchar * buf)
 
 int ha_aby::update_row(const uchar * old_data, uchar * new_data)
 {
-  static int force_parallelism = 1;
+  static int force_parallelism = 0;
                                     /* now, force_parallelism = 1 will cause
                                      * the operations on our table to look thread
                                      * unsafe.

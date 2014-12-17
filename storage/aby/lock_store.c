@@ -11,7 +11,7 @@ pthread_cond_t  condition[HTABSIZE] ;
 #define NO  0
 static int init, use_mutex = NO;
 
-static volatile int _aby_ls_lock = 0;
+static volatile int _aby_ls_lock;
 
 /*
  * method : aby_ls_lock
@@ -22,12 +22,25 @@ void aby_ls_lock() {
   }
 }
 
+void aby_ls_lock_all() {
+  int idx;
+  for (idx=0; idx<HTABSIZE; idx++)
+    aby_ls_lock();
+}
+
 /*
  * method : aby_ls_unlock
  */
 void aby_ls_unlock() {
   __sync_synchronize(); // Memory barrier.
   _aby_ls_lock = 0;
+}
+
+void aby_ls_unlock_all()
+{
+  int idx;
+  for (idx=0; idx<HTABSIZE; idx++)
+    aby_ls_unlock();
 }
 
 /*
@@ -164,10 +177,16 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid, int flag)
         {
           // this tread needs to sleep and check whether
           // it can promote preiodically.
-          while (exists_at->tid != 0 && exists_at->addr == heap_mem)
+          while (exists_at->tid != tid
+              && exists_at->tid != 0
+              && exists_at->addr == heap_mem)
           {
             char buff[512];
-            sprintf(buff, "tid %d is going to sleep, exists_at-tid %d", tid, exists_at->tid);
+
+            thread_says_bye(1);
+            sprintf(buff,
+                "tid %d, heapmem %ld, is going to sleep, exists_at-tid %d",
+                tid, ((long int)heap_mem) % HTABSIZE, exists_at->tid);
             log_this(buff, 1100);
 
             aby_ls_unlock();
@@ -236,10 +255,16 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid, int flag)
       }
       else 
       {
-        while (exists_at->tid != 0 && exists_at->addr == heap_mem)
+        while (exists_at->tid != tid
+            && exists_at->tid != 0
+            && exists_at->addr == heap_mem)
         {
           char buff[512];
-          sprintf(buff, "tid %d is going to sleep, exists_at-tid %d", tid, exists_at->tid);
+
+          thread_says_bye(1);
+          sprintf(buff,
+              "tid %d, heapmem %ld, is going to sleep, exists_at-tid %d",
+              tid, ((long int)heap_mem) % HTABSIZE, exists_at->tid);
           log_this(buff, 1100);
 
           aby_ls_unlock();
@@ -346,17 +371,19 @@ int thread_says_bye (pid_t tid)
     long int addr = (long int) htab_ptr->addr;
     hd_prev = NULL;
     for (hd = htab_ptr; hd != NULL; hd_prev = hd, hd = hd->next)
+    {
       if (hd->tid == tid)
       {
         // hd is now a node that has to be removed
         if (hd->flag == RONL)
         {
-          if (hd->tid != 1 && hd->count > 1)
+          if (hd->count >= 2)
           {
-            hd->tid   = 1;
-            hd->count--;
+            hd->tid = 1;
+            if (hd->tid != 1)
+              hd->count--;
           }
-          else if (hd->count <= 1)
+          else
           {
             if (hd_prev == NULL)
             {
@@ -365,15 +392,12 @@ int thread_says_bye (pid_t tid)
               hd->tid  = 0;
               hd->addr = 0;
               hd->next = NULL;
-              if (use_mutex == YES)
-                pthread_cond_signal(&condition[addr % HTABSIZE]);
+              hd->count = 0;
             }
             else
             {
               hd_prev->next = hd->next;
               free(hd);
-              if (use_mutex == YES)
-                pthread_cond_signal(&condition[addr % HTABSIZE]);
             }
           }
         }
@@ -386,25 +410,32 @@ int thread_says_bye (pid_t tid)
             hd->tid  = 0;
             hd->addr = 0;
             hd->next = NULL;
-            if (use_mutex == YES)
-              pthread_cond_signal(&condition[addr % HTABSIZE]);
+            hd->count = 0;
           }
           else
           {
             hd_prev->next = hd->next;
             free(hd);
-            if (use_mutex == YES)
-              pthread_cond_signal(&condition[addr % HTABSIZE]);
           }
         }
+        if (use_mutex == YES)
+        {
+          char buff[512];
+          sprintf(buff, "waking up %ld", (addr%HTABSIZE));
+          log_this(buff, 1100);
+
+          pthread_cond_signal(&condition[addr % HTABSIZE]);
+        }
       }
+    }
   }
+  /* aby_ls_unlock_all(); */
   aby_ls_unlock();
 
   if (rubbish_count >= 20)
   {
-    thread_says_bye(1);
     rubbish_count = 0;
+    thread_says_bye(1);
     // once in a while, clean all nodes
     // that have a thread id 1 and count 0
     // for this, we should be just able to
