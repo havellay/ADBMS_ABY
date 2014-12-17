@@ -9,7 +9,7 @@ pthread_cond_t  condition[HTABSIZE] ;
 
 #define YES 1
 #define NO  0
-static int init, use_mutex = YES;
+static int init, use_mutex = NO;
 
 static volatile int _aby_ls_lock = 0;
 
@@ -166,7 +166,10 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid, int flag)
           // it can promote preiodically.
           while (exists_at->tid != 0 && exists_at->addr == heap_mem)
           {
-            log_this("a thread is going to sleep", 1100);
+            char buff[512];
+            sprintf(buff, "tid %d is going to sleep, exists_at-tid %d", tid, exists_at->tid);
+            log_this(buff, 1100);
+
             aby_ls_unlock();
 
             if (use_mutex == YES)
@@ -235,7 +238,10 @@ int store_address_in(void* des_ptr, void* heap_mem, pid_t tid, int flag)
       {
         while (exists_at->tid != 0 && exists_at->addr == heap_mem)
         {
-          log_this("a thread is going to sleep", 1100);
+          char buff[512];
+          sprintf(buff, "tid %d is going to sleep, exists_at-tid %d", tid, exists_at->tid);
+          log_this(buff, 1100);
+
           aby_ls_unlock();
           if (use_mutex == YES)
           {
@@ -359,13 +365,15 @@ int thread_says_bye (pid_t tid)
               hd->tid  = 0;
               hd->addr = 0;
               hd->next = NULL;
-              pthread_cond_signal(&condition[addr % HTABSIZE]);
+              if (use_mutex == YES)
+                pthread_cond_signal(&condition[addr % HTABSIZE]);
             }
             else
             {
               hd_prev->next = hd->next;
               free(hd);
-              pthread_cond_signal(&condition[addr % HTABSIZE]);
+              if (use_mutex == YES)
+                pthread_cond_signal(&condition[addr % HTABSIZE]);
             }
           }
         }
@@ -378,20 +386,22 @@ int thread_says_bye (pid_t tid)
             hd->tid  = 0;
             hd->addr = 0;
             hd->next = NULL;
-            pthread_cond_signal(&condition[addr % HTABSIZE]);
+            if (use_mutex == YES)
+              pthread_cond_signal(&condition[addr % HTABSIZE]);
           }
           else
           {
             hd_prev->next = hd->next;
             free(hd);
-            pthread_cond_signal(&condition[addr % HTABSIZE]);
+            if (use_mutex == YES)
+              pthread_cond_signal(&condition[addr % HTABSIZE]);
           }
         }
       }
   }
   aby_ls_unlock();
 
-  if (rubbish_count == 20)
+  if (rubbish_count >= 20)
   {
     thread_says_bye(1);
     rubbish_count = 0;

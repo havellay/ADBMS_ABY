@@ -260,7 +260,7 @@ int ha_aby::write_row(uchar * buf)
 
 int ha_aby::update_row(const uchar * old_data, uchar * new_data)
 {
-  static int force_parallelism = 0;
+  static int force_parallelism = 1;
                                     /* now, force_parallelism = 1 will cause
                                      * the operations on our table to look thread
                                      * unsafe.
@@ -269,7 +269,8 @@ int ha_aby::update_row(const uchar * old_data, uchar * new_data)
                                      * in lock_store should take care of maintaining
                                      * correct parallelism. But that doesn't happen.
                                      * When force_parallelism is 1, the output looks
-                                     * thread unsafe. When it is 0, output looks okay.
+                                     * thread unsafe. When it is 0, output looks
+                                     * okay.
                                      * This is probably some bug in lock_store
                                      * that will become visible for high parallelism.
                                      */
