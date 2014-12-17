@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # Utility rule file for test-unit.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
 include unittest/CMakeFiles/test-unit.dir/progress.make
 
 unittest/CMakeFiles/test-unit:
-	perl /home/adbms/mysqlsrc/mysql-5.6.21/unittest/unit.pl run .
+	perl /home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/unit.pl run .
 
 test-unit: unittest/CMakeFiles/test-unit
 test-unit: unittest/CMakeFiles/test-unit.dir/build.make
@@ -57,10 +57,10 @@ unittest/CMakeFiles/test-unit.dir/build: test-unit
 .PHONY : unittest/CMakeFiles/test-unit.dir/build
 
 unittest/CMakeFiles/test-unit.dir/clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/unittest && $(CMAKE_COMMAND) -P CMakeFiles/test-unit.dir/cmake_clean.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest && $(CMAKE_COMMAND) -P CMakeFiles/test-unit.dir/cmake_clean.cmake
 .PHONY : unittest/CMakeFiles/test-unit.dir/clean
 
 unittest/CMakeFiles/test-unit.dir/depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/unittest /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/unittest /home/adbms/mysqlsrc/mysql-5.6.21/unittest/CMakeFiles/test-unit.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest /home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/CMakeFiles/test-unit.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : unittest/CMakeFiles/test-unit.dir/depend
 

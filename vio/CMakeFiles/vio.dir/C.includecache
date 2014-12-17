@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/vio/vio.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vio.c
 vio_priv.h
-/home/adbms/mysqlsrc/mysql-5.6.21/vio/vio_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vio_priv.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/vio/vio_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vio_priv.h
 my_global.h
 -
 mysql_com.h
@@ -22,29 +22,29 @@ m_string.h
 violite.h
 -
 my_net.h
-/home/adbms/mysqlsrc/mysql-5.6.21/vio/my_net.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/my_net.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/vio/viopipe.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viopipe.c
 vio_priv.h
-/home/adbms/mysqlsrc/mysql-5.6.21/vio/vio_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vio_priv.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/vio/vioshm.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vioshm.c
 vio_priv.h
-/home/adbms/mysqlsrc/mysql-5.6.21/vio/vio_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vio_priv.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/vio/viosocket.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viosocket.c
 vio_priv.h
-/home/adbms/mysqlsrc/mysql-5.6.21/vio/vio_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vio_priv.h
 sys/filio.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/vio/viossl.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viossl.c
 vio_priv.h
-/home/adbms/mysqlsrc/mysql-5.6.21/vio/vio_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vio_priv.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/vio/viosslfactories.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viosslfactories.c
 vio_priv.h
-/home/adbms/mysqlsrc/mysql-5.6.21/vio/vio_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vio_priv.h
 
 extra/yassl/include/openssl/err.h
 

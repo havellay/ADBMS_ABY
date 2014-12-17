@@ -2,6 +2,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/mysqlimport.dir/mysqlimport.c.o"
   "mysqlimport.pdb"
   "mysqlimport"
+  "mysqlimport.pdb"
+  "CMakeFiles/CMakeRelink.dir/mysqlimport"
 )
 
 # Per-language clean rules from dependency scanning.

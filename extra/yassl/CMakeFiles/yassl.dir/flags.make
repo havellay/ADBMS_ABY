@@ -3,11 +3,11 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_FLAGS =  -fPIC -Wall -g -fabi-version=2 -fno-omit-frame-pointer -fno-strict-aliasing -DENABLED_DEBUG_SYNC -DSAFE_MUTEX -I/home/adbms/mysqlsrc/mysql-5.6.21/include -I/home/adbms/mysqlsrc/mysql-5.6.21/extra/yassl/include -I/home/adbms/mysqlsrc/mysql-5.6.21/extra/yassl/taocrypt/include -I/home/adbms/mysqlsrc/mysql-5.6.21/extra/yassl/taocrypt/mySTL    -DHAVE_YASSL -DYASSL_PREFIX -DHAVE_OPENSSL -DMULTI_THREADED  -fvisibility=hidden
+C_FLAGS =  -fPIC -Wall -g -fabi-version=2 -fno-omit-frame-pointer -fno-strict-aliasing -DENABLED_DEBUG_SYNC -DSAFE_MUTEX -I/home/hari/ADBMS_PROJECT/ADBMS_ABY/include -I/home/hari/ADBMS_PROJECT/ADBMS_ABY/extra/yassl/include -I/home/hari/ADBMS_PROJECT/ADBMS_ABY/extra/yassl/taocrypt/include -I/home/hari/ADBMS_PROJECT/ADBMS_ABY/extra/yassl/taocrypt/mySTL    -DHAVE_YASSL -DYASSL_PREFIX -DHAVE_OPENSSL -DMULTI_THREADED  -fvisibility=hidden
 
 C_DEFINES = -DHAVE_CONFIG_H -Dget_tty_password=yassl_mysql_get_tty_password -Dget_tty_password_ext=yassl_mysql_get_tty_password_ext
 
-CXX_FLAGS =  -fPIC -Wall -Wno-unused-parameter -g -fabi-version=2 -fno-omit-frame-pointer -fno-strict-aliasing -DENABLED_DEBUG_SYNC -DSAFE_MUTEX -I/home/adbms/mysqlsrc/mysql-5.6.21/include -I/home/adbms/mysqlsrc/mysql-5.6.21/extra/yassl/include -I/home/adbms/mysqlsrc/mysql-5.6.21/extra/yassl/taocrypt/include -I/home/adbms/mysqlsrc/mysql-5.6.21/extra/yassl/taocrypt/mySTL    -DHAVE_YASSL -DYASSL_PREFIX -DHAVE_OPENSSL -DMULTI_THREADED  -fvisibility=hidden
+CXX_FLAGS =  -fPIC -Wall -Wno-unused-parameter -g -fabi-version=2 -fno-omit-frame-pointer -fno-strict-aliasing -DENABLED_DEBUG_SYNC -DSAFE_MUTEX -I/home/hari/ADBMS_PROJECT/ADBMS_ABY/include -I/home/hari/ADBMS_PROJECT/ADBMS_ABY/extra/yassl/include -I/home/hari/ADBMS_PROJECT/ADBMS_ABY/extra/yassl/taocrypt/include -I/home/hari/ADBMS_PROJECT/ADBMS_ABY/extra/yassl/taocrypt/mySTL    -DHAVE_YASSL -DYASSL_PREFIX -DHAVE_OPENSSL -DMULTI_THREADED  -fvisibility=hidden
 
 CXX_DEFINES = -DHAVE_CONFIG_H -Dget_tty_password=yassl_mysql_get_tty_password -Dget_tty_password_ext=yassl_mysql_get_tty_password_ext
 

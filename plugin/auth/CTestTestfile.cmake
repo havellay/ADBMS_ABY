@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/adbms/mysqlsrc/mysql-5.6.21/plugin/auth
-# Build directory: /home/adbms/mysqlsrc/mysql-5.6.21/plugin/auth
+# Source directory: /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/auth
+# Build directory: /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/auth
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/ha_myisam.cc
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/ha_myisam.cc
 sql_priv.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/sql_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/sql_priv.h
 probes_mysql.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/probes_mysql.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/probes_mysql.h
 key.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/key.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/key.h
 sql_plugin.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/sql_plugin.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/sql_plugin.h
 m_ctype.h
 -
 my_bit.h
@@ -22,35 +22,35 @@ my_bit.h
 myisampack.h
 -
 ha_myisam.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/ha_myisam.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/ha_myisam.h
 stdarg.h
 -
 myisamdef.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisamdef.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisamdef.h
 rt_index.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/rt_index.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/rt_index.h
 sql_table.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/sql_table.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/sql_table.h
 sql_class.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/sql_class.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/sql_class.h
 algorithm
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/ha_myisam.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/ha_myisam.h
 myisam.h
 -
 ft_global.h
 -
 handler.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/handler.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/handler.h
 table.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/table.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/table.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisamdef.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisamdef.h
 myisam.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisam.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisam.h
 myisampack.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisampack.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisampack.h
 my_tree.h
 -
 my_pthread.h
@@ -60,7 +60,7 @@ thr_lock.h
 mysql/psi/mysql_file.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/rt_index.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/rt_index.h
 
 extra/yassl/include/openssl/err.h
 
@@ -1031,8 +1031,6 @@ table.h
 sql/table.h
 
 sql/sql_udf.h
-
-sql/sql_yacc.h
 
 sql/structs.h
 sql_plugin.h

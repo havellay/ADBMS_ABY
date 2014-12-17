@@ -164,6 +164,7 @@ storage/archive/CMakeFiles/archive.dir/ha_archive.cc.o: sql/sql_string.h
 storage/archive/CMakeFiles/archive.dir/ha_archive.cc.o: sql/sql_table.h
 storage/archive/CMakeFiles/archive.dir/ha_archive.cc.o: sql/sql_trigger.h
 storage/archive/CMakeFiles/archive.dir/ha_archive.cc.o: sql/sql_udf.h
+storage/archive/CMakeFiles/archive.dir/ha_archive.cc.o: sql/sql_yacc.h
 storage/archive/CMakeFiles/archive.dir/ha_archive.cc.o: sql/structs.h
 storage/archive/CMakeFiles/archive.dir/ha_archive.cc.o: sql/table.h
 storage/archive/CMakeFiles/archive.dir/ha_archive.cc.o: sql/table_id.h

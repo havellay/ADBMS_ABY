@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/mi_extrafunc.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/mi_extrafunc.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisamdef.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisamdef.h
 myisam.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisam.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisam.h
 myisampack.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisampack.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisampack.h
 my_tree.h
 -
 my_pthread.h
@@ -22,23 +22,23 @@ thr_lock.h
 mysql/psi/mysql_file.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisampack.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisampack.c
 myisamdef.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisamdef.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisamdef.h
 my_default.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/my_default.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/my_default.h
 queues.h
 -
 my_tree.h
 -
 mysys_err.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/mysys_err.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/mysys_err.h
 my_getopt.h
 -
 assert.h
 -
 mi_extrafunc.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/mi_extrafunc.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/mi_extrafunc.h
 
 include/big_endian.h
 

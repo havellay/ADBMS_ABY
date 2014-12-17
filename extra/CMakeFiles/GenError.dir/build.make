@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # Utility rule file for GenError.
 
@@ -51,9 +51,9 @@ extra/CMakeFiles/GenError: sql/share/errmsg-utf8.txt
 
 include/mysqld_error.h: sql/share/errmsg-utf8.txt
 include/mysqld_error.h: extra/comp_err.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../include/mysqld_error.h, ../sql/share/english/errmsg.sys"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/extra && ./comp_err --charset=/home/adbms/mysqlsrc/mysql-5.6.21/sql/share/charsets --out-dir=/home/adbms/mysqlsrc/mysql-5.6.21/sql/share/ --header_file=/home/adbms/mysqlsrc/mysql-5.6.21/include/mysqld_error.h --name_file=/home/adbms/mysqlsrc/mysql-5.6.21/include/mysqld_ername.h --state_file=/home/adbms/mysqlsrc/mysql-5.6.21/include/sql_state.h --in_file=/home/adbms/mysqlsrc/mysql-5.6.21/sql/share/errmsg-utf8.txt
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/extra && ./comp_err --charset=/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/share/charsets --out-dir=/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/share/ --header_file=/home/hari/ADBMS_PROJECT/ADBMS_ABY/include/mysqld_error.h --name_file=/home/hari/ADBMS_PROJECT/ADBMS_ABY/include/mysqld_ername.h --state_file=/home/hari/ADBMS_PROJECT/ADBMS_ABY/include/sql_state.h --in_file=/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/share/errmsg-utf8.txt
 
 sql/share/english/errmsg.sys: include/mysqld_error.h
 
@@ -68,10 +68,10 @@ extra/CMakeFiles/GenError.dir/build: GenError
 .PHONY : extra/CMakeFiles/GenError.dir/build
 
 extra/CMakeFiles/GenError.dir/clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/extra && $(CMAKE_COMMAND) -P CMakeFiles/GenError.dir/cmake_clean.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/extra && $(CMAKE_COMMAND) -P CMakeFiles/GenError.dir/cmake_clean.cmake
 .PHONY : extra/CMakeFiles/GenError.dir/clean
 
 extra/CMakeFiles/GenError.dir/depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/extra /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/extra /home/adbms/mysqlsrc/mysql-5.6.21/extra/CMakeFiles/GenError.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/extra /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/extra /home/hari/ADBMS_PROJECT/ADBMS_ABY/extra/CMakeFiles/GenError.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : extra/CMakeFiles/GenError.dir/depend
 

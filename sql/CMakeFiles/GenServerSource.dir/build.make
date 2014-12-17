@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # Utility rule file for GenServerSource.
 
@@ -51,16 +51,16 @@ sql/CMakeFiles/GenServerSource: sql/sql_builtin.cc
 sql/CMakeFiles/GenServerSource: sql/lex_hash.h
 
 sql/sql_yacc.cc: sql/sql_yacc.yy
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating sql_yacc.cc, sql_yacc.h"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/sql && /usr/bin/bison -y -p MYSQL --output=/home/adbms/mysqlsrc/mysql-5.6.21/sql/sql_yacc.cc --defines=/home/adbms/mysqlsrc/mysql-5.6.21/sql/sql_yacc.h /home/adbms/mysqlsrc/mysql-5.6.21/sql/sql_yacc.yy
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql && /usr/bin/bison -y -p MYSQL --output=/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/sql_yacc.cc --defines=/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/sql_yacc.h /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/sql_yacc.yy
 
 sql/sql_yacc.h: sql/sql_yacc.cc
 
 sql/lex_hash.h: sql/gen_lex_hash
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating lex_hash.h"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/sql && ./gen_lex_hash > lex_hash.h
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql && ./gen_lex_hash > lex_hash.h
 
 GenServerSource: sql/CMakeFiles/GenServerSource
 GenServerSource: sql/sql_yacc.cc
@@ -74,10 +74,10 @@ sql/CMakeFiles/GenServerSource.dir/build: GenServerSource
 .PHONY : sql/CMakeFiles/GenServerSource.dir/build
 
 sql/CMakeFiles/GenServerSource.dir/clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/sql && $(CMAKE_COMMAND) -P CMakeFiles/GenServerSource.dir/cmake_clean.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql && $(CMAKE_COMMAND) -P CMakeFiles/GenServerSource.dir/cmake_clean.cmake
 .PHONY : sql/CMakeFiles/GenServerSource.dir/clean
 
 sql/CMakeFiles/GenServerSource.dir/depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/sql /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/sql /home/adbms/mysqlsrc/mysql-5.6.21/sql/CMakeFiles/GenServerSource.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/CMakeFiles/GenServerSource.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : sql/CMakeFiles/GenServerSource.dir/depend
 

@@ -2,6 +2,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/mysqlslap.dir/mysqlslap.c.o"
   "mysqlslap.pdb"
   "mysqlslap"
+  "mysqlslap.pdb"
+  "CMakeFiles/CMakeRelink.dir/mysqlslap"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -6,191 +6,191 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/bchange.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/bchange.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/bmove_upp.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/bmove_upp.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-big5.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-big5.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-bin.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-bin.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-cp932.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-cp932.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-czech.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-czech.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-euc_kr.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-euc_kr.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-eucjpms.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-eucjpms.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-extra.c
-my_global.h
--
-m_ctype.h
--
-
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-gb2312.c
-my_global.h
--
-m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
-m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
-
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-gbk.c
-my_global.h
--
-m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
-m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
-
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-latin1.c
-my_global.h
--
-m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
-m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
-
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-mb.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-extra.c
 my_global.h
 -
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
-m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+-
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-simple.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-gb2312.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-gbk.c
+my_global.h
+-
+m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
+m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-latin1.c
+my_global.h
+-
+m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
+m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-mb.c
+my_global.h
+-
+m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
+m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-simple.c
+my_global.h
+-
+m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
+m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 my_sys.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/my_sys.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_sys.h
 errno.h
 -
 stdarg.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/stdarg.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/stdarg.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-sjis.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-sjis.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-tis620.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-tis620.c
 my_global.h
 -
 my_sys.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 t_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/t_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/t_ctype.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-uca.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-uca.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-ucs2.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-ucs2.c
 my_global.h
 -
 my_sys.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 errno.h
 -
 stdarg.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-ujis.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-ujis.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-utf8.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-utf8.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 errno.h
 -
 my_uctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/my_uctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_uctype.h
 stdio.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-win1250ch.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-win1250ch.c
 my_global.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/my_global.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_global.h
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype.c
 my_global.h
 -
 m_ctype.h
@@ -200,7 +200,7 @@ my_xml.h
 m_string.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/decimal.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/decimal.c
 my_global.h
 -
 m_ctype.h
@@ -214,7 +214,7 @@ m_string.h
 decimal.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/dtoa.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/dtoa.c
 my_base.h
 -
 my_global.h
@@ -222,39 +222,39 @@ my_global.h
 m_string.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/int2str.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/int2str.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/is_prefix.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/is_prefix.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/llstr.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/llstr.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/longlong2str.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/longlong2str.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/my_strchr.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_strchr.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/my_strtoll10.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_strtoll10.c
 my_global.h
 -
 my_sys.h
@@ -262,7 +262,7 @@ my_sys.h
 m_string.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/my_vsnprintf.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_vsnprintf.c
 my_global.h
 -
 m_string.h
@@ -272,97 +272,97 @@ stdarg.h
 m_ctype.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/str2int.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/str2int.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_ctype.h
 my_sys.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/my_sys.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_sys.h
 errno.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/str_alloc.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/str_alloc.c
 my_global.h
 -
 m_string.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/strappend.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strappend.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/strcend.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strcend.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/strcont.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strcont.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/strend.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strend.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/strfill.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strfill.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/strmake.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strmake.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/strmov.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strmov.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/strnmov.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strnmov.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/strxmov.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strxmov.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 stdarg.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/strxnmov.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strxnmov.c
 my_global.h
 -
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 stdarg.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/t_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/t_ctype.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/xml.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/xml.c
 my_global.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/my_global.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_global.h
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/m_string.h
 my_xml.h
-/home/adbms/mysqlsrc/mysql-5.6.21/strings/my_xml.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_xml.h
 
 include/big_endian.h
 

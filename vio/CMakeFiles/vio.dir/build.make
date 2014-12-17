@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # Include any dependencies generated for this target.
 include vio/CMakeFiles/vio.dir/depend.make
@@ -51,17 +51,17 @@ include vio/CMakeFiles/vio.dir/flags.make
 
 vio/CMakeFiles/vio.dir/vio.c.o: vio/CMakeFiles/vio.dir/flags.make
 vio/CMakeFiles/vio.dir/vio.c.o: vio/vio.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object vio/CMakeFiles/vio.dir/vio.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/vio.dir/vio.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/vio/vio.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/vio.dir/vio.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vio.c
 
 vio/CMakeFiles/vio.dir/vio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vio.dir/vio.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/vio/vio.c > CMakeFiles/vio.dir/vio.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vio.c > CMakeFiles/vio.dir/vio.c.i
 
 vio/CMakeFiles/vio.dir/vio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vio.dir/vio.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/vio/vio.c -o CMakeFiles/vio.dir/vio.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vio.c -o CMakeFiles/vio.dir/vio.c.s
 
 vio/CMakeFiles/vio.dir/vio.c.o.requires:
 .PHONY : vio/CMakeFiles/vio.dir/vio.c.o.requires
@@ -74,17 +74,17 @@ vio/CMakeFiles/vio.dir/vio.c.o.provides.build: vio/CMakeFiles/vio.dir/vio.c.o
 
 vio/CMakeFiles/vio.dir/viosocket.c.o: vio/CMakeFiles/vio.dir/flags.make
 vio/CMakeFiles/vio.dir/viosocket.c.o: vio/viosocket.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object vio/CMakeFiles/vio.dir/viosocket.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/vio.dir/viosocket.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/vio/viosocket.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/vio.dir/viosocket.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viosocket.c
 
 vio/CMakeFiles/vio.dir/viosocket.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vio.dir/viosocket.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/vio/viosocket.c > CMakeFiles/vio.dir/viosocket.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viosocket.c > CMakeFiles/vio.dir/viosocket.c.i
 
 vio/CMakeFiles/vio.dir/viosocket.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vio.dir/viosocket.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/vio/viosocket.c -o CMakeFiles/vio.dir/viosocket.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viosocket.c -o CMakeFiles/vio.dir/viosocket.c.s
 
 vio/CMakeFiles/vio.dir/viosocket.c.o.requires:
 .PHONY : vio/CMakeFiles/vio.dir/viosocket.c.o.requires
@@ -97,17 +97,17 @@ vio/CMakeFiles/vio.dir/viosocket.c.o.provides.build: vio/CMakeFiles/vio.dir/vios
 
 vio/CMakeFiles/vio.dir/viossl.c.o: vio/CMakeFiles/vio.dir/flags.make
 vio/CMakeFiles/vio.dir/viossl.c.o: vio/viossl.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object vio/CMakeFiles/vio.dir/viossl.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/vio.dir/viossl.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/vio/viossl.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/vio.dir/viossl.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viossl.c
 
 vio/CMakeFiles/vio.dir/viossl.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vio.dir/viossl.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/vio/viossl.c > CMakeFiles/vio.dir/viossl.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viossl.c > CMakeFiles/vio.dir/viossl.c.i
 
 vio/CMakeFiles/vio.dir/viossl.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vio.dir/viossl.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/vio/viossl.c -o CMakeFiles/vio.dir/viossl.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viossl.c -o CMakeFiles/vio.dir/viossl.c.s
 
 vio/CMakeFiles/vio.dir/viossl.c.o.requires:
 .PHONY : vio/CMakeFiles/vio.dir/viossl.c.o.requires
@@ -120,17 +120,17 @@ vio/CMakeFiles/vio.dir/viossl.c.o.provides.build: vio/CMakeFiles/vio.dir/viossl.
 
 vio/CMakeFiles/vio.dir/viopipe.c.o: vio/CMakeFiles/vio.dir/flags.make
 vio/CMakeFiles/vio.dir/viopipe.c.o: vio/viopipe.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object vio/CMakeFiles/vio.dir/viopipe.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/vio.dir/viopipe.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/vio/viopipe.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/vio.dir/viopipe.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viopipe.c
 
 vio/CMakeFiles/vio.dir/viopipe.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vio.dir/viopipe.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/vio/viopipe.c > CMakeFiles/vio.dir/viopipe.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viopipe.c > CMakeFiles/vio.dir/viopipe.c.i
 
 vio/CMakeFiles/vio.dir/viopipe.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vio.dir/viopipe.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/vio/viopipe.c -o CMakeFiles/vio.dir/viopipe.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viopipe.c -o CMakeFiles/vio.dir/viopipe.c.s
 
 vio/CMakeFiles/vio.dir/viopipe.c.o.requires:
 .PHONY : vio/CMakeFiles/vio.dir/viopipe.c.o.requires
@@ -143,17 +143,17 @@ vio/CMakeFiles/vio.dir/viopipe.c.o.provides.build: vio/CMakeFiles/vio.dir/viopip
 
 vio/CMakeFiles/vio.dir/vioshm.c.o: vio/CMakeFiles/vio.dir/flags.make
 vio/CMakeFiles/vio.dir/vioshm.c.o: vio/vioshm.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object vio/CMakeFiles/vio.dir/vioshm.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/vio.dir/vioshm.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/vio/vioshm.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/vio.dir/vioshm.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vioshm.c
 
 vio/CMakeFiles/vio.dir/vioshm.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vio.dir/vioshm.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/vio/vioshm.c > CMakeFiles/vio.dir/vioshm.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vioshm.c > CMakeFiles/vio.dir/vioshm.c.i
 
 vio/CMakeFiles/vio.dir/vioshm.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vio.dir/vioshm.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/vio/vioshm.c -o CMakeFiles/vio.dir/vioshm.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/vioshm.c -o CMakeFiles/vio.dir/vioshm.c.s
 
 vio/CMakeFiles/vio.dir/vioshm.c.o.requires:
 .PHONY : vio/CMakeFiles/vio.dir/vioshm.c.o.requires
@@ -166,17 +166,17 @@ vio/CMakeFiles/vio.dir/vioshm.c.o.provides.build: vio/CMakeFiles/vio.dir/vioshm.
 
 vio/CMakeFiles/vio.dir/viosslfactories.c.o: vio/CMakeFiles/vio.dir/flags.make
 vio/CMakeFiles/vio.dir/viosslfactories.c.o: vio/viosslfactories.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object vio/CMakeFiles/vio.dir/viosslfactories.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/vio.dir/viosslfactories.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/vio/viosslfactories.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/vio.dir/viosslfactories.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viosslfactories.c
 
 vio/CMakeFiles/vio.dir/viosslfactories.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vio.dir/viosslfactories.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/vio/viosslfactories.c > CMakeFiles/vio.dir/viosslfactories.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viosslfactories.c > CMakeFiles/vio.dir/viosslfactories.c.i
 
 vio/CMakeFiles/vio.dir/viosslfactories.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vio.dir/viosslfactories.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/vio/viosslfactories.c -o CMakeFiles/vio.dir/viosslfactories.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/viosslfactories.c -o CMakeFiles/vio.dir/viosslfactories.c.s
 
 vio/CMakeFiles/vio.dir/viosslfactories.c.o.requires:
 .PHONY : vio/CMakeFiles/vio.dir/viosslfactories.c.o.requires
@@ -208,8 +208,8 @@ vio/libvio.a: vio/CMakeFiles/vio.dir/viosslfactories.c.o
 vio/libvio.a: vio/CMakeFiles/vio.dir/build.make
 vio/libvio.a: vio/CMakeFiles/vio.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C static library libvio.a"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && $(CMAKE_COMMAND) -P CMakeFiles/vio.dir/cmake_clean_target.cmake
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vio.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && $(CMAKE_COMMAND) -P CMakeFiles/vio.dir/cmake_clean_target.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vio.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 vio/CMakeFiles/vio.dir/build: vio/libvio.a
@@ -224,10 +224,10 @@ vio/CMakeFiles/vio.dir/requires: vio/CMakeFiles/vio.dir/viosslfactories.c.o.requ
 .PHONY : vio/CMakeFiles/vio.dir/requires
 
 vio/CMakeFiles/vio.dir/clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/vio && $(CMAKE_COMMAND) -P CMakeFiles/vio.dir/cmake_clean.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio && $(CMAKE_COMMAND) -P CMakeFiles/vio.dir/cmake_clean.cmake
 .PHONY : vio/CMakeFiles/vio.dir/clean
 
 vio/CMakeFiles/vio.dir/depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/vio /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/vio /home/adbms/mysqlsrc/mysql-5.6.21/vio/CMakeFiles/vio.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio /home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/CMakeFiles/vio.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : vio/CMakeFiles/vio.dir/depend
 

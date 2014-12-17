@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,16 +79,6 @@ install/local: preinstall
 install/local/fast: install/local
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Client\" \"DataFiles\" \"DebugBinaries\" \"Development\" \"Documentation\" \"Embedded\" \"Info\" \"IniFiles\" \"ManPages\" \"Readme\" \"Server\" \"Server_Scripts\" \"SharedLibraries\" \"SqlBench\" \"SupportFiles\" \"Test\" \"Unspecified\""
@@ -101,7 +91,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -111,7 +101,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/adbms/mysqlsrc/mysql-5.6.21/CPackSourceConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/hari/ADBMS_PROJECT/ADBMS_ABY/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -140,14 +130,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles /home/adbms/mysqlsrc/mysql-5.6.21/storage/perfschema/unittest/CMakeFiles/progress.marks
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles /home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/perfschema/unittest/CMakeFiles/progress.marks
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/clean
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/clean
 .PHONY : clean
 
 # The main clean target
@@ -156,22 +146,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 storage/perfschema/unittest/CMakeFiles/pfs-t.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs-t.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs-t.dir/rule
 .PHONY : storage/perfschema/unittest/CMakeFiles/pfs-t.dir/rule
 
 # Convenience name for target.
@@ -180,12 +170,12 @@ pfs-t: storage/perfschema/unittest/CMakeFiles/pfs-t.dir/rule
 
 # fast build rule for target.
 pfs-t/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs-t.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs-t.dir/build
 .PHONY : pfs-t/fast
 
 # Convenience name for target.
 storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/rule
 .PHONY : storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/rule
 
 # Convenience name for target.
@@ -194,12 +184,12 @@ pfs_account-oom-t: storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/
 
 # fast build rule for target.
 pfs_account-oom-t/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/build
 .PHONY : pfs_account-oom-t/fast
 
 # Convenience name for target.
 storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/rule
 .PHONY : storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/rule
 
 # Convenience name for target.
@@ -208,12 +198,12 @@ pfs_connect_attr-t: storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.di
 
 # fast build rule for target.
 pfs_connect_attr-t/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build
 .PHONY : pfs_connect_attr-t/fast
 
 # Convenience name for target.
 storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/rule
 .PHONY : storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/rule
 
 # Convenience name for target.
@@ -222,12 +212,12 @@ pfs_host-oom-t: storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/rule
 
 # fast build rule for target.
 pfs_host-oom-t/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/build
 .PHONY : pfs_host-oom-t/fast
 
 # Convenience name for target.
 storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/rule
 .PHONY : storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/rule
 
 # Convenience name for target.
@@ -236,12 +226,12 @@ pfs_instr-oom-t: storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/rule
 
 # fast build rule for target.
 pfs_instr-oom-t/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/build
 .PHONY : pfs_instr-oom-t/fast
 
 # Convenience name for target.
 storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/rule
 .PHONY : storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/rule
 
 # Convenience name for target.
@@ -250,12 +240,12 @@ pfs_instr-t: storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/rule
 
 # fast build rule for target.
 pfs_instr-t/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/build
 .PHONY : pfs_instr-t/fast
 
 # Convenience name for target.
 storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/rule
 .PHONY : storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/rule
 
 # Convenience name for target.
@@ -264,12 +254,12 @@ pfs_instr_class-oom-t: storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oo
 
 # fast build rule for target.
 pfs_instr_class-oom-t/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/build
 .PHONY : pfs_instr_class-oom-t/fast
 
 # Convenience name for target.
 storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/rule
 .PHONY : storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/rule
 
 # Convenience name for target.
@@ -278,12 +268,12 @@ pfs_instr_class-t: storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/
 
 # fast build rule for target.
 pfs_instr_class-t/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/build
 .PHONY : pfs_instr_class-t/fast
 
 # Convenience name for target.
 storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/rule
 .PHONY : storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/rule
 
 # Convenience name for target.
@@ -292,7 +282,7 @@ pfs_user-oom-t: storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/rule
 
 # fast build rule for target.
 pfs_user-oom-t/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/build
 .PHONY : pfs_user-oom-t/fast
 
 __/__/__/mysys/string.o: __/__/__/mysys/string.c.o
@@ -300,7 +290,7 @@ __/__/__/mysys/string.o: __/__/__/mysys/string.c.o
 
 # target to build an object file
 __/__/__/mysys/string.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/__/__/__/mysys/string.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/__/__/__/mysys/string.c.o
 .PHONY : __/__/__/mysys/string.c.o
 
 __/__/__/mysys/string.i: __/__/__/mysys/string.c.i
@@ -308,7 +298,7 @@ __/__/__/mysys/string.i: __/__/__/mysys/string.c.i
 
 # target to preprocess a source file
 __/__/__/mysys/string.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/__/__/__/mysys/string.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/__/__/__/mysys/string.c.i
 .PHONY : __/__/__/mysys/string.c.i
 
 __/__/__/mysys/string.s: __/__/__/mysys/string.c.s
@@ -316,7 +306,7 @@ __/__/__/mysys/string.s: __/__/__/mysys/string.c.s
 
 # target to generate assembly for a file
 __/__/__/mysys/string.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/__/__/__/mysys/string.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/__/__/__/mysys/string.c.s
 .PHONY : __/__/__/mysys/string.c.s
 
 __/__/__/sql/sql_builtin.o: __/__/__/sql/sql_builtin.cc.o
@@ -324,7 +314,7 @@ __/__/__/sql/sql_builtin.o: __/__/__/sql/sql_builtin.cc.o
 
 # target to build an object file
 __/__/__/sql/sql_builtin.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/__/__/__/sql/sql_builtin.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/__/__/__/sql/sql_builtin.cc.o
 .PHONY : __/__/__/sql/sql_builtin.cc.o
 
 __/__/__/sql/sql_builtin.i: __/__/__/sql/sql_builtin.cc.i
@@ -332,7 +322,7 @@ __/__/__/sql/sql_builtin.i: __/__/__/sql/sql_builtin.cc.i
 
 # target to preprocess a source file
 __/__/__/sql/sql_builtin.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/__/__/__/sql/sql_builtin.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/__/__/__/sql/sql_builtin.cc.i
 .PHONY : __/__/__/sql/sql_builtin.cc.i
 
 __/__/__/sql/sql_builtin.s: __/__/__/sql/sql_builtin.cc.s
@@ -340,7 +330,7 @@ __/__/__/sql/sql_builtin.s: __/__/__/sql/sql_builtin.cc.s
 
 # target to generate assembly for a file
 __/__/__/sql/sql_builtin.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/__/__/__/sql/sql_builtin.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/__/__/__/sql/sql_builtin.cc.s
 .PHONY : __/__/__/sql/sql_builtin.cc.s
 
 pfs-t.o: pfs-t.cc.o
@@ -348,7 +338,7 @@ pfs-t.o: pfs-t.cc.o
 
 # target to build an object file
 pfs-t.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs-t.dir/pfs-t.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs-t.dir/pfs-t.cc.o
 .PHONY : pfs-t.cc.o
 
 pfs-t.i: pfs-t.cc.i
@@ -356,7 +346,7 @@ pfs-t.i: pfs-t.cc.i
 
 # target to preprocess a source file
 pfs-t.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs-t.dir/pfs-t.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs-t.dir/pfs-t.cc.i
 .PHONY : pfs-t.cc.i
 
 pfs-t.s: pfs-t.cc.s
@@ -364,7 +354,7 @@ pfs-t.s: pfs-t.cc.s
 
 # target to generate assembly for a file
 pfs-t.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs-t.dir/pfs-t.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs-t.dir/pfs-t.cc.s
 .PHONY : pfs-t.cc.s
 
 pfs_account-oom-t.o: pfs_account-oom-t.cc.o
@@ -372,7 +362,7 @@ pfs_account-oom-t.o: pfs_account-oom-t.cc.o
 
 # target to build an object file
 pfs_account-oom-t.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/pfs_account-oom-t.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/pfs_account-oom-t.cc.o
 .PHONY : pfs_account-oom-t.cc.o
 
 pfs_account-oom-t.i: pfs_account-oom-t.cc.i
@@ -380,7 +370,7 @@ pfs_account-oom-t.i: pfs_account-oom-t.cc.i
 
 # target to preprocess a source file
 pfs_account-oom-t.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/pfs_account-oom-t.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/pfs_account-oom-t.cc.i
 .PHONY : pfs_account-oom-t.cc.i
 
 pfs_account-oom-t.s: pfs_account-oom-t.cc.s
@@ -388,7 +378,7 @@ pfs_account-oom-t.s: pfs_account-oom-t.cc.s
 
 # target to generate assembly for a file
 pfs_account-oom-t.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/pfs_account-oom-t.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_account-oom-t.dir/pfs_account-oom-t.cc.s
 .PHONY : pfs_account-oom-t.cc.s
 
 pfs_connect_attr-t.o: pfs_connect_attr-t.cc.o
@@ -396,7 +386,7 @@ pfs_connect_attr-t.o: pfs_connect_attr-t.cc.o
 
 # target to build an object file
 pfs_connect_attr-t.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/pfs_connect_attr-t.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/pfs_connect_attr-t.cc.o
 .PHONY : pfs_connect_attr-t.cc.o
 
 pfs_connect_attr-t.i: pfs_connect_attr-t.cc.i
@@ -404,7 +394,7 @@ pfs_connect_attr-t.i: pfs_connect_attr-t.cc.i
 
 # target to preprocess a source file
 pfs_connect_attr-t.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/pfs_connect_attr-t.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/pfs_connect_attr-t.cc.i
 .PHONY : pfs_connect_attr-t.cc.i
 
 pfs_connect_attr-t.s: pfs_connect_attr-t.cc.s
@@ -412,7 +402,7 @@ pfs_connect_attr-t.s: pfs_connect_attr-t.cc.s
 
 # target to generate assembly for a file
 pfs_connect_attr-t.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/pfs_connect_attr-t.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_connect_attr-t.dir/pfs_connect_attr-t.cc.s
 .PHONY : pfs_connect_attr-t.cc.s
 
 pfs_host-oom-t.o: pfs_host-oom-t.cc.o
@@ -420,7 +410,7 @@ pfs_host-oom-t.o: pfs_host-oom-t.cc.o
 
 # target to build an object file
 pfs_host-oom-t.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/pfs_host-oom-t.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/pfs_host-oom-t.cc.o
 .PHONY : pfs_host-oom-t.cc.o
 
 pfs_host-oom-t.i: pfs_host-oom-t.cc.i
@@ -428,7 +418,7 @@ pfs_host-oom-t.i: pfs_host-oom-t.cc.i
 
 # target to preprocess a source file
 pfs_host-oom-t.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/pfs_host-oom-t.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/pfs_host-oom-t.cc.i
 .PHONY : pfs_host-oom-t.cc.i
 
 pfs_host-oom-t.s: pfs_host-oom-t.cc.s
@@ -436,7 +426,7 @@ pfs_host-oom-t.s: pfs_host-oom-t.cc.s
 
 # target to generate assembly for a file
 pfs_host-oom-t.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/pfs_host-oom-t.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_host-oom-t.dir/pfs_host-oom-t.cc.s
 .PHONY : pfs_host-oom-t.cc.s
 
 pfs_instr-oom-t.o: pfs_instr-oom-t.cc.o
@@ -444,7 +434,7 @@ pfs_instr-oom-t.o: pfs_instr-oom-t.cc.o
 
 # target to build an object file
 pfs_instr-oom-t.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/pfs_instr-oom-t.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/pfs_instr-oom-t.cc.o
 .PHONY : pfs_instr-oom-t.cc.o
 
 pfs_instr-oom-t.i: pfs_instr-oom-t.cc.i
@@ -452,7 +442,7 @@ pfs_instr-oom-t.i: pfs_instr-oom-t.cc.i
 
 # target to preprocess a source file
 pfs_instr-oom-t.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/pfs_instr-oom-t.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/pfs_instr-oom-t.cc.i
 .PHONY : pfs_instr-oom-t.cc.i
 
 pfs_instr-oom-t.s: pfs_instr-oom-t.cc.s
@@ -460,7 +450,7 @@ pfs_instr-oom-t.s: pfs_instr-oom-t.cc.s
 
 # target to generate assembly for a file
 pfs_instr-oom-t.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/pfs_instr-oom-t.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-oom-t.dir/pfs_instr-oom-t.cc.s
 .PHONY : pfs_instr-oom-t.cc.s
 
 pfs_instr-t.o: pfs_instr-t.cc.o
@@ -468,7 +458,7 @@ pfs_instr-t.o: pfs_instr-t.cc.o
 
 # target to build an object file
 pfs_instr-t.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/pfs_instr-t.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/pfs_instr-t.cc.o
 .PHONY : pfs_instr-t.cc.o
 
 pfs_instr-t.i: pfs_instr-t.cc.i
@@ -476,7 +466,7 @@ pfs_instr-t.i: pfs_instr-t.cc.i
 
 # target to preprocess a source file
 pfs_instr-t.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/pfs_instr-t.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/pfs_instr-t.cc.i
 .PHONY : pfs_instr-t.cc.i
 
 pfs_instr-t.s: pfs_instr-t.cc.s
@@ -484,7 +474,7 @@ pfs_instr-t.s: pfs_instr-t.cc.s
 
 # target to generate assembly for a file
 pfs_instr-t.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/pfs_instr-t.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr-t.dir/pfs_instr-t.cc.s
 .PHONY : pfs_instr-t.cc.s
 
 pfs_instr_class-oom-t.o: pfs_instr_class-oom-t.cc.o
@@ -492,7 +482,7 @@ pfs_instr_class-oom-t.o: pfs_instr_class-oom-t.cc.o
 
 # target to build an object file
 pfs_instr_class-oom-t.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/pfs_instr_class-oom-t.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/pfs_instr_class-oom-t.cc.o
 .PHONY : pfs_instr_class-oom-t.cc.o
 
 pfs_instr_class-oom-t.i: pfs_instr_class-oom-t.cc.i
@@ -500,7 +490,7 @@ pfs_instr_class-oom-t.i: pfs_instr_class-oom-t.cc.i
 
 # target to preprocess a source file
 pfs_instr_class-oom-t.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/pfs_instr_class-oom-t.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/pfs_instr_class-oom-t.cc.i
 .PHONY : pfs_instr_class-oom-t.cc.i
 
 pfs_instr_class-oom-t.s: pfs_instr_class-oom-t.cc.s
@@ -508,7 +498,7 @@ pfs_instr_class-oom-t.s: pfs_instr_class-oom-t.cc.s
 
 # target to generate assembly for a file
 pfs_instr_class-oom-t.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/pfs_instr_class-oom-t.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-oom-t.dir/pfs_instr_class-oom-t.cc.s
 .PHONY : pfs_instr_class-oom-t.cc.s
 
 pfs_instr_class-t.o: pfs_instr_class-t.cc.o
@@ -516,7 +506,7 @@ pfs_instr_class-t.o: pfs_instr_class-t.cc.o
 
 # target to build an object file
 pfs_instr_class-t.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/pfs_instr_class-t.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/pfs_instr_class-t.cc.o
 .PHONY : pfs_instr_class-t.cc.o
 
 pfs_instr_class-t.i: pfs_instr_class-t.cc.i
@@ -524,7 +514,7 @@ pfs_instr_class-t.i: pfs_instr_class-t.cc.i
 
 # target to preprocess a source file
 pfs_instr_class-t.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/pfs_instr_class-t.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/pfs_instr_class-t.cc.i
 .PHONY : pfs_instr_class-t.cc.i
 
 pfs_instr_class-t.s: pfs_instr_class-t.cc.s
@@ -532,7 +522,7 @@ pfs_instr_class-t.s: pfs_instr_class-t.cc.s
 
 # target to generate assembly for a file
 pfs_instr_class-t.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/pfs_instr_class-t.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_instr_class-t.dir/pfs_instr_class-t.cc.s
 .PHONY : pfs_instr_class-t.cc.s
 
 pfs_user-oom-t.o: pfs_user-oom-t.cc.o
@@ -540,7 +530,7 @@ pfs_user-oom-t.o: pfs_user-oom-t.cc.o
 
 # target to build an object file
 pfs_user-oom-t.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/pfs_user-oom-t.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/pfs_user-oom-t.cc.o
 .PHONY : pfs_user-oom-t.cc.o
 
 pfs_user-oom-t.i: pfs_user-oom-t.cc.i
@@ -548,7 +538,7 @@ pfs_user-oom-t.i: pfs_user-oom-t.cc.i
 
 # target to preprocess a source file
 pfs_user-oom-t.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/pfs_user-oom-t.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/pfs_user-oom-t.cc.i
 .PHONY : pfs_user-oom-t.cc.i
 
 pfs_user-oom-t.s: pfs_user-oom-t.cc.s
@@ -556,7 +546,7 @@ pfs_user-oom-t.s: pfs_user-oom-t.cc.s
 
 # target to generate assembly for a file
 pfs_user-oom-t.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/pfs_user-oom-t.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/build.make storage/perfschema/unittest/CMakeFiles/pfs_user-oom-t.dir/pfs_user-oom-t.cc.s
 .PHONY : pfs_user-oom-t.cc.s
 
 # Help Target
@@ -568,7 +558,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... package"
 	@echo "... package_source"
@@ -627,6 +616,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

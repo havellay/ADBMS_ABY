@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,16 +79,6 @@ install/local: preinstall
 install/local/fast: install/local
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Client\" \"DataFiles\" \"DebugBinaries\" \"Development\" \"Documentation\" \"Embedded\" \"Info\" \"IniFiles\" \"ManPages\" \"Readme\" \"Server\" \"Server_Scripts\" \"SharedLibraries\" \"SqlBench\" \"SupportFiles\" \"Test\" \"Unspecified\""
@@ -101,7 +91,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -111,7 +101,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/adbms/mysqlsrc/mysql-5.6.21/CPackSourceConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/hari/ADBMS_PROJECT/ADBMS_ABY/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -140,14 +130,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles /home/adbms/mysqlsrc/mysql-5.6.21/libservices/CMakeFiles/progress.marks
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libservices/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles /home/hari/ADBMS_PROJECT/ADBMS_ABY/libservices/CMakeFiles/progress.marks
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libservices/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libservices/clean
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libservices/clean
 .PHONY : clean
 
 # The main clean target
@@ -156,22 +146,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libservices/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libservices/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libservices/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libservices/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 libservices/CMakeFiles/mysqlservices.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libservices/CMakeFiles/mysqlservices.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libservices/CMakeFiles/mysqlservices.dir/rule
 .PHONY : libservices/CMakeFiles/mysqlservices.dir/rule
 
 # Convenience name for target.
@@ -180,7 +170,7 @@ mysqlservices: libservices/CMakeFiles/mysqlservices.dir/rule
 
 # fast build rule for target.
 mysqlservices/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/build
 .PHONY : mysqlservices/fast
 
 my_plugin_log_service.o: my_plugin_log_service.c.o
@@ -188,7 +178,7 @@ my_plugin_log_service.o: my_plugin_log_service.c.o
 
 # target to build an object file
 my_plugin_log_service.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_plugin_log_service.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_plugin_log_service.c.o
 .PHONY : my_plugin_log_service.c.o
 
 my_plugin_log_service.i: my_plugin_log_service.c.i
@@ -196,7 +186,7 @@ my_plugin_log_service.i: my_plugin_log_service.c.i
 
 # target to preprocess a source file
 my_plugin_log_service.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_plugin_log_service.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_plugin_log_service.c.i
 .PHONY : my_plugin_log_service.c.i
 
 my_plugin_log_service.s: my_plugin_log_service.c.s
@@ -204,7 +194,7 @@ my_plugin_log_service.s: my_plugin_log_service.c.s
 
 # target to generate assembly for a file
 my_plugin_log_service.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_plugin_log_service.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_plugin_log_service.c.s
 .PHONY : my_plugin_log_service.c.s
 
 my_snprintf_service.o: my_snprintf_service.c.o
@@ -212,7 +202,7 @@ my_snprintf_service.o: my_snprintf_service.c.o
 
 # target to build an object file
 my_snprintf_service.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_snprintf_service.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_snprintf_service.c.o
 .PHONY : my_snprintf_service.c.o
 
 my_snprintf_service.i: my_snprintf_service.c.i
@@ -220,7 +210,7 @@ my_snprintf_service.i: my_snprintf_service.c.i
 
 # target to preprocess a source file
 my_snprintf_service.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_snprintf_service.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_snprintf_service.c.i
 .PHONY : my_snprintf_service.c.i
 
 my_snprintf_service.s: my_snprintf_service.c.s
@@ -228,7 +218,7 @@ my_snprintf_service.s: my_snprintf_service.c.s
 
 # target to generate assembly for a file
 my_snprintf_service.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_snprintf_service.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_snprintf_service.c.s
 .PHONY : my_snprintf_service.c.s
 
 my_thread_scheduler_service.o: my_thread_scheduler_service.c.o
@@ -236,7 +226,7 @@ my_thread_scheduler_service.o: my_thread_scheduler_service.c.o
 
 # target to build an object file
 my_thread_scheduler_service.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_thread_scheduler_service.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_thread_scheduler_service.c.o
 .PHONY : my_thread_scheduler_service.c.o
 
 my_thread_scheduler_service.i: my_thread_scheduler_service.c.i
@@ -244,7 +234,7 @@ my_thread_scheduler_service.i: my_thread_scheduler_service.c.i
 
 # target to preprocess a source file
 my_thread_scheduler_service.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_thread_scheduler_service.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_thread_scheduler_service.c.i
 .PHONY : my_thread_scheduler_service.c.i
 
 my_thread_scheduler_service.s: my_thread_scheduler_service.c.s
@@ -252,7 +242,7 @@ my_thread_scheduler_service.s: my_thread_scheduler_service.c.s
 
 # target to generate assembly for a file
 my_thread_scheduler_service.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_thread_scheduler_service.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/my_thread_scheduler_service.c.s
 .PHONY : my_thread_scheduler_service.c.s
 
 mysql_string_service.o: mysql_string_service.c.o
@@ -260,7 +250,7 @@ mysql_string_service.o: mysql_string_service.c.o
 
 # target to build an object file
 mysql_string_service.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/mysql_string_service.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/mysql_string_service.c.o
 .PHONY : mysql_string_service.c.o
 
 mysql_string_service.i: mysql_string_service.c.i
@@ -268,7 +258,7 @@ mysql_string_service.i: mysql_string_service.c.i
 
 # target to preprocess a source file
 mysql_string_service.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/mysql_string_service.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/mysql_string_service.c.i
 .PHONY : mysql_string_service.c.i
 
 mysql_string_service.s: mysql_string_service.c.s
@@ -276,7 +266,7 @@ mysql_string_service.s: mysql_string_service.c.s
 
 # target to generate assembly for a file
 mysql_string_service.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/mysql_string_service.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/mysql_string_service.c.s
 .PHONY : mysql_string_service.c.s
 
 thd_alloc_service.o: thd_alloc_service.c.o
@@ -284,7 +274,7 @@ thd_alloc_service.o: thd_alloc_service.c.o
 
 # target to build an object file
 thd_alloc_service.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/thd_alloc_service.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/thd_alloc_service.c.o
 .PHONY : thd_alloc_service.c.o
 
 thd_alloc_service.i: thd_alloc_service.c.i
@@ -292,7 +282,7 @@ thd_alloc_service.i: thd_alloc_service.c.i
 
 # target to preprocess a source file
 thd_alloc_service.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/thd_alloc_service.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/thd_alloc_service.c.i
 .PHONY : thd_alloc_service.c.i
 
 thd_alloc_service.s: thd_alloc_service.c.s
@@ -300,7 +290,7 @@ thd_alloc_service.s: thd_alloc_service.c.s
 
 # target to generate assembly for a file
 thd_alloc_service.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/thd_alloc_service.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/thd_alloc_service.c.s
 .PHONY : thd_alloc_service.c.s
 
 thd_wait_service.o: thd_wait_service.c.o
@@ -308,7 +298,7 @@ thd_wait_service.o: thd_wait_service.c.o
 
 # target to build an object file
 thd_wait_service.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/thd_wait_service.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/thd_wait_service.c.o
 .PHONY : thd_wait_service.c.o
 
 thd_wait_service.i: thd_wait_service.c.i
@@ -316,7 +306,7 @@ thd_wait_service.i: thd_wait_service.c.i
 
 # target to preprocess a source file
 thd_wait_service.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/thd_wait_service.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/thd_wait_service.c.i
 .PHONY : thd_wait_service.c.i
 
 thd_wait_service.s: thd_wait_service.c.s
@@ -324,7 +314,7 @@ thd_wait_service.s: thd_wait_service.c.s
 
 # target to generate assembly for a file
 thd_wait_service.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/thd_wait_service.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libservices/CMakeFiles/mysqlservices.dir/build.make libservices/CMakeFiles/mysqlservices.dir/thd_wait_service.c.s
 .PHONY : thd_wait_service.c.s
 
 # Help Target
@@ -336,7 +326,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... mysqlservices"
 	@echo "... package"
@@ -372,6 +361,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

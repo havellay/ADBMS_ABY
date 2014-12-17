@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,16 +79,6 @@ install/local: preinstall
 install/local/fast: install/local
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Client\" \"DataFiles\" \"DebugBinaries\" \"Development\" \"Documentation\" \"Embedded\" \"Info\" \"IniFiles\" \"ManPages\" \"Readme\" \"Server\" \"Server_Scripts\" \"SharedLibraries\" \"SqlBench\" \"SupportFiles\" \"Test\" \"Unspecified\""
@@ -111,7 +101,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/adbms/mysqlsrc/mysql-5.6.21/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/hari/ADBMS_PROJECT/ADBMS_ABY/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -140,9 +130,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -300,69 +290,154 @@ edit/fast:
 .PHONY : edit/fast
 
 #=============================================================================
-# Target rules for targets named archive
+# Target rules for targets named aby
 
 # Build rule for target.
-archive: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 archive
-.PHONY : archive
+aby: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 aby
+.PHONY : aby
 
 # fast build rule for target.
-archive/fast:
-	$(MAKE) -f storage/archive/CMakeFiles/archive.dir/build.make storage/archive/CMakeFiles/archive.dir/build
-.PHONY : archive/fast
+aby/fast:
+	$(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/build
+.PHONY : aby/fast
 
 #=============================================================================
-# Target rules for targets named blackhole
+# Target rules for targets named aby_embedded
 
 # Build rule for target.
-blackhole: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 blackhole
-.PHONY : blackhole
+aby_embedded: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 aby_embedded
+.PHONY : aby_embedded
 
 # fast build rule for target.
-blackhole/fast:
-	$(MAKE) -f storage/blackhole/CMakeFiles/blackhole.dir/build.make storage/blackhole/CMakeFiles/blackhole.dir/build
-.PHONY : blackhole/fast
+aby_embedded/fast:
+	$(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/build
+.PHONY : aby_embedded/fast
 
 #=============================================================================
-# Target rules for targets named csv
+# Target rules for targets named hpa_aby_test1
 
 # Build rule for target.
-csv: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 csv
-.PHONY : csv
+hpa_aby_test1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hpa_aby_test1
+.PHONY : hpa_aby_test1
 
 # fast build rule for target.
-csv/fast:
-	$(MAKE) -f storage/csv/CMakeFiles/csv.dir/build.make storage/csv/CMakeFiles/csv.dir/build
-.PHONY : csv/fast
+hpa_aby_test1/fast:
+	$(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test1.dir/build.make storage/aby/CMakeFiles/hpa_aby_test1.dir/build
+.PHONY : hpa_aby_test1/fast
 
 #=============================================================================
-# Target rules for targets named myisammrg
+# Target rules for targets named hpa_aby_test2
 
 # Build rule for target.
-myisammrg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 myisammrg
-.PHONY : myisammrg
+hpa_aby_test2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hpa_aby_test2
+.PHONY : hpa_aby_test2
 
 # fast build rule for target.
-myisammrg/fast:
-	$(MAKE) -f storage/myisammrg/CMakeFiles/myisammrg.dir/build.make storage/myisammrg/CMakeFiles/myisammrg.dir/build
-.PHONY : myisammrg/fast
+hpa_aby_test2/fast:
+	$(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test2.dir/build.make storage/aby/CMakeFiles/hpa_aby_test2.dir/build
+.PHONY : hpa_aby_test2/fast
 
 #=============================================================================
-# Target rules for targets named myisammrg_embedded
+# Target rules for targets named myisam
 
 # Build rule for target.
-myisammrg_embedded: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 myisammrg_embedded
-.PHONY : myisammrg_embedded
+myisam: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myisam
+.PHONY : myisam
 
 # fast build rule for target.
-myisammrg_embedded/fast:
-	$(MAKE) -f storage/myisammrg/CMakeFiles/myisammrg_embedded.dir/build.make storage/myisammrg/CMakeFiles/myisammrg_embedded.dir/build
-.PHONY : myisammrg_embedded/fast
+myisam/fast:
+	$(MAKE) -f storage/myisam/CMakeFiles/myisam.dir/build.make storage/myisam/CMakeFiles/myisam.dir/build
+.PHONY : myisam/fast
+
+#=============================================================================
+# Target rules for targets named myisam_embedded
+
+# Build rule for target.
+myisam_embedded: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myisam_embedded
+.PHONY : myisam_embedded
+
+# fast build rule for target.
+myisam_embedded/fast:
+	$(MAKE) -f storage/myisam/CMakeFiles/myisam_embedded.dir/build.make storage/myisam/CMakeFiles/myisam_embedded.dir/build
+.PHONY : myisam_embedded/fast
+
+#=============================================================================
+# Target rules for targets named myisam_ftdump
+
+# Build rule for target.
+myisam_ftdump: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myisam_ftdump
+.PHONY : myisam_ftdump
+
+# fast build rule for target.
+myisam_ftdump/fast:
+	$(MAKE) -f storage/myisam/CMakeFiles/myisam_ftdump.dir/build.make storage/myisam/CMakeFiles/myisam_ftdump.dir/build
+.PHONY : myisam_ftdump/fast
+
+# Manual pre-install relink rule for target.
+myisam_ftdump/preinstall:
+	$(MAKE) -f storage/myisam/CMakeFiles/myisam_ftdump.dir/build.make storage/myisam/CMakeFiles/myisam_ftdump.dir/preinstall
+.PHONY : myisam_ftdump/preinstall
+
+#=============================================================================
+# Target rules for targets named myisamchk
+
+# Build rule for target.
+myisamchk: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myisamchk
+.PHONY : myisamchk
+
+# fast build rule for target.
+myisamchk/fast:
+	$(MAKE) -f storage/myisam/CMakeFiles/myisamchk.dir/build.make storage/myisam/CMakeFiles/myisamchk.dir/build
+.PHONY : myisamchk/fast
+
+# Manual pre-install relink rule for target.
+myisamchk/preinstall:
+	$(MAKE) -f storage/myisam/CMakeFiles/myisamchk.dir/build.make storage/myisam/CMakeFiles/myisamchk.dir/preinstall
+.PHONY : myisamchk/preinstall
+
+#=============================================================================
+# Target rules for targets named myisamlog
+
+# Build rule for target.
+myisamlog: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myisamlog
+.PHONY : myisamlog
+
+# fast build rule for target.
+myisamlog/fast:
+	$(MAKE) -f storage/myisam/CMakeFiles/myisamlog.dir/build.make storage/myisam/CMakeFiles/myisamlog.dir/build
+.PHONY : myisamlog/fast
+
+# Manual pre-install relink rule for target.
+myisamlog/preinstall:
+	$(MAKE) -f storage/myisam/CMakeFiles/myisamlog.dir/build.make storage/myisam/CMakeFiles/myisamlog.dir/preinstall
+.PHONY : myisamlog/preinstall
+
+#=============================================================================
+# Target rules for targets named myisampack
+
+# Build rule for target.
+myisampack: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myisampack
+.PHONY : myisampack
+
+# fast build rule for target.
+myisampack/fast:
+	$(MAKE) -f storage/myisam/CMakeFiles/myisampack.dir/build.make storage/myisam/CMakeFiles/myisampack.dir/build
+.PHONY : myisampack/fast
+
+# Manual pre-install relink rule for target.
+myisampack/preinstall:
+	$(MAKE) -f storage/myisam/CMakeFiles/myisampack.dir/build.make storage/myisam/CMakeFiles/myisampack.dir/preinstall
+.PHONY : myisampack/preinstall
 
 #=============================================================================
 # Target rules for targets named gen_pfs_lex_token
@@ -508,69 +583,17 @@ pfs_user-oom-t/fast:
 .PHONY : pfs_user-oom-t/fast
 
 #=============================================================================
-# Target rules for targets named innobase
+# Target rules for targets named archive
 
 # Build rule for target.
-innobase: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 innobase
-.PHONY : innobase
+archive: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 archive
+.PHONY : archive
 
 # fast build rule for target.
-innobase/fast:
-	$(MAKE) -f storage/innobase/CMakeFiles/innobase.dir/build.make storage/innobase/CMakeFiles/innobase.dir/build
-.PHONY : innobase/fast
-
-#=============================================================================
-# Target rules for targets named aby
-
-# Build rule for target.
-aby: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 aby
-.PHONY : aby
-
-# fast build rule for target.
-aby/fast:
-	$(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/build
-.PHONY : aby/fast
-
-#=============================================================================
-# Target rules for targets named aby_embedded
-
-# Build rule for target.
-aby_embedded: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 aby_embedded
-.PHONY : aby_embedded
-
-# fast build rule for target.
-aby_embedded/fast:
-	$(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/build
-.PHONY : aby_embedded/fast
-
-#=============================================================================
-# Target rules for targets named hpa_aby_test1
-
-# Build rule for target.
-hpa_aby_test1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 hpa_aby_test1
-.PHONY : hpa_aby_test1
-
-# fast build rule for target.
-hpa_aby_test1/fast:
-	$(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test1.dir/build.make storage/aby/CMakeFiles/hpa_aby_test1.dir/build
-.PHONY : hpa_aby_test1/fast
-
-#=============================================================================
-# Target rules for targets named hpa_aby_test2
-
-# Build rule for target.
-hpa_aby_test2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 hpa_aby_test2
-.PHONY : hpa_aby_test2
-
-# fast build rule for target.
-hpa_aby_test2/fast:
-	$(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test2.dir/build.make storage/aby/CMakeFiles/hpa_aby_test2.dir/build
-.PHONY : hpa_aby_test2/fast
+archive/fast:
+	$(MAKE) -f storage/archive/CMakeFiles/archive.dir/build.make storage/archive/CMakeFiles/archive.dir/build
+.PHONY : archive/fast
 
 #=============================================================================
 # Target rules for targets named federated
@@ -586,82 +609,43 @@ federated/fast:
 .PHONY : federated/fast
 
 #=============================================================================
-# Target rules for targets named myisam
+# Target rules for targets named myisammrg
 
 # Build rule for target.
-myisam: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 myisam
-.PHONY : myisam
+myisammrg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myisammrg
+.PHONY : myisammrg
 
 # fast build rule for target.
-myisam/fast:
-	$(MAKE) -f storage/myisam/CMakeFiles/myisam.dir/build.make storage/myisam/CMakeFiles/myisam.dir/build
-.PHONY : myisam/fast
+myisammrg/fast:
+	$(MAKE) -f storage/myisammrg/CMakeFiles/myisammrg.dir/build.make storage/myisammrg/CMakeFiles/myisammrg.dir/build
+.PHONY : myisammrg/fast
 
 #=============================================================================
-# Target rules for targets named myisam_embedded
+# Target rules for targets named myisammrg_embedded
 
 # Build rule for target.
-myisam_embedded: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 myisam_embedded
-.PHONY : myisam_embedded
+myisammrg_embedded: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myisammrg_embedded
+.PHONY : myisammrg_embedded
 
 # fast build rule for target.
-myisam_embedded/fast:
-	$(MAKE) -f storage/myisam/CMakeFiles/myisam_embedded.dir/build.make storage/myisam/CMakeFiles/myisam_embedded.dir/build
-.PHONY : myisam_embedded/fast
+myisammrg_embedded/fast:
+	$(MAKE) -f storage/myisammrg/CMakeFiles/myisammrg_embedded.dir/build.make storage/myisammrg/CMakeFiles/myisammrg_embedded.dir/build
+.PHONY : myisammrg_embedded/fast
 
 #=============================================================================
-# Target rules for targets named myisam_ftdump
+# Target rules for targets named blackhole
 
 # Build rule for target.
-myisam_ftdump: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 myisam_ftdump
-.PHONY : myisam_ftdump
+blackhole: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 blackhole
+.PHONY : blackhole
 
 # fast build rule for target.
-myisam_ftdump/fast:
-	$(MAKE) -f storage/myisam/CMakeFiles/myisam_ftdump.dir/build.make storage/myisam/CMakeFiles/myisam_ftdump.dir/build
-.PHONY : myisam_ftdump/fast
-
-#=============================================================================
-# Target rules for targets named myisamchk
-
-# Build rule for target.
-myisamchk: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 myisamchk
-.PHONY : myisamchk
-
-# fast build rule for target.
-myisamchk/fast:
-	$(MAKE) -f storage/myisam/CMakeFiles/myisamchk.dir/build.make storage/myisam/CMakeFiles/myisamchk.dir/build
-.PHONY : myisamchk/fast
-
-#=============================================================================
-# Target rules for targets named myisamlog
-
-# Build rule for target.
-myisamlog: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 myisamlog
-.PHONY : myisamlog
-
-# fast build rule for target.
-myisamlog/fast:
-	$(MAKE) -f storage/myisam/CMakeFiles/myisamlog.dir/build.make storage/myisam/CMakeFiles/myisamlog.dir/build
-.PHONY : myisamlog/fast
-
-#=============================================================================
-# Target rules for targets named myisampack
-
-# Build rule for target.
-myisampack: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 myisampack
-.PHONY : myisampack
-
-# fast build rule for target.
-myisampack/fast:
-	$(MAKE) -f storage/myisam/CMakeFiles/myisampack.dir/build.make storage/myisam/CMakeFiles/myisampack.dir/build
-.PHONY : myisampack/fast
+blackhole/fast:
+	$(MAKE) -f storage/blackhole/CMakeFiles/blackhole.dir/build.make storage/blackhole/CMakeFiles/blackhole.dir/build
+.PHONY : blackhole/fast
 
 #=============================================================================
 # Target rules for targets named heap
@@ -716,6 +700,32 @@ hp_test2/fast:
 .PHONY : hp_test2/fast
 
 #=============================================================================
+# Target rules for targets named innobase
+
+# Build rule for target.
+innobase: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 innobase
+.PHONY : innobase
+
+# fast build rule for target.
+innobase/fast:
+	$(MAKE) -f storage/innobase/CMakeFiles/innobase.dir/build.make storage/innobase/CMakeFiles/innobase.dir/build
+.PHONY : innobase/fast
+
+#=============================================================================
+# Target rules for targets named csv
+
+# Build rule for target.
+csv: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 csv
+.PHONY : csv
+
+# fast build rule for target.
+csv/fast:
+	$(MAKE) -f storage/csv/CMakeFiles/csv.dir/build.make storage/csv/CMakeFiles/csv.dir/build
+.PHONY : csv/fast
+
+#=============================================================================
 # Target rules for targets named ftexample
 
 # Build rule for target.
@@ -728,44 +738,10 @@ ftexample/fast:
 	$(MAKE) -f plugin/fulltext/CMakeFiles/ftexample.dir/build.make plugin/fulltext/CMakeFiles/ftexample.dir/build
 .PHONY : ftexample/fast
 
-#=============================================================================
-# Target rules for targets named semisync_master
-
-# Build rule for target.
-semisync_master: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 semisync_master
-.PHONY : semisync_master
-
-# fast build rule for target.
-semisync_master/fast:
-	$(MAKE) -f plugin/semisync/CMakeFiles/semisync_master.dir/build.make plugin/semisync/CMakeFiles/semisync_master.dir/build
-.PHONY : semisync_master/fast
-
-#=============================================================================
-# Target rules for targets named semisync_slave
-
-# Build rule for target.
-semisync_slave: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 semisync_slave
-.PHONY : semisync_slave
-
-# fast build rule for target.
-semisync_slave/fast:
-	$(MAKE) -f plugin/semisync/CMakeFiles/semisync_slave.dir/build.make plugin/semisync/CMakeFiles/semisync_slave.dir/build
-.PHONY : semisync_slave/fast
-
-#=============================================================================
-# Target rules for targets named audit_null
-
-# Build rule for target.
-audit_null: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 audit_null
-.PHONY : audit_null
-
-# fast build rule for target.
-audit_null/fast:
-	$(MAKE) -f plugin/audit_null/CMakeFiles/audit_null.dir/build.make plugin/audit_null/CMakeFiles/audit_null.dir/build
-.PHONY : audit_null/fast
+# Manual pre-install relink rule for target.
+ftexample/preinstall:
+	$(MAKE) -f plugin/fulltext/CMakeFiles/ftexample.dir/build.make plugin/fulltext/CMakeFiles/ftexample.dir/preinstall
+.PHONY : ftexample/preinstall
 
 #=============================================================================
 # Target rules for targets named validate_password
@@ -780,6 +756,65 @@ validate_password/fast:
 	$(MAKE) -f plugin/password_validation/CMakeFiles/validate_password.dir/build.make plugin/password_validation/CMakeFiles/validate_password.dir/build
 .PHONY : validate_password/fast
 
+# Manual pre-install relink rule for target.
+validate_password/preinstall:
+	$(MAKE) -f plugin/password_validation/CMakeFiles/validate_password.dir/build.make plugin/password_validation/CMakeFiles/validate_password.dir/preinstall
+.PHONY : validate_password/preinstall
+
+#=============================================================================
+# Target rules for targets named audit_null
+
+# Build rule for target.
+audit_null: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audit_null
+.PHONY : audit_null
+
+# fast build rule for target.
+audit_null/fast:
+	$(MAKE) -f plugin/audit_null/CMakeFiles/audit_null.dir/build.make plugin/audit_null/CMakeFiles/audit_null.dir/build
+.PHONY : audit_null/fast
+
+# Manual pre-install relink rule for target.
+audit_null/preinstall:
+	$(MAKE) -f plugin/audit_null/CMakeFiles/audit_null.dir/build.make plugin/audit_null/CMakeFiles/audit_null.dir/preinstall
+.PHONY : audit_null/preinstall
+
+#=============================================================================
+# Target rules for targets named semisync_master
+
+# Build rule for target.
+semisync_master: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 semisync_master
+.PHONY : semisync_master
+
+# fast build rule for target.
+semisync_master/fast:
+	$(MAKE) -f plugin/semisync/CMakeFiles/semisync_master.dir/build.make plugin/semisync/CMakeFiles/semisync_master.dir/build
+.PHONY : semisync_master/fast
+
+# Manual pre-install relink rule for target.
+semisync_master/preinstall:
+	$(MAKE) -f plugin/semisync/CMakeFiles/semisync_master.dir/build.make plugin/semisync/CMakeFiles/semisync_master.dir/preinstall
+.PHONY : semisync_master/preinstall
+
+#=============================================================================
+# Target rules for targets named semisync_slave
+
+# Build rule for target.
+semisync_slave: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 semisync_slave
+.PHONY : semisync_slave
+
+# fast build rule for target.
+semisync_slave/fast:
+	$(MAKE) -f plugin/semisync/CMakeFiles/semisync_slave.dir/build.make plugin/semisync/CMakeFiles/semisync_slave.dir/build
+.PHONY : semisync_slave/fast
+
+# Manual pre-install relink rule for target.
+semisync_slave/preinstall:
+	$(MAKE) -f plugin/semisync/CMakeFiles/semisync_slave.dir/build.make plugin/semisync/CMakeFiles/semisync_slave.dir/preinstall
+.PHONY : semisync_slave/preinstall
+
 #=============================================================================
 # Target rules for targets named daemon_example
 
@@ -792,6 +827,11 @@ daemon_example: cmake_check_build_system
 daemon_example/fast:
 	$(MAKE) -f plugin/daemon_example/CMakeFiles/daemon_example.dir/build.make plugin/daemon_example/CMakeFiles/daemon_example.dir/build
 .PHONY : daemon_example/fast
+
+# Manual pre-install relink rule for target.
+daemon_example/preinstall:
+	$(MAKE) -f plugin/daemon_example/CMakeFiles/daemon_example.dir/build.make plugin/daemon_example/CMakeFiles/daemon_example.dir/preinstall
+.PHONY : daemon_example/preinstall
 
 #=============================================================================
 # Target rules for targets named auth
@@ -806,6 +846,11 @@ auth/fast:
 	$(MAKE) -f plugin/auth/CMakeFiles/auth.dir/build.make plugin/auth/CMakeFiles/auth.dir/build
 .PHONY : auth/fast
 
+# Manual pre-install relink rule for target.
+auth/preinstall:
+	$(MAKE) -f plugin/auth/CMakeFiles/auth.dir/build.make plugin/auth/CMakeFiles/auth.dir/preinstall
+.PHONY : auth/preinstall
+
 #=============================================================================
 # Target rules for targets named auth_socket
 
@@ -818,6 +863,11 @@ auth_socket: cmake_check_build_system
 auth_socket/fast:
 	$(MAKE) -f plugin/auth/CMakeFiles/auth_socket.dir/build.make plugin/auth/CMakeFiles/auth_socket.dir/build
 .PHONY : auth_socket/fast
+
+# Manual pre-install relink rule for target.
+auth_socket/preinstall:
+	$(MAKE) -f plugin/auth/CMakeFiles/auth_socket.dir/build.make plugin/auth/CMakeFiles/auth_socket.dir/preinstall
+.PHONY : auth_socket/preinstall
 
 #=============================================================================
 # Target rules for targets named auth_test_plugin
@@ -832,6 +882,11 @@ auth_test_plugin/fast:
 	$(MAKE) -f plugin/auth/CMakeFiles/auth_test_plugin.dir/build.make plugin/auth/CMakeFiles/auth_test_plugin.dir/build
 .PHONY : auth_test_plugin/fast
 
+# Manual pre-install relink rule for target.
+auth_test_plugin/preinstall:
+	$(MAKE) -f plugin/auth/CMakeFiles/auth_test_plugin.dir/build.make plugin/auth/CMakeFiles/auth_test_plugin.dir/preinstall
+.PHONY : auth_test_plugin/preinstall
+
 #=============================================================================
 # Target rules for targets named qa_auth_client
 
@@ -844,6 +899,11 @@ qa_auth_client: cmake_check_build_system
 qa_auth_client/fast:
 	$(MAKE) -f plugin/auth/CMakeFiles/qa_auth_client.dir/build.make plugin/auth/CMakeFiles/qa_auth_client.dir/build
 .PHONY : qa_auth_client/fast
+
+# Manual pre-install relink rule for target.
+qa_auth_client/preinstall:
+	$(MAKE) -f plugin/auth/CMakeFiles/qa_auth_client.dir/build.make plugin/auth/CMakeFiles/qa_auth_client.dir/preinstall
+.PHONY : qa_auth_client/preinstall
 
 #=============================================================================
 # Target rules for targets named qa_auth_interface
@@ -858,6 +918,11 @@ qa_auth_interface/fast:
 	$(MAKE) -f plugin/auth/CMakeFiles/qa_auth_interface.dir/build.make plugin/auth/CMakeFiles/qa_auth_interface.dir/build
 .PHONY : qa_auth_interface/fast
 
+# Manual pre-install relink rule for target.
+qa_auth_interface/preinstall:
+	$(MAKE) -f plugin/auth/CMakeFiles/qa_auth_interface.dir/build.make plugin/auth/CMakeFiles/qa_auth_interface.dir/preinstall
+.PHONY : qa_auth_interface/preinstall
+
 #=============================================================================
 # Target rules for targets named qa_auth_server
 
@@ -870,6 +935,11 @@ qa_auth_server: cmake_check_build_system
 qa_auth_server/fast:
 	$(MAKE) -f plugin/auth/CMakeFiles/qa_auth_server.dir/build.make plugin/auth/CMakeFiles/qa_auth_server.dir/build
 .PHONY : qa_auth_server/fast
+
+# Manual pre-install relink rule for target.
+qa_auth_server/preinstall:
+	$(MAKE) -f plugin/auth/CMakeFiles/qa_auth_server.dir/build.make plugin/auth/CMakeFiles/qa_auth_server.dir/preinstall
+.PHONY : qa_auth_server/preinstall
 
 #=============================================================================
 # Target rules for targets named dbug
@@ -1026,6 +1096,11 @@ libmysql: cmake_check_build_system
 libmysql/fast:
 	$(MAKE) -f libmysql/CMakeFiles/libmysql.dir/build.make libmysql/CMakeFiles/libmysql.dir/build
 .PHONY : libmysql/fast
+
+# Manual pre-install relink rule for target.
+libmysql/preinstall:
+	$(MAKE) -f libmysql/CMakeFiles/libmysql.dir/build.make libmysql/CMakeFiles/libmysql.dir/preinstall
+.PHONY : libmysql/preinstall
 
 #=============================================================================
 # Target rules for targets named mysqlclient
@@ -1235,6 +1310,11 @@ innochecksum/fast:
 	$(MAKE) -f extra/CMakeFiles/innochecksum.dir/build.make extra/CMakeFiles/innochecksum.dir/build
 .PHONY : innochecksum/fast
 
+# Manual pre-install relink rule for target.
+innochecksum/preinstall:
+	$(MAKE) -f extra/CMakeFiles/innochecksum.dir/build.make extra/CMakeFiles/innochecksum.dir/preinstall
+.PHONY : innochecksum/preinstall
+
 #=============================================================================
 # Target rules for targets named my_print_defaults
 
@@ -1247,6 +1327,11 @@ my_print_defaults: cmake_check_build_system
 my_print_defaults/fast:
 	$(MAKE) -f extra/CMakeFiles/my_print_defaults.dir/build.make extra/CMakeFiles/my_print_defaults.dir/build
 .PHONY : my_print_defaults/fast
+
+# Manual pre-install relink rule for target.
+my_print_defaults/preinstall:
+	$(MAKE) -f extra/CMakeFiles/my_print_defaults.dir/build.make extra/CMakeFiles/my_print_defaults.dir/preinstall
+.PHONY : my_print_defaults/preinstall
 
 #=============================================================================
 # Target rules for targets named mysql_waitpid
@@ -1261,6 +1346,11 @@ mysql_waitpid/fast:
 	$(MAKE) -f extra/CMakeFiles/mysql_waitpid.dir/build.make extra/CMakeFiles/mysql_waitpid.dir/build
 .PHONY : mysql_waitpid/fast
 
+# Manual pre-install relink rule for target.
+mysql_waitpid/preinstall:
+	$(MAKE) -f extra/CMakeFiles/mysql_waitpid.dir/build.make extra/CMakeFiles/mysql_waitpid.dir/preinstall
+.PHONY : mysql_waitpid/preinstall
+
 #=============================================================================
 # Target rules for targets named perror
 
@@ -1273,6 +1363,11 @@ perror: cmake_check_build_system
 perror/fast:
 	$(MAKE) -f extra/CMakeFiles/perror.dir/build.make extra/CMakeFiles/perror.dir/build
 .PHONY : perror/fast
+
+# Manual pre-install relink rule for target.
+perror/preinstall:
+	$(MAKE) -f extra/CMakeFiles/perror.dir/build.make extra/CMakeFiles/perror.dir/preinstall
+.PHONY : perror/preinstall
 
 #=============================================================================
 # Target rules for targets named replace
@@ -1287,6 +1382,11 @@ replace/fast:
 	$(MAKE) -f extra/CMakeFiles/replace.dir/build.make extra/CMakeFiles/replace.dir/build
 .PHONY : replace/fast
 
+# Manual pre-install relink rule for target.
+replace/preinstall:
+	$(MAKE) -f extra/CMakeFiles/replace.dir/build.make extra/CMakeFiles/replace.dir/preinstall
+.PHONY : replace/preinstall
+
 #=============================================================================
 # Target rules for targets named resolve_stack_dump
 
@@ -1299,6 +1399,11 @@ resolve_stack_dump: cmake_check_build_system
 resolve_stack_dump/fast:
 	$(MAKE) -f extra/CMakeFiles/resolve_stack_dump.dir/build.make extra/CMakeFiles/resolve_stack_dump.dir/build
 .PHONY : resolve_stack_dump/fast
+
+# Manual pre-install relink rule for target.
+resolve_stack_dump/preinstall:
+	$(MAKE) -f extra/CMakeFiles/resolve_stack_dump.dir/build.make extra/CMakeFiles/resolve_stack_dump.dir/preinstall
+.PHONY : resolve_stack_dump/preinstall
 
 #=============================================================================
 # Target rules for targets named resolveip
@@ -1313,6 +1418,11 @@ resolveip/fast:
 	$(MAKE) -f extra/CMakeFiles/resolveip.dir/build.make extra/CMakeFiles/resolveip.dir/build
 .PHONY : resolveip/fast
 
+# Manual pre-install relink rule for target.
+resolveip/preinstall:
+	$(MAKE) -f extra/CMakeFiles/resolveip.dir/build.make extra/CMakeFiles/resolveip.dir/preinstall
+.PHONY : resolveip/preinstall
+
 #=============================================================================
 # Target rules for targets named mysql
 
@@ -1325,6 +1435,11 @@ mysql: cmake_check_build_system
 mysql/fast:
 	$(MAKE) -f client/CMakeFiles/mysql.dir/build.make client/CMakeFiles/mysql.dir/build
 .PHONY : mysql/fast
+
+# Manual pre-install relink rule for target.
+mysql/preinstall:
+	$(MAKE) -f client/CMakeFiles/mysql.dir/build.make client/CMakeFiles/mysql.dir/preinstall
+.PHONY : mysql/preinstall
 
 #=============================================================================
 # Target rules for targets named mysql_config_editor
@@ -1339,6 +1454,11 @@ mysql_config_editor/fast:
 	$(MAKE) -f client/CMakeFiles/mysql_config_editor.dir/build.make client/CMakeFiles/mysql_config_editor.dir/build
 .PHONY : mysql_config_editor/fast
 
+# Manual pre-install relink rule for target.
+mysql_config_editor/preinstall:
+	$(MAKE) -f client/CMakeFiles/mysql_config_editor.dir/build.make client/CMakeFiles/mysql_config_editor.dir/preinstall
+.PHONY : mysql_config_editor/preinstall
+
 #=============================================================================
 # Target rules for targets named mysql_plugin
 
@@ -1351,6 +1471,11 @@ mysql_plugin: cmake_check_build_system
 mysql_plugin/fast:
 	$(MAKE) -f client/CMakeFiles/mysql_plugin.dir/build.make client/CMakeFiles/mysql_plugin.dir/build
 .PHONY : mysql_plugin/fast
+
+# Manual pre-install relink rule for target.
+mysql_plugin/preinstall:
+	$(MAKE) -f client/CMakeFiles/mysql_plugin.dir/build.make client/CMakeFiles/mysql_plugin.dir/preinstall
+.PHONY : mysql_plugin/preinstall
 
 #=============================================================================
 # Target rules for targets named mysql_upgrade
@@ -1365,6 +1490,11 @@ mysql_upgrade/fast:
 	$(MAKE) -f client/CMakeFiles/mysql_upgrade.dir/build.make client/CMakeFiles/mysql_upgrade.dir/build
 .PHONY : mysql_upgrade/fast
 
+# Manual pre-install relink rule for target.
+mysql_upgrade/preinstall:
+	$(MAKE) -f client/CMakeFiles/mysql_upgrade.dir/build.make client/CMakeFiles/mysql_upgrade.dir/preinstall
+.PHONY : mysql_upgrade/preinstall
+
 #=============================================================================
 # Target rules for targets named mysqladmin
 
@@ -1377,6 +1507,11 @@ mysqladmin: cmake_check_build_system
 mysqladmin/fast:
 	$(MAKE) -f client/CMakeFiles/mysqladmin.dir/build.make client/CMakeFiles/mysqladmin.dir/build
 .PHONY : mysqladmin/fast
+
+# Manual pre-install relink rule for target.
+mysqladmin/preinstall:
+	$(MAKE) -f client/CMakeFiles/mysqladmin.dir/build.make client/CMakeFiles/mysqladmin.dir/preinstall
+.PHONY : mysqladmin/preinstall
 
 #=============================================================================
 # Target rules for targets named mysqlbinlog
@@ -1391,6 +1526,11 @@ mysqlbinlog/fast:
 	$(MAKE) -f client/CMakeFiles/mysqlbinlog.dir/build.make client/CMakeFiles/mysqlbinlog.dir/build
 .PHONY : mysqlbinlog/fast
 
+# Manual pre-install relink rule for target.
+mysqlbinlog/preinstall:
+	$(MAKE) -f client/CMakeFiles/mysqlbinlog.dir/build.make client/CMakeFiles/mysqlbinlog.dir/preinstall
+.PHONY : mysqlbinlog/preinstall
+
 #=============================================================================
 # Target rules for targets named mysqlcheck
 
@@ -1403,6 +1543,11 @@ mysqlcheck: cmake_check_build_system
 mysqlcheck/fast:
 	$(MAKE) -f client/CMakeFiles/mysqlcheck.dir/build.make client/CMakeFiles/mysqlcheck.dir/build
 .PHONY : mysqlcheck/fast
+
+# Manual pre-install relink rule for target.
+mysqlcheck/preinstall:
+	$(MAKE) -f client/CMakeFiles/mysqlcheck.dir/build.make client/CMakeFiles/mysqlcheck.dir/preinstall
+.PHONY : mysqlcheck/preinstall
 
 #=============================================================================
 # Target rules for targets named mysqldump
@@ -1417,6 +1562,11 @@ mysqldump/fast:
 	$(MAKE) -f client/CMakeFiles/mysqldump.dir/build.make client/CMakeFiles/mysqldump.dir/build
 .PHONY : mysqldump/fast
 
+# Manual pre-install relink rule for target.
+mysqldump/preinstall:
+	$(MAKE) -f client/CMakeFiles/mysqldump.dir/build.make client/CMakeFiles/mysqldump.dir/preinstall
+.PHONY : mysqldump/preinstall
+
 #=============================================================================
 # Target rules for targets named mysqlimport
 
@@ -1429,6 +1579,11 @@ mysqlimport: cmake_check_build_system
 mysqlimport/fast:
 	$(MAKE) -f client/CMakeFiles/mysqlimport.dir/build.make client/CMakeFiles/mysqlimport.dir/build
 .PHONY : mysqlimport/fast
+
+# Manual pre-install relink rule for target.
+mysqlimport/preinstall:
+	$(MAKE) -f client/CMakeFiles/mysqlimport.dir/build.make client/CMakeFiles/mysqlimport.dir/preinstall
+.PHONY : mysqlimport/preinstall
 
 #=============================================================================
 # Target rules for targets named mysqlshow
@@ -1443,6 +1598,11 @@ mysqlshow/fast:
 	$(MAKE) -f client/CMakeFiles/mysqlshow.dir/build.make client/CMakeFiles/mysqlshow.dir/build
 .PHONY : mysqlshow/fast
 
+# Manual pre-install relink rule for target.
+mysqlshow/preinstall:
+	$(MAKE) -f client/CMakeFiles/mysqlshow.dir/build.make client/CMakeFiles/mysqlshow.dir/preinstall
+.PHONY : mysqlshow/preinstall
+
 #=============================================================================
 # Target rules for targets named mysqlslap
 
@@ -1456,6 +1616,11 @@ mysqlslap/fast:
 	$(MAKE) -f client/CMakeFiles/mysqlslap.dir/build.make client/CMakeFiles/mysqlslap.dir/build
 .PHONY : mysqlslap/fast
 
+# Manual pre-install relink rule for target.
+mysqlslap/preinstall:
+	$(MAKE) -f client/CMakeFiles/mysqlslap.dir/build.make client/CMakeFiles/mysqlslap.dir/preinstall
+.PHONY : mysqlslap/preinstall
+
 #=============================================================================
 # Target rules for targets named mysqltest
 
@@ -1468,6 +1633,11 @@ mysqltest: cmake_check_build_system
 mysqltest/fast:
 	$(MAKE) -f client/CMakeFiles/mysqltest.dir/build.make client/CMakeFiles/mysqltest.dir/build
 .PHONY : mysqltest/fast
+
+# Manual pre-install relink rule for target.
+mysqltest/preinstall:
+	$(MAKE) -f client/CMakeFiles/mysqltest.dir/build.make client/CMakeFiles/mysqltest.dir/preinstall
+.PHONY : mysqltest/preinstall
 
 #=============================================================================
 # Target rules for targets named mysqlservices
@@ -1507,6 +1677,11 @@ mysql_client_test: cmake_check_build_system
 mysql_client_test/fast:
 	$(MAKE) -f tests/CMakeFiles/mysql_client_test.dir/build.make tests/CMakeFiles/mysql_client_test.dir/build
 .PHONY : mysql_client_test/fast
+
+# Manual pre-install relink rule for target.
+mysql_client_test/preinstall:
+	$(MAKE) -f tests/CMakeFiles/mysql_client_test.dir/build.make tests/CMakeFiles/mysql_client_test.dir/preinstall
+.PHONY : mysql_client_test/preinstall
 
 #=============================================================================
 # Target rules for targets named GenServerSource
@@ -1599,6 +1774,11 @@ mysql_tzinfo_to_sql/fast:
 	$(MAKE) -f sql/CMakeFiles/mysql_tzinfo_to_sql.dir/build.make sql/CMakeFiles/mysql_tzinfo_to_sql.dir/build
 .PHONY : mysql_tzinfo_to_sql/fast
 
+# Manual pre-install relink rule for target.
+mysql_tzinfo_to_sql/preinstall:
+	$(MAKE) -f sql/CMakeFiles/mysql_tzinfo_to_sql.dir/build.make sql/CMakeFiles/mysql_tzinfo_to_sql.dir/preinstall
+.PHONY : mysql_tzinfo_to_sql/preinstall
+
 #=============================================================================
 # Target rules for targets named mysqld
 
@@ -1611,6 +1791,11 @@ mysqld: cmake_check_build_system
 mysqld/fast:
 	$(MAKE) -f sql/CMakeFiles/mysqld.dir/build.make sql/CMakeFiles/mysqld.dir/build
 .PHONY : mysqld/fast
+
+# Manual pre-install relink rule for target.
+mysqld/preinstall:
+	$(MAKE) -f sql/CMakeFiles/mysqld.dir/build.make sql/CMakeFiles/mysqld.dir/preinstall
+.PHONY : mysqld/preinstall
 
 #=============================================================================
 # Target rules for targets named partition
@@ -1755,6 +1940,11 @@ mysql_client_test_embedded/fast:
 	$(MAKE) -f libmysqld/examples/CMakeFiles/mysql_client_test_embedded.dir/build.make libmysqld/examples/CMakeFiles/mysql_client_test_embedded.dir/build
 .PHONY : mysql_client_test_embedded/fast
 
+# Manual pre-install relink rule for target.
+mysql_client_test_embedded/preinstall:
+	$(MAKE) -f libmysqld/examples/CMakeFiles/mysql_client_test_embedded.dir/build.make libmysqld/examples/CMakeFiles/mysql_client_test_embedded.dir/preinstall
+.PHONY : mysql_client_test_embedded/preinstall
+
 #=============================================================================
 # Target rules for targets named mysql_embedded
 
@@ -1768,6 +1958,11 @@ mysql_embedded/fast:
 	$(MAKE) -f libmysqld/examples/CMakeFiles/mysql_embedded.dir/build.make libmysqld/examples/CMakeFiles/mysql_embedded.dir/build
 .PHONY : mysql_embedded/fast
 
+# Manual pre-install relink rule for target.
+mysql_embedded/preinstall:
+	$(MAKE) -f libmysqld/examples/CMakeFiles/mysql_embedded.dir/build.make libmysqld/examples/CMakeFiles/mysql_embedded.dir/preinstall
+.PHONY : mysql_embedded/preinstall
+
 #=============================================================================
 # Target rules for targets named mysqltest_embedded
 
@@ -1780,6 +1975,11 @@ mysqltest_embedded: cmake_check_build_system
 mysqltest_embedded/fast:
 	$(MAKE) -f libmysqld/examples/CMakeFiles/mysqltest_embedded.dir/build.make libmysqld/examples/CMakeFiles/mysqltest_embedded.dir/build
 .PHONY : mysqltest_embedded/fast
+
+# Manual pre-install relink rule for target.
+mysqltest_embedded/preinstall:
+	$(MAKE) -f libmysqld/examples/CMakeFiles/mysqltest_embedded.dir/build.make libmysqld/examples/CMakeFiles/mysqltest_embedded.dir/preinstall
+.PHONY : mysqltest_embedded/preinstall
 
 #=============================================================================
 # Target rules for targets named GenFixPrivs
@@ -1833,6 +2033,11 @@ my_safe_process/fast:
 	$(MAKE) -f mysql-test/lib/My/SafeProcess/CMakeFiles/my_safe_process.dir/build.make mysql-test/lib/My/SafeProcess/CMakeFiles/my_safe_process.dir/build
 .PHONY : my_safe_process/fast
 
+# Manual pre-install relink rule for target.
+my_safe_process/preinstall:
+	$(MAKE) -f mysql-test/lib/My/SafeProcess/CMakeFiles/my_safe_process.dir/build.make mysql-test/lib/My/SafeProcess/CMakeFiles/my_safe_process.dir/preinstall
+.PHONY : my_safe_process/preinstall
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1847,7 +2052,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... package"
 	@echo "... package_source"
@@ -1858,11 +2062,16 @@ help:
 	@echo "... yassl"
 	@echo "... taocrypt"
 	@echo "... edit"
-	@echo "... archive"
-	@echo "... blackhole"
-	@echo "... csv"
-	@echo "... myisammrg"
-	@echo "... myisammrg_embedded"
+	@echo "... aby"
+	@echo "... aby_embedded"
+	@echo "... hpa_aby_test1"
+	@echo "... hpa_aby_test2"
+	@echo "... myisam"
+	@echo "... myisam_embedded"
+	@echo "... myisam_ftdump"
+	@echo "... myisamchk"
+	@echo "... myisamlog"
+	@echo "... myisampack"
 	@echo "... gen_pfs_lex_token"
 	@echo "... perfschema"
 	@echo "... pfs-t"
@@ -1874,27 +2083,22 @@ help:
 	@echo "... pfs_instr_class-oom-t"
 	@echo "... pfs_instr_class-t"
 	@echo "... pfs_user-oom-t"
-	@echo "... innobase"
-	@echo "... aby"
-	@echo "... aby_embedded"
-	@echo "... hpa_aby_test1"
-	@echo "... hpa_aby_test2"
+	@echo "... archive"
 	@echo "... federated"
-	@echo "... myisam"
-	@echo "... myisam_embedded"
-	@echo "... myisam_ftdump"
-	@echo "... myisamchk"
-	@echo "... myisamlog"
-	@echo "... myisampack"
+	@echo "... myisammrg"
+	@echo "... myisammrg_embedded"
+	@echo "... blackhole"
 	@echo "... heap"
 	@echo "... heap_embedded"
 	@echo "... hp_test1"
 	@echo "... hp_test2"
+	@echo "... innobase"
+	@echo "... csv"
 	@echo "... ftexample"
+	@echo "... validate_password"
+	@echo "... audit_null"
 	@echo "... semisync_master"
 	@echo "... semisync_slave"
-	@echo "... audit_null"
-	@echo "... validate_password"
 	@echo "... daemon_example"
 	@echo "... auth"
 	@echo "... auth_socket"

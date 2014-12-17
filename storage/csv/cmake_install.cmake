@@ -1,4 +1,4 @@
-# Install script for directory: /home/adbms/mysqlsrc/mysql-5.6.21/storage/csv
+# Install script for directory: /home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/csv
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

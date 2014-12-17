@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,16 +79,6 @@ install/local: preinstall
 install/local/fast: install/local
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Client\" \"DataFiles\" \"DebugBinaries\" \"Development\" \"Documentation\" \"Embedded\" \"Info\" \"IniFiles\" \"ManPages\" \"Readme\" \"Server\" \"Server_Scripts\" \"SharedLibraries\" \"SqlBench\" \"SupportFiles\" \"Test\" \"Unspecified\""
@@ -101,7 +91,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -111,7 +101,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/adbms/mysqlsrc/mysql-5.6.21/CPackSourceConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/hari/ADBMS_PROJECT/ADBMS_ABY/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -140,14 +130,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles /home/adbms/mysqlsrc/mysql-5.6.21/tests/CMakeFiles/progress.marks
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles /home/hari/ADBMS_PROJECT/ADBMS_ABY/tests/CMakeFiles/progress.marks
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -156,22 +146,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tests/CMakeFiles/bug25714.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/bug25714.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/bug25714.dir/rule
 .PHONY : tests/CMakeFiles/bug25714.dir/rule
 
 # Convenience name for target.
@@ -180,12 +170,12 @@ bug25714: tests/CMakeFiles/bug25714.dir/rule
 
 # fast build rule for target.
 bug25714/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f tests/CMakeFiles/bug25714.dir/build.make tests/CMakeFiles/bug25714.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f tests/CMakeFiles/bug25714.dir/build.make tests/CMakeFiles/bug25714.dir/build
 .PHONY : bug25714/fast
 
 # Convenience name for target.
 tests/CMakeFiles/mysql_client_test.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/mysql_client_test.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/mysql_client_test.dir/rule
 .PHONY : tests/CMakeFiles/mysql_client_test.dir/rule
 
 # Convenience name for target.
@@ -194,15 +184,20 @@ mysql_client_test: tests/CMakeFiles/mysql_client_test.dir/rule
 
 # fast build rule for target.
 mysql_client_test/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f tests/CMakeFiles/mysql_client_test.dir/build.make tests/CMakeFiles/mysql_client_test.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f tests/CMakeFiles/mysql_client_test.dir/build.make tests/CMakeFiles/mysql_client_test.dir/build
 .PHONY : mysql_client_test/fast
+
+# Manual pre-install relink rule for target.
+mysql_client_test/preinstall:
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/mysql_client_test.dir/preinstall
+.PHONY : mysql_client_test/preinstall
 
 bug25714.o: bug25714.c.o
 .PHONY : bug25714.o
 
 # target to build an object file
 bug25714.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f tests/CMakeFiles/bug25714.dir/build.make tests/CMakeFiles/bug25714.dir/bug25714.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f tests/CMakeFiles/bug25714.dir/build.make tests/CMakeFiles/bug25714.dir/bug25714.c.o
 .PHONY : bug25714.c.o
 
 bug25714.i: bug25714.c.i
@@ -210,7 +205,7 @@ bug25714.i: bug25714.c.i
 
 # target to preprocess a source file
 bug25714.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f tests/CMakeFiles/bug25714.dir/build.make tests/CMakeFiles/bug25714.dir/bug25714.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f tests/CMakeFiles/bug25714.dir/build.make tests/CMakeFiles/bug25714.dir/bug25714.c.i
 .PHONY : bug25714.c.i
 
 bug25714.s: bug25714.c.s
@@ -218,7 +213,7 @@ bug25714.s: bug25714.c.s
 
 # target to generate assembly for a file
 bug25714.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f tests/CMakeFiles/bug25714.dir/build.make tests/CMakeFiles/bug25714.dir/bug25714.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f tests/CMakeFiles/bug25714.dir/build.make tests/CMakeFiles/bug25714.dir/bug25714.c.s
 .PHONY : bug25714.c.s
 
 mysql_client_test.o: mysql_client_test.c.o
@@ -226,7 +221,7 @@ mysql_client_test.o: mysql_client_test.c.o
 
 # target to build an object file
 mysql_client_test.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f tests/CMakeFiles/mysql_client_test.dir/build.make tests/CMakeFiles/mysql_client_test.dir/mysql_client_test.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f tests/CMakeFiles/mysql_client_test.dir/build.make tests/CMakeFiles/mysql_client_test.dir/mysql_client_test.c.o
 .PHONY : mysql_client_test.c.o
 
 mysql_client_test.i: mysql_client_test.c.i
@@ -234,7 +229,7 @@ mysql_client_test.i: mysql_client_test.c.i
 
 # target to preprocess a source file
 mysql_client_test.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f tests/CMakeFiles/mysql_client_test.dir/build.make tests/CMakeFiles/mysql_client_test.dir/mysql_client_test.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f tests/CMakeFiles/mysql_client_test.dir/build.make tests/CMakeFiles/mysql_client_test.dir/mysql_client_test.c.i
 .PHONY : mysql_client_test.c.i
 
 mysql_client_test.s: mysql_client_test.c.s
@@ -242,7 +237,7 @@ mysql_client_test.s: mysql_client_test.c.s
 
 # target to generate assembly for a file
 mysql_client_test.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f tests/CMakeFiles/mysql_client_test.dir/build.make tests/CMakeFiles/mysql_client_test.dir/mysql_client_test.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f tests/CMakeFiles/mysql_client_test.dir/build.make tests/CMakeFiles/mysql_client_test.dir/mysql_client_test.c.s
 .PHONY : mysql_client_test.c.s
 
 # Help Target
@@ -255,7 +250,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... mysql_client_test"
 	@echo "... package"
@@ -279,6 +273,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

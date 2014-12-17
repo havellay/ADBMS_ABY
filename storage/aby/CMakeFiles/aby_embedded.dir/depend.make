@@ -1123,7 +1123,6 @@ storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: sql/sql_profile.h
 storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: sql/sql_string.h
 storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: sql/sql_trigger.h
 storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: sql/sql_udf.h
-storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: sql/sql_yacc.h
 storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: sql/structs.h
 storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: sql/table.h
 storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o: sql/table_id.h

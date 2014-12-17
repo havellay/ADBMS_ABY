@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/fulltext/plugin_example.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/fulltext/plugin_example.c
 stdlib.h
 -
 ctype.h

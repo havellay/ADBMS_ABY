@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/extra/resolveip.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/extra/resolveip.c
 my_global.h
 -
 m_ctype.h

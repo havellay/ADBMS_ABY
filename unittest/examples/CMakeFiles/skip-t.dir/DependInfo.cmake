@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/adbms/mysqlsrc/mysql-5.6.21/unittest/examples/skip-t.c" "/home/adbms/mysqlsrc/mysql-5.6.21/unittest/examples/CMakeFiles/skip-t.dir/skip-t.c.o"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/examples/skip-t.c" "/home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/examples/CMakeFiles/skip-t.dir/skip-t.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 
@@ -15,11 +15,11 @@ SET(CMAKE_TARGET_DEFINITIONS
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/adbms/mysqlsrc/mysql-5.6.21/unittest/mytap/CMakeFiles/mytap.dir/DependInfo.cmake"
-  "/home/adbms/mysqlsrc/mysql-5.6.21/mysys/CMakeFiles/mysys.dir/DependInfo.cmake"
-  "/home/adbms/mysqlsrc/mysql-5.6.21/dbug/CMakeFiles/dbug.dir/DependInfo.cmake"
-  "/home/adbms/mysqlsrc/mysql-5.6.21/strings/CMakeFiles/strings.dir/DependInfo.cmake"
-  "/home/adbms/mysqlsrc/mysql-5.6.21/zlib/CMakeFiles/zlib.dir/DependInfo.cmake"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/mytap/CMakeFiles/mytap.dir/DependInfo.cmake"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/mysys/CMakeFiles/mysys.dir/DependInfo.cmake"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/dbug/CMakeFiles/dbug.dir/DependInfo.cmake"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/CMakeFiles/strings.dir/DependInfo.cmake"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/zlib/CMakeFiles/zlib.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

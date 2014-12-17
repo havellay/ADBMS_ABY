@@ -1,4 +1,4 @@
-# Install script for directory: /home/adbms/mysqlsrc/mysql-5.6.21/mysys
+# Install script for directory: /home/hari/ADBMS_PROJECT/ADBMS_ABY/mysys
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

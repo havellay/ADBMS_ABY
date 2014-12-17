@@ -6,7 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/net_serv.cc
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql-common/client_authentication.cc
+my_config.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql-common/my_config.h
+crypt_genhash_impl.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql-common/crypt_genhash_impl.h
+mysql/client_authentication.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql-common/mysql/client_authentication.h
+m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql-common/m_ctype.h
+sql_common.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql-common/sql_common.h
+errmsg.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql-common/errmsg.h
+sql_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql-common/sql_string.h
+string.h
+-
+stdarg.h
+-
+openssl/rsa.h
+-
+openssl/pem.h
+-
+openssl/err.h
+-
+openssl/applink.c
+-
+mysql/service_my_plugin_log.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql-common/mysql/service_my_plugin_log.h
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/net_serv.cc
 my_global.h
 -
 mysql.h
@@ -28,15 +58,17 @@ signal.h
 errno.h
 -
 probes_mysql.h
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/probes_mysql.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/probes_mysql.h
 algorithm
 -
 mysql_com_server.h
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/mysql_com_server.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/mysql_com_server.h
 
 extra/yassl/include/openssl/err.h
 
 extra/yassl/include/openssl/opensslv.h
+
+extra/yassl/include/openssl/pem.h
 
 extra/yassl/include/openssl/prefix_ssl.h
 
@@ -63,6 +95,20 @@ include/byte_order_generic.h
 include/byte_order_generic_x86.h
 
 include/byte_order_generic_x86_64.h
+
+include/crypt_genhash_impl.h
+stddef.h
+-
+my_global.h
+-
+
+include/errmsg.h
+
+include/hash.h
+my_global.h
+include/my_global.h
+my_sys.h
+include/my_sys.h
 
 include/little_endian.h
 
@@ -294,11 +340,29 @@ include/typelib.h
 my_alloc.h
 include/my_alloc.h
 
+include/mysql/client_authentication.h
+my_global.h
+-
+mysql.h
+include/mysql/mysql.h
+mysql/client_plugin.h
+include/mysql/mysql/client_plugin.h
+
+include/mysql/client_plugin.h
+stdarg.h
+-
+stdlib.h
+-
+mysql/plugin_auth_common.h
+-
+
 include/mysql/plugin.h
 mysql/services.h
 -
 plugin_ftparser.h
 include/mysql/plugin_ftparser.h
+
+include/mysql/plugin_auth_common.h
 
 include/mysql/plugin_ftparser.h
 plugin.h
@@ -386,6 +450,12 @@ include/probes_mysql_nodtrace.h
 
 include/probes_mysql_nodtrace.h
 
+include/sql_common.h
+mysql.h
+-
+hash.h
+-
+
 include/t_ctype.h
 
 include/typelib.h
@@ -405,4 +475,12 @@ openssl/err.h
 -
 
 sql/custom_conf.h
+
+sql/sql_string.h
+m_ctype.h
+sql/m_ctype.h
+my_sys.h
+sql/my_sys.h
+m_string.h
+sql/m_string.h
 

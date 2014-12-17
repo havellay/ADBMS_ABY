@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/client/get_password.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/get_password.c
 my_global.h
 -
 my_sys.h
 -
 mysql.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/mysql.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/mysql.h
 m_string.h
 -
 m_ctype.h

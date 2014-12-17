@@ -2,6 +2,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/myisamlog.dir/myisamlog.c.o"
   "myisamlog.pdb"
   "myisamlog"
+  "myisamlog.pdb"
+  "CMakeFiles/CMakeRelink.dir/myisamlog"
 )
 
 # Per-language clean rules from dependency scanning.

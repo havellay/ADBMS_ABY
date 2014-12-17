@@ -5,11 +5,11 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/adbms/mysqlsrc/mysql-5.6.21/storage/archive/azio.c" "/home/adbms/mysqlsrc/mysql-5.6.21/storage/archive/CMakeFiles/archive.dir/azio.c.o"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/archive/azio.c" "/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/archive/CMakeFiles/archive.dir/azio.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/adbms/mysqlsrc/mysql-5.6.21/storage/archive/ha_archive.cc" "/home/adbms/mysqlsrc/mysql-5.6.21/storage/archive/CMakeFiles/archive.dir/ha_archive.cc.o"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/archive/ha_archive.cc" "/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/archive/CMakeFiles/archive.dir/ha_archive.cc.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -20,7 +20,7 @@ SET(CMAKE_TARGET_DEFINITIONS
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/adbms/mysqlsrc/mysql-5.6.21/zlib/CMakeFiles/zlib.dir/DependInfo.cmake"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/zlib/CMakeFiles/zlib.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

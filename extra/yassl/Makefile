@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,16 +79,6 @@ install/local: preinstall
 install/local/fast: install/local
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Client\" \"DataFiles\" \"DebugBinaries\" \"Development\" \"Documentation\" \"Embedded\" \"Info\" \"IniFiles\" \"ManPages\" \"Readme\" \"Server\" \"Server_Scripts\" \"SharedLibraries\" \"SqlBench\" \"SupportFiles\" \"Test\" \"Unspecified\""
@@ -101,7 +91,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -111,7 +101,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/adbms/mysqlsrc/mysql-5.6.21/CPackSourceConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/hari/ADBMS_PROJECT/ADBMS_ABY/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -140,14 +130,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles /home/adbms/mysqlsrc/mysql-5.6.21/extra/yassl/CMakeFiles/progress.marks
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles /home/hari/ADBMS_PROJECT/ADBMS_ABY/extra/yassl/CMakeFiles/progress.marks
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/clean
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/clean
 .PHONY : clean
 
 # The main clean target
@@ -156,22 +146,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 extra/yassl/CMakeFiles/yassl.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/CMakeFiles/yassl.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/CMakeFiles/yassl.dir/rule
 .PHONY : extra/yassl/CMakeFiles/yassl.dir/rule
 
 # Convenience name for target.
@@ -180,7 +170,7 @@ yassl: extra/yassl/CMakeFiles/yassl.dir/rule
 
 # fast build rule for target.
 yassl/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/build
 .PHONY : yassl/fast
 
 __/__/client/get_password.o: __/__/client/get_password.c.o
@@ -188,7 +178,7 @@ __/__/client/get_password.o: __/__/client/get_password.c.o
 
 # target to build an object file
 __/__/client/get_password.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/__/__/client/get_password.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/__/__/client/get_password.c.o
 .PHONY : __/__/client/get_password.c.o
 
 __/__/client/get_password.i: __/__/client/get_password.c.i
@@ -196,7 +186,7 @@ __/__/client/get_password.i: __/__/client/get_password.c.i
 
 # target to preprocess a source file
 __/__/client/get_password.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/__/__/client/get_password.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/__/__/client/get_password.c.i
 .PHONY : __/__/client/get_password.c.i
 
 __/__/client/get_password.s: __/__/client/get_password.c.s
@@ -204,7 +194,7 @@ __/__/client/get_password.s: __/__/client/get_password.c.s
 
 # target to generate assembly for a file
 __/__/client/get_password.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/__/__/client/get_password.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/__/__/client/get_password.c.s
 .PHONY : __/__/client/get_password.c.s
 
 src/buffer.o: src/buffer.cpp.o
@@ -212,7 +202,7 @@ src/buffer.o: src/buffer.cpp.o
 
 # target to build an object file
 src/buffer.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/buffer.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/buffer.cpp.o
 .PHONY : src/buffer.cpp.o
 
 src/buffer.i: src/buffer.cpp.i
@@ -220,7 +210,7 @@ src/buffer.i: src/buffer.cpp.i
 
 # target to preprocess a source file
 src/buffer.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/buffer.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/buffer.cpp.i
 .PHONY : src/buffer.cpp.i
 
 src/buffer.s: src/buffer.cpp.s
@@ -228,7 +218,7 @@ src/buffer.s: src/buffer.cpp.s
 
 # target to generate assembly for a file
 src/buffer.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/buffer.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/buffer.cpp.s
 .PHONY : src/buffer.cpp.s
 
 src/cert_wrapper.o: src/cert_wrapper.cpp.o
@@ -236,7 +226,7 @@ src/cert_wrapper.o: src/cert_wrapper.cpp.o
 
 # target to build an object file
 src/cert_wrapper.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/cert_wrapper.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/cert_wrapper.cpp.o
 .PHONY : src/cert_wrapper.cpp.o
 
 src/cert_wrapper.i: src/cert_wrapper.cpp.i
@@ -244,7 +234,7 @@ src/cert_wrapper.i: src/cert_wrapper.cpp.i
 
 # target to preprocess a source file
 src/cert_wrapper.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/cert_wrapper.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/cert_wrapper.cpp.i
 .PHONY : src/cert_wrapper.cpp.i
 
 src/cert_wrapper.s: src/cert_wrapper.cpp.s
@@ -252,7 +242,7 @@ src/cert_wrapper.s: src/cert_wrapper.cpp.s
 
 # target to generate assembly for a file
 src/cert_wrapper.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/cert_wrapper.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/cert_wrapper.cpp.s
 .PHONY : src/cert_wrapper.cpp.s
 
 src/crypto_wrapper.o: src/crypto_wrapper.cpp.o
@@ -260,7 +250,7 @@ src/crypto_wrapper.o: src/crypto_wrapper.cpp.o
 
 # target to build an object file
 src/crypto_wrapper.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/crypto_wrapper.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/crypto_wrapper.cpp.o
 .PHONY : src/crypto_wrapper.cpp.o
 
 src/crypto_wrapper.i: src/crypto_wrapper.cpp.i
@@ -268,7 +258,7 @@ src/crypto_wrapper.i: src/crypto_wrapper.cpp.i
 
 # target to preprocess a source file
 src/crypto_wrapper.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/crypto_wrapper.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/crypto_wrapper.cpp.i
 .PHONY : src/crypto_wrapper.cpp.i
 
 src/crypto_wrapper.s: src/crypto_wrapper.cpp.s
@@ -276,7 +266,7 @@ src/crypto_wrapper.s: src/crypto_wrapper.cpp.s
 
 # target to generate assembly for a file
 src/crypto_wrapper.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/crypto_wrapper.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/crypto_wrapper.cpp.s
 .PHONY : src/crypto_wrapper.cpp.s
 
 src/handshake.o: src/handshake.cpp.o
@@ -284,7 +274,7 @@ src/handshake.o: src/handshake.cpp.o
 
 # target to build an object file
 src/handshake.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/handshake.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/handshake.cpp.o
 .PHONY : src/handshake.cpp.o
 
 src/handshake.i: src/handshake.cpp.i
@@ -292,7 +282,7 @@ src/handshake.i: src/handshake.cpp.i
 
 # target to preprocess a source file
 src/handshake.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/handshake.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/handshake.cpp.i
 .PHONY : src/handshake.cpp.i
 
 src/handshake.s: src/handshake.cpp.s
@@ -300,7 +290,7 @@ src/handshake.s: src/handshake.cpp.s
 
 # target to generate assembly for a file
 src/handshake.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/handshake.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/handshake.cpp.s
 .PHONY : src/handshake.cpp.s
 
 src/lock.o: src/lock.cpp.o
@@ -308,7 +298,7 @@ src/lock.o: src/lock.cpp.o
 
 # target to build an object file
 src/lock.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/lock.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/lock.cpp.o
 .PHONY : src/lock.cpp.o
 
 src/lock.i: src/lock.cpp.i
@@ -316,7 +306,7 @@ src/lock.i: src/lock.cpp.i
 
 # target to preprocess a source file
 src/lock.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/lock.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/lock.cpp.i
 .PHONY : src/lock.cpp.i
 
 src/lock.s: src/lock.cpp.s
@@ -324,7 +314,7 @@ src/lock.s: src/lock.cpp.s
 
 # target to generate assembly for a file
 src/lock.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/lock.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/lock.cpp.s
 .PHONY : src/lock.cpp.s
 
 src/log.o: src/log.cpp.o
@@ -332,7 +322,7 @@ src/log.o: src/log.cpp.o
 
 # target to build an object file
 src/log.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/log.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/log.cpp.o
 .PHONY : src/log.cpp.o
 
 src/log.i: src/log.cpp.i
@@ -340,7 +330,7 @@ src/log.i: src/log.cpp.i
 
 # target to preprocess a source file
 src/log.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/log.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/log.cpp.i
 .PHONY : src/log.cpp.i
 
 src/log.s: src/log.cpp.s
@@ -348,7 +338,7 @@ src/log.s: src/log.cpp.s
 
 # target to generate assembly for a file
 src/log.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/log.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/log.cpp.s
 .PHONY : src/log.cpp.s
 
 src/socket_wrapper.o: src/socket_wrapper.cpp.o
@@ -356,7 +346,7 @@ src/socket_wrapper.o: src/socket_wrapper.cpp.o
 
 # target to build an object file
 src/socket_wrapper.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/socket_wrapper.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/socket_wrapper.cpp.o
 .PHONY : src/socket_wrapper.cpp.o
 
 src/socket_wrapper.i: src/socket_wrapper.cpp.i
@@ -364,7 +354,7 @@ src/socket_wrapper.i: src/socket_wrapper.cpp.i
 
 # target to preprocess a source file
 src/socket_wrapper.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/socket_wrapper.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/socket_wrapper.cpp.i
 .PHONY : src/socket_wrapper.cpp.i
 
 src/socket_wrapper.s: src/socket_wrapper.cpp.s
@@ -372,7 +362,7 @@ src/socket_wrapper.s: src/socket_wrapper.cpp.s
 
 # target to generate assembly for a file
 src/socket_wrapper.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/socket_wrapper.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/socket_wrapper.cpp.s
 .PHONY : src/socket_wrapper.cpp.s
 
 src/ssl.o: src/ssl.cpp.o
@@ -380,7 +370,7 @@ src/ssl.o: src/ssl.cpp.o
 
 # target to build an object file
 src/ssl.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/ssl.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/ssl.cpp.o
 .PHONY : src/ssl.cpp.o
 
 src/ssl.i: src/ssl.cpp.i
@@ -388,7 +378,7 @@ src/ssl.i: src/ssl.cpp.i
 
 # target to preprocess a source file
 src/ssl.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/ssl.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/ssl.cpp.i
 .PHONY : src/ssl.cpp.i
 
 src/ssl.s: src/ssl.cpp.s
@@ -396,7 +386,7 @@ src/ssl.s: src/ssl.cpp.s
 
 # target to generate assembly for a file
 src/ssl.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/ssl.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/ssl.cpp.s
 .PHONY : src/ssl.cpp.s
 
 src/timer.o: src/timer.cpp.o
@@ -404,7 +394,7 @@ src/timer.o: src/timer.cpp.o
 
 # target to build an object file
 src/timer.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/timer.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/timer.cpp.o
 .PHONY : src/timer.cpp.o
 
 src/timer.i: src/timer.cpp.i
@@ -412,7 +402,7 @@ src/timer.i: src/timer.cpp.i
 
 # target to preprocess a source file
 src/timer.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/timer.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/timer.cpp.i
 .PHONY : src/timer.cpp.i
 
 src/timer.s: src/timer.cpp.s
@@ -420,7 +410,7 @@ src/timer.s: src/timer.cpp.s
 
 # target to generate assembly for a file
 src/timer.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/timer.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/timer.cpp.s
 .PHONY : src/timer.cpp.s
 
 src/yassl_error.o: src/yassl_error.cpp.o
@@ -428,7 +418,7 @@ src/yassl_error.o: src/yassl_error.cpp.o
 
 # target to build an object file
 src/yassl_error.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_error.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_error.cpp.o
 .PHONY : src/yassl_error.cpp.o
 
 src/yassl_error.i: src/yassl_error.cpp.i
@@ -436,7 +426,7 @@ src/yassl_error.i: src/yassl_error.cpp.i
 
 # target to preprocess a source file
 src/yassl_error.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_error.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_error.cpp.i
 .PHONY : src/yassl_error.cpp.i
 
 src/yassl_error.s: src/yassl_error.cpp.s
@@ -444,7 +434,7 @@ src/yassl_error.s: src/yassl_error.cpp.s
 
 # target to generate assembly for a file
 src/yassl_error.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_error.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_error.cpp.s
 .PHONY : src/yassl_error.cpp.s
 
 src/yassl_imp.o: src/yassl_imp.cpp.o
@@ -452,7 +442,7 @@ src/yassl_imp.o: src/yassl_imp.cpp.o
 
 # target to build an object file
 src/yassl_imp.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_imp.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_imp.cpp.o
 .PHONY : src/yassl_imp.cpp.o
 
 src/yassl_imp.i: src/yassl_imp.cpp.i
@@ -460,7 +450,7 @@ src/yassl_imp.i: src/yassl_imp.cpp.i
 
 # target to preprocess a source file
 src/yassl_imp.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_imp.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_imp.cpp.i
 .PHONY : src/yassl_imp.cpp.i
 
 src/yassl_imp.s: src/yassl_imp.cpp.s
@@ -468,7 +458,7 @@ src/yassl_imp.s: src/yassl_imp.cpp.s
 
 # target to generate assembly for a file
 src/yassl_imp.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_imp.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_imp.cpp.s
 .PHONY : src/yassl_imp.cpp.s
 
 src/yassl_int.o: src/yassl_int.cpp.o
@@ -476,7 +466,7 @@ src/yassl_int.o: src/yassl_int.cpp.o
 
 # target to build an object file
 src/yassl_int.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_int.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_int.cpp.o
 .PHONY : src/yassl_int.cpp.o
 
 src/yassl_int.i: src/yassl_int.cpp.i
@@ -484,7 +474,7 @@ src/yassl_int.i: src/yassl_int.cpp.i
 
 # target to preprocess a source file
 src/yassl_int.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_int.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_int.cpp.i
 .PHONY : src/yassl_int.cpp.i
 
 src/yassl_int.s: src/yassl_int.cpp.s
@@ -492,7 +482,7 @@ src/yassl_int.s: src/yassl_int.cpp.s
 
 # target to generate assembly for a file
 src/yassl_int.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_int.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/CMakeFiles/yassl.dir/build.make extra/yassl/CMakeFiles/yassl.dir/src/yassl_int.cpp.s
 .PHONY : src/yassl_int.cpp.s
 
 # Help Target
@@ -504,7 +494,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... package"
 	@echo "... package_source"
@@ -561,6 +550,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

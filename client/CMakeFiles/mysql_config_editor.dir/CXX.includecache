@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/client/client_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/client_priv.h
 my_global.h
 -
 my_sys.h
@@ -20,9 +20,9 @@ errmsg.h
 my_getopt.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/client/mysql_config_editor.cc
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/mysql_config_editor.cc
 my_config.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/my_config.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/my_config.h
 welcome_copyright_notice.h
 -
 signal.h
@@ -32,13 +32,13 @@ my_dir.h
 my_rnd.h
 -
 my_aes.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/my_aes.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/my_aes.h
 client_priv.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/client_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/client_priv.h
 my_default.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/my_default.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/my_default.h
 my_default_priv.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/my_default_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/my_default_priv.h
 
 include/big_endian.h
 

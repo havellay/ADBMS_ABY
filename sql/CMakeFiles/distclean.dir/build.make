@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # Utility rule file for distclean.
 
@@ -46,8 +46,8 @@ CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
 include sql/CMakeFiles/distclean.dir/progress.make
 
 sql/CMakeFiles/distclean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/sql && /usr/bin/cmake -E echo WARNING: distclean target is not functional
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/sql && /usr/bin/cmake -E echo Use "'bzr" "clean-tree'" with --unknown and/or --ignored parameter instead
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql && /usr/bin/cmake -E echo WARNING: distclean target is not functional
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql && /usr/bin/cmake -E echo Use "'bzr" "clean-tree'" with --unknown and/or --ignored parameter instead
 
 distclean: sql/CMakeFiles/distclean
 distclean: sql/CMakeFiles/distclean.dir/build.make
@@ -58,10 +58,10 @@ sql/CMakeFiles/distclean.dir/build: distclean
 .PHONY : sql/CMakeFiles/distclean.dir/build
 
 sql/CMakeFiles/distclean.dir/clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/sql && $(CMAKE_COMMAND) -P CMakeFiles/distclean.dir/cmake_clean.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql && $(CMAKE_COMMAND) -P CMakeFiles/distclean.dir/cmake_clean.cmake
 .PHONY : sql/CMakeFiles/distclean.dir/clean
 
 sql/CMakeFiles/distclean.dir/depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/sql /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/sql /home/adbms/mysqlsrc/mysql-5.6.21/sql/CMakeFiles/distclean.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/CMakeFiles/distclean.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : sql/CMakeFiles/distclean.dir/depend
 

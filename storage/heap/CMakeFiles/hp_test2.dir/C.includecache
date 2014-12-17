@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/heap/heapdef.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/heap/heapdef.h
 my_base.h
 -
 my_pthread.h
 -
 heap.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/heap/heap.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/heap/heap.h
 my_tree.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/heap/my_tree.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/heap/my_tree.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/heap/hp_test2.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/heap/hp_test2.c
 heapdef.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/heap/heapdef.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/heap/heapdef.h
 signal.h
 -
 

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # Include any dependencies generated for this target.
 include strings/CMakeFiles/strings.dir/depend.make
@@ -51,17 +51,17 @@ include strings/CMakeFiles/strings.dir/flags.make
 
 strings/CMakeFiles/strings.dir/bchange.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/bchange.c.o: strings/bchange.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/bchange.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/bchange.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/bchange.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/bchange.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/bchange.c
 
 strings/CMakeFiles/strings.dir/bchange.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/bchange.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/bchange.c > CMakeFiles/strings.dir/bchange.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/bchange.c > CMakeFiles/strings.dir/bchange.c.i
 
 strings/CMakeFiles/strings.dir/bchange.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/bchange.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/bchange.c -o CMakeFiles/strings.dir/bchange.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/bchange.c -o CMakeFiles/strings.dir/bchange.c.s
 
 strings/CMakeFiles/strings.dir/bchange.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/bchange.c.o.requires
@@ -74,17 +74,17 @@ strings/CMakeFiles/strings.dir/bchange.c.o.provides.build: strings/CMakeFiles/st
 
 strings/CMakeFiles/strings.dir/bmove_upp.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/bmove_upp.c.o: strings/bmove_upp.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/bmove_upp.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/bmove_upp.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/bmove_upp.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/bmove_upp.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/bmove_upp.c
 
 strings/CMakeFiles/strings.dir/bmove_upp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/bmove_upp.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/bmove_upp.c > CMakeFiles/strings.dir/bmove_upp.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/bmove_upp.c > CMakeFiles/strings.dir/bmove_upp.c.i
 
 strings/CMakeFiles/strings.dir/bmove_upp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/bmove_upp.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/bmove_upp.c -o CMakeFiles/strings.dir/bmove_upp.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/bmove_upp.c -o CMakeFiles/strings.dir/bmove_upp.c.s
 
 strings/CMakeFiles/strings.dir/bmove_upp.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/bmove_upp.c.o.requires
@@ -97,17 +97,17 @@ strings/CMakeFiles/strings.dir/bmove_upp.c.o.provides.build: strings/CMakeFiles/
 
 strings/CMakeFiles/strings.dir/ctype-big5.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-big5.c.o: strings/ctype-big5.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-big5.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-big5.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-big5.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-big5.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-big5.c
 
 strings/CMakeFiles/strings.dir/ctype-big5.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-big5.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-big5.c > CMakeFiles/strings.dir/ctype-big5.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-big5.c > CMakeFiles/strings.dir/ctype-big5.c.i
 
 strings/CMakeFiles/strings.dir/ctype-big5.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-big5.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-big5.c -o CMakeFiles/strings.dir/ctype-big5.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-big5.c -o CMakeFiles/strings.dir/ctype-big5.c.s
 
 strings/CMakeFiles/strings.dir/ctype-big5.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-big5.c.o.requires
@@ -120,17 +120,17 @@ strings/CMakeFiles/strings.dir/ctype-big5.c.o.provides.build: strings/CMakeFiles
 
 strings/CMakeFiles/strings.dir/ctype-bin.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-bin.c.o: strings/ctype-bin.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-bin.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-bin.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-bin.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-bin.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-bin.c
 
 strings/CMakeFiles/strings.dir/ctype-bin.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-bin.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-bin.c > CMakeFiles/strings.dir/ctype-bin.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-bin.c > CMakeFiles/strings.dir/ctype-bin.c.i
 
 strings/CMakeFiles/strings.dir/ctype-bin.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-bin.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-bin.c -o CMakeFiles/strings.dir/ctype-bin.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-bin.c -o CMakeFiles/strings.dir/ctype-bin.c.s
 
 strings/CMakeFiles/strings.dir/ctype-bin.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-bin.c.o.requires
@@ -143,17 +143,17 @@ strings/CMakeFiles/strings.dir/ctype-bin.c.o.provides.build: strings/CMakeFiles/
 
 strings/CMakeFiles/strings.dir/ctype-cp932.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-cp932.c.o: strings/ctype-cp932.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-cp932.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-cp932.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-cp932.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-cp932.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-cp932.c
 
 strings/CMakeFiles/strings.dir/ctype-cp932.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-cp932.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-cp932.c > CMakeFiles/strings.dir/ctype-cp932.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-cp932.c > CMakeFiles/strings.dir/ctype-cp932.c.i
 
 strings/CMakeFiles/strings.dir/ctype-cp932.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-cp932.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-cp932.c -o CMakeFiles/strings.dir/ctype-cp932.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-cp932.c -o CMakeFiles/strings.dir/ctype-cp932.c.s
 
 strings/CMakeFiles/strings.dir/ctype-cp932.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-cp932.c.o.requires
@@ -166,17 +166,17 @@ strings/CMakeFiles/strings.dir/ctype-cp932.c.o.provides.build: strings/CMakeFile
 
 strings/CMakeFiles/strings.dir/ctype-czech.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-czech.c.o: strings/ctype-czech.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-czech.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-czech.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-czech.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-czech.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-czech.c
 
 strings/CMakeFiles/strings.dir/ctype-czech.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-czech.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-czech.c > CMakeFiles/strings.dir/ctype-czech.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-czech.c > CMakeFiles/strings.dir/ctype-czech.c.i
 
 strings/CMakeFiles/strings.dir/ctype-czech.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-czech.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-czech.c -o CMakeFiles/strings.dir/ctype-czech.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-czech.c -o CMakeFiles/strings.dir/ctype-czech.c.s
 
 strings/CMakeFiles/strings.dir/ctype-czech.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-czech.c.o.requires
@@ -189,17 +189,17 @@ strings/CMakeFiles/strings.dir/ctype-czech.c.o.provides.build: strings/CMakeFile
 
 strings/CMakeFiles/strings.dir/ctype-euc_kr.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-euc_kr.c.o: strings/ctype-euc_kr.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-euc_kr.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-euc_kr.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-euc_kr.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-euc_kr.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-euc_kr.c
 
 strings/CMakeFiles/strings.dir/ctype-euc_kr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-euc_kr.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-euc_kr.c > CMakeFiles/strings.dir/ctype-euc_kr.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-euc_kr.c > CMakeFiles/strings.dir/ctype-euc_kr.c.i
 
 strings/CMakeFiles/strings.dir/ctype-euc_kr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-euc_kr.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-euc_kr.c -o CMakeFiles/strings.dir/ctype-euc_kr.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-euc_kr.c -o CMakeFiles/strings.dir/ctype-euc_kr.c.s
 
 strings/CMakeFiles/strings.dir/ctype-euc_kr.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-euc_kr.c.o.requires
@@ -212,17 +212,17 @@ strings/CMakeFiles/strings.dir/ctype-euc_kr.c.o.provides.build: strings/CMakeFil
 
 strings/CMakeFiles/strings.dir/ctype-eucjpms.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-eucjpms.c.o: strings/ctype-eucjpms.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-eucjpms.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-eucjpms.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-eucjpms.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-eucjpms.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-eucjpms.c
 
 strings/CMakeFiles/strings.dir/ctype-eucjpms.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-eucjpms.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-eucjpms.c > CMakeFiles/strings.dir/ctype-eucjpms.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-eucjpms.c > CMakeFiles/strings.dir/ctype-eucjpms.c.i
 
 strings/CMakeFiles/strings.dir/ctype-eucjpms.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-eucjpms.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-eucjpms.c -o CMakeFiles/strings.dir/ctype-eucjpms.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-eucjpms.c -o CMakeFiles/strings.dir/ctype-eucjpms.c.s
 
 strings/CMakeFiles/strings.dir/ctype-eucjpms.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-eucjpms.c.o.requires
@@ -235,17 +235,17 @@ strings/CMakeFiles/strings.dir/ctype-eucjpms.c.o.provides.build: strings/CMakeFi
 
 strings/CMakeFiles/strings.dir/ctype-extra.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-extra.c.o: strings/ctype-extra.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-extra.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-extra.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-extra.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-extra.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-extra.c
 
 strings/CMakeFiles/strings.dir/ctype-extra.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-extra.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-extra.c > CMakeFiles/strings.dir/ctype-extra.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-extra.c > CMakeFiles/strings.dir/ctype-extra.c.i
 
 strings/CMakeFiles/strings.dir/ctype-extra.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-extra.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-extra.c -o CMakeFiles/strings.dir/ctype-extra.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-extra.c -o CMakeFiles/strings.dir/ctype-extra.c.s
 
 strings/CMakeFiles/strings.dir/ctype-extra.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-extra.c.o.requires
@@ -258,17 +258,17 @@ strings/CMakeFiles/strings.dir/ctype-extra.c.o.provides.build: strings/CMakeFile
 
 strings/CMakeFiles/strings.dir/ctype-gb2312.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-gb2312.c.o: strings/ctype-gb2312.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-gb2312.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-gb2312.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-gb2312.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-gb2312.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-gb2312.c
 
 strings/CMakeFiles/strings.dir/ctype-gb2312.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-gb2312.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-gb2312.c > CMakeFiles/strings.dir/ctype-gb2312.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-gb2312.c > CMakeFiles/strings.dir/ctype-gb2312.c.i
 
 strings/CMakeFiles/strings.dir/ctype-gb2312.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-gb2312.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-gb2312.c -o CMakeFiles/strings.dir/ctype-gb2312.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-gb2312.c -o CMakeFiles/strings.dir/ctype-gb2312.c.s
 
 strings/CMakeFiles/strings.dir/ctype-gb2312.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-gb2312.c.o.requires
@@ -281,17 +281,17 @@ strings/CMakeFiles/strings.dir/ctype-gb2312.c.o.provides.build: strings/CMakeFil
 
 strings/CMakeFiles/strings.dir/ctype-gbk.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-gbk.c.o: strings/ctype-gbk.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-gbk.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-gbk.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-gbk.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-gbk.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-gbk.c
 
 strings/CMakeFiles/strings.dir/ctype-gbk.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-gbk.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-gbk.c > CMakeFiles/strings.dir/ctype-gbk.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-gbk.c > CMakeFiles/strings.dir/ctype-gbk.c.i
 
 strings/CMakeFiles/strings.dir/ctype-gbk.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-gbk.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-gbk.c -o CMakeFiles/strings.dir/ctype-gbk.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-gbk.c -o CMakeFiles/strings.dir/ctype-gbk.c.s
 
 strings/CMakeFiles/strings.dir/ctype-gbk.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-gbk.c.o.requires
@@ -304,17 +304,17 @@ strings/CMakeFiles/strings.dir/ctype-gbk.c.o.provides.build: strings/CMakeFiles/
 
 strings/CMakeFiles/strings.dir/ctype-latin1.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-latin1.c.o: strings/ctype-latin1.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-latin1.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-latin1.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-latin1.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-latin1.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-latin1.c
 
 strings/CMakeFiles/strings.dir/ctype-latin1.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-latin1.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-latin1.c > CMakeFiles/strings.dir/ctype-latin1.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-latin1.c > CMakeFiles/strings.dir/ctype-latin1.c.i
 
 strings/CMakeFiles/strings.dir/ctype-latin1.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-latin1.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-latin1.c -o CMakeFiles/strings.dir/ctype-latin1.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-latin1.c -o CMakeFiles/strings.dir/ctype-latin1.c.s
 
 strings/CMakeFiles/strings.dir/ctype-latin1.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-latin1.c.o.requires
@@ -327,17 +327,17 @@ strings/CMakeFiles/strings.dir/ctype-latin1.c.o.provides.build: strings/CMakeFil
 
 strings/CMakeFiles/strings.dir/ctype-mb.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-mb.c.o: strings/ctype-mb.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-mb.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-mb.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-mb.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-mb.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-mb.c
 
 strings/CMakeFiles/strings.dir/ctype-mb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-mb.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-mb.c > CMakeFiles/strings.dir/ctype-mb.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-mb.c > CMakeFiles/strings.dir/ctype-mb.c.i
 
 strings/CMakeFiles/strings.dir/ctype-mb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-mb.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-mb.c -o CMakeFiles/strings.dir/ctype-mb.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-mb.c -o CMakeFiles/strings.dir/ctype-mb.c.s
 
 strings/CMakeFiles/strings.dir/ctype-mb.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-mb.c.o.requires
@@ -350,17 +350,17 @@ strings/CMakeFiles/strings.dir/ctype-mb.c.o.provides.build: strings/CMakeFiles/s
 
 strings/CMakeFiles/strings.dir/ctype-simple.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-simple.c.o: strings/ctype-simple.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-simple.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-simple.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-simple.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-simple.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-simple.c
 
 strings/CMakeFiles/strings.dir/ctype-simple.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-simple.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-simple.c > CMakeFiles/strings.dir/ctype-simple.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-simple.c > CMakeFiles/strings.dir/ctype-simple.c.i
 
 strings/CMakeFiles/strings.dir/ctype-simple.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-simple.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-simple.c -o CMakeFiles/strings.dir/ctype-simple.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-simple.c -o CMakeFiles/strings.dir/ctype-simple.c.s
 
 strings/CMakeFiles/strings.dir/ctype-simple.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-simple.c.o.requires
@@ -373,17 +373,17 @@ strings/CMakeFiles/strings.dir/ctype-simple.c.o.provides.build: strings/CMakeFil
 
 strings/CMakeFiles/strings.dir/ctype-sjis.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-sjis.c.o: strings/ctype-sjis.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-sjis.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-sjis.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-sjis.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-sjis.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-sjis.c
 
 strings/CMakeFiles/strings.dir/ctype-sjis.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-sjis.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-sjis.c > CMakeFiles/strings.dir/ctype-sjis.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-sjis.c > CMakeFiles/strings.dir/ctype-sjis.c.i
 
 strings/CMakeFiles/strings.dir/ctype-sjis.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-sjis.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-sjis.c -o CMakeFiles/strings.dir/ctype-sjis.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-sjis.c -o CMakeFiles/strings.dir/ctype-sjis.c.s
 
 strings/CMakeFiles/strings.dir/ctype-sjis.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-sjis.c.o.requires
@@ -396,17 +396,17 @@ strings/CMakeFiles/strings.dir/ctype-sjis.c.o.provides.build: strings/CMakeFiles
 
 strings/CMakeFiles/strings.dir/ctype-tis620.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-tis620.c.o: strings/ctype-tis620.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-tis620.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-tis620.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-tis620.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-tis620.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-tis620.c
 
 strings/CMakeFiles/strings.dir/ctype-tis620.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-tis620.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-tis620.c > CMakeFiles/strings.dir/ctype-tis620.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-tis620.c > CMakeFiles/strings.dir/ctype-tis620.c.i
 
 strings/CMakeFiles/strings.dir/ctype-tis620.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-tis620.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-tis620.c -o CMakeFiles/strings.dir/ctype-tis620.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-tis620.c -o CMakeFiles/strings.dir/ctype-tis620.c.s
 
 strings/CMakeFiles/strings.dir/ctype-tis620.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-tis620.c.o.requires
@@ -419,17 +419,17 @@ strings/CMakeFiles/strings.dir/ctype-tis620.c.o.provides.build: strings/CMakeFil
 
 strings/CMakeFiles/strings.dir/ctype-uca.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-uca.c.o: strings/ctype-uca.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-uca.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-uca.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-uca.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-uca.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-uca.c
 
 strings/CMakeFiles/strings.dir/ctype-uca.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-uca.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-uca.c > CMakeFiles/strings.dir/ctype-uca.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-uca.c > CMakeFiles/strings.dir/ctype-uca.c.i
 
 strings/CMakeFiles/strings.dir/ctype-uca.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-uca.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-uca.c -o CMakeFiles/strings.dir/ctype-uca.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-uca.c -o CMakeFiles/strings.dir/ctype-uca.c.s
 
 strings/CMakeFiles/strings.dir/ctype-uca.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-uca.c.o.requires
@@ -442,17 +442,17 @@ strings/CMakeFiles/strings.dir/ctype-uca.c.o.provides.build: strings/CMakeFiles/
 
 strings/CMakeFiles/strings.dir/ctype-ucs2.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-ucs2.c.o: strings/ctype-ucs2.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-ucs2.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-ucs2.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-ucs2.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-ucs2.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-ucs2.c
 
 strings/CMakeFiles/strings.dir/ctype-ucs2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-ucs2.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-ucs2.c > CMakeFiles/strings.dir/ctype-ucs2.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-ucs2.c > CMakeFiles/strings.dir/ctype-ucs2.c.i
 
 strings/CMakeFiles/strings.dir/ctype-ucs2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-ucs2.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-ucs2.c -o CMakeFiles/strings.dir/ctype-ucs2.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-ucs2.c -o CMakeFiles/strings.dir/ctype-ucs2.c.s
 
 strings/CMakeFiles/strings.dir/ctype-ucs2.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-ucs2.c.o.requires
@@ -465,17 +465,17 @@ strings/CMakeFiles/strings.dir/ctype-ucs2.c.o.provides.build: strings/CMakeFiles
 
 strings/CMakeFiles/strings.dir/ctype-ujis.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-ujis.c.o: strings/ctype-ujis.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-ujis.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-ujis.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-ujis.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-ujis.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-ujis.c
 
 strings/CMakeFiles/strings.dir/ctype-ujis.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-ujis.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-ujis.c > CMakeFiles/strings.dir/ctype-ujis.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-ujis.c > CMakeFiles/strings.dir/ctype-ujis.c.i
 
 strings/CMakeFiles/strings.dir/ctype-ujis.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-ujis.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-ujis.c -o CMakeFiles/strings.dir/ctype-ujis.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-ujis.c -o CMakeFiles/strings.dir/ctype-ujis.c.s
 
 strings/CMakeFiles/strings.dir/ctype-ujis.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-ujis.c.o.requires
@@ -488,17 +488,17 @@ strings/CMakeFiles/strings.dir/ctype-ujis.c.o.provides.build: strings/CMakeFiles
 
 strings/CMakeFiles/strings.dir/ctype-utf8.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-utf8.c.o: strings/ctype-utf8.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-utf8.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-utf8.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-utf8.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-utf8.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-utf8.c
 
 strings/CMakeFiles/strings.dir/ctype-utf8.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-utf8.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-utf8.c > CMakeFiles/strings.dir/ctype-utf8.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-utf8.c > CMakeFiles/strings.dir/ctype-utf8.c.i
 
 strings/CMakeFiles/strings.dir/ctype-utf8.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-utf8.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-utf8.c -o CMakeFiles/strings.dir/ctype-utf8.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-utf8.c -o CMakeFiles/strings.dir/ctype-utf8.c.s
 
 strings/CMakeFiles/strings.dir/ctype-utf8.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-utf8.c.o.requires
@@ -511,17 +511,17 @@ strings/CMakeFiles/strings.dir/ctype-utf8.c.o.provides.build: strings/CMakeFiles
 
 strings/CMakeFiles/strings.dir/ctype-win1250ch.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype-win1250ch.c.o: strings/ctype-win1250ch.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype-win1250ch.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-win1250ch.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-win1250ch.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype-win1250ch.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-win1250ch.c
 
 strings/CMakeFiles/strings.dir/ctype-win1250ch.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype-win1250ch.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-win1250ch.c > CMakeFiles/strings.dir/ctype-win1250ch.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-win1250ch.c > CMakeFiles/strings.dir/ctype-win1250ch.c.i
 
 strings/CMakeFiles/strings.dir/ctype-win1250ch.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype-win1250ch.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype-win1250ch.c -o CMakeFiles/strings.dir/ctype-win1250ch.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype-win1250ch.c -o CMakeFiles/strings.dir/ctype-win1250ch.c.s
 
 strings/CMakeFiles/strings.dir/ctype-win1250ch.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype-win1250ch.c.o.requires
@@ -534,17 +534,17 @@ strings/CMakeFiles/strings.dir/ctype-win1250ch.c.o.provides.build: strings/CMake
 
 strings/CMakeFiles/strings.dir/ctype.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/ctype.c.o: strings/ctype.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/ctype.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/ctype.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype.c
 
 strings/CMakeFiles/strings.dir/ctype.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/ctype.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype.c > CMakeFiles/strings.dir/ctype.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype.c > CMakeFiles/strings.dir/ctype.c.i
 
 strings/CMakeFiles/strings.dir/ctype.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/ctype.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/ctype.c -o CMakeFiles/strings.dir/ctype.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/ctype.c -o CMakeFiles/strings.dir/ctype.c.s
 
 strings/CMakeFiles/strings.dir/ctype.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/ctype.c.o.requires
@@ -557,17 +557,17 @@ strings/CMakeFiles/strings.dir/ctype.c.o.provides.build: strings/CMakeFiles/stri
 
 strings/CMakeFiles/strings.dir/decimal.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/decimal.c.o: strings/decimal.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/decimal.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/decimal.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/decimal.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/decimal.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/decimal.c
 
 strings/CMakeFiles/strings.dir/decimal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/decimal.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/decimal.c > CMakeFiles/strings.dir/decimal.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/decimal.c > CMakeFiles/strings.dir/decimal.c.i
 
 strings/CMakeFiles/strings.dir/decimal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/decimal.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/decimal.c -o CMakeFiles/strings.dir/decimal.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/decimal.c -o CMakeFiles/strings.dir/decimal.c.s
 
 strings/CMakeFiles/strings.dir/decimal.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/decimal.c.o.requires
@@ -580,17 +580,17 @@ strings/CMakeFiles/strings.dir/decimal.c.o.provides.build: strings/CMakeFiles/st
 
 strings/CMakeFiles/strings.dir/dtoa.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/dtoa.c.o: strings/dtoa.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/dtoa.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/dtoa.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/dtoa.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/dtoa.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/dtoa.c
 
 strings/CMakeFiles/strings.dir/dtoa.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/dtoa.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/dtoa.c > CMakeFiles/strings.dir/dtoa.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/dtoa.c > CMakeFiles/strings.dir/dtoa.c.i
 
 strings/CMakeFiles/strings.dir/dtoa.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/dtoa.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/dtoa.c -o CMakeFiles/strings.dir/dtoa.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/dtoa.c -o CMakeFiles/strings.dir/dtoa.c.s
 
 strings/CMakeFiles/strings.dir/dtoa.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/dtoa.c.o.requires
@@ -603,17 +603,17 @@ strings/CMakeFiles/strings.dir/dtoa.c.o.provides.build: strings/CMakeFiles/strin
 
 strings/CMakeFiles/strings.dir/int2str.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/int2str.c.o: strings/int2str.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/int2str.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/int2str.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/int2str.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/int2str.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/int2str.c
 
 strings/CMakeFiles/strings.dir/int2str.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/int2str.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/int2str.c > CMakeFiles/strings.dir/int2str.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/int2str.c > CMakeFiles/strings.dir/int2str.c.i
 
 strings/CMakeFiles/strings.dir/int2str.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/int2str.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/int2str.c -o CMakeFiles/strings.dir/int2str.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/int2str.c -o CMakeFiles/strings.dir/int2str.c.s
 
 strings/CMakeFiles/strings.dir/int2str.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/int2str.c.o.requires
@@ -626,17 +626,17 @@ strings/CMakeFiles/strings.dir/int2str.c.o.provides.build: strings/CMakeFiles/st
 
 strings/CMakeFiles/strings.dir/is_prefix.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/is_prefix.c.o: strings/is_prefix.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/is_prefix.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/is_prefix.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/is_prefix.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/is_prefix.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/is_prefix.c
 
 strings/CMakeFiles/strings.dir/is_prefix.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/is_prefix.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/is_prefix.c > CMakeFiles/strings.dir/is_prefix.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/is_prefix.c > CMakeFiles/strings.dir/is_prefix.c.i
 
 strings/CMakeFiles/strings.dir/is_prefix.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/is_prefix.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/is_prefix.c -o CMakeFiles/strings.dir/is_prefix.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/is_prefix.c -o CMakeFiles/strings.dir/is_prefix.c.s
 
 strings/CMakeFiles/strings.dir/is_prefix.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/is_prefix.c.o.requires
@@ -649,17 +649,17 @@ strings/CMakeFiles/strings.dir/is_prefix.c.o.provides.build: strings/CMakeFiles/
 
 strings/CMakeFiles/strings.dir/llstr.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/llstr.c.o: strings/llstr.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_27)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/llstr.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/llstr.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/llstr.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/llstr.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/llstr.c
 
 strings/CMakeFiles/strings.dir/llstr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/llstr.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/llstr.c > CMakeFiles/strings.dir/llstr.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/llstr.c > CMakeFiles/strings.dir/llstr.c.i
 
 strings/CMakeFiles/strings.dir/llstr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/llstr.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/llstr.c -o CMakeFiles/strings.dir/llstr.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/llstr.c -o CMakeFiles/strings.dir/llstr.c.s
 
 strings/CMakeFiles/strings.dir/llstr.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/llstr.c.o.requires
@@ -672,17 +672,17 @@ strings/CMakeFiles/strings.dir/llstr.c.o.provides.build: strings/CMakeFiles/stri
 
 strings/CMakeFiles/strings.dir/longlong2str.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/longlong2str.c.o: strings/longlong2str.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/longlong2str.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/longlong2str.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/longlong2str.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/longlong2str.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/longlong2str.c
 
 strings/CMakeFiles/strings.dir/longlong2str.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/longlong2str.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/longlong2str.c > CMakeFiles/strings.dir/longlong2str.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/longlong2str.c > CMakeFiles/strings.dir/longlong2str.c.i
 
 strings/CMakeFiles/strings.dir/longlong2str.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/longlong2str.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/longlong2str.c -o CMakeFiles/strings.dir/longlong2str.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/longlong2str.c -o CMakeFiles/strings.dir/longlong2str.c.s
 
 strings/CMakeFiles/strings.dir/longlong2str.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/longlong2str.c.o.requires
@@ -695,17 +695,17 @@ strings/CMakeFiles/strings.dir/longlong2str.c.o.provides.build: strings/CMakeFil
 
 strings/CMakeFiles/strings.dir/my_strtoll10.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/my_strtoll10.c.o: strings/my_strtoll10.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_29)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_29)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/my_strtoll10.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/my_strtoll10.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/my_strtoll10.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/my_strtoll10.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_strtoll10.c
 
 strings/CMakeFiles/strings.dir/my_strtoll10.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/my_strtoll10.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/my_strtoll10.c > CMakeFiles/strings.dir/my_strtoll10.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_strtoll10.c > CMakeFiles/strings.dir/my_strtoll10.c.i
 
 strings/CMakeFiles/strings.dir/my_strtoll10.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/my_strtoll10.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/my_strtoll10.c -o CMakeFiles/strings.dir/my_strtoll10.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_strtoll10.c -o CMakeFiles/strings.dir/my_strtoll10.c.s
 
 strings/CMakeFiles/strings.dir/my_strtoll10.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/my_strtoll10.c.o.requires
@@ -718,17 +718,17 @@ strings/CMakeFiles/strings.dir/my_strtoll10.c.o.provides.build: strings/CMakeFil
 
 strings/CMakeFiles/strings.dir/my_vsnprintf.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/my_vsnprintf.c.o: strings/my_vsnprintf.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_30)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_30)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/my_vsnprintf.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/my_vsnprintf.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/my_vsnprintf.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/my_vsnprintf.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_vsnprintf.c
 
 strings/CMakeFiles/strings.dir/my_vsnprintf.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/my_vsnprintf.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/my_vsnprintf.c > CMakeFiles/strings.dir/my_vsnprintf.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_vsnprintf.c > CMakeFiles/strings.dir/my_vsnprintf.c.i
 
 strings/CMakeFiles/strings.dir/my_vsnprintf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/my_vsnprintf.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/my_vsnprintf.c -o CMakeFiles/strings.dir/my_vsnprintf.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_vsnprintf.c -o CMakeFiles/strings.dir/my_vsnprintf.c.s
 
 strings/CMakeFiles/strings.dir/my_vsnprintf.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/my_vsnprintf.c.o.requires
@@ -741,17 +741,17 @@ strings/CMakeFiles/strings.dir/my_vsnprintf.c.o.provides.build: strings/CMakeFil
 
 strings/CMakeFiles/strings.dir/str2int.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/str2int.c.o: strings/str2int.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_31)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_31)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/str2int.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/str2int.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/str2int.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/str2int.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/str2int.c
 
 strings/CMakeFiles/strings.dir/str2int.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/str2int.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/str2int.c > CMakeFiles/strings.dir/str2int.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/str2int.c > CMakeFiles/strings.dir/str2int.c.i
 
 strings/CMakeFiles/strings.dir/str2int.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/str2int.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/str2int.c -o CMakeFiles/strings.dir/str2int.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/str2int.c -o CMakeFiles/strings.dir/str2int.c.s
 
 strings/CMakeFiles/strings.dir/str2int.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/str2int.c.o.requires
@@ -764,17 +764,17 @@ strings/CMakeFiles/strings.dir/str2int.c.o.provides.build: strings/CMakeFiles/st
 
 strings/CMakeFiles/strings.dir/str_alloc.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/str_alloc.c.o: strings/str_alloc.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_32)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_32)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/str_alloc.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/str_alloc.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/str_alloc.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/str_alloc.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/str_alloc.c
 
 strings/CMakeFiles/strings.dir/str_alloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/str_alloc.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/str_alloc.c > CMakeFiles/strings.dir/str_alloc.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/str_alloc.c > CMakeFiles/strings.dir/str_alloc.c.i
 
 strings/CMakeFiles/strings.dir/str_alloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/str_alloc.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/str_alloc.c -o CMakeFiles/strings.dir/str_alloc.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/str_alloc.c -o CMakeFiles/strings.dir/str_alloc.c.s
 
 strings/CMakeFiles/strings.dir/str_alloc.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/str_alloc.c.o.requires
@@ -787,17 +787,17 @@ strings/CMakeFiles/strings.dir/str_alloc.c.o.provides.build: strings/CMakeFiles/
 
 strings/CMakeFiles/strings.dir/strcend.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/strcend.c.o: strings/strcend.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_33)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_33)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/strcend.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strcend.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/strcend.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strcend.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strcend.c
 
 strings/CMakeFiles/strings.dir/strcend.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/strcend.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/strcend.c > CMakeFiles/strings.dir/strcend.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strcend.c > CMakeFiles/strings.dir/strcend.c.i
 
 strings/CMakeFiles/strings.dir/strcend.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/strcend.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/strcend.c -o CMakeFiles/strings.dir/strcend.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strcend.c -o CMakeFiles/strings.dir/strcend.c.s
 
 strings/CMakeFiles/strings.dir/strcend.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/strcend.c.o.requires
@@ -810,17 +810,17 @@ strings/CMakeFiles/strings.dir/strcend.c.o.provides.build: strings/CMakeFiles/st
 
 strings/CMakeFiles/strings.dir/strend.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/strend.c.o: strings/strend.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_34)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_34)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/strend.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strend.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/strend.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strend.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strend.c
 
 strings/CMakeFiles/strings.dir/strend.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/strend.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/strend.c > CMakeFiles/strings.dir/strend.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strend.c > CMakeFiles/strings.dir/strend.c.i
 
 strings/CMakeFiles/strings.dir/strend.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/strend.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/strend.c -o CMakeFiles/strings.dir/strend.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strend.c -o CMakeFiles/strings.dir/strend.c.s
 
 strings/CMakeFiles/strings.dir/strend.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/strend.c.o.requires
@@ -833,17 +833,17 @@ strings/CMakeFiles/strings.dir/strend.c.o.provides.build: strings/CMakeFiles/str
 
 strings/CMakeFiles/strings.dir/strfill.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/strfill.c.o: strings/strfill.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_35)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_35)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/strfill.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strfill.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/strfill.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strfill.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strfill.c
 
 strings/CMakeFiles/strings.dir/strfill.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/strfill.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/strfill.c > CMakeFiles/strings.dir/strfill.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strfill.c > CMakeFiles/strings.dir/strfill.c.i
 
 strings/CMakeFiles/strings.dir/strfill.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/strfill.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/strfill.c -o CMakeFiles/strings.dir/strfill.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strfill.c -o CMakeFiles/strings.dir/strfill.c.s
 
 strings/CMakeFiles/strings.dir/strfill.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/strfill.c.o.requires
@@ -856,17 +856,17 @@ strings/CMakeFiles/strings.dir/strfill.c.o.provides.build: strings/CMakeFiles/st
 
 strings/CMakeFiles/strings.dir/strmake.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/strmake.c.o: strings/strmake.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_36)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_36)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/strmake.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strmake.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/strmake.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strmake.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strmake.c
 
 strings/CMakeFiles/strings.dir/strmake.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/strmake.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/strmake.c > CMakeFiles/strings.dir/strmake.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strmake.c > CMakeFiles/strings.dir/strmake.c.i
 
 strings/CMakeFiles/strings.dir/strmake.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/strmake.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/strmake.c -o CMakeFiles/strings.dir/strmake.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strmake.c -o CMakeFiles/strings.dir/strmake.c.s
 
 strings/CMakeFiles/strings.dir/strmake.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/strmake.c.o.requires
@@ -879,17 +879,17 @@ strings/CMakeFiles/strings.dir/strmake.c.o.provides.build: strings/CMakeFiles/st
 
 strings/CMakeFiles/strings.dir/strmov.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/strmov.c.o: strings/strmov.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_37)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_37)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/strmov.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strmov.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/strmov.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strmov.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strmov.c
 
 strings/CMakeFiles/strings.dir/strmov.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/strmov.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/strmov.c > CMakeFiles/strings.dir/strmov.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strmov.c > CMakeFiles/strings.dir/strmov.c.i
 
 strings/CMakeFiles/strings.dir/strmov.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/strmov.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/strmov.c -o CMakeFiles/strings.dir/strmov.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strmov.c -o CMakeFiles/strings.dir/strmov.c.s
 
 strings/CMakeFiles/strings.dir/strmov.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/strmov.c.o.requires
@@ -902,17 +902,17 @@ strings/CMakeFiles/strings.dir/strmov.c.o.provides.build: strings/CMakeFiles/str
 
 strings/CMakeFiles/strings.dir/strnmov.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/strnmov.c.o: strings/strnmov.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_38)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_38)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/strnmov.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strnmov.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/strnmov.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strnmov.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strnmov.c
 
 strings/CMakeFiles/strings.dir/strnmov.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/strnmov.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/strnmov.c > CMakeFiles/strings.dir/strnmov.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strnmov.c > CMakeFiles/strings.dir/strnmov.c.i
 
 strings/CMakeFiles/strings.dir/strnmov.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/strnmov.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/strnmov.c -o CMakeFiles/strings.dir/strnmov.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strnmov.c -o CMakeFiles/strings.dir/strnmov.c.s
 
 strings/CMakeFiles/strings.dir/strnmov.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/strnmov.c.o.requires
@@ -925,17 +925,17 @@ strings/CMakeFiles/strings.dir/strnmov.c.o.provides.build: strings/CMakeFiles/st
 
 strings/CMakeFiles/strings.dir/strxmov.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/strxmov.c.o: strings/strxmov.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_39)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_39)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/strxmov.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strxmov.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/strxmov.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strxmov.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strxmov.c
 
 strings/CMakeFiles/strings.dir/strxmov.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/strxmov.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/strxmov.c > CMakeFiles/strings.dir/strxmov.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strxmov.c > CMakeFiles/strings.dir/strxmov.c.i
 
 strings/CMakeFiles/strings.dir/strxmov.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/strxmov.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/strxmov.c -o CMakeFiles/strings.dir/strxmov.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strxmov.c -o CMakeFiles/strings.dir/strxmov.c.s
 
 strings/CMakeFiles/strings.dir/strxmov.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/strxmov.c.o.requires
@@ -948,17 +948,17 @@ strings/CMakeFiles/strings.dir/strxmov.c.o.provides.build: strings/CMakeFiles/st
 
 strings/CMakeFiles/strings.dir/strxnmov.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/strxnmov.c.o: strings/strxnmov.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_40)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_40)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/strxnmov.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strxnmov.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/strxnmov.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strxnmov.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strxnmov.c
 
 strings/CMakeFiles/strings.dir/strxnmov.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/strxnmov.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/strxnmov.c > CMakeFiles/strings.dir/strxnmov.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strxnmov.c > CMakeFiles/strings.dir/strxnmov.c.i
 
 strings/CMakeFiles/strings.dir/strxnmov.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/strxnmov.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/strxnmov.c -o CMakeFiles/strings.dir/strxnmov.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strxnmov.c -o CMakeFiles/strings.dir/strxnmov.c.s
 
 strings/CMakeFiles/strings.dir/strxnmov.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/strxnmov.c.o.requires
@@ -971,17 +971,17 @@ strings/CMakeFiles/strings.dir/strxnmov.c.o.provides.build: strings/CMakeFiles/s
 
 strings/CMakeFiles/strings.dir/xml.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/xml.c.o: strings/xml.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_41)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_41)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/xml.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/xml.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/xml.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/xml.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/xml.c
 
 strings/CMakeFiles/strings.dir/xml.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/xml.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/xml.c > CMakeFiles/strings.dir/xml.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/xml.c > CMakeFiles/strings.dir/xml.c.i
 
 strings/CMakeFiles/strings.dir/xml.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/xml.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/xml.c -o CMakeFiles/strings.dir/xml.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/xml.c -o CMakeFiles/strings.dir/xml.c.s
 
 strings/CMakeFiles/strings.dir/xml.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/xml.c.o.requires
@@ -994,17 +994,17 @@ strings/CMakeFiles/strings.dir/xml.c.o.provides.build: strings/CMakeFiles/string
 
 strings/CMakeFiles/strings.dir/my_strchr.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/my_strchr.c.o: strings/my_strchr.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_42)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_42)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/my_strchr.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/my_strchr.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/my_strchr.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/my_strchr.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_strchr.c
 
 strings/CMakeFiles/strings.dir/my_strchr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/my_strchr.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/my_strchr.c > CMakeFiles/strings.dir/my_strchr.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_strchr.c > CMakeFiles/strings.dir/my_strchr.c.i
 
 strings/CMakeFiles/strings.dir/my_strchr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/my_strchr.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/my_strchr.c -o CMakeFiles/strings.dir/my_strchr.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/my_strchr.c -o CMakeFiles/strings.dir/my_strchr.c.s
 
 strings/CMakeFiles/strings.dir/my_strchr.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/my_strchr.c.o.requires
@@ -1017,17 +1017,17 @@ strings/CMakeFiles/strings.dir/my_strchr.c.o.provides.build: strings/CMakeFiles/
 
 strings/CMakeFiles/strings.dir/strcont.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/strcont.c.o: strings/strcont.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_43)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_43)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/strcont.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strcont.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/strcont.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strcont.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strcont.c
 
 strings/CMakeFiles/strings.dir/strcont.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/strcont.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/strcont.c > CMakeFiles/strings.dir/strcont.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strcont.c > CMakeFiles/strings.dir/strcont.c.i
 
 strings/CMakeFiles/strings.dir/strcont.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/strcont.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/strcont.c -o CMakeFiles/strings.dir/strcont.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strcont.c -o CMakeFiles/strings.dir/strcont.c.s
 
 strings/CMakeFiles/strings.dir/strcont.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/strcont.c.o.requires
@@ -1040,17 +1040,17 @@ strings/CMakeFiles/strings.dir/strcont.c.o.provides.build: strings/CMakeFiles/st
 
 strings/CMakeFiles/strings.dir/strappend.c.o: strings/CMakeFiles/strings.dir/flags.make
 strings/CMakeFiles/strings.dir/strappend.c.o: strings/strappend.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_44)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_44)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object strings/CMakeFiles/strings.dir/strappend.c.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strappend.c.o   -c /home/adbms/mysqlsrc/mysql-5.6.21/strings/strappend.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/strings.dir/strappend.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strappend.c
 
 strings/CMakeFiles/strings.dir/strappend.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/strings.dir/strappend.c.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/strings/strappend.c > CMakeFiles/strings.dir/strappend.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strappend.c > CMakeFiles/strings.dir/strappend.c.i
 
 strings/CMakeFiles/strings.dir/strappend.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/strings.dir/strappend.c.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/strings/strappend.c -o CMakeFiles/strings.dir/strappend.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/strappend.c -o CMakeFiles/strings.dir/strappend.c.s
 
 strings/CMakeFiles/strings.dir/strappend.c.o.requires:
 .PHONY : strings/CMakeFiles/strings.dir/strappend.c.o.requires
@@ -1158,8 +1158,8 @@ strings/libstrings.a: strings/CMakeFiles/strings.dir/strappend.c.o
 strings/libstrings.a: strings/CMakeFiles/strings.dir/build.make
 strings/libstrings.a: strings/CMakeFiles/strings.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C static library libstrings.a"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && $(CMAKE_COMMAND) -P CMakeFiles/strings.dir/cmake_clean_target.cmake
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/strings.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && $(CMAKE_COMMAND) -P CMakeFiles/strings.dir/cmake_clean_target.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/strings.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 strings/CMakeFiles/strings.dir/build: strings/libstrings.a
@@ -1212,10 +1212,10 @@ strings/CMakeFiles/strings.dir/requires: strings/CMakeFiles/strings.dir/strappen
 .PHONY : strings/CMakeFiles/strings.dir/requires
 
 strings/CMakeFiles/strings.dir/clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/strings && $(CMAKE_COMMAND) -P CMakeFiles/strings.dir/cmake_clean.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings && $(CMAKE_COMMAND) -P CMakeFiles/strings.dir/cmake_clean.cmake
 .PHONY : strings/CMakeFiles/strings.dir/clean
 
 strings/CMakeFiles/strings.dir/depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/strings /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/strings /home/adbms/mysqlsrc/mysql-5.6.21/strings/CMakeFiles/strings.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings /home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/CMakeFiles/strings.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : strings/CMakeFiles/strings.dir/depend
 

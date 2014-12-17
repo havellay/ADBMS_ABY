@@ -17,12 +17,12 @@
 # If bzr is present, run bzr export.
 # Otherwise, just run cpack with source configuration.
 
-SET(CMAKE_SOURCE_DIR "/home/adbms/mysqlsrc/mysql-5.6.21")
-SET(CMAKE_BINARY_DIR "/home/adbms/mysqlsrc/mysql-5.6.21")
+SET(CMAKE_SOURCE_DIR "/home/hari/ADBMS_PROJECT/ADBMS_ABY")
+SET(CMAKE_BINARY_DIR "/home/hari/ADBMS_PROJECT/ADBMS_ABY")
 SET(CPACK_SOURCE_PACKAGE_FILE_NAME "mysql-5.6.21")
 SET(CMAKE_CPACK_COMMAND  "/usr/bin/cpack")
 SET(CMAKE_COMMAND  "/usr/bin/cmake")
-SET(BZR_EXECUTABLE "BZR_EXECUTABLE-NOTFOUND")
+SET(BZR_EXECUTABLE "/usr/bin/bzr")
 SET(GTAR_EXECUTABLE "GTAR_EXECUTABLE-NOTFOUND")
 SET(TAR_EXECUTABLE "/bin/tar")
 SET(CMAKE_GENERATOR "Unix Makefiles")

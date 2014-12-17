@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/adbms/mysqlsrc/mysql-5.6.21/scripts/comp_sql.c" "/home/adbms/mysqlsrc/mysql-5.6.21/scripts/CMakeFiles/comp_sql.dir/comp_sql.c.o"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/scripts/comp_sql.c" "/home/hari/ADBMS_PROJECT/ADBMS_ABY/scripts/CMakeFiles/comp_sql.dir/comp_sql.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 

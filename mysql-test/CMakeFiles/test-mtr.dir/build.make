@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # Utility rule file for test-mtr.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
 include mysql-test/CMakeFiles/test-mtr.dir/progress.make
 
 mysql-test/CMakeFiles/test-mtr:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/mysql-test && perl ./mysql-test-run.pl --force --parallel=4 --suite=main --debug-server --experimental=collections/default.experimental
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/mysql-test && perl ./mysql-test-run.pl --force --parallel=4 --suite=main --debug-server --experimental=collections/default.experimental
 
 test-mtr: mysql-test/CMakeFiles/test-mtr
 test-mtr: mysql-test/CMakeFiles/test-mtr.dir/build.make
@@ -57,10 +57,10 @@ mysql-test/CMakeFiles/test-mtr.dir/build: test-mtr
 .PHONY : mysql-test/CMakeFiles/test-mtr.dir/build
 
 mysql-test/CMakeFiles/test-mtr.dir/clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/mysql-test && $(CMAKE_COMMAND) -P CMakeFiles/test-mtr.dir/cmake_clean.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/mysql-test && $(CMAKE_COMMAND) -P CMakeFiles/test-mtr.dir/cmake_clean.cmake
 .PHONY : mysql-test/CMakeFiles/test-mtr.dir/clean
 
 mysql-test/CMakeFiles/test-mtr.dir/depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/mysql-test /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/mysql-test /home/adbms/mysqlsrc/mysql-5.6.21/mysql-test/CMakeFiles/test-mtr.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/mysql-test /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/mysql-test /home/hari/ADBMS_PROJECT/ADBMS_ABY/mysql-test/CMakeFiles/test-mtr.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : mysql-test/CMakeFiles/test-mtr.dir/depend
 

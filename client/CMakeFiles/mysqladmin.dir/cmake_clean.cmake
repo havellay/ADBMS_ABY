@@ -2,6 +2,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/mysqladmin.dir/mysqladmin.cc.o"
   "mysqladmin.pdb"
   "mysqladmin"
+  "mysqladmin.pdb"
+  "CMakeFiles/CMakeRelink.dir/mysqladmin"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,16 +79,6 @@ install/local: preinstall
 install/local/fast: install/local
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Client\" \"DataFiles\" \"DebugBinaries\" \"Development\" \"Documentation\" \"Embedded\" \"Info\" \"IniFiles\" \"ManPages\" \"Readme\" \"Server\" \"Server_Scripts\" \"SharedLibraries\" \"SqlBench\" \"SupportFiles\" \"Test\" \"Unspecified\""
@@ -101,7 +91,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -111,7 +101,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/adbms/mysqlsrc/mysql-5.6.21/CPackSourceConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/hari/ADBMS_PROJECT/ADBMS_ABY/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -140,14 +130,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles /home/adbms/mysqlsrc/mysql-5.6.21/extra/yassl/taocrypt/CMakeFiles/progress.marks
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/taocrypt/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles /home/hari/ADBMS_PROJECT/ADBMS_ABY/extra/yassl/taocrypt/CMakeFiles/progress.marks
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/taocrypt/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/taocrypt/clean
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/taocrypt/clean
 .PHONY : clean
 
 # The main clean target
@@ -156,22 +146,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/taocrypt/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/taocrypt/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/taocrypt/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/taocrypt/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/rule
 .PHONY : extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/rule
 
 # Convenience name for target.
@@ -180,7 +170,7 @@ taocrypt: extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/rule
 
 # fast build rule for target.
 taocrypt/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build
 .PHONY : taocrypt/fast
 
 src/aes.o: src/aes.cpp.o
@@ -188,7 +178,7 @@ src/aes.o: src/aes.cpp.o
 
 # target to build an object file
 src/aes.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/aes.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/aes.cpp.o
 .PHONY : src/aes.cpp.o
 
 src/aes.i: src/aes.cpp.i
@@ -196,7 +186,7 @@ src/aes.i: src/aes.cpp.i
 
 # target to preprocess a source file
 src/aes.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/aes.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/aes.cpp.i
 .PHONY : src/aes.cpp.i
 
 src/aes.s: src/aes.cpp.s
@@ -204,7 +194,7 @@ src/aes.s: src/aes.cpp.s
 
 # target to generate assembly for a file
 src/aes.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/aes.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/aes.cpp.s
 .PHONY : src/aes.cpp.s
 
 src/aestables.o: src/aestables.cpp.o
@@ -212,7 +202,7 @@ src/aestables.o: src/aestables.cpp.o
 
 # target to build an object file
 src/aestables.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/aestables.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/aestables.cpp.o
 .PHONY : src/aestables.cpp.o
 
 src/aestables.i: src/aestables.cpp.i
@@ -220,7 +210,7 @@ src/aestables.i: src/aestables.cpp.i
 
 # target to preprocess a source file
 src/aestables.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/aestables.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/aestables.cpp.i
 .PHONY : src/aestables.cpp.i
 
 src/aestables.s: src/aestables.cpp.s
@@ -228,7 +218,7 @@ src/aestables.s: src/aestables.cpp.s
 
 # target to generate assembly for a file
 src/aestables.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/aestables.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/aestables.cpp.s
 .PHONY : src/aestables.cpp.s
 
 src/algebra.o: src/algebra.cpp.o
@@ -236,7 +226,7 @@ src/algebra.o: src/algebra.cpp.o
 
 # target to build an object file
 src/algebra.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/algebra.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/algebra.cpp.o
 .PHONY : src/algebra.cpp.o
 
 src/algebra.i: src/algebra.cpp.i
@@ -244,7 +234,7 @@ src/algebra.i: src/algebra.cpp.i
 
 # target to preprocess a source file
 src/algebra.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/algebra.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/algebra.cpp.i
 .PHONY : src/algebra.cpp.i
 
 src/algebra.s: src/algebra.cpp.s
@@ -252,7 +242,7 @@ src/algebra.s: src/algebra.cpp.s
 
 # target to generate assembly for a file
 src/algebra.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/algebra.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/algebra.cpp.s
 .PHONY : src/algebra.cpp.s
 
 src/arc4.o: src/arc4.cpp.o
@@ -260,7 +250,7 @@ src/arc4.o: src/arc4.cpp.o
 
 # target to build an object file
 src/arc4.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/arc4.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/arc4.cpp.o
 .PHONY : src/arc4.cpp.o
 
 src/arc4.i: src/arc4.cpp.i
@@ -268,7 +258,7 @@ src/arc4.i: src/arc4.cpp.i
 
 # target to preprocess a source file
 src/arc4.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/arc4.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/arc4.cpp.i
 .PHONY : src/arc4.cpp.i
 
 src/arc4.s: src/arc4.cpp.s
@@ -276,7 +266,7 @@ src/arc4.s: src/arc4.cpp.s
 
 # target to generate assembly for a file
 src/arc4.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/arc4.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/arc4.cpp.s
 .PHONY : src/arc4.cpp.s
 
 src/asn.o: src/asn.cpp.o
@@ -284,7 +274,7 @@ src/asn.o: src/asn.cpp.o
 
 # target to build an object file
 src/asn.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/asn.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/asn.cpp.o
 .PHONY : src/asn.cpp.o
 
 src/asn.i: src/asn.cpp.i
@@ -292,7 +282,7 @@ src/asn.i: src/asn.cpp.i
 
 # target to preprocess a source file
 src/asn.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/asn.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/asn.cpp.i
 .PHONY : src/asn.cpp.i
 
 src/asn.s: src/asn.cpp.s
@@ -300,7 +290,7 @@ src/asn.s: src/asn.cpp.s
 
 # target to generate assembly for a file
 src/asn.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/asn.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/asn.cpp.s
 .PHONY : src/asn.cpp.s
 
 src/coding.o: src/coding.cpp.o
@@ -308,7 +298,7 @@ src/coding.o: src/coding.cpp.o
 
 # target to build an object file
 src/coding.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/coding.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/coding.cpp.o
 .PHONY : src/coding.cpp.o
 
 src/coding.i: src/coding.cpp.i
@@ -316,7 +306,7 @@ src/coding.i: src/coding.cpp.i
 
 # target to preprocess a source file
 src/coding.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/coding.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/coding.cpp.i
 .PHONY : src/coding.cpp.i
 
 src/coding.s: src/coding.cpp.s
@@ -324,7 +314,7 @@ src/coding.s: src/coding.cpp.s
 
 # target to generate assembly for a file
 src/coding.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/coding.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/coding.cpp.s
 .PHONY : src/coding.cpp.s
 
 src/des.o: src/des.cpp.o
@@ -332,7 +322,7 @@ src/des.o: src/des.cpp.o
 
 # target to build an object file
 src/des.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/des.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/des.cpp.o
 .PHONY : src/des.cpp.o
 
 src/des.i: src/des.cpp.i
@@ -340,7 +330,7 @@ src/des.i: src/des.cpp.i
 
 # target to preprocess a source file
 src/des.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/des.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/des.cpp.i
 .PHONY : src/des.cpp.i
 
 src/des.s: src/des.cpp.s
@@ -348,7 +338,7 @@ src/des.s: src/des.cpp.s
 
 # target to generate assembly for a file
 src/des.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/des.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/des.cpp.s
 .PHONY : src/des.cpp.s
 
 src/dh.o: src/dh.cpp.o
@@ -356,7 +346,7 @@ src/dh.o: src/dh.cpp.o
 
 # target to build an object file
 src/dh.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/dh.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/dh.cpp.o
 .PHONY : src/dh.cpp.o
 
 src/dh.i: src/dh.cpp.i
@@ -364,7 +354,7 @@ src/dh.i: src/dh.cpp.i
 
 # target to preprocess a source file
 src/dh.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/dh.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/dh.cpp.i
 .PHONY : src/dh.cpp.i
 
 src/dh.s: src/dh.cpp.s
@@ -372,7 +362,7 @@ src/dh.s: src/dh.cpp.s
 
 # target to generate assembly for a file
 src/dh.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/dh.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/dh.cpp.s
 .PHONY : src/dh.cpp.s
 
 src/dsa.o: src/dsa.cpp.o
@@ -380,7 +370,7 @@ src/dsa.o: src/dsa.cpp.o
 
 # target to build an object file
 src/dsa.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/dsa.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/dsa.cpp.o
 .PHONY : src/dsa.cpp.o
 
 src/dsa.i: src/dsa.cpp.i
@@ -388,7 +378,7 @@ src/dsa.i: src/dsa.cpp.i
 
 # target to preprocess a source file
 src/dsa.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/dsa.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/dsa.cpp.i
 .PHONY : src/dsa.cpp.i
 
 src/dsa.s: src/dsa.cpp.s
@@ -396,7 +386,7 @@ src/dsa.s: src/dsa.cpp.s
 
 # target to generate assembly for a file
 src/dsa.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/dsa.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/dsa.cpp.s
 .PHONY : src/dsa.cpp.s
 
 src/file.o: src/file.cpp.o
@@ -404,7 +394,7 @@ src/file.o: src/file.cpp.o
 
 # target to build an object file
 src/file.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/file.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/file.cpp.o
 .PHONY : src/file.cpp.o
 
 src/file.i: src/file.cpp.i
@@ -412,7 +402,7 @@ src/file.i: src/file.cpp.i
 
 # target to preprocess a source file
 src/file.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/file.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/file.cpp.i
 .PHONY : src/file.cpp.i
 
 src/file.s: src/file.cpp.s
@@ -420,7 +410,7 @@ src/file.s: src/file.cpp.s
 
 # target to generate assembly for a file
 src/file.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/file.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/file.cpp.s
 .PHONY : src/file.cpp.s
 
 src/hash.o: src/hash.cpp.o
@@ -428,7 +418,7 @@ src/hash.o: src/hash.cpp.o
 
 # target to build an object file
 src/hash.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/hash.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/hash.cpp.o
 .PHONY : src/hash.cpp.o
 
 src/hash.i: src/hash.cpp.i
@@ -436,7 +426,7 @@ src/hash.i: src/hash.cpp.i
 
 # target to preprocess a source file
 src/hash.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/hash.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/hash.cpp.i
 .PHONY : src/hash.cpp.i
 
 src/hash.s: src/hash.cpp.s
@@ -444,7 +434,7 @@ src/hash.s: src/hash.cpp.s
 
 # target to generate assembly for a file
 src/hash.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/hash.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/hash.cpp.s
 .PHONY : src/hash.cpp.s
 
 src/hc128.o: src/hc128.cpp.o
@@ -452,7 +442,7 @@ src/hc128.o: src/hc128.cpp.o
 
 # target to build an object file
 src/hc128.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/hc128.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/hc128.cpp.o
 .PHONY : src/hc128.cpp.o
 
 src/hc128.i: src/hc128.cpp.i
@@ -460,7 +450,7 @@ src/hc128.i: src/hc128.cpp.i
 
 # target to preprocess a source file
 src/hc128.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/hc128.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/hc128.cpp.i
 .PHONY : src/hc128.cpp.i
 
 src/hc128.s: src/hc128.cpp.s
@@ -468,7 +458,7 @@ src/hc128.s: src/hc128.cpp.s
 
 # target to generate assembly for a file
 src/hc128.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/hc128.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/hc128.cpp.s
 .PHONY : src/hc128.cpp.s
 
 src/integer.o: src/integer.cpp.o
@@ -476,7 +466,7 @@ src/integer.o: src/integer.cpp.o
 
 # target to build an object file
 src/integer.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/integer.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/integer.cpp.o
 .PHONY : src/integer.cpp.o
 
 src/integer.i: src/integer.cpp.i
@@ -484,7 +474,7 @@ src/integer.i: src/integer.cpp.i
 
 # target to preprocess a source file
 src/integer.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/integer.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/integer.cpp.i
 .PHONY : src/integer.cpp.i
 
 src/integer.s: src/integer.cpp.s
@@ -492,7 +482,7 @@ src/integer.s: src/integer.cpp.s
 
 # target to generate assembly for a file
 src/integer.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/integer.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/integer.cpp.s
 .PHONY : src/integer.cpp.s
 
 src/md2.o: src/md2.cpp.o
@@ -500,7 +490,7 @@ src/md2.o: src/md2.cpp.o
 
 # target to build an object file
 src/md2.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md2.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md2.cpp.o
 .PHONY : src/md2.cpp.o
 
 src/md2.i: src/md2.cpp.i
@@ -508,7 +498,7 @@ src/md2.i: src/md2.cpp.i
 
 # target to preprocess a source file
 src/md2.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md2.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md2.cpp.i
 .PHONY : src/md2.cpp.i
 
 src/md2.s: src/md2.cpp.s
@@ -516,7 +506,7 @@ src/md2.s: src/md2.cpp.s
 
 # target to generate assembly for a file
 src/md2.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md2.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md2.cpp.s
 .PHONY : src/md2.cpp.s
 
 src/md4.o: src/md4.cpp.o
@@ -524,7 +514,7 @@ src/md4.o: src/md4.cpp.o
 
 # target to build an object file
 src/md4.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md4.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md4.cpp.o
 .PHONY : src/md4.cpp.o
 
 src/md4.i: src/md4.cpp.i
@@ -532,7 +522,7 @@ src/md4.i: src/md4.cpp.i
 
 # target to preprocess a source file
 src/md4.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md4.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md4.cpp.i
 .PHONY : src/md4.cpp.i
 
 src/md4.s: src/md4.cpp.s
@@ -540,7 +530,7 @@ src/md4.s: src/md4.cpp.s
 
 # target to generate assembly for a file
 src/md4.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md4.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md4.cpp.s
 .PHONY : src/md4.cpp.s
 
 src/md5.o: src/md5.cpp.o
@@ -548,7 +538,7 @@ src/md5.o: src/md5.cpp.o
 
 # target to build an object file
 src/md5.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md5.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md5.cpp.o
 .PHONY : src/md5.cpp.o
 
 src/md5.i: src/md5.cpp.i
@@ -556,7 +546,7 @@ src/md5.i: src/md5.cpp.i
 
 # target to preprocess a source file
 src/md5.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md5.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md5.cpp.i
 .PHONY : src/md5.cpp.i
 
 src/md5.s: src/md5.cpp.s
@@ -564,7 +554,7 @@ src/md5.s: src/md5.cpp.s
 
 # target to generate assembly for a file
 src/md5.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md5.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/md5.cpp.s
 .PHONY : src/md5.cpp.s
 
 src/misc.o: src/misc.cpp.o
@@ -572,7 +562,7 @@ src/misc.o: src/misc.cpp.o
 
 # target to build an object file
 src/misc.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/misc.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/misc.cpp.o
 .PHONY : src/misc.cpp.o
 
 src/misc.i: src/misc.cpp.i
@@ -580,7 +570,7 @@ src/misc.i: src/misc.cpp.i
 
 # target to preprocess a source file
 src/misc.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/misc.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/misc.cpp.i
 .PHONY : src/misc.cpp.i
 
 src/misc.s: src/misc.cpp.s
@@ -588,7 +578,7 @@ src/misc.s: src/misc.cpp.s
 
 # target to generate assembly for a file
 src/misc.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/misc.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/misc.cpp.s
 .PHONY : src/misc.cpp.s
 
 src/rabbit.o: src/rabbit.cpp.o
@@ -596,7 +586,7 @@ src/rabbit.o: src/rabbit.cpp.o
 
 # target to build an object file
 src/rabbit.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/rabbit.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/rabbit.cpp.o
 .PHONY : src/rabbit.cpp.o
 
 src/rabbit.i: src/rabbit.cpp.i
@@ -604,7 +594,7 @@ src/rabbit.i: src/rabbit.cpp.i
 
 # target to preprocess a source file
 src/rabbit.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/rabbit.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/rabbit.cpp.i
 .PHONY : src/rabbit.cpp.i
 
 src/rabbit.s: src/rabbit.cpp.s
@@ -612,7 +602,7 @@ src/rabbit.s: src/rabbit.cpp.s
 
 # target to generate assembly for a file
 src/rabbit.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/rabbit.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/rabbit.cpp.s
 .PHONY : src/rabbit.cpp.s
 
 src/random.o: src/random.cpp.o
@@ -620,7 +610,7 @@ src/random.o: src/random.cpp.o
 
 # target to build an object file
 src/random.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/random.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/random.cpp.o
 .PHONY : src/random.cpp.o
 
 src/random.i: src/random.cpp.i
@@ -628,7 +618,7 @@ src/random.i: src/random.cpp.i
 
 # target to preprocess a source file
 src/random.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/random.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/random.cpp.i
 .PHONY : src/random.cpp.i
 
 src/random.s: src/random.cpp.s
@@ -636,7 +626,7 @@ src/random.s: src/random.cpp.s
 
 # target to generate assembly for a file
 src/random.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/random.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/random.cpp.s
 .PHONY : src/random.cpp.s
 
 src/ripemd.o: src/ripemd.cpp.o
@@ -644,7 +634,7 @@ src/ripemd.o: src/ripemd.cpp.o
 
 # target to build an object file
 src/ripemd.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/ripemd.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/ripemd.cpp.o
 .PHONY : src/ripemd.cpp.o
 
 src/ripemd.i: src/ripemd.cpp.i
@@ -652,7 +642,7 @@ src/ripemd.i: src/ripemd.cpp.i
 
 # target to preprocess a source file
 src/ripemd.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/ripemd.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/ripemd.cpp.i
 .PHONY : src/ripemd.cpp.i
 
 src/ripemd.s: src/ripemd.cpp.s
@@ -660,7 +650,7 @@ src/ripemd.s: src/ripemd.cpp.s
 
 # target to generate assembly for a file
 src/ripemd.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/ripemd.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/ripemd.cpp.s
 .PHONY : src/ripemd.cpp.s
 
 src/rsa.o: src/rsa.cpp.o
@@ -668,7 +658,7 @@ src/rsa.o: src/rsa.cpp.o
 
 # target to build an object file
 src/rsa.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/rsa.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/rsa.cpp.o
 .PHONY : src/rsa.cpp.o
 
 src/rsa.i: src/rsa.cpp.i
@@ -676,7 +666,7 @@ src/rsa.i: src/rsa.cpp.i
 
 # target to preprocess a source file
 src/rsa.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/rsa.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/rsa.cpp.i
 .PHONY : src/rsa.cpp.i
 
 src/rsa.s: src/rsa.cpp.s
@@ -684,7 +674,7 @@ src/rsa.s: src/rsa.cpp.s
 
 # target to generate assembly for a file
 src/rsa.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/rsa.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/rsa.cpp.s
 .PHONY : src/rsa.cpp.s
 
 src/sha.o: src/sha.cpp.o
@@ -692,7 +682,7 @@ src/sha.o: src/sha.cpp.o
 
 # target to build an object file
 src/sha.cpp.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/sha.cpp.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/sha.cpp.o
 .PHONY : src/sha.cpp.o
 
 src/sha.i: src/sha.cpp.i
@@ -700,7 +690,7 @@ src/sha.i: src/sha.cpp.i
 
 # target to preprocess a source file
 src/sha.cpp.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/sha.cpp.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/sha.cpp.i
 .PHONY : src/sha.cpp.i
 
 src/sha.s: src/sha.cpp.s
@@ -708,7 +698,7 @@ src/sha.s: src/sha.cpp.s
 
 # target to generate assembly for a file
 src/sha.cpp.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/sha.cpp.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/build.make extra/yassl/taocrypt/CMakeFiles/taocrypt.dir/src/sha.cpp.s
 .PHONY : src/sha.cpp.s
 
 # Help Target
@@ -720,7 +710,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... package"
 	@echo "... package_source"
@@ -804,6 +793,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/ftdefs.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/ftdefs.h
 fulltext.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/fulltext.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/fulltext.h
 m_ctype.h
 -
 my_tree.h
@@ -18,27 +18,27 @@ queues.h
 mysql/plugin.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/fulltext.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/fulltext.h
 myisamdef.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisamdef.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisamdef.h
 ft_global.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/ft_global.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/ft_global.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/mi_extrafunc.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/mi_extrafunc.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisam_ftdump.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisam_ftdump.c
 ftdefs.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/ftdefs.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/ftdefs.h
 my_getopt.h
 -
 mi_extrafunc.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/mi_extrafunc.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/mi_extrafunc.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisamdef.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisamdef.h
 myisam.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisam.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisam.h
 myisampack.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisampack.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisampack.h
 my_tree.h
 -
 my_pthread.h

@@ -6,6 +6,7 @@ import threading
 
 # open a database connection
 con = mdb.connect(
+        unix_socket = '/var/run/mysqld/mysqld.sock',
         host = 'localhost',
         user = 'root', passwd = '',
         db = 'test'
@@ -40,6 +41,7 @@ def update_method():
     # we want each thread to perfom an update on
     # each row of the table
     small_con = mdb.connect(
+            unix_socket = '/var/run/mysqld/mysqld.sock',
             host = 'localhost',
             user = 'root', passwd = '',
             db = 'test'
@@ -53,6 +55,7 @@ def update_method():
         small_cursor.execute(query)
         if x%10 == 0:
             small_con.commit()
+    small_con.close()
 
 if perform_update == 1 :
     thread_set = []

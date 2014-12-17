@@ -4,12 +4,12 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/adbms/mysqlsrc/mysql-5.6.21/libservices/my_plugin_log_service.c" "/home/adbms/mysqlsrc/mysql-5.6.21/libservices/CMakeFiles/mysqlservices.dir/my_plugin_log_service.c.o"
-  "/home/adbms/mysqlsrc/mysql-5.6.21/libservices/my_snprintf_service.c" "/home/adbms/mysqlsrc/mysql-5.6.21/libservices/CMakeFiles/mysqlservices.dir/my_snprintf_service.c.o"
-  "/home/adbms/mysqlsrc/mysql-5.6.21/libservices/my_thread_scheduler_service.c" "/home/adbms/mysqlsrc/mysql-5.6.21/libservices/CMakeFiles/mysqlservices.dir/my_thread_scheduler_service.c.o"
-  "/home/adbms/mysqlsrc/mysql-5.6.21/libservices/mysql_string_service.c" "/home/adbms/mysqlsrc/mysql-5.6.21/libservices/CMakeFiles/mysqlservices.dir/mysql_string_service.c.o"
-  "/home/adbms/mysqlsrc/mysql-5.6.21/libservices/thd_alloc_service.c" "/home/adbms/mysqlsrc/mysql-5.6.21/libservices/CMakeFiles/mysqlservices.dir/thd_alloc_service.c.o"
-  "/home/adbms/mysqlsrc/mysql-5.6.21/libservices/thd_wait_service.c" "/home/adbms/mysqlsrc/mysql-5.6.21/libservices/CMakeFiles/mysqlservices.dir/thd_wait_service.c.o"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libservices/my_plugin_log_service.c" "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libservices/CMakeFiles/mysqlservices.dir/my_plugin_log_service.c.o"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libservices/my_snprintf_service.c" "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libservices/CMakeFiles/mysqlservices.dir/my_snprintf_service.c.o"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libservices/my_thread_scheduler_service.c" "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libservices/CMakeFiles/mysqlservices.dir/my_thread_scheduler_service.c.o"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libservices/mysql_string_service.c" "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libservices/CMakeFiles/mysqlservices.dir/mysql_string_service.c.o"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libservices/thd_alloc_service.c" "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libservices/CMakeFiles/mysqlservices.dir/thd_alloc_service.c.o"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libservices/thd_wait_service.c" "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libservices/CMakeFiles/mysqlservices.dir/thd_wait_service.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 
