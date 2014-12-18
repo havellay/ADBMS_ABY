@@ -1,1 +1,1 @@
-cd /home/adbms/mysqlsrc/mysql-5.6.21 && '/usr/bin/cpack' -G TGZ --config CPackConfig.cmake
+cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && '/usr/bin/cpack' -G TGZ --config CPackConfig.cmake

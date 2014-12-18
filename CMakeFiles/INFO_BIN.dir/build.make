@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # Utility rule file for INFO_BIN.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
 include CMakeFiles/INFO_BIN.dir/progress.make
 
 CMakeFiles/INFO_BIN:
-	/usr/bin/cmake -P /home/adbms/mysqlsrc/mysql-5.6.21/cmake/info_bin.cmake
+	/usr/bin/cmake -P /home/hari/ADBMS_PROJECT/ADBMS_ABY/cmake/info_bin.cmake
 
 INFO_BIN: CMakeFiles/INFO_BIN
 INFO_BIN: CMakeFiles/INFO_BIN.dir/build.make
@@ -61,6 +61,6 @@ CMakeFiles/INFO_BIN.dir/clean:
 .PHONY : CMakeFiles/INFO_BIN.dir/clean
 
 CMakeFiles/INFO_BIN.dir/depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles/INFO_BIN.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/INFO_BIN.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/INFO_BIN.dir/depend
 

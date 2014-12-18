@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # Utility rule file for GenFixPrivs.
 
@@ -50,10 +50,10 @@ scripts/CMakeFiles/GenFixPrivs: scripts/mysql_fix_privilege_tables_sql.c
 scripts/mysql_fix_privilege_tables_sql.c: scripts/comp_sql
 scripts/mysql_fix_privilege_tables_sql.c: scripts/mysql_system_tables.sql
 scripts/mysql_fix_privilege_tables_sql.c: scripts/mysql_system_tables_fix.sql
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating mysql_fix_privilege_tables_sql.c"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/scripts && /usr/bin/cmake -E chdir /home/adbms/mysqlsrc/mysql-5.6.21/scripts /bin/cat mysql_system_tables.sql mysql_system_tables_fix.sql > /home/adbms/mysqlsrc/mysql-5.6.21/scripts/mysql_fix_privilege_tables.sql
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/scripts && /home/adbms/mysqlsrc/mysql-5.6.21/scripts/comp_sql mysql_fix_privilege_tables mysql_fix_privilege_tables.sql mysql_fix_privilege_tables_sql.c
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/scripts && /usr/bin/cmake -E chdir /home/hari/ADBMS_PROJECT/ADBMS_ABY/scripts /bin/cat mysql_system_tables.sql mysql_system_tables_fix.sql > /home/hari/ADBMS_PROJECT/ADBMS_ABY/scripts/mysql_fix_privilege_tables.sql
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/scripts && /home/hari/ADBMS_PROJECT/ADBMS_ABY/scripts/comp_sql mysql_fix_privilege_tables mysql_fix_privilege_tables.sql mysql_fix_privilege_tables_sql.c
 
 GenFixPrivs: scripts/CMakeFiles/GenFixPrivs
 GenFixPrivs: scripts/mysql_fix_privilege_tables_sql.c
@@ -65,10 +65,10 @@ scripts/CMakeFiles/GenFixPrivs.dir/build: GenFixPrivs
 .PHONY : scripts/CMakeFiles/GenFixPrivs.dir/build
 
 scripts/CMakeFiles/GenFixPrivs.dir/clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/scripts && $(CMAKE_COMMAND) -P CMakeFiles/GenFixPrivs.dir/cmake_clean.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/scripts && $(CMAKE_COMMAND) -P CMakeFiles/GenFixPrivs.dir/cmake_clean.cmake
 .PHONY : scripts/CMakeFiles/GenFixPrivs.dir/clean
 
 scripts/CMakeFiles/GenFixPrivs.dir/depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/scripts /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/scripts /home/adbms/mysqlsrc/mysql-5.6.21/scripts/CMakeFiles/GenFixPrivs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/scripts /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/scripts /home/hari/ADBMS_PROJECT/ADBMS_ABY/scripts/CMakeFiles/GenFixPrivs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : scripts/CMakeFiles/GenFixPrivs.dir/depend
 

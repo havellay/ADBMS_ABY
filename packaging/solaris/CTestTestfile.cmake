@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/adbms/mysqlsrc/mysql-5.6.21/packaging/solaris
-# Build directory: /home/adbms/mysqlsrc/mysql-5.6.21/packaging/solaris
+# Source directory: /home/hari/ADBMS_PROJECT/ADBMS_ABY/packaging/solaris
+# Build directory: /home/hari/ADBMS_PROJECT/ADBMS_ABY/packaging/solaris
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

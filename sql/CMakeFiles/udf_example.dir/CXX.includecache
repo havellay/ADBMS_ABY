@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/udf_example.cc
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/udf_example.cc
 my_global.h
 -
 my_sys.h

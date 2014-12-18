@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/adbms/mysqlsrc/mysql-5.6.21/man
-# Build directory: /home/adbms/mysqlsrc/mysql-5.6.21/man
+# Source directory: /home/hari/ADBMS_PROJECT/ADBMS_ABY/man
+# Build directory: /home/hari/ADBMS_PROJECT/ADBMS_ABY/man
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

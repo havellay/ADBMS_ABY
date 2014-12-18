@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # Utility rule file for abi_check_all.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
 include CMakeFiles/abi_check_all.dir/progress.make
 
 CMakeFiles/abi_check_all:
-	/usr/bin/cmake -DCOMPILER=/usr/bin/cc -DSOURCE_DIR=/home/adbms/mysqlsrc/mysql-5.6.21 -DBINARY_DIR=/home/adbms/mysqlsrc/mysql-5.6.21 "-DABI_HEADERS=/home/adbms/mysqlsrc/mysql-5.6.21/include/mysql/plugin_audit.h;/home/adbms/mysqlsrc/mysql-5.6.21/include/mysql/plugin_ftparser.h;/home/adbms/mysqlsrc/mysql-5.6.21/include/mysql.h;/home/adbms/mysqlsrc/mysql-5.6.21/include/mysql/psi/psi_abi_v0.h;/home/adbms/mysqlsrc/mysql-5.6.21/include/mysql/psi/psi_abi_v1.h;/home/adbms/mysqlsrc/mysql-5.6.21/include/mysql/psi/psi_abi_v2.h;/home/adbms/mysqlsrc/mysql-5.6.21/include/mysql/client_plugin.h;/home/adbms/mysqlsrc/mysql-5.6.21/include/mysql/plugin_auth.h" -P /home/adbms/mysqlsrc/mysql-5.6.21/cmake/do_abi_check.cmake
+	/usr/bin/cmake -DCOMPILER=/usr/bin/cc -DSOURCE_DIR=/home/hari/ADBMS_PROJECT/ADBMS_ABY -DBINARY_DIR=/home/hari/ADBMS_PROJECT/ADBMS_ABY "-DABI_HEADERS=/home/hari/ADBMS_PROJECT/ADBMS_ABY/include/mysql/plugin_audit.h;/home/hari/ADBMS_PROJECT/ADBMS_ABY/include/mysql/plugin_ftparser.h;/home/hari/ADBMS_PROJECT/ADBMS_ABY/include/mysql.h;/home/hari/ADBMS_PROJECT/ADBMS_ABY/include/mysql/psi/psi_abi_v0.h;/home/hari/ADBMS_PROJECT/ADBMS_ABY/include/mysql/psi/psi_abi_v1.h;/home/hari/ADBMS_PROJECT/ADBMS_ABY/include/mysql/psi/psi_abi_v2.h;/home/hari/ADBMS_PROJECT/ADBMS_ABY/include/mysql/client_plugin.h;/home/hari/ADBMS_PROJECT/ADBMS_ABY/include/mysql/plugin_auth.h" -P /home/hari/ADBMS_PROJECT/ADBMS_ABY/cmake/do_abi_check.cmake
 
 abi_check_all: CMakeFiles/abi_check_all
 abi_check_all: CMakeFiles/abi_check_all.dir/build.make
@@ -61,6 +61,6 @@ CMakeFiles/abi_check_all.dir/clean:
 .PHONY : CMakeFiles/abi_check_all.dir/clean
 
 CMakeFiles/abi_check_all.dir/depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles/abi_check_all.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/abi_check_all.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/abi_check_all.dir/depend
 

@@ -133,6 +133,7 @@ storage/csv/CMakeFiles/csv.dir/ha_tina.cc.o: sql/sql_profile.h
 storage/csv/CMakeFiles/csv.dir/ha_tina.cc.o: sql/sql_string.h
 storage/csv/CMakeFiles/csv.dir/ha_tina.cc.o: sql/sql_trigger.h
 storage/csv/CMakeFiles/csv.dir/ha_tina.cc.o: sql/sql_udf.h
+storage/csv/CMakeFiles/csv.dir/ha_tina.cc.o: sql/sql_yacc.h
 storage/csv/CMakeFiles/csv.dir/ha_tina.cc.o: sql/structs.h
 storage/csv/CMakeFiles/csv.dir/ha_tina.cc.o: sql/table.h
 storage/csv/CMakeFiles/csv.dir/ha_tina.cc.o: sql/table_id.h

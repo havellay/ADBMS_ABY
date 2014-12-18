@@ -4,6 +4,10 @@ FILE(REMOVE_RECURSE
   "libmysqlclient.so"
   "libmysqlclient.so.18.1.0"
   "libmysqlclient.so.18"
+  "libmysqlclient.pdb"
+  "CMakeFiles/CMakeRelink.dir/libmysqlclient.so"
+  "CMakeFiles/CMakeRelink.dir/libmysqlclient.so.18.1.0"
+  "CMakeFiles/CMakeRelink.dir/libmysqlclient.so.18"
 )
 
 # Per-language clean rules from dependency scanning.

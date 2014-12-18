@@ -16,10 +16,10 @@
 
 # This script merges many static libraries into
 # one big library on Unix.
-SET(TARGET_LOCATION "/home/adbms/mysqlsrc/mysql-5.6.21/libmysql/libmysqlclient.a")
+SET(TARGET_LOCATION "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libmysql/libmysqlclient.a")
 SET(TARGET "mysqlclient")
-SET(STATIC_LIBS "/home/adbms/mysqlsrc/mysql-5.6.21/libmysql/libclientlib.a;/home/adbms/mysqlsrc/mysql-5.6.21/dbug/libdbug.a;/home/adbms/mysqlsrc/mysql-5.6.21/strings/libstrings.a;/home/adbms/mysqlsrc/mysql-5.6.21/vio/libvio.a;/home/adbms/mysqlsrc/mysql-5.6.21/mysys/libmysys.a;/home/adbms/mysqlsrc/mysql-5.6.21/mysys_ssl/libmysys_ssl.a;/home/adbms/mysqlsrc/mysql-5.6.21/zlib/libzlib.a;/home/adbms/mysqlsrc/mysql-5.6.21/extra/yassl/libyassl.a;/home/adbms/mysqlsrc/mysql-5.6.21/extra/yassl/taocrypt/libtaocrypt.a")
-SET(CMAKE_CURRENT_BINARY_DIR "/home/adbms/mysqlsrc/mysql-5.6.21/libmysql")
+SET(STATIC_LIBS "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libmysql/libclientlib.a;/home/hari/ADBMS_PROJECT/ADBMS_ABY/dbug/libdbug.a;/home/hari/ADBMS_PROJECT/ADBMS_ABY/strings/libstrings.a;/home/hari/ADBMS_PROJECT/ADBMS_ABY/vio/libvio.a;/home/hari/ADBMS_PROJECT/ADBMS_ABY/mysys/libmysys.a;/home/hari/ADBMS_PROJECT/ADBMS_ABY/mysys_ssl/libmysys_ssl.a;/home/hari/ADBMS_PROJECT/ADBMS_ABY/zlib/libzlib.a;/home/hari/ADBMS_PROJECT/ADBMS_ABY/extra/yassl/libyassl.a;/home/hari/ADBMS_PROJECT/ADBMS_ABY/extra/yassl/taocrypt/libtaocrypt.a")
+SET(CMAKE_CURRENT_BINARY_DIR "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libmysql")
 SET(CMAKE_AR "/usr/bin/ar")
 SET(CMAKE_RANLIB "/usr/bin/ranlib")
 

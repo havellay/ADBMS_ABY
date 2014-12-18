@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync.cc
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync.cc
 semisync.h
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync.h
 sql_priv.h
 -
 unireg.h
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/unireg.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/unireg.h
 my_global.h
 -
 my_pthread.h
@@ -24,19 +24,19 @@ mysql/plugin.h
 replication.h
 -
 log.h
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/log.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/log.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync_slave.cc
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync_slave.cc
 semisync_slave.h
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync_slave.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync_slave.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync_slave.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync_slave.h
 semisync.h
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync_slave_plugin.cc
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync_slave_plugin.cc
 semisync_slave.h
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync_slave.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync_slave.h
 mysql.h
 -
 

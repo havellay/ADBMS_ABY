@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/client/client_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/client_priv.h
 my_global.h
 -
 my_sys.h
@@ -20,7 +20,7 @@ errmsg.h
 my_getopt.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/client/completion_hash.cc
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/completion_hash.cc
 my_global.h
 -
 m_string.h
@@ -28,21 +28,21 @@ m_string.h
 my_sys.h
 -
 completion_hash.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/completion_hash.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/completion_hash.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/client/completion_hash.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/completion_hash.h
 sys/types.h
 -
 my_sys.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/client/my_readline.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/my_readline.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/client/mysql.cc
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/mysql.cc
 client_priv.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/client_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/client_priv.h
 my_default.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/my_default.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/my_default.h
 m_ctype.h
 -
 stdarg.h
@@ -50,7 +50,7 @@ stdarg.h
 my_dir.h
 -
 my_readline.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/my_readline.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/my_readline.h
 signal.h
 -
 violite.h
@@ -60,7 +60,7 @@ algorithm
 locale.h
 -
 sql_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/sql_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/sql_string.h
 curses.h
 -
 term.h
@@ -84,13 +84,13 @@ conio.h
 readline.h
 -
 completion_hash.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/completion_hash.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/completion_hash.h
 welcome_copyright_notice.h
 -
 sslopt-vars.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/sslopt-vars.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/sslopt-vars.h
 sslopt-longopts.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/sslopt-longopts.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/sslopt-longopts.h
 sslopt-case.h
 -
 time.h
@@ -98,7 +98,7 @@ time.h
 sys/times.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/client/readline.cc
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/readline.cc
 my_global.h
 -
 my_sys.h
@@ -108,9 +108,9 @@ m_string.h
 my_dir.h
 -
 my_readline.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/my_readline.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/my_readline.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/client/sql_string.cc
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/sql_string.cc
 my_global.h
 -
 my_sys.h
@@ -122,15 +122,15 @@ m_ctype.h
 mysql_com.h
 -
 sql_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/sql_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/sql_string.h
 algorithm
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/client/sql_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/sql_string.h
 m_ctype.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/m_ctype.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/m_ctype.h
 my_sys.h
-/home/adbms/mysqlsrc/mysql-5.6.21/client/my_sys.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/client/my_sys.h
 
 cmd-line-utils/libedit/editline/readline.h
 sys/types.h

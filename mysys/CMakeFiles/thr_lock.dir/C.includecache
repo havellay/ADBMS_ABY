@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/mysys/mysys_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/mysys/mysys_priv.h
 my_global.h
 -
 my_sys.h
 -
 system_wrappers.h
-/home/adbms/mysqlsrc/mysql-5.6.21/mysys/system_wrappers.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/mysys/system_wrappers.h
 sys/resource.h
 -
 my_pthread.h
@@ -22,13 +22,13 @@ mysql/psi/mysql_file.h
 sys/stat.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/mysys/thr_lock.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/mysys/thr_lock.c
 mysys_priv.h
-/home/adbms/mysqlsrc/mysql-5.6.21/mysys/mysys_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/mysys/mysys_priv.h
 thr_lock.h
-/home/adbms/mysqlsrc/mysql-5.6.21/mysys/thr_lock.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/mysys/thr_lock.h
 mysql/psi/mysql_table.h
-/home/adbms/mysqlsrc/mysql-5.6.21/mysys/mysql/psi/mysql_table.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/mysys/mysql/psi/mysql_table.h
 m_string.h
 -
 errno.h

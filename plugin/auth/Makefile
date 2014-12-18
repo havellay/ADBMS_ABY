@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,16 +79,6 @@ install/local: preinstall
 install/local/fast: install/local
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Client\" \"DataFiles\" \"DebugBinaries\" \"Development\" \"Documentation\" \"Embedded\" \"Info\" \"IniFiles\" \"ManPages\" \"Readme\" \"Server\" \"Server_Scripts\" \"SharedLibraries\" \"SqlBench\" \"SupportFiles\" \"Test\" \"Unspecified\""
@@ -101,7 +91,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -111,7 +101,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/adbms/mysqlsrc/mysql-5.6.21/CPackSourceConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/hari/ADBMS_PROJECT/ADBMS_ABY/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -140,14 +130,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles /home/adbms/mysqlsrc/mysql-5.6.21/plugin/auth/CMakeFiles/progress.marks
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/auth/CMakeFiles/progress.marks
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/clean
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/clean
 .PHONY : clean
 
 # The main clean target
@@ -156,22 +146,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 plugin/auth/CMakeFiles/auth.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/auth.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/auth.dir/rule
 .PHONY : plugin/auth/CMakeFiles/auth.dir/rule
 
 # Convenience name for target.
@@ -180,12 +170,17 @@ auth: plugin/auth/CMakeFiles/auth.dir/rule
 
 # fast build rule for target.
 auth/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/auth.dir/build.make plugin/auth/CMakeFiles/auth.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/auth.dir/build.make plugin/auth/CMakeFiles/auth.dir/build
 .PHONY : auth/fast
+
+# Manual pre-install relink rule for target.
+auth/preinstall:
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/auth.dir/preinstall
+.PHONY : auth/preinstall
 
 # Convenience name for target.
 plugin/auth/CMakeFiles/auth_socket.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/auth_socket.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/auth_socket.dir/rule
 .PHONY : plugin/auth/CMakeFiles/auth_socket.dir/rule
 
 # Convenience name for target.
@@ -194,12 +189,17 @@ auth_socket: plugin/auth/CMakeFiles/auth_socket.dir/rule
 
 # fast build rule for target.
 auth_socket/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/auth_socket.dir/build.make plugin/auth/CMakeFiles/auth_socket.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/auth_socket.dir/build.make plugin/auth/CMakeFiles/auth_socket.dir/build
 .PHONY : auth_socket/fast
+
+# Manual pre-install relink rule for target.
+auth_socket/preinstall:
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/auth_socket.dir/preinstall
+.PHONY : auth_socket/preinstall
 
 # Convenience name for target.
 plugin/auth/CMakeFiles/auth_test_plugin.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/auth_test_plugin.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/auth_test_plugin.dir/rule
 .PHONY : plugin/auth/CMakeFiles/auth_test_plugin.dir/rule
 
 # Convenience name for target.
@@ -208,12 +208,17 @@ auth_test_plugin: plugin/auth/CMakeFiles/auth_test_plugin.dir/rule
 
 # fast build rule for target.
 auth_test_plugin/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/auth_test_plugin.dir/build.make plugin/auth/CMakeFiles/auth_test_plugin.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/auth_test_plugin.dir/build.make plugin/auth/CMakeFiles/auth_test_plugin.dir/build
 .PHONY : auth_test_plugin/fast
+
+# Manual pre-install relink rule for target.
+auth_test_plugin/preinstall:
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/auth_test_plugin.dir/preinstall
+.PHONY : auth_test_plugin/preinstall
 
 # Convenience name for target.
 plugin/auth/CMakeFiles/qa_auth_client.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/qa_auth_client.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/qa_auth_client.dir/rule
 .PHONY : plugin/auth/CMakeFiles/qa_auth_client.dir/rule
 
 # Convenience name for target.
@@ -222,12 +227,17 @@ qa_auth_client: plugin/auth/CMakeFiles/qa_auth_client.dir/rule
 
 # fast build rule for target.
 qa_auth_client/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_client.dir/build.make plugin/auth/CMakeFiles/qa_auth_client.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_client.dir/build.make plugin/auth/CMakeFiles/qa_auth_client.dir/build
 .PHONY : qa_auth_client/fast
+
+# Manual pre-install relink rule for target.
+qa_auth_client/preinstall:
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/qa_auth_client.dir/preinstall
+.PHONY : qa_auth_client/preinstall
 
 # Convenience name for target.
 plugin/auth/CMakeFiles/qa_auth_interface.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/qa_auth_interface.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/qa_auth_interface.dir/rule
 .PHONY : plugin/auth/CMakeFiles/qa_auth_interface.dir/rule
 
 # Convenience name for target.
@@ -236,12 +246,17 @@ qa_auth_interface: plugin/auth/CMakeFiles/qa_auth_interface.dir/rule
 
 # fast build rule for target.
 qa_auth_interface/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_interface.dir/build.make plugin/auth/CMakeFiles/qa_auth_interface.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_interface.dir/build.make plugin/auth/CMakeFiles/qa_auth_interface.dir/build
 .PHONY : qa_auth_interface/fast
+
+# Manual pre-install relink rule for target.
+qa_auth_interface/preinstall:
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/qa_auth_interface.dir/preinstall
+.PHONY : qa_auth_interface/preinstall
 
 # Convenience name for target.
 plugin/auth/CMakeFiles/qa_auth_server.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/qa_auth_server.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/qa_auth_server.dir/rule
 .PHONY : plugin/auth/CMakeFiles/qa_auth_server.dir/rule
 
 # Convenience name for target.
@@ -250,15 +265,20 @@ qa_auth_server: plugin/auth/CMakeFiles/qa_auth_server.dir/rule
 
 # fast build rule for target.
 qa_auth_server/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_server.dir/build.make plugin/auth/CMakeFiles/qa_auth_server.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_server.dir/build.make plugin/auth/CMakeFiles/qa_auth_server.dir/build
 .PHONY : qa_auth_server/fast
+
+# Manual pre-install relink rule for target.
+qa_auth_server/preinstall:
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 plugin/auth/CMakeFiles/qa_auth_server.dir/preinstall
+.PHONY : qa_auth_server/preinstall
 
 auth_socket.o: auth_socket.c.o
 .PHONY : auth_socket.o
 
 # target to build an object file
 auth_socket.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/auth_socket.dir/build.make plugin/auth/CMakeFiles/auth_socket.dir/auth_socket.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/auth_socket.dir/build.make plugin/auth/CMakeFiles/auth_socket.dir/auth_socket.c.o
 .PHONY : auth_socket.c.o
 
 auth_socket.i: auth_socket.c.i
@@ -266,7 +286,7 @@ auth_socket.i: auth_socket.c.i
 
 # target to preprocess a source file
 auth_socket.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/auth_socket.dir/build.make plugin/auth/CMakeFiles/auth_socket.dir/auth_socket.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/auth_socket.dir/build.make plugin/auth/CMakeFiles/auth_socket.dir/auth_socket.c.i
 .PHONY : auth_socket.c.i
 
 auth_socket.s: auth_socket.c.s
@@ -274,7 +294,7 @@ auth_socket.s: auth_socket.c.s
 
 # target to generate assembly for a file
 auth_socket.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/auth_socket.dir/build.make plugin/auth/CMakeFiles/auth_socket.dir/auth_socket.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/auth_socket.dir/build.make plugin/auth/CMakeFiles/auth_socket.dir/auth_socket.c.s
 .PHONY : auth_socket.c.s
 
 dialog.o: dialog.c.o
@@ -282,7 +302,7 @@ dialog.o: dialog.c.o
 
 # target to build an object file
 dialog.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/auth.dir/build.make plugin/auth/CMakeFiles/auth.dir/dialog.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/auth.dir/build.make plugin/auth/CMakeFiles/auth.dir/dialog.c.o
 .PHONY : dialog.c.o
 
 dialog.i: dialog.c.i
@@ -290,7 +310,7 @@ dialog.i: dialog.c.i
 
 # target to preprocess a source file
 dialog.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/auth.dir/build.make plugin/auth/CMakeFiles/auth.dir/dialog.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/auth.dir/build.make plugin/auth/CMakeFiles/auth.dir/dialog.c.i
 .PHONY : dialog.c.i
 
 dialog.s: dialog.c.s
@@ -298,7 +318,7 @@ dialog.s: dialog.c.s
 
 # target to generate assembly for a file
 dialog.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/auth.dir/build.make plugin/auth/CMakeFiles/auth.dir/dialog.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/auth.dir/build.make plugin/auth/CMakeFiles/auth.dir/dialog.c.s
 .PHONY : dialog.c.s
 
 qa_auth_client.o: qa_auth_client.c.o
@@ -306,7 +326,7 @@ qa_auth_client.o: qa_auth_client.c.o
 
 # target to build an object file
 qa_auth_client.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_client.dir/build.make plugin/auth/CMakeFiles/qa_auth_client.dir/qa_auth_client.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_client.dir/build.make plugin/auth/CMakeFiles/qa_auth_client.dir/qa_auth_client.c.o
 .PHONY : qa_auth_client.c.o
 
 qa_auth_client.i: qa_auth_client.c.i
@@ -314,7 +334,7 @@ qa_auth_client.i: qa_auth_client.c.i
 
 # target to preprocess a source file
 qa_auth_client.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_client.dir/build.make plugin/auth/CMakeFiles/qa_auth_client.dir/qa_auth_client.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_client.dir/build.make plugin/auth/CMakeFiles/qa_auth_client.dir/qa_auth_client.c.i
 .PHONY : qa_auth_client.c.i
 
 qa_auth_client.s: qa_auth_client.c.s
@@ -322,7 +342,7 @@ qa_auth_client.s: qa_auth_client.c.s
 
 # target to generate assembly for a file
 qa_auth_client.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_client.dir/build.make plugin/auth/CMakeFiles/qa_auth_client.dir/qa_auth_client.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_client.dir/build.make plugin/auth/CMakeFiles/qa_auth_client.dir/qa_auth_client.c.s
 .PHONY : qa_auth_client.c.s
 
 qa_auth_interface.o: qa_auth_interface.c.o
@@ -330,7 +350,7 @@ qa_auth_interface.o: qa_auth_interface.c.o
 
 # target to build an object file
 qa_auth_interface.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_interface.dir/build.make plugin/auth/CMakeFiles/qa_auth_interface.dir/qa_auth_interface.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_interface.dir/build.make plugin/auth/CMakeFiles/qa_auth_interface.dir/qa_auth_interface.c.o
 .PHONY : qa_auth_interface.c.o
 
 qa_auth_interface.i: qa_auth_interface.c.i
@@ -338,7 +358,7 @@ qa_auth_interface.i: qa_auth_interface.c.i
 
 # target to preprocess a source file
 qa_auth_interface.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_interface.dir/build.make plugin/auth/CMakeFiles/qa_auth_interface.dir/qa_auth_interface.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_interface.dir/build.make plugin/auth/CMakeFiles/qa_auth_interface.dir/qa_auth_interface.c.i
 .PHONY : qa_auth_interface.c.i
 
 qa_auth_interface.s: qa_auth_interface.c.s
@@ -346,7 +366,7 @@ qa_auth_interface.s: qa_auth_interface.c.s
 
 # target to generate assembly for a file
 qa_auth_interface.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_interface.dir/build.make plugin/auth/CMakeFiles/qa_auth_interface.dir/qa_auth_interface.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_interface.dir/build.make plugin/auth/CMakeFiles/qa_auth_interface.dir/qa_auth_interface.c.s
 .PHONY : qa_auth_interface.c.s
 
 qa_auth_server.o: qa_auth_server.c.o
@@ -354,7 +374,7 @@ qa_auth_server.o: qa_auth_server.c.o
 
 # target to build an object file
 qa_auth_server.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_server.dir/build.make plugin/auth/CMakeFiles/qa_auth_server.dir/qa_auth_server.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_server.dir/build.make plugin/auth/CMakeFiles/qa_auth_server.dir/qa_auth_server.c.o
 .PHONY : qa_auth_server.c.o
 
 qa_auth_server.i: qa_auth_server.c.i
@@ -362,7 +382,7 @@ qa_auth_server.i: qa_auth_server.c.i
 
 # target to preprocess a source file
 qa_auth_server.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_server.dir/build.make plugin/auth/CMakeFiles/qa_auth_server.dir/qa_auth_server.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_server.dir/build.make plugin/auth/CMakeFiles/qa_auth_server.dir/qa_auth_server.c.i
 .PHONY : qa_auth_server.c.i
 
 qa_auth_server.s: qa_auth_server.c.s
@@ -370,7 +390,7 @@ qa_auth_server.s: qa_auth_server.c.s
 
 # target to generate assembly for a file
 qa_auth_server.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_server.dir/build.make plugin/auth/CMakeFiles/qa_auth_server.dir/qa_auth_server.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/qa_auth_server.dir/build.make plugin/auth/CMakeFiles/qa_auth_server.dir/qa_auth_server.c.s
 .PHONY : qa_auth_server.c.s
 
 test_plugin.o: test_plugin.c.o
@@ -378,7 +398,7 @@ test_plugin.o: test_plugin.c.o
 
 # target to build an object file
 test_plugin.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/auth_test_plugin.dir/build.make plugin/auth/CMakeFiles/auth_test_plugin.dir/test_plugin.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/auth_test_plugin.dir/build.make plugin/auth/CMakeFiles/auth_test_plugin.dir/test_plugin.c.o
 .PHONY : test_plugin.c.o
 
 test_plugin.i: test_plugin.c.i
@@ -386,7 +406,7 @@ test_plugin.i: test_plugin.c.i
 
 # target to preprocess a source file
 test_plugin.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/auth_test_plugin.dir/build.make plugin/auth/CMakeFiles/auth_test_plugin.dir/test_plugin.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/auth_test_plugin.dir/build.make plugin/auth/CMakeFiles/auth_test_plugin.dir/test_plugin.c.i
 .PHONY : test_plugin.c.i
 
 test_plugin.s: test_plugin.c.s
@@ -394,7 +414,7 @@ test_plugin.s: test_plugin.c.s
 
 # target to generate assembly for a file
 test_plugin.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f plugin/auth/CMakeFiles/auth_test_plugin.dir/build.make plugin/auth/CMakeFiles/auth_test_plugin.dir/test_plugin.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f plugin/auth/CMakeFiles/auth_test_plugin.dir/build.make plugin/auth/CMakeFiles/auth_test_plugin.dir/test_plugin.c.s
 .PHONY : test_plugin.c.s
 
 # Help Target
@@ -409,7 +429,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... package"
 	@echo "... package_source"
@@ -447,6 +466,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

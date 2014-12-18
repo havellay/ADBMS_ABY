@@ -3,6 +3,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/mysqldump.dir/__/sql-common/my_user.c.o"
   "mysqldump.pdb"
   "mysqldump"
+  "mysqldump.pdb"
+  "CMakeFiles/CMakeRelink.dir/mysqldump"
 )
 
 # Per-language clean rules from dependency scanning.

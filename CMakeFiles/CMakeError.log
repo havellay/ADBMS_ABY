@@ -2616,3 +2616,2621 @@ make[1]: *** [cmTryCompileExec2985014887] Error 1
 make: *** [cmTryCompileExec2985014887/fast] Error 2
 
 
+Performing C++ SOURCE FILE Test HAVE_LLVM_LIBCPP failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2852440084/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2852440084.dir/build.make CMakeFiles/cmTryCompileExec2852440084.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2852440084.dir/src.cxx.o
+/usr/bin/c++    -fPIC -Wall -Wno-unused-parameter -DHAVE_LLVM_LIBCPP  -Wno-error   -o CMakeFiles/cmTryCompileExec2852440084.dir/src.cxx.o -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec2852440084
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2852440084.dir/link.txt --verbose=1
+/usr/bin/c++    -fPIC -Wall -Wno-unused-parameter -DHAVE_LLVM_LIBCPP  -Wno-error    CMakeFiles/cmTryCompileExec2852440084.dir/src.cxx.o  -o cmTryCompileExec2852440084 -rdynamic 
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+#include <ciso646>
+int main()
+{
+#ifdef _LIBCPP_VERSION
+  return 0;
+#else
+  return 1;
+#endif
+}
+Determining if the function floor exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3201367067/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3201367067.dir/build.make CMakeFiles/cmTryCompileExec3201367067.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3201367067.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=floor  -Wno-error   -o CMakeFiles/cmTryCompileExec3201367067.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘floor’
+/usr/share/cmake-2.8/Modules/CheckFunctionExists.c:3:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTryCompileExec3201367067
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3201367067.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=floor  -Wno-error    CMakeFiles/cmTryCompileExec3201367067.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3201367067 -rdynamic 
+CMakeFiles/cmTryCompileExec3201367067.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `floor'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3201367067.dir/build.make:88: recipe for target 'cmTryCompileExec3201367067' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3201367067] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3201367067/fast' failed
+make: *** [cmTryCompileExec3201367067/fast] Error 2
+
+
+Determining if the function crypt exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1455248217/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1455248217.dir/build.make CMakeFiles/cmTryCompileExec1455248217.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1455248217.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=crypt  -Wno-error   -o CMakeFiles/cmTryCompileExec1455248217.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1455248217
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1455248217.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=crypt  -Wno-error    CMakeFiles/cmTryCompileExec1455248217.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1455248217 -rdynamic 
+CMakeFiles/cmTryCompileExec1455248217.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `crypt'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1455248217.dir/build.make:88: recipe for target 'cmTryCompileExec1455248217' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1455248217] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec1455248217/fast' failed
+make: *** [cmTryCompileExec1455248217/fast] Error 2
+
+
+Determining if the function dlopen exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3328734630/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3328734630.dir/build.make CMakeFiles/cmTryCompileExec3328734630.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3328734630.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=dlopen  -Wno-error   -o CMakeFiles/cmTryCompileExec3328734630.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3328734630
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3328734630.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=dlopen  -Wno-error    CMakeFiles/cmTryCompileExec3328734630.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3328734630 -rdynamic 
+CMakeFiles/cmTryCompileExec3328734630.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `dlopen'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3328734630.dir/build.make:88: recipe for target 'cmTryCompileExec3328734630' failed
+make[1]: *** [cmTryCompileExec3328734630] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3328734630/fast' failed
+make: *** [cmTryCompileExec3328734630/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1934101560/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1934101560.dir/build.make CMakeFiles/cmTryCompileExec1934101560.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1934101560.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec1934101560.dir/CheckSymbolExists.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1934101560
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1934101560.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall  -Wno-error    CMakeFiles/cmTryCompileExec1934101560.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1934101560 -rdynamic 
+CMakeFiles/cmTryCompileExec1934101560.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1934101560.dir/build.make:88: recipe for target 'cmTryCompileExec1934101560' failed
+make[1]: *** [cmTryCompileExec1934101560] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1934101560/fast' failed
+make: *** [cmTryCompileExec1934101560/fast] Error 2
+
+File /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec771202596/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec771202596.dir/build.make CMakeFiles/cmTryCompileExec771202596.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec771202596.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=pthread_create  -Wno-error   -o CMakeFiles/cmTryCompileExec771202596.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec771202596
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec771202596.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=pthread_create  -Wno-error    CMakeFiles/cmTryCompileExec771202596.dir/CheckFunctionExists.c.o  -o cmTryCompileExec771202596 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec771202596.dir/build.make:88: recipe for target 'cmTryCompileExec771202596' failed
+make[1]: *** [cmTryCompileExec771202596] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec771202596/fast' failed
+make: *** [cmTryCompileExec771202596/fast] Error 2
+
+
+Determining if files cxxabi.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2151852143/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2151852143.dir/build.make CMakeFiles/cmTryCompileExec2151852143.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2151852143.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec2151852143.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:20: fatal error: cxxabi.h: No such file or directory
+ #include <cxxabi.h>
+                    ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2151852143.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2151852143.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2151852143.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec2151852143/fast' failed
+make: *** [cmTryCompileExec2151852143/fast] Error 2
+
+Source:
+/* */
+#include <cxxabi.h>
+
+
+int main(){return 0;}
+
+Determining if files floatingpoint.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4196745805/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4196745805.dir/build.make CMakeFiles/cmTryCompileExec4196745805.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4196745805.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec4196745805.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:27: fatal error: floatingpoint.h: No such file or directory
+ #include <floatingpoint.h>
+                           ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec4196745805.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec4196745805.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec4196745805.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec4196745805/fast' failed
+make: *** [cmTryCompileExec4196745805/fast] Error 2
+
+Source:
+/* */
+#include <floatingpoint.h>
+
+
+int main(){return 0;}
+
+Determining if files ieeefp.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec172410526/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec172410526.dir/build.make CMakeFiles/cmTryCompileExec172410526.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec172410526.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec172410526.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:20: fatal error: ieeefp.h: No such file or directory
+ #include <ieeefp.h>
+                    ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec172410526.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec172410526.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec172410526.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec172410526/fast' failed
+make: *** [cmTryCompileExec172410526/fast] Error 2
+
+Source:
+/* */
+#include <ieeefp.h>
+
+
+int main(){return 0;}
+
+Determining if files ndir.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4220831327/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4220831327.dir/build.make CMakeFiles/cmTryCompileExec4220831327.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4220831327.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec4220831327.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:18: fatal error: ndir.h: No such file or directory
+ #include <ndir.h>
+                  ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec4220831327.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec4220831327.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec4220831327.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec4220831327/fast' failed
+make: *** [cmTryCompileExec4220831327/fast] Error 2
+
+Source:
+/* */
+#include <ndir.h>
+
+
+int main(){return 0;}
+
+Determining if files port.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec557258815/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec557258815.dir/build.make CMakeFiles/cmTryCompileExec557258815.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec557258815.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec557258815.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:18: fatal error: port.h: No such file or directory
+ #include <port.h>
+                  ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec557258815.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec557258815.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec557258815.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec557258815/fast' failed
+make: *** [cmTryCompileExec557258815/fast] Error 2
+
+Source:
+/* */
+#include <port.h>
+
+
+int main(){return 0;}
+
+Determining if files select.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec156111740/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec156111740.dir/build.make CMakeFiles/cmTryCompileExec156111740.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec156111740.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec156111740.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:20: fatal error: select.h: No such file or directory
+ #include <select.h>
+                    ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec156111740.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec156111740.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec156111740.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec156111740/fast' failed
+make: *** [cmTryCompileExec156111740/fast] Error 2
+
+Source:
+/* */
+#include <select.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/ndir.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec658231254/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec658231254.dir/build.make CMakeFiles/cmTryCompileExec658231254.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec658231254.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec658231254.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:22: fatal error: sys/ndir.h: No such file or directory
+ #include <sys/ndir.h>
+                      ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec658231254.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec658231254.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec658231254.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec658231254/fast' failed
+make: *** [cmTryCompileExec658231254/fast] Error 2
+
+Source:
+/* */
+#include <sys/ndir.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/pte.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2722650485/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2722650485.dir/build.make CMakeFiles/cmTryCompileExec2722650485.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2722650485.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec2722650485.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:21: fatal error: sys/pte.h: No such file or directory
+ #include <sys/pte.h>
+                     ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2722650485.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2722650485.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2722650485.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec2722650485/fast' failed
+make: *** [cmTryCompileExec2722650485/fast] Error 2
+
+Source:
+/* */
+#include <sys/pte.h>
+
+
+int main(){return 0;}
+
+Determining if files synch.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1548960458/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1548960458.dir/build.make CMakeFiles/cmTryCompileExec1548960458.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1548960458.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec1548960458.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:19: fatal error: synch.h: No such file or directory
+ #include <synch.h>
+                   ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1548960458.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1548960458.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1548960458.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec1548960458/fast' failed
+make: *** [cmTryCompileExec1548960458/fast] Error 2
+
+Source:
+/* */
+#include <synch.h>
+
+
+int main(){return 0;}
+
+Determining if files sysent.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec504608143/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec504608143.dir/build.make CMakeFiles/cmTryCompileExec504608143.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec504608143.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec504608143.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:20: fatal error: sysent.h: No such file or directory
+ #include <sysent.h>
+                    ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec504608143.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec504608143.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec504608143.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec504608143/fast' failed
+make: *** [cmTryCompileExec504608143/fast] Error 2
+
+Source:
+/* */
+#include <sysent.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/fpu.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3336282156/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3336282156.dir/build.make CMakeFiles/cmTryCompileExec3336282156.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3336282156.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec3336282156.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:21: fatal error: sys/fpu.h: No such file or directory
+ #include <sys/fpu.h>
+                     ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3336282156.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3336282156.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3336282156.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3336282156/fast' failed
+make: *** [cmTryCompileExec3336282156/fast] Error 2
+
+Source:
+/* */
+#include <sys/fpu.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/malloc.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2185638785/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2185638785.dir/build.make CMakeFiles/cmTryCompileExec2185638785.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2185638785.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec2185638785.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:24: fatal error: sys/malloc.h: No such file or directory
+ #include <sys/malloc.h>
+                        ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2185638785.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2185638785.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2185638785.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec2185638785/fast' failed
+make: *** [cmTryCompileExec2185638785/fast] Error 2
+
+Source:
+/* */
+#include <sys/malloc.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/stream.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4293322631/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4293322631.dir/build.make CMakeFiles/cmTryCompileExec4293322631.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4293322631.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec4293322631.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:24: fatal error: sys/stream.h: No such file or directory
+ #include <sys/stream.h>
+                        ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec4293322631.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec4293322631.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec4293322631.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec4293322631/fast' failed
+make: *** [cmTryCompileExec4293322631/fast] Error 2
+
+Source:
+/* */
+#include <sys/stream.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/termcap.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1530255838/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1530255838.dir/build.make CMakeFiles/cmTryCompileExec1530255838.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1530255838.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec1530255838.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:25: fatal error: sys/termcap.h: No such file or directory
+ #include <sys/termcap.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1530255838.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1530255838.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1530255838.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1530255838/fast' failed
+make: *** [cmTryCompileExec1530255838/fast] Error 2
+
+Source:
+/* */
+#include <sys/termcap.h>
+
+
+int main(){return 0;}
+
+Determining if files termbits.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4246566215/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4246566215.dir/build.make CMakeFiles/cmTryCompileExec4246566215.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4246566215.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec4246566215.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:22: fatal error: termbits.h: No such file or directory
+ #include <termbits.h>
+                      ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec4246566215.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec4246566215.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec4246566215.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec4246566215/fast' failed
+make: *** [cmTryCompileExec4246566215/fast] Error 2
+
+Source:
+/* */
+#include <termbits.h>
+
+
+int main(){return 0;}
+
+Determining if files varargs.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2586251941/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2586251941.dir/build.make CMakeFiles/cmTryCompileExec2586251941.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2586251941.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec2586251941.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+In file included from /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:0:
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+CMakeFiles/cmTryCompileExec2586251941.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2586251941.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec2586251941.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2586251941/fast' failed
+make: *** [cmTryCompileExec2586251941/fast] Error 2
+
+Source:
+/* */
+#include <varargs.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/utime.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4070504898/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4070504898.dir/build.make CMakeFiles/cmTryCompileExec4070504898.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4070504898.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec4070504898.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:23: fatal error: sys/utime.h: No such file or directory
+ #include <sys/utime.h>
+                       ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec4070504898.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec4070504898.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec4070504898.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec4070504898/fast' failed
+make: *** [cmTryCompileExec4070504898/fast] Error 2
+
+Source:
+/* */
+#include <sys/utime.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/vadvise.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3630546088/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3630546088.dir/build.make CMakeFiles/cmTryCompileExec3630546088.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3630546088.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec3630546088.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:25: fatal error: sys/vadvise.h: No such file or directory
+ #include <sys/vadvise.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3630546088.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3630546088.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3630546088.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3630546088/fast' failed
+make: *** [cmTryCompileExec3630546088/fast] Error 2
+
+Source:
+/* */
+#include <sys/vadvise.h>
+
+
+int main(){return 0;}
+
+Determining if files vis.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1913853545/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1913853545.dir/build.make CMakeFiles/cmTryCompileExec1913853545.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1913853545.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec1913853545.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:17: fatal error: vis.h: No such file or directory
+ #include <vis.h>
+                 ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1913853545.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1913853545.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1913853545.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec1913853545/fast' failed
+make: *** [cmTryCompileExec1913853545/fast] Error 2
+
+Source:
+/* */
+#include <vis.h>
+
+
+int main(){return 0;}
+
+Determining if files sasl/sasl.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1045246993/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1045246993.dir/build.make CMakeFiles/cmTryCompileExec1045246993.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1045246993.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec1045246993.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:23: fatal error: sasl/sasl.h: No such file or directory
+ #include <sasl/sasl.h>
+                       ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1045246993.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1045246993.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1045246993.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec1045246993/fast' failed
+make: *** [cmTryCompileExec1045246993/fast] Error 2
+
+Source:
+/* */
+#include <sasl/sasl.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/devpoll.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1197259946/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1197259946.dir/build.make CMakeFiles/cmTryCompileExec1197259946.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1197259946.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec1197259946.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:25: fatal error: sys/devpoll.h: No such file or directory
+ #include <sys/devpoll.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1197259946.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1197259946.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1197259946.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec1197259946/fast' failed
+make: *** [cmTryCompileExec1197259946/fast] Error 2
+
+Source:
+/* */
+#include <sys/devpoll.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/devpoll.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec946498781/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec946498781.dir/build.make CMakeFiles/cmTryCompileExec946498781.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec946498781.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec946498781.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:25: fatal error: sys/devpoll.h: No such file or directory
+ #include <sys/devpoll.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec946498781.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec946498781.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec946498781.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec946498781/fast' failed
+make: *** [cmTryCompileExec946498781/fast] Error 2
+
+Source:
+/* */
+#include <sys/devpoll.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/event.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1378219897/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1378219897.dir/build.make CMakeFiles/cmTryCompileExec1378219897.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1378219897.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec1378219897.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:23: fatal error: sys/event.h: No such file or directory
+ #include <sys/event.h>
+                       ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1378219897.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1378219897.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1378219897.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1378219897/fast' failed
+make: *** [cmTryCompileExec1378219897/fast] Error 2
+
+Source:
+/* */
+#include <sys/event.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/ptem.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1146088538/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1146088538.dir/build.make CMakeFiles/cmTryCompileExec1146088538.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1146088538.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec1146088538.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:22: fatal error: sys/ptem.h: No such file or directory
+ #include <sys/ptem.h>
+                      ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1146088538.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1146088538.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1146088538.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec1146088538/fast' failed
+make: *** [cmTryCompileExec1146088538/fast] Error 2
+
+Source:
+/* */
+#include <sys/ptem.h>
+
+
+int main(){return 0;}
+
+Determining if the function _aligned_malloc exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3088461696/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3088461696.dir/build.make CMakeFiles/cmTryCompileExec3088461696.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3088461696.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=_aligned_malloc  -Wno-error   -o CMakeFiles/cmTryCompileExec3088461696.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3088461696
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3088461696.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=_aligned_malloc  -Wno-error    CMakeFiles/cmTryCompileExec3088461696.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3088461696 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3088461696.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_aligned_malloc'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3088461696.dir/build.make:88: recipe for target 'cmTryCompileExec3088461696' failed
+make[1]: *** [cmTryCompileExec3088461696] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3088461696/fast' failed
+make: *** [cmTryCompileExec3088461696/fast] Error 2
+
+
+Determining if the function _aligned_free exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2488850508/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2488850508.dir/build.make CMakeFiles/cmTryCompileExec2488850508.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2488850508.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=_aligned_free  -Wno-error   -o CMakeFiles/cmTryCompileExec2488850508.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2488850508
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2488850508.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=_aligned_free  -Wno-error    CMakeFiles/cmTryCompileExec2488850508.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2488850508 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2488850508.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_aligned_free'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2488850508.dir/build.make:88: recipe for target 'cmTryCompileExec2488850508' failed
+make[1]: *** [cmTryCompileExec2488850508] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2488850508/fast' failed
+make: *** [cmTryCompileExec2488850508/fast] Error 2
+
+
+Determining if the function aio_read exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1995168677/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1995168677.dir/build.make CMakeFiles/cmTryCompileExec1995168677.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1995168677.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=aio_read  -Wno-error   -o CMakeFiles/cmTryCompileExec1995168677.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1995168677
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1995168677.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=aio_read  -Wno-error    CMakeFiles/cmTryCompileExec1995168677.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1995168677 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec1995168677.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `aio_read'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1995168677.dir/build.make:88: recipe for target 'cmTryCompileExec1995168677' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1995168677] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec1995168677/fast' failed
+make: *** [cmTryCompileExec1995168677/fast] Error 2
+
+
+Determining if the function printstack exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec277980159/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec277980159.dir/build.make CMakeFiles/cmTryCompileExec277980159.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec277980159.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=printstack  -Wno-error   -o CMakeFiles/cmTryCompileExec277980159.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec277980159
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec277980159.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=printstack  -Wno-error    CMakeFiles/cmTryCompileExec277980159.dir/CheckFunctionExists.c.o  -o cmTryCompileExec277980159 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec277980159.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `printstack'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec277980159.dir/build.make:88: recipe for target 'cmTryCompileExec277980159' failed
+make[1]: *** [cmTryCompileExec277980159] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec277980159/fast' failed
+make: *** [cmTryCompileExec277980159/fast] Error 2
+
+
+Determining if the function bmove exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1438324919/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1438324919.dir/build.make CMakeFiles/cmTryCompileExec1438324919.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1438324919.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=bmove  -Wno-error   -o CMakeFiles/cmTryCompileExec1438324919.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1438324919
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1438324919.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=bmove  -Wno-error    CMakeFiles/cmTryCompileExec1438324919.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1438324919 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec1438324919.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `bmove'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1438324919.dir/build.make:88: recipe for target 'cmTryCompileExec1438324919' failed
+make[1]: *** [cmTryCompileExec1438324919] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1438324919/fast' failed
+make: *** [cmTryCompileExec1438324919/fast] Error 2
+
+
+Determining if the function directio exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2381842797/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2381842797.dir/build.make CMakeFiles/cmTryCompileExec2381842797.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2381842797.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=directio  -Wno-error   -o CMakeFiles/cmTryCompileExec2381842797.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2381842797
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2381842797.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=directio  -Wno-error    CMakeFiles/cmTryCompileExec2381842797.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2381842797 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2381842797.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `directio'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2381842797.dir/build.make:88: recipe for target 'cmTryCompileExec2381842797' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec2381842797] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec2381842797/fast' failed
+make: *** [cmTryCompileExec2381842797/fast] Error 2
+
+
+Determining if the function _doprnt exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1311951972/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1311951972.dir/build.make CMakeFiles/cmTryCompileExec1311951972.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1311951972.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=_doprnt  -Wno-error   -o CMakeFiles/cmTryCompileExec1311951972.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1311951972
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1311951972.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=_doprnt  -Wno-error    CMakeFiles/cmTryCompileExec1311951972.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1311951972 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec1311951972.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_doprnt'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1311951972.dir/build.make:88: recipe for target 'cmTryCompileExec1311951972' failed
+make[1]: *** [cmTryCompileExec1311951972] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1311951972/fast' failed
+make: *** [cmTryCompileExec1311951972/fast] Error 2
+
+
+Determining if the function compress exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2161891258/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2161891258.dir/build.make CMakeFiles/cmTryCompileExec2161891258.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2161891258.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=compress  -Wno-error   -o CMakeFiles/cmTryCompileExec2161891258.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2161891258
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2161891258.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=compress  -Wno-error    CMakeFiles/cmTryCompileExec2161891258.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2161891258 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2161891258.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `compress'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2161891258.dir/build.make:88: recipe for target 'cmTryCompileExec2161891258' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec2161891258] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec2161891258/fast' failed
+make: *** [cmTryCompileExec2161891258/fast] Error 2
+
+
+Determining if the function fconvert exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2012706528/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2012706528.dir/build.make CMakeFiles/cmTryCompileExec2012706528.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2012706528.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=fconvert  -Wno-error   -o CMakeFiles/cmTryCompileExec2012706528.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2012706528
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2012706528.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=fconvert  -Wno-error    CMakeFiles/cmTryCompileExec2012706528.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2012706528 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2012706528.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `fconvert'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2012706528.dir/build.make:88: recipe for target 'cmTryCompileExec2012706528' failed
+make[1]: *** [cmTryCompileExec2012706528] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2012706528/fast' failed
+make: *** [cmTryCompileExec2012706528/fast] Error 2
+
+
+Determining if the function fpsetmask exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2990998290/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2990998290.dir/build.make CMakeFiles/cmTryCompileExec2990998290.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2990998290.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=fpsetmask  -Wno-error   -o CMakeFiles/cmTryCompileExec2990998290.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2990998290
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2990998290.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=fpsetmask  -Wno-error    CMakeFiles/cmTryCompileExec2990998290.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2990998290 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2990998290.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `fpsetmask'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2990998290.dir/build.make:88: recipe for target 'cmTryCompileExec2990998290' failed
+make[1]: *** [cmTryCompileExec2990998290] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2990998290/fast' failed
+make: *** [cmTryCompileExec2990998290/fast] Error 2
+
+
+Determining if the function gethrtime exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2831703080/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2831703080.dir/build.make CMakeFiles/cmTryCompileExec2831703080.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2831703080.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=gethrtime  -Wno-error   -o CMakeFiles/cmTryCompileExec2831703080.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2831703080
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2831703080.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=gethrtime  -Wno-error    CMakeFiles/cmTryCompileExec2831703080.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2831703080 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2831703080.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `gethrtime'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2831703080.dir/build.make:88: recipe for target 'cmTryCompileExec2831703080' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec2831703080] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec2831703080/fast' failed
+make: *** [cmTryCompileExec2831703080/fast] Error 2
+
+
+Determining if the function getpassphrase exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec753998574/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec753998574.dir/build.make CMakeFiles/cmTryCompileExec753998574.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec753998574.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=getpassphrase  -Wno-error   -o CMakeFiles/cmTryCompileExec753998574.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec753998574
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec753998574.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=getpassphrase  -Wno-error    CMakeFiles/cmTryCompileExec753998574.dir/CheckFunctionExists.c.o  -o cmTryCompileExec753998574 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec753998574.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `getpassphrase'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec753998574.dir/build.make:88: recipe for target 'cmTryCompileExec753998574' failed
+make[1]: *** [cmTryCompileExec753998574] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec753998574/fast' failed
+make: *** [cmTryCompileExec753998574/fast] Error 2
+
+
+Determining if the function issetugid exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec168902798/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec168902798.dir/build.make CMakeFiles/cmTryCompileExec168902798.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec168902798.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=issetugid  -Wno-error   -o CMakeFiles/cmTryCompileExec168902798.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec168902798
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec168902798.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=issetugid  -Wno-error    CMakeFiles/cmTryCompileExec168902798.dir/CheckFunctionExists.c.o  -o cmTryCompileExec168902798 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec168902798.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `issetugid'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec168902798.dir/build.make:88: recipe for target 'cmTryCompileExec168902798' failed
+make[1]: *** [cmTryCompileExec168902798] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec168902798/fast' failed
+make: *** [cmTryCompileExec168902798/fast] Error 2
+
+
+Determining if the function port_create exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1736013442/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1736013442.dir/build.make CMakeFiles/cmTryCompileExec1736013442.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1736013442.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=port_create  -Wno-error   -o CMakeFiles/cmTryCompileExec1736013442.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1736013442
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1736013442.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=port_create  -Wno-error    CMakeFiles/cmTryCompileExec1736013442.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1736013442 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec1736013442.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `port_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1736013442.dir/build.make:88: recipe for target 'cmTryCompileExec1736013442' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1736013442] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec1736013442/fast' failed
+make: *** [cmTryCompileExec1736013442/fast] Error 2
+
+
+Determining if the function pthread_attr_create exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec648880966/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec648880966.dir/build.make CMakeFiles/cmTryCompileExec648880966.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec648880966.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=pthread_attr_create  -Wno-error   -o CMakeFiles/cmTryCompileExec648880966.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec648880966
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec648880966.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=pthread_attr_create  -Wno-error    CMakeFiles/cmTryCompileExec648880966.dir/CheckFunctionExists.c.o  -o cmTryCompileExec648880966 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec648880966.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `pthread_attr_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec648880966.dir/build.make:88: recipe for target 'cmTryCompileExec648880966' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec648880966] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec648880966/fast' failed
+make: *** [cmTryCompileExec648880966/fast] Error 2
+
+
+Determining if the function pthread_condattr_create exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2635369353/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2635369353.dir/build.make CMakeFiles/cmTryCompileExec2635369353.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2635369353.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=pthread_condattr_create  -Wno-error   -o CMakeFiles/cmTryCompileExec2635369353.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2635369353
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2635369353.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=pthread_condattr_create  -Wno-error    CMakeFiles/cmTryCompileExec2635369353.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2635369353 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2635369353.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `pthread_condattr_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2635369353.dir/build.make:88: recipe for target 'cmTryCompileExec2635369353' failed
+make[1]: *** [cmTryCompileExec2635369353] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2635369353/fast' failed
+make: *** [cmTryCompileExec2635369353/fast] Error 2
+
+
+Determining if the function pthread_threadmask exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3085530937/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3085530937.dir/build.make CMakeFiles/cmTryCompileExec3085530937.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3085530937.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=pthread_threadmask  -Wno-error   -o CMakeFiles/cmTryCompileExec3085530937.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3085530937
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3085530937.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=pthread_threadmask  -Wno-error    CMakeFiles/cmTryCompileExec3085530937.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3085530937 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3085530937.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `pthread_threadmask'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3085530937.dir/build.make:88: recipe for target 'cmTryCompileExec3085530937' failed
+make[1]: *** [cmTryCompileExec3085530937] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3085530937/fast' failed
+make: *** [cmTryCompileExec3085530937/fast] Error 2
+
+
+Determining if the function pthread_yield_np exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec385884629/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec385884629.dir/build.make CMakeFiles/cmTryCompileExec385884629.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec385884629.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=pthread_yield_np  -Wno-error   -o CMakeFiles/cmTryCompileExec385884629.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec385884629
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec385884629.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=pthread_yield_np  -Wno-error    CMakeFiles/cmTryCompileExec385884629.dir/CheckFunctionExists.c.o  -o cmTryCompileExec385884629 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec385884629.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `pthread_yield_np'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec385884629.dir/build.make:88: recipe for target 'cmTryCompileExec385884629' failed
+make[1]: *** [cmTryCompileExec385884629] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec385884629/fast' failed
+make: *** [cmTryCompileExec385884629/fast] Error 2
+
+
+Determining if the function rwlock_init exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3089223787/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3089223787.dir/build.make CMakeFiles/cmTryCompileExec3089223787.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3089223787.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=rwlock_init  -Wno-error   -o CMakeFiles/cmTryCompileExec3089223787.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3089223787
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3089223787.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=rwlock_init  -Wno-error    CMakeFiles/cmTryCompileExec3089223787.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3089223787 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3089223787.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `rwlock_init'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3089223787.dir/build.make:88: recipe for target 'cmTryCompileExec3089223787' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3089223787] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3089223787/fast' failed
+make: *** [cmTryCompileExec3089223787/fast] Error 2
+
+
+Determining if the function setfd exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3309663677/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3309663677.dir/build.make CMakeFiles/cmTryCompileExec3309663677.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3309663677.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=setfd  -Wno-error   -o CMakeFiles/cmTryCompileExec3309663677.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3309663677
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3309663677.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=setfd  -Wno-error    CMakeFiles/cmTryCompileExec3309663677.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3309663677 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3309663677.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `setfd'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3309663677.dir/build.make:88: recipe for target 'cmTryCompileExec3309663677' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3309663677] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3309663677/fast' failed
+make: *** [cmTryCompileExec3309663677/fast] Error 2
+
+
+Determining if the function sigthreadmask exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2747931768/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2747931768.dir/build.make CMakeFiles/cmTryCompileExec2747931768.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2747931768.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=sigthreadmask  -Wno-error   -o CMakeFiles/cmTryCompileExec2747931768.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2747931768
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2747931768.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=sigthreadmask  -Wno-error    CMakeFiles/cmTryCompileExec2747931768.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2747931768 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2747931768.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `sigthreadmask'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2747931768.dir/build.make:88: recipe for target 'cmTryCompileExec2747931768' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec2747931768] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec2747931768/fast' failed
+make: *** [cmTryCompileExec2747931768/fast] Error 2
+
+
+Determining if the function strlcpy exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2399061757/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2399061757.dir/build.make CMakeFiles/cmTryCompileExec2399061757.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2399061757.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=strlcpy  -Wno-error   -o CMakeFiles/cmTryCompileExec2399061757.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2399061757
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2399061757.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=strlcpy  -Wno-error    CMakeFiles/cmTryCompileExec2399061757.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2399061757 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2399061757.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `strlcpy'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2399061757.dir/build.make:88: recipe for target 'cmTryCompileExec2399061757' failed
+make[1]: *** [cmTryCompileExec2399061757] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2399061757/fast' failed
+make: *** [cmTryCompileExec2399061757/fast] Error 2
+
+
+Determining if the function strlcat exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1663037782/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1663037782.dir/build.make CMakeFiles/cmTryCompileExec1663037782.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1663037782.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=strlcat  -Wno-error   -o CMakeFiles/cmTryCompileExec1663037782.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1663037782
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1663037782.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=strlcat  -Wno-error    CMakeFiles/cmTryCompileExec1663037782.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1663037782 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec1663037782.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `strlcat'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1663037782.dir/build.make:88: recipe for target 'cmTryCompileExec1663037782' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1663037782] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec1663037782/fast' failed
+make: *** [cmTryCompileExec1663037782/fast] Error 2
+
+
+Determining if the function fgetln exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3936976572/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3936976572.dir/build.make CMakeFiles/cmTryCompileExec3936976572.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3936976572.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=fgetln  -Wno-error   -o CMakeFiles/cmTryCompileExec3936976572.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3936976572
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3936976572.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=fgetln  -Wno-error    CMakeFiles/cmTryCompileExec3936976572.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3936976572 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3936976572.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `fgetln'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3936976572.dir/build.make:88: recipe for target 'cmTryCompileExec3936976572' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3936976572] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3936976572/fast' failed
+make: *** [cmTryCompileExec3936976572/fast] Error 2
+
+
+Determining if the function tell exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec571526277/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec571526277.dir/build.make CMakeFiles/cmTryCompileExec571526277.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec571526277.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=tell  -Wno-error   -o CMakeFiles/cmTryCompileExec571526277.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec571526277
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec571526277.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=tell  -Wno-error    CMakeFiles/cmTryCompileExec571526277.dir/CheckFunctionExists.c.o  -o cmTryCompileExec571526277 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec571526277.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `tell'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec571526277.dir/build.make:88: recipe for target 'cmTryCompileExec571526277' failed
+make[1]: *** [cmTryCompileExec571526277] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec571526277/fast' failed
+make: *** [cmTryCompileExec571526277/fast] Error 2
+
+
+Determining if the function thr_setconcurrency exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec944130812/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec944130812.dir/build.make CMakeFiles/cmTryCompileExec944130812.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec944130812.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=thr_setconcurrency  -Wno-error   -o CMakeFiles/cmTryCompileExec944130812.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec944130812
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec944130812.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=thr_setconcurrency  -Wno-error    CMakeFiles/cmTryCompileExec944130812.dir/CheckFunctionExists.c.o  -o cmTryCompileExec944130812 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec944130812.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `thr_setconcurrency'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec944130812.dir/build.make:88: recipe for target 'cmTryCompileExec944130812' failed
+make[1]: *** [cmTryCompileExec944130812] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec944130812/fast' failed
+make: *** [cmTryCompileExec944130812/fast] Error 2
+
+
+Determining if the function thr_yield exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3089473271/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3089473271.dir/build.make CMakeFiles/cmTryCompileExec3089473271.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3089473271.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=thr_yield  -Wno-error   -o CMakeFiles/cmTryCompileExec3089473271.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3089473271
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3089473271.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=thr_yield  -Wno-error    CMakeFiles/cmTryCompileExec3089473271.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3089473271 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3089473271.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `thr_yield'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3089473271.dir/build.make:88: recipe for target 'cmTryCompileExec3089473271' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3089473271] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3089473271/fast' failed
+make: *** [cmTryCompileExec3089473271/fast] Error 2
+
+
+Determining if the function ntohll exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3166745321/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3166745321.dir/build.make CMakeFiles/cmTryCompileExec3166745321.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3166745321.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=ntohll  -Wno-error   -o CMakeFiles/cmTryCompileExec3166745321.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3166745321
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3166745321.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=ntohll  -Wno-error    CMakeFiles/cmTryCompileExec3166745321.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3166745321 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3166745321.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `ntohll'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3166745321.dir/build.make:88: recipe for target 'cmTryCompileExec3166745321' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3166745321] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3166745321/fast' failed
+make: *** [cmTryCompileExec3166745321/fast] Error 2
+
+
+Determining if the function kqueue exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec343092110/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec343092110.dir/build.make CMakeFiles/cmTryCompileExec343092110.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec343092110.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=kqueue  -Wno-error   -o CMakeFiles/cmTryCompileExec343092110.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec343092110
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec343092110.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=kqueue  -Wno-error    CMakeFiles/cmTryCompileExec343092110.dir/CheckFunctionExists.c.o  -o cmTryCompileExec343092110 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec343092110.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `kqueue'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec343092110.dir/build.make:88: recipe for target 'cmTryCompileExec343092110' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec343092110] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec343092110/fast' failed
+make: *** [cmTryCompileExec343092110/fast] Error 2
+
+
+Determining if the function kqueue exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2354676798/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2354676798.dir/build.make CMakeFiles/cmTryCompileExec2354676798.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2354676798.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=kqueue  -Wno-error   -o CMakeFiles/cmTryCompileExec2354676798.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2354676798
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2354676798.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=kqueue  -Wno-error    CMakeFiles/cmTryCompileExec2354676798.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2354676798 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2354676798.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `kqueue'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2354676798.dir/build.make:88: recipe for target 'cmTryCompileExec2354676798' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec2354676798] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec2354676798/fast' failed
+make: *** [cmTryCompileExec2354676798/fast] Error 2
+
+
+Determining if files ia64intrin.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3104719012/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3104719012.dir/build.make CMakeFiles/cmTryCompileExec3104719012.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3104719012.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec3104719012.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:24: fatal error: ia64intrin.h: No such file or directory
+ #include <ia64intrin.h>
+                        ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3104719012.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3104719012.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3104719012.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3104719012/fast' failed
+make: *** [cmTryCompileExec3104719012/fast] Error 2
+
+Source:
+/* */
+#include <ia64intrin.h>
+
+
+int main(){return 0;}
+
+Determining if the function read_real_time exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1290594353/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1290594353.dir/build.make CMakeFiles/cmTryCompileExec1290594353.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1290594353.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=read_real_time  -Wno-error   -o CMakeFiles/cmTryCompileExec1290594353.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1290594353
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1290594353.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=read_real_time  -Wno-error    CMakeFiles/cmTryCompileExec1290594353.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1290594353 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec1290594353.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `read_real_time'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1290594353.dir/build.make:88: recipe for target 'cmTryCompileExec1290594353' failed
+make[1]: *** [cmTryCompileExec1290594353] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1290594353/fast' failed
+make: *** [cmTryCompileExec1290594353/fast] Error 2
+
+
+Determining if the function rdtscll exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2846329721/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2846329721.dir/build.make CMakeFiles/cmTryCompileExec2846329721.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2846329721.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=rdtscll  -Wno-error   -o CMakeFiles/cmTryCompileExec2846329721.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2846329721
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2846329721.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=rdtscll  -Wno-error    CMakeFiles/cmTryCompileExec2846329721.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2846329721 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2846329721.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `rdtscll'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2846329721.dir/build.make:88: recipe for target 'cmTryCompileExec2846329721' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec2846329721] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec2846329721/fast' failed
+make: *** [cmTryCompileExec2846329721/fast] Error 2
+
+
+Determining if the TIOCSTAT exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3218732244/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3218732244.dir/build.make CMakeFiles/cmTryCompileExec3218732244.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3218732244.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec3218732244.dir/CheckSymbolExists.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘TIOCSTAT’ undeclared (first use in this function)
+   return ((int*)(&TIOCSTAT))[argc];
+                   ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckSymbolExists.c:13:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+CMakeFiles/cmTryCompileExec3218732244.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3218732244.dir/CheckSymbolExists.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3218732244.dir/CheckSymbolExists.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3218732244/fast' failed
+make: *** [cmTryCompileExec3218732244/fast] Error 2
+
+File /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/ioctl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef TIOCSTAT
+  return ((int*)(&TIOCSTAT))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the FIONREAD exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3169923243/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3169923243.dir/build.make CMakeFiles/cmTryCompileExec3169923243.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3169923243.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec3169923243.dir/CheckSymbolExists.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:23: fatal error: sys/filio.h: No such file or directory
+ #include <sys/filio.h>
+                       ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3169923243.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3169923243.dir/CheckSymbolExists.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3169923243.dir/CheckSymbolExists.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3169923243/fast' failed
+make: *** [cmTryCompileExec3169923243/fast] Error 2
+
+File /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/filio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef FIONREAD
+  return ((int*)(&FIONREAD))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the system is big endian passed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec564482635/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec564482635.dir/build.make CMakeFiles/cmTryCompileExec564482635.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec564482635.dir/TestEndianess.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTryCompileExec564482635.dir/TestEndianess.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTryCompileExec564482635
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec564482635.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall     CMakeFiles/cmTryCompileExec564482635.dir/TestEndianess.c.o  -o cmTryCompileExec564482635 -rdynamic 
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of uchar failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2402616697/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2402616697.dir/build.make CMakeFiles/cmTryCompileExec2402616697.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2402616697.dir/SIZEOF_UCHAR.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec2402616697.dir/SIZEOF_UCHAR.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UCHAR.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UCHAR.c:19:22: error: ‘uchar’ undeclared here (not in a function)
+ #define SIZE (sizeof(uchar))
+                      ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UCHAR.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec2402616697.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2402616697.dir/SIZEOF_UCHAR.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec2402616697.dir/SIZEOF_UCHAR.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2402616697/fast' failed
+make: *** [cmTryCompileExec2402616697/fast] Error 2
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UCHAR.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(uchar))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of int8 failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2371191161/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2371191161.dir/build.make CMakeFiles/cmTryCompileExec2371191161.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2371191161.dir/SIZEOF_INT8.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec2371191161.dir/SIZEOF_INT8.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT8.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT8.c:19:22: error: ‘int8’ undeclared here (not in a function)
+ #define SIZE (sizeof(int8))
+                      ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT8.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec2371191161.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2371191161.dir/SIZEOF_INT8.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2371191161.dir/SIZEOF_INT8.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec2371191161/fast' failed
+make: *** [cmTryCompileExec2371191161/fast] Error 2
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT8.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(int8))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of uint8 failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3113667823/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3113667823.dir/build.make CMakeFiles/cmTryCompileExec3113667823.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3113667823.dir/SIZEOF_UINT8.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec3113667823.dir/SIZEOF_UINT8.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT8.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT8.c:19:22: error: ‘uint8’ undeclared here (not in a function)
+ #define SIZE (sizeof(uint8))
+                      ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT8.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec3113667823.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3113667823.dir/SIZEOF_UINT8.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3113667823.dir/SIZEOF_UINT8.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3113667823/fast' failed
+make: *** [cmTryCompileExec3113667823/fast] Error 2
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT8.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(uint8))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of int16 failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3814203026/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3814203026.dir/build.make CMakeFiles/cmTryCompileExec3814203026.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3814203026.dir/SIZEOF_INT16.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec3814203026.dir/SIZEOF_INT16.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT16.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT16.c:19:22: error: ‘int16’ undeclared here (not in a function)
+ #define SIZE (sizeof(int16))
+                      ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT16.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec3814203026.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3814203026.dir/SIZEOF_INT16.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3814203026.dir/SIZEOF_INT16.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3814203026/fast' failed
+make: *** [cmTryCompileExec3814203026/fast] Error 2
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT16.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(int16))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of uint16 failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec324878124/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec324878124.dir/build.make CMakeFiles/cmTryCompileExec324878124.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec324878124.dir/SIZEOF_UINT16.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec324878124.dir/SIZEOF_UINT16.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT16.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT16.c:19:22: error: ‘uint16’ undeclared here (not in a function)
+ #define SIZE (sizeof(uint16))
+                      ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT16.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec324878124.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec324878124.dir/SIZEOF_UINT16.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec324878124.dir/SIZEOF_UINT16.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec324878124/fast' failed
+make: *** [cmTryCompileExec324878124/fast] Error 2
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT16.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(uint16))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of int32 failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3212705924/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3212705924.dir/build.make CMakeFiles/cmTryCompileExec3212705924.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3212705924.dir/SIZEOF_INT32.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec3212705924.dir/SIZEOF_INT32.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT32.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT32.c:19:22: error: ‘int32’ undeclared here (not in a function)
+ #define SIZE (sizeof(int32))
+                      ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT32.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec3212705924.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3212705924.dir/SIZEOF_INT32.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3212705924.dir/SIZEOF_INT32.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3212705924/fast' failed
+make: *** [cmTryCompileExec3212705924/fast] Error 2
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(int32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of uint32 failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec765912239/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec765912239.dir/build.make CMakeFiles/cmTryCompileExec765912239.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec765912239.dir/SIZEOF_UINT32.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec765912239.dir/SIZEOF_UINT32.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT32.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT32.c:19:22: error: ‘uint32’ undeclared here (not in a function)
+ #define SIZE (sizeof(uint32))
+                      ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT32.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec765912239.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec765912239.dir/SIZEOF_UINT32.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec765912239.dir/SIZEOF_UINT32.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec765912239/fast' failed
+make: *** [cmTryCompileExec765912239/fast] Error 2
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(uint32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of int64 failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3799470313/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3799470313.dir/build.make CMakeFiles/cmTryCompileExec3799470313.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3799470313.dir/SIZEOF_INT64.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec3799470313.dir/SIZEOF_INT64.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT64.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT64.c:19:22: error: ‘int64’ undeclared here (not in a function)
+ #define SIZE (sizeof(int64))
+                      ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT64.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec3799470313.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3799470313.dir/SIZEOF_INT64.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3799470313.dir/SIZEOF_INT64.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3799470313/fast' failed
+make: *** [cmTryCompileExec3799470313/fast] Error 2
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(int64))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of uint64 failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1648739347/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1648739347.dir/build.make CMakeFiles/cmTryCompileExec1648739347.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1648739347.dir/SIZEOF_UINT64.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec1648739347.dir/SIZEOF_UINT64.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT64.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT64.c:19:22: error: ‘uint64’ undeclared here (not in a function)
+ #define SIZE (sizeof(uint64))
+                      ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT64.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec1648739347.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1648739347.dir/SIZEOF_UINT64.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1648739347.dir/SIZEOF_UINT64.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1648739347/fast' failed
+make: *** [cmTryCompileExec1648739347/fast] Error 2
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_UINT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(uint64))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of bool failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3702845998/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3702845998.dir/build.make CMakeFiles/cmTryCompileExec3702845998.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3702845998.dir/SIZEOF_BOOL.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec3702845998.dir/SIZEOF_BOOL.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_BOOL.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_BOOL.c:18:22: error: ‘bool’ undeclared here (not in a function)
+ #define SIZE (sizeof(bool))
+                      ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_BOOL.c:20:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec3702845998.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3702845998.dir/SIZEOF_BOOL.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3702845998.dir/SIZEOF_BOOL.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3702845998/fast' failed
+make: *** [cmTryCompileExec3702845998/fast] Error 2
+
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CheckTypeSize/SIZEOF_BOOL.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(bool))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Performing C SOURCE FILE Test TIME_T_UNSIGNED failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2133596083/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2133596083.dir/build.make CMakeFiles/cmTryCompileExec2133596083.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2133596083.dir/src.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall -DTIME_T_UNSIGNED  -Wno-error   -o CMakeFiles/cmTryCompileExec2133596083.dir/src.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c:5:7: error: size of array ‘array’ is negative
+   int array[(((time_t)-1) > 0) ? 1 : -1];
+       ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c:5:7: warning: unused variable ‘array’ [-Wunused-variable]
+CMakeFiles/cmTryCompileExec2133596083.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2133596083.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec2133596083.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2133596083/fast' failed
+make: *** [cmTryCompileExec2133596083/fast] Error 2
+
+Source file was:
+
+#include <time.h>
+int main()
+{
+  int array[(((time_t)-1) > 0) ? 1 : -1];
+  return 0;
+}
+Performing C SOURCE FILE Test HAVE_TIMESPEC_TS_SEC failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3126476957/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3126476957.dir/build.make CMakeFiles/cmTryCompileExec3126476957.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3126476957.dir/src.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall -DHAVE_TIMESPEC_TS_SEC  -Wno-error   -o CMakeFiles/cmTryCompileExec3126476957.dir/src.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c:7:10: error: ‘struct timespec’ has no member named ‘ts_sec’
+   abstime.ts_sec = time(NULL)+1;
+          ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c:8:10: error: ‘struct timespec’ has no member named ‘ts_nsec’
+   abstime.ts_nsec = 0;
+          ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c:6:19: warning: variable ‘abstime’ set but not used [-Wunused-but-set-variable]
+   struct timespec abstime;
+                   ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c:9:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+CMakeFiles/cmTryCompileExec3126476957.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3126476957.dir/src.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3126476957.dir/src.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3126476957/fast' failed
+make: *** [cmTryCompileExec3126476957/fast] Error 2
+
+Source file was:
+
+#include <pthread.h>
+
+int main(int ac, char **av)
+{
+  struct timespec abstime;
+  abstime.ts_sec = time(NULL)+1;
+  abstime.ts_nsec = 0;
+}
+
+Performing C++ SOURCE FILE Test HAVE_SOLARIS_STYLE_GETHOST failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1909352627/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1909352627.dir/build.make CMakeFiles/cmTryCompileExec1909352627.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1909352627.dir/src.cxx.o
+/usr/bin/c++   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall -Wno-unused-parameter -DHAVE_SOLARIS_STYLE_GETHOST  -Wno-error   -o CMakeFiles/cmTryCompileExec1909352627.dir/src.cxx.o -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.cxx
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.cxx:17:66: error: cannot convert ‘int*’ to ‘hostent**’ for argument ‘7’ to ‘int gethostbyaddr_r(const void*, __socklen_t, int, hostent*, char*, size_t, hostent**, int*)’
+           0, 0, (struct hostent *) 0, (char *) NULL,  0, (int *)0);
+                                                                  ^
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.cxx:15:24: warning: unused variable ‘foo’ [-Wunused-variable]
+        struct hostent *foo =
+                        ^
+CMakeFiles/cmTryCompileExec1909352627.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1909352627.dir/src.cxx.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1909352627.dir/src.cxx.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec1909352627/fast' failed
+make: *** [cmTryCompileExec1909352627/fast] Error 2
+
+Source file was:
+
+    #undef inline
+    #if !defined(SCO) && !defined(__osf__) && !defined(_REENTRANT)
+    #define _REENTRANT
+    #endif
+    #include <pthread.h>
+    #include <sys/types.h>
+    #include <sys/socket.h>
+    #include <netinet/in.h>
+    #include <arpa/inet.h>
+    #include <netdb.h>
+    int main()
+    {
+
+       struct hostent *foo =
+       gethostbyaddr_r((const char *) 0,
+          0, 0, (struct hostent *) 0, (char *) NULL,  0, (int *)0);
+       return 0;
+    }
+  
+Determining if the include file netinet/in6.h exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3496026704/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3496026704.dir/build.make CMakeFiles/cmTryCompileExec3496026704.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3496026704.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall  -Wno-error   -o CMakeFiles/cmTryCompileExec3496026704.dir/CheckIncludeFile.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: netinet/in6.h: No such file or directory
+ #include <netinet/in6.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3496026704.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3496026704.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3496026704.dir/CheckIncludeFile.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3496026704/fast' failed
+make: *** [cmTryCompileExec3496026704/fast] Error 2
+
+
+Performing C SOURCE FILE Test HAVE_SOCKADDR_IN_SIN_LEN failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3145053518/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3145053518.dir/build.make CMakeFiles/cmTryCompileExec3145053518.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3145053518.dir/src.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall -DHAVE_SOCKADDR_IN_SIN_LEN  -Wno-error   -o CMakeFiles/cmTryCompileExec3145053518.dir/src.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c:9:7: error: ‘struct sockaddr_in’ has no member named ‘sin_len’
+    tmp->sin_len;
+       ^
+CMakeFiles/cmTryCompileExec3145053518.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3145053518.dir/src.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3145053518.dir/src.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3145053518/fast' failed
+make: *** [cmTryCompileExec3145053518/fast] Error 2
+
+Source file was:
+
+#include <sys/types.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+
+int main()
+{
+   struct sockaddr_in* tmp;
+   tmp->sin_len;
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_SOCKADDR_IN6_SIN6_LEN failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec231221870/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec231221870.dir/build.make CMakeFiles/cmTryCompileExec231221870.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec231221870.dir/src.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall -DHAVE_SOCKADDR_IN6_SIN6_LEN  -Wno-error   -o CMakeFiles/cmTryCompileExec231221870.dir/src.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c:9:7: error: ‘struct sockaddr_in6’ has no member named ‘sin6_len’
+    tmp->sin6_len;
+       ^
+CMakeFiles/cmTryCompileExec231221870.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec231221870.dir/src.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec231221870.dir/src.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec231221870/fast' failed
+make: *** [cmTryCompileExec231221870/fast] Error 2
+
+Source file was:
+
+#include <sys/types.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+
+int main()
+{
+   struct sockaddr_in6* tmp;
+   tmp->sin6_len;
+  return 0;
+}
+
+Performing C SOURCE FILE Test STRUCT_DIRENT_HAS_D_NAMLEN failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3821461811/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3821461811.dir/build.make CMakeFiles/cmTryCompileExec3821461811.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3821461811.dir/src.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall -DSTRUCT_DIRENT_HAS_D_NAMLEN  -Wno-error   -o CMakeFiles/cmTryCompileExec3821461811.dir/src.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/src.c:7:7: error: ‘struct dirent’ has no member named ‘d_namlen’
+    tmp->d_namlen;
+       ^
+CMakeFiles/cmTryCompileExec3821461811.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3821461811.dir/src.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3821461811.dir/src.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3821461811/fast' failed
+make: *** [cmTryCompileExec3821461811/fast] Error 2
+
+Source file was:
+
+#include <dirent.h>
+
+int main()
+{
+   struct dirent* tmp;
+   tmp->d_namlen;
+  return 0;
+}
+
+Determining if the function mbscmp exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec667906765/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec667906765.dir/build.make CMakeFiles/cmTryCompileExec667906765.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec667906765.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall -DCHECK_FUNCTION_EXISTS=mbscmp  -Wno-error   -o CMakeFiles/cmTryCompileExec667906765.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec667906765
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec667906765.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=mbscmp  -Wno-error    CMakeFiles/cmTryCompileExec667906765.dir/CheckFunctionExists.c.o  -o cmTryCompileExec667906765 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec667906765.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `mbscmp'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec667906765.dir/build.make:88: recipe for target 'cmTryCompileExec667906765' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec667906765] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec667906765/fast' failed
+make: *** [cmTryCompileExec667906765/fast] Error 2
+
+
+Determining if the function strvis exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2121961895/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2121961895.dir/build.make CMakeFiles/cmTryCompileExec2121961895.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2121961895.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall -DCHECK_FUNCTION_EXISTS=strvis  -Wno-error   -o CMakeFiles/cmTryCompileExec2121961895.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2121961895
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2121961895.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=strvis  -Wno-error    CMakeFiles/cmTryCompileExec2121961895.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2121961895 -rdynamic 
+CMakeFiles/cmTryCompileExec2121961895.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `strvis'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2121961895.dir/build.make:88: recipe for target 'cmTryCompileExec2121961895' failed
+make[1]: *** [cmTryCompileExec2121961895] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2121961895/fast' failed
+make: *** [cmTryCompileExec2121961895/fast] Error 2
+
+
+Determining if the function strunvis exists failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3209234063/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3209234063.dir/build.make CMakeFiles/cmTryCompileExec3209234063.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3209234063.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall -DCHECK_FUNCTION_EXISTS=strunvis  -Wno-error   -o CMakeFiles/cmTryCompileExec3209234063.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3209234063
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3209234063.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=strunvis  -Wno-error    CMakeFiles/cmTryCompileExec3209234063.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3209234063 -rdynamic 
+CMakeFiles/cmTryCompileExec3209234063.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `strunvis'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3209234063.dir/build.make:88: recipe for target 'cmTryCompileExec3209234063' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3209234063] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3209234063/fast' failed
+make: *** [cmTryCompileExec3209234063/fast] Error 2
+
+
+Determining if files libaio.h exist failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2356792672/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2356792672.dir/build.make CMakeFiles/cmTryCompileExec2356792672.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2356792672.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall -Wall -Wextra -Wunused -Wwrite-strings -Wno-strict-aliasing  -Werror -Wdeclaration-after-statement  -Wno-error   -o CMakeFiles/cmTryCompileExec2356792672.dir/CheckIncludeFiles.c.o   -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:20: fatal error: libaio.h: No such file or directory
+ #include <libaio.h>
+                    ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2356792672.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2356792672.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2356792672.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec2356792672/fast' failed
+make: *** [cmTryCompileExec2356792672/fast] Error 2
+
+Source:
+/* */
+#include <libaio.h>
+
+
+int main(){return 0;}
+
+Determining if the function io_queue_init exists in the aio failed with the following output:
+Change Dir: /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4080017860/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4080017860.dir/build.make CMakeFiles/cmTryCompileExec4080017860.dir/build
+make[1]: Entering directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4080017860.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIC -Wall -Wall -Wextra -Wunused -Wwrite-strings -Wno-strict-aliasing  -Werror -Wdeclaration-after-statement -DCHECK_FUNCTION_EXISTS=io_queue_init  -Wno-error   -o CMakeFiles/cmTryCompileExec4080017860.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4080017860
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4080017860.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -Wall -Wextra -Wunused -Wwrite-strings -Wno-strict-aliasing  -Werror -Wdeclaration-after-statement -DCHECK_FUNCTION_EXISTS=io_queue_init  -Wno-error    CMakeFiles/cmTryCompileExec4080017860.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4080017860 -rdynamic -laio -lm -lcrypt -ldl -lpthread 
+/usr/bin/ld: cannot find -laio
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec4080017860.dir/build.make:88: recipe for target 'cmTryCompileExec4080017860' failed
+make[1]: *** [cmTryCompileExec4080017860] Error 1
+make[1]: Leaving directory '/home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec4080017860/fast' failed
+make: *** [cmTryCompileExec4080017860/fast] Error 2
+
+

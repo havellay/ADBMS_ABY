@@ -23,11 +23,11 @@
 # If further variables are used in this file, add them to this list.
 
 SET(VERSION "5.6.21")
-SET(CMAKE_SOURCE_DIR "/home/adbms/mysqlsrc/mysql-5.6.21")
-SET(CMAKE_BINARY_DIR "/home/adbms/mysqlsrc/mysql-5.6.21")
+SET(CMAKE_SOURCE_DIR "/home/hari/ADBMS_PROJECT/ADBMS_ABY")
+SET(CMAKE_BINARY_DIR "/home/hari/ADBMS_PROJECT/ADBMS_ABY")
 SET(CMAKE_GENERATOR "Unix Makefiles")
 SET(CMAKE_SIZEOF_VOID_P "8")
-SET(BZR_EXECUTABLE "BZR_EXECUTABLE-NOTFOUND")
+SET(BZR_EXECUTABLE "/usr/bin/bzr")
 SET(CMAKE_CROSSCOMPILING "FALSE")
 SET(CMAKE_HOST_SYSTEM "Linux-3.16.0-23-generic")
 SET(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")

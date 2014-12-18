@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/unittest/mytap/t/basic-t.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/mytap/t/basic-t.c
 my_config.h
-/home/adbms/mysqlsrc/mysql-5.6.21/unittest/mytap/t/my_config.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/mytap/t/my_config.h
 stdlib.h
 -
 ../tap.h
-/home/adbms/mysqlsrc/mysql-5.6.21/unittest/mytap/tap.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/mytap/tap.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/unittest/mytap/tap.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/mytap/tap.h
 my_global.h
-/home/adbms/mysqlsrc/mysql-5.6.21/unittest/mytap/my_global.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/mytap/my_global.h
 
 include/big_endian.h
 

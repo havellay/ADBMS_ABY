@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/adbms/mysqlsrc/mysql-5.6.21/plugin/daemon_example/daemon_example.cc" "/home/adbms/mysqlsrc/mysql-5.6.21/plugin/daemon_example/CMakeFiles/daemon_example.dir/daemon_example.cc.o"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/daemon_example/daemon_example.cc" "/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/daemon_example/CMakeFiles/daemon_example.dir/daemon_example.cc.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,7 +16,7 @@ SET(CMAKE_TARGET_DEFINITIONS
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/adbms/mysqlsrc/mysql-5.6.21/libservices/CMakeFiles/mysqlservices.dir/DependInfo.cmake"
+  "/home/hari/ADBMS_PROJECT/ADBMS_ABY/libservices/CMakeFiles/mysqlservices.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

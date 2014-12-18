@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,16 +79,6 @@ install/local: preinstall
 install/local/fast: install/local
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Client\" \"DataFiles\" \"DebugBinaries\" \"Development\" \"Documentation\" \"Embedded\" \"Info\" \"IniFiles\" \"ManPages\" \"Readme\" \"Server\" \"Server_Scripts\" \"SharedLibraries\" \"SqlBench\" \"SupportFiles\" \"Test\" \"Unspecified\""
@@ -101,7 +91,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -111,7 +101,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/adbms/mysqlsrc/mysql-5.6.21/CPackSourceConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/hari/ADBMS_PROJECT/ADBMS_ABY/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -140,14 +130,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles /home/adbms/mysqlsrc/mysql-5.6.21/libmysqld/CMakeFiles/progress.marks
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysqld/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles /home/hari/ADBMS_PROJECT/ADBMS_ABY/libmysqld/CMakeFiles/progress.marks
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysqld/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysqld/clean
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysqld/clean
 .PHONY : clean
 
 # The main clean target
@@ -156,22 +146,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysqld/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysqld/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysqld/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysqld/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 libmysqld/CMakeFiles/mysqlserver.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysqld/CMakeFiles/mysqlserver.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysqld/CMakeFiles/mysqlserver.dir/rule
 .PHONY : libmysqld/CMakeFiles/mysqlserver.dir/rule
 
 # Convenience name for target.
@@ -180,12 +170,12 @@ mysqlserver: libmysqld/CMakeFiles/mysqlserver.dir/rule
 
 # fast build rule for target.
 mysqlserver/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/mysqlserver.dir/build.make libmysqld/CMakeFiles/mysqlserver.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/mysqlserver.dir/build.make libmysqld/CMakeFiles/mysqlserver.dir/build
 .PHONY : mysqlserver/fast
 
 # Convenience name for target.
 libmysqld/CMakeFiles/sql_embedded.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysqld/CMakeFiles/sql_embedded.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysqld/CMakeFiles/sql_embedded.dir/rule
 .PHONY : libmysqld/CMakeFiles/sql_embedded.dir/rule
 
 # Convenience name for target.
@@ -194,7 +184,7 @@ sql_embedded: libmysqld/CMakeFiles/sql_embedded.dir/rule
 
 # fast build rule for target.
 sql_embedded/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/build
 .PHONY : sql_embedded/fast
 
 __/client/get_password.o: __/client/get_password.c.o
@@ -202,7 +192,7 @@ __/client/get_password.o: __/client/get_password.c.o
 
 # target to build an object file
 __/client/get_password.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/client/get_password.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/client/get_password.c.o
 .PHONY : __/client/get_password.c.o
 
 __/client/get_password.i: __/client/get_password.c.i
@@ -210,7 +200,7 @@ __/client/get_password.i: __/client/get_password.c.i
 
 # target to preprocess a source file
 __/client/get_password.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/client/get_password.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/client/get_password.c.i
 .PHONY : __/client/get_password.c.i
 
 __/client/get_password.s: __/client/get_password.c.s
@@ -218,7 +208,7 @@ __/client/get_password.s: __/client/get_password.c.s
 
 # target to generate assembly for a file
 __/client/get_password.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/client/get_password.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/client/get_password.c.s
 .PHONY : __/client/get_password.c.s
 
 __/libmysql/errmsg.o: __/libmysql/errmsg.c.o
@@ -226,7 +216,7 @@ __/libmysql/errmsg.o: __/libmysql/errmsg.c.o
 
 # target to build an object file
 __/libmysql/errmsg.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/libmysql/errmsg.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/libmysql/errmsg.c.o
 .PHONY : __/libmysql/errmsg.c.o
 
 __/libmysql/errmsg.i: __/libmysql/errmsg.c.i
@@ -234,7 +224,7 @@ __/libmysql/errmsg.i: __/libmysql/errmsg.c.i
 
 # target to preprocess a source file
 __/libmysql/errmsg.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/libmysql/errmsg.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/libmysql/errmsg.c.i
 .PHONY : __/libmysql/errmsg.c.i
 
 __/libmysql/errmsg.s: __/libmysql/errmsg.c.s
@@ -242,7 +232,7 @@ __/libmysql/errmsg.s: __/libmysql/errmsg.c.s
 
 # target to generate assembly for a file
 __/libmysql/errmsg.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/libmysql/errmsg.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/libmysql/errmsg.c.s
 .PHONY : __/libmysql/errmsg.c.s
 
 __/libmysql/libmysql.o: __/libmysql/libmysql.c.o
@@ -250,7 +240,7 @@ __/libmysql/libmysql.o: __/libmysql/libmysql.c.o
 
 # target to build an object file
 __/libmysql/libmysql.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/libmysql/libmysql.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/libmysql/libmysql.c.o
 .PHONY : __/libmysql/libmysql.c.o
 
 __/libmysql/libmysql.i: __/libmysql/libmysql.c.i
@@ -258,7 +248,7 @@ __/libmysql/libmysql.i: __/libmysql/libmysql.c.i
 
 # target to preprocess a source file
 __/libmysql/libmysql.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/libmysql/libmysql.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/libmysql/libmysql.c.i
 .PHONY : __/libmysql/libmysql.c.i
 
 __/libmysql/libmysql.s: __/libmysql/libmysql.c.s
@@ -266,7 +256,7 @@ __/libmysql/libmysql.s: __/libmysql/libmysql.c.s
 
 # target to generate assembly for a file
 __/libmysql/libmysql.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/libmysql/libmysql.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/libmysql/libmysql.c.s
 .PHONY : __/libmysql/libmysql.c.s
 
 __/sql-common/client.o: __/sql-common/client.c.o
@@ -274,7 +264,7 @@ __/sql-common/client.o: __/sql-common/client.c.o
 
 # target to build an object file
 __/sql-common/client.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/client.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/client.c.o
 .PHONY : __/sql-common/client.c.o
 
 __/sql-common/client.i: __/sql-common/client.c.i
@@ -282,7 +272,7 @@ __/sql-common/client.i: __/sql-common/client.c.i
 
 # target to preprocess a source file
 __/sql-common/client.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/client.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/client.c.i
 .PHONY : __/sql-common/client.c.i
 
 __/sql-common/client.s: __/sql-common/client.c.s
@@ -290,7 +280,7 @@ __/sql-common/client.s: __/sql-common/client.c.s
 
 # target to generate assembly for a file
 __/sql-common/client.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/client.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/client.c.s
 .PHONY : __/sql-common/client.c.s
 
 __/sql-common/client_plugin.o: __/sql-common/client_plugin.c.o
@@ -298,7 +288,7 @@ __/sql-common/client_plugin.o: __/sql-common/client_plugin.c.o
 
 # target to build an object file
 __/sql-common/client_plugin.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/client_plugin.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/client_plugin.c.o
 .PHONY : __/sql-common/client_plugin.c.o
 
 __/sql-common/client_plugin.i: __/sql-common/client_plugin.c.i
@@ -306,7 +296,7 @@ __/sql-common/client_plugin.i: __/sql-common/client_plugin.c.i
 
 # target to preprocess a source file
 __/sql-common/client_plugin.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/client_plugin.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/client_plugin.c.i
 .PHONY : __/sql-common/client_plugin.c.i
 
 __/sql-common/client_plugin.s: __/sql-common/client_plugin.c.s
@@ -314,7 +304,7 @@ __/sql-common/client_plugin.s: __/sql-common/client_plugin.c.s
 
 # target to generate assembly for a file
 __/sql-common/client_plugin.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/client_plugin.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/client_plugin.c.s
 .PHONY : __/sql-common/client_plugin.c.s
 
 __/sql-common/my_time.o: __/sql-common/my_time.c.o
@@ -322,7 +312,7 @@ __/sql-common/my_time.o: __/sql-common/my_time.c.o
 
 # target to build an object file
 __/sql-common/my_time.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/my_time.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/my_time.c.o
 .PHONY : __/sql-common/my_time.c.o
 
 __/sql-common/my_time.i: __/sql-common/my_time.c.i
@@ -330,7 +320,7 @@ __/sql-common/my_time.i: __/sql-common/my_time.c.i
 
 # target to preprocess a source file
 __/sql-common/my_time.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/my_time.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/my_time.c.i
 .PHONY : __/sql-common/my_time.c.i
 
 __/sql-common/my_time.s: __/sql-common/my_time.c.s
@@ -338,7 +328,7 @@ __/sql-common/my_time.s: __/sql-common/my_time.c.s
 
 # target to generate assembly for a file
 __/sql-common/my_time.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/my_time.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/my_time.c.s
 .PHONY : __/sql-common/my_time.c.s
 
 __/sql-common/my_user.o: __/sql-common/my_user.c.o
@@ -346,7 +336,7 @@ __/sql-common/my_user.o: __/sql-common/my_user.c.o
 
 # target to build an object file
 __/sql-common/my_user.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/my_user.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/my_user.c.o
 .PHONY : __/sql-common/my_user.c.o
 
 __/sql-common/my_user.i: __/sql-common/my_user.c.i
@@ -354,7 +344,7 @@ __/sql-common/my_user.i: __/sql-common/my_user.c.i
 
 # target to preprocess a source file
 __/sql-common/my_user.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/my_user.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/my_user.c.i
 .PHONY : __/sql-common/my_user.c.i
 
 __/sql-common/my_user.s: __/sql-common/my_user.c.s
@@ -362,7 +352,7 @@ __/sql-common/my_user.s: __/sql-common/my_user.c.s
 
 # target to generate assembly for a file
 __/sql-common/my_user.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/my_user.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/my_user.c.s
 .PHONY : __/sql-common/my_user.c.s
 
 __/sql-common/pack.o: __/sql-common/pack.c.o
@@ -370,7 +360,7 @@ __/sql-common/pack.o: __/sql-common/pack.c.o
 
 # target to build an object file
 __/sql-common/pack.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/pack.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/pack.c.o
 .PHONY : __/sql-common/pack.c.o
 
 __/sql-common/pack.i: __/sql-common/pack.c.i
@@ -378,7 +368,7 @@ __/sql-common/pack.i: __/sql-common/pack.c.i
 
 # target to preprocess a source file
 __/sql-common/pack.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/pack.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/pack.c.i
 .PHONY : __/sql-common/pack.c.i
 
 __/sql-common/pack.s: __/sql-common/pack.c.s
@@ -386,7 +376,7 @@ __/sql-common/pack.s: __/sql-common/pack.c.s
 
 # target to generate assembly for a file
 __/sql-common/pack.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/pack.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql-common/pack.c.s
 .PHONY : __/sql-common/pack.c.s
 
 __/sql/abstract_query_plan.o: __/sql/abstract_query_plan.cc.o
@@ -394,7 +384,7 @@ __/sql/abstract_query_plan.o: __/sql/abstract_query_plan.cc.o
 
 # target to build an object file
 __/sql/abstract_query_plan.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/abstract_query_plan.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/abstract_query_plan.cc.o
 .PHONY : __/sql/abstract_query_plan.cc.o
 
 __/sql/abstract_query_plan.i: __/sql/abstract_query_plan.cc.i
@@ -402,7 +392,7 @@ __/sql/abstract_query_plan.i: __/sql/abstract_query_plan.cc.i
 
 # target to preprocess a source file
 __/sql/abstract_query_plan.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/abstract_query_plan.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/abstract_query_plan.cc.i
 .PHONY : __/sql/abstract_query_plan.cc.i
 
 __/sql/abstract_query_plan.s: __/sql/abstract_query_plan.cc.s
@@ -410,7 +400,7 @@ __/sql/abstract_query_plan.s: __/sql/abstract_query_plan.cc.s
 
 # target to generate assembly for a file
 __/sql/abstract_query_plan.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/abstract_query_plan.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/abstract_query_plan.cc.s
 .PHONY : __/sql/abstract_query_plan.cc.s
 
 __/sql/binlog.o: __/sql/binlog.cc.o
@@ -418,7 +408,7 @@ __/sql/binlog.o: __/sql/binlog.cc.o
 
 # target to build an object file
 __/sql/binlog.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/binlog.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/binlog.cc.o
 .PHONY : __/sql/binlog.cc.o
 
 __/sql/binlog.i: __/sql/binlog.cc.i
@@ -426,7 +416,7 @@ __/sql/binlog.i: __/sql/binlog.cc.i
 
 # target to preprocess a source file
 __/sql/binlog.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/binlog.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/binlog.cc.i
 .PHONY : __/sql/binlog.cc.i
 
 __/sql/binlog.s: __/sql/binlog.cc.s
@@ -434,7 +424,7 @@ __/sql/binlog.s: __/sql/binlog.cc.s
 
 # target to generate assembly for a file
 __/sql/binlog.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/binlog.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/binlog.cc.s
 .PHONY : __/sql/binlog.cc.s
 
 __/sql/datadict.o: __/sql/datadict.cc.o
@@ -442,7 +432,7 @@ __/sql/datadict.o: __/sql/datadict.cc.o
 
 # target to build an object file
 __/sql/datadict.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/datadict.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/datadict.cc.o
 .PHONY : __/sql/datadict.cc.o
 
 __/sql/datadict.i: __/sql/datadict.cc.i
@@ -450,7 +440,7 @@ __/sql/datadict.i: __/sql/datadict.cc.i
 
 # target to preprocess a source file
 __/sql/datadict.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/datadict.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/datadict.cc.i
 .PHONY : __/sql/datadict.cc.i
 
 __/sql/datadict.s: __/sql/datadict.cc.s
@@ -458,7 +448,7 @@ __/sql/datadict.s: __/sql/datadict.cc.s
 
 # target to generate assembly for a file
 __/sql/datadict.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/datadict.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/datadict.cc.s
 .PHONY : __/sql/datadict.cc.s
 
 __/sql/debug_sync.o: __/sql/debug_sync.cc.o
@@ -466,7 +456,7 @@ __/sql/debug_sync.o: __/sql/debug_sync.cc.o
 
 # target to build an object file
 __/sql/debug_sync.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/debug_sync.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/debug_sync.cc.o
 .PHONY : __/sql/debug_sync.cc.o
 
 __/sql/debug_sync.i: __/sql/debug_sync.cc.i
@@ -474,7 +464,7 @@ __/sql/debug_sync.i: __/sql/debug_sync.cc.i
 
 # target to preprocess a source file
 __/sql/debug_sync.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/debug_sync.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/debug_sync.cc.i
 .PHONY : __/sql/debug_sync.cc.i
 
 __/sql/debug_sync.s: __/sql/debug_sync.cc.s
@@ -482,7 +472,7 @@ __/sql/debug_sync.s: __/sql/debug_sync.cc.s
 
 # target to generate assembly for a file
 __/sql/debug_sync.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/debug_sync.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/debug_sync.cc.s
 .PHONY : __/sql/debug_sync.cc.s
 
 __/sql/derror.o: __/sql/derror.cc.o
@@ -490,7 +480,7 @@ __/sql/derror.o: __/sql/derror.cc.o
 
 # target to build an object file
 __/sql/derror.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/derror.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/derror.cc.o
 .PHONY : __/sql/derror.cc.o
 
 __/sql/derror.i: __/sql/derror.cc.i
@@ -498,7 +488,7 @@ __/sql/derror.i: __/sql/derror.cc.i
 
 # target to preprocess a source file
 __/sql/derror.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/derror.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/derror.cc.i
 .PHONY : __/sql/derror.cc.i
 
 __/sql/derror.s: __/sql/derror.cc.s
@@ -506,7 +496,7 @@ __/sql/derror.s: __/sql/derror.cc.s
 
 # target to generate assembly for a file
 __/sql/derror.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/derror.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/derror.cc.s
 .PHONY : __/sql/derror.cc.s
 
 __/sql/des_key_file.o: __/sql/des_key_file.cc.o
@@ -514,7 +504,7 @@ __/sql/des_key_file.o: __/sql/des_key_file.cc.o
 
 # target to build an object file
 __/sql/des_key_file.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/des_key_file.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/des_key_file.cc.o
 .PHONY : __/sql/des_key_file.cc.o
 
 __/sql/des_key_file.i: __/sql/des_key_file.cc.i
@@ -522,7 +512,7 @@ __/sql/des_key_file.i: __/sql/des_key_file.cc.i
 
 # target to preprocess a source file
 __/sql/des_key_file.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/des_key_file.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/des_key_file.cc.i
 .PHONY : __/sql/des_key_file.cc.i
 
 __/sql/des_key_file.s: __/sql/des_key_file.cc.s
@@ -530,7 +520,7 @@ __/sql/des_key_file.s: __/sql/des_key_file.cc.s
 
 # target to generate assembly for a file
 __/sql/des_key_file.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/des_key_file.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/des_key_file.cc.s
 .PHONY : __/sql/des_key_file.cc.s
 
 __/sql/discover.o: __/sql/discover.cc.o
@@ -538,7 +528,7 @@ __/sql/discover.o: __/sql/discover.cc.o
 
 # target to build an object file
 __/sql/discover.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/discover.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/discover.cc.o
 .PHONY : __/sql/discover.cc.o
 
 __/sql/discover.i: __/sql/discover.cc.i
@@ -546,7 +536,7 @@ __/sql/discover.i: __/sql/discover.cc.i
 
 # target to preprocess a source file
 __/sql/discover.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/discover.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/discover.cc.i
 .PHONY : __/sql/discover.cc.i
 
 __/sql/discover.s: __/sql/discover.cc.s
@@ -554,7 +544,7 @@ __/sql/discover.s: __/sql/discover.cc.s
 
 # target to generate assembly for a file
 __/sql/discover.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/discover.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/discover.cc.s
 .PHONY : __/sql/discover.cc.s
 
 __/sql/event_parse_data.o: __/sql/event_parse_data.cc.o
@@ -562,7 +552,7 @@ __/sql/event_parse_data.o: __/sql/event_parse_data.cc.o
 
 # target to build an object file
 __/sql/event_parse_data.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/event_parse_data.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/event_parse_data.cc.o
 .PHONY : __/sql/event_parse_data.cc.o
 
 __/sql/event_parse_data.i: __/sql/event_parse_data.cc.i
@@ -570,7 +560,7 @@ __/sql/event_parse_data.i: __/sql/event_parse_data.cc.i
 
 # target to preprocess a source file
 __/sql/event_parse_data.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/event_parse_data.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/event_parse_data.cc.i
 .PHONY : __/sql/event_parse_data.cc.i
 
 __/sql/event_parse_data.s: __/sql/event_parse_data.cc.s
@@ -578,7 +568,7 @@ __/sql/event_parse_data.s: __/sql/event_parse_data.cc.s
 
 # target to generate assembly for a file
 __/sql/event_parse_data.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/event_parse_data.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/event_parse_data.cc.s
 .PHONY : __/sql/event_parse_data.cc.s
 
 __/sql/field.o: __/sql/field.cc.o
@@ -586,7 +576,7 @@ __/sql/field.o: __/sql/field.cc.o
 
 # target to build an object file
 __/sql/field.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/field.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/field.cc.o
 .PHONY : __/sql/field.cc.o
 
 __/sql/field.i: __/sql/field.cc.i
@@ -594,7 +584,7 @@ __/sql/field.i: __/sql/field.cc.i
 
 # target to preprocess a source file
 __/sql/field.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/field.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/field.cc.i
 .PHONY : __/sql/field.cc.i
 
 __/sql/field.s: __/sql/field.cc.s
@@ -602,7 +592,7 @@ __/sql/field.s: __/sql/field.cc.s
 
 # target to generate assembly for a file
 __/sql/field.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/field.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/field.cc.s
 .PHONY : __/sql/field.cc.s
 
 __/sql/field_conv.o: __/sql/field_conv.cc.o
@@ -610,7 +600,7 @@ __/sql/field_conv.o: __/sql/field_conv.cc.o
 
 # target to build an object file
 __/sql/field_conv.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/field_conv.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/field_conv.cc.o
 .PHONY : __/sql/field_conv.cc.o
 
 __/sql/field_conv.i: __/sql/field_conv.cc.i
@@ -618,7 +608,7 @@ __/sql/field_conv.i: __/sql/field_conv.cc.i
 
 # target to preprocess a source file
 __/sql/field_conv.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/field_conv.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/field_conv.cc.i
 .PHONY : __/sql/field_conv.cc.i
 
 __/sql/field_conv.s: __/sql/field_conv.cc.s
@@ -626,7 +616,7 @@ __/sql/field_conv.s: __/sql/field_conv.cc.s
 
 # target to generate assembly for a file
 __/sql/field_conv.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/field_conv.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/field_conv.cc.s
 .PHONY : __/sql/field_conv.cc.s
 
 __/sql/filesort.o: __/sql/filesort.cc.o
@@ -634,7 +624,7 @@ __/sql/filesort.o: __/sql/filesort.cc.o
 
 # target to build an object file
 __/sql/filesort.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/filesort.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/filesort.cc.o
 .PHONY : __/sql/filesort.cc.o
 
 __/sql/filesort.i: __/sql/filesort.cc.i
@@ -642,7 +632,7 @@ __/sql/filesort.i: __/sql/filesort.cc.i
 
 # target to preprocess a source file
 __/sql/filesort.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/filesort.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/filesort.cc.i
 .PHONY : __/sql/filesort.cc.i
 
 __/sql/filesort.s: __/sql/filesort.cc.s
@@ -650,7 +640,7 @@ __/sql/filesort.s: __/sql/filesort.cc.s
 
 # target to generate assembly for a file
 __/sql/filesort.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/filesort.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/filesort.cc.s
 .PHONY : __/sql/filesort.cc.s
 
 __/sql/filesort_utils.o: __/sql/filesort_utils.cc.o
@@ -658,7 +648,7 @@ __/sql/filesort_utils.o: __/sql/filesort_utils.cc.o
 
 # target to build an object file
 __/sql/filesort_utils.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/filesort_utils.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/filesort_utils.cc.o
 .PHONY : __/sql/filesort_utils.cc.o
 
 __/sql/filesort_utils.i: __/sql/filesort_utils.cc.i
@@ -666,7 +656,7 @@ __/sql/filesort_utils.i: __/sql/filesort_utils.cc.i
 
 # target to preprocess a source file
 __/sql/filesort_utils.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/filesort_utils.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/filesort_utils.cc.i
 .PHONY : __/sql/filesort_utils.cc.i
 
 __/sql/filesort_utils.s: __/sql/filesort_utils.cc.s
@@ -674,7 +664,7 @@ __/sql/filesort_utils.s: __/sql/filesort_utils.cc.s
 
 # target to generate assembly for a file
 __/sql/filesort_utils.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/filesort_utils.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/filesort_utils.cc.s
 .PHONY : __/sql/filesort_utils.cc.s
 
 __/sql/gcalc_slicescan.o: __/sql/gcalc_slicescan.cc.o
@@ -682,7 +672,7 @@ __/sql/gcalc_slicescan.o: __/sql/gcalc_slicescan.cc.o
 
 # target to build an object file
 __/sql/gcalc_slicescan.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gcalc_slicescan.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gcalc_slicescan.cc.o
 .PHONY : __/sql/gcalc_slicescan.cc.o
 
 __/sql/gcalc_slicescan.i: __/sql/gcalc_slicescan.cc.i
@@ -690,7 +680,7 @@ __/sql/gcalc_slicescan.i: __/sql/gcalc_slicescan.cc.i
 
 # target to preprocess a source file
 __/sql/gcalc_slicescan.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gcalc_slicescan.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gcalc_slicescan.cc.i
 .PHONY : __/sql/gcalc_slicescan.cc.i
 
 __/sql/gcalc_slicescan.s: __/sql/gcalc_slicescan.cc.s
@@ -698,7 +688,7 @@ __/sql/gcalc_slicescan.s: __/sql/gcalc_slicescan.cc.s
 
 # target to generate assembly for a file
 __/sql/gcalc_slicescan.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gcalc_slicescan.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gcalc_slicescan.cc.s
 .PHONY : __/sql/gcalc_slicescan.cc.s
 
 __/sql/gcalc_tools.o: __/sql/gcalc_tools.cc.o
@@ -706,7 +696,7 @@ __/sql/gcalc_tools.o: __/sql/gcalc_tools.cc.o
 
 # target to build an object file
 __/sql/gcalc_tools.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gcalc_tools.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gcalc_tools.cc.o
 .PHONY : __/sql/gcalc_tools.cc.o
 
 __/sql/gcalc_tools.i: __/sql/gcalc_tools.cc.i
@@ -714,7 +704,7 @@ __/sql/gcalc_tools.i: __/sql/gcalc_tools.cc.i
 
 # target to preprocess a source file
 __/sql/gcalc_tools.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gcalc_tools.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gcalc_tools.cc.i
 .PHONY : __/sql/gcalc_tools.cc.i
 
 __/sql/gcalc_tools.s: __/sql/gcalc_tools.cc.s
@@ -722,7 +712,7 @@ __/sql/gcalc_tools.s: __/sql/gcalc_tools.cc.s
 
 # target to generate assembly for a file
 __/sql/gcalc_tools.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gcalc_tools.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gcalc_tools.cc.s
 .PHONY : __/sql/gcalc_tools.cc.s
 
 __/sql/gstream.o: __/sql/gstream.cc.o
@@ -730,7 +720,7 @@ __/sql/gstream.o: __/sql/gstream.cc.o
 
 # target to build an object file
 __/sql/gstream.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gstream.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gstream.cc.o
 .PHONY : __/sql/gstream.cc.o
 
 __/sql/gstream.i: __/sql/gstream.cc.i
@@ -738,7 +728,7 @@ __/sql/gstream.i: __/sql/gstream.cc.i
 
 # target to preprocess a source file
 __/sql/gstream.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gstream.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gstream.cc.i
 .PHONY : __/sql/gstream.cc.i
 
 __/sql/gstream.s: __/sql/gstream.cc.s
@@ -746,7 +736,7 @@ __/sql/gstream.s: __/sql/gstream.cc.s
 
 # target to generate assembly for a file
 __/sql/gstream.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gstream.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/gstream.cc.s
 .PHONY : __/sql/gstream.cc.s
 
 __/sql/handler.o: __/sql/handler.cc.o
@@ -754,7 +744,7 @@ __/sql/handler.o: __/sql/handler.cc.o
 
 # target to build an object file
 __/sql/handler.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/handler.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/handler.cc.o
 .PHONY : __/sql/handler.cc.o
 
 __/sql/handler.i: __/sql/handler.cc.i
@@ -762,7 +752,7 @@ __/sql/handler.i: __/sql/handler.cc.i
 
 # target to preprocess a source file
 __/sql/handler.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/handler.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/handler.cc.i
 .PHONY : __/sql/handler.cc.i
 
 __/sql/handler.s: __/sql/handler.cc.s
@@ -770,7 +760,7 @@ __/sql/handler.s: __/sql/handler.cc.s
 
 # target to generate assembly for a file
 __/sql/handler.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/handler.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/handler.cc.s
 .PHONY : __/sql/handler.cc.s
 
 __/sql/hash_filo.o: __/sql/hash_filo.cc.o
@@ -778,7 +768,7 @@ __/sql/hash_filo.o: __/sql/hash_filo.cc.o
 
 # target to build an object file
 __/sql/hash_filo.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/hash_filo.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/hash_filo.cc.o
 .PHONY : __/sql/hash_filo.cc.o
 
 __/sql/hash_filo.i: __/sql/hash_filo.cc.i
@@ -786,7 +776,7 @@ __/sql/hash_filo.i: __/sql/hash_filo.cc.i
 
 # target to preprocess a source file
 __/sql/hash_filo.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/hash_filo.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/hash_filo.cc.i
 .PHONY : __/sql/hash_filo.cc.i
 
 __/sql/hash_filo.s: __/sql/hash_filo.cc.s
@@ -794,7 +784,7 @@ __/sql/hash_filo.s: __/sql/hash_filo.cc.s
 
 # target to generate assembly for a file
 __/sql/hash_filo.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/hash_filo.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/hash_filo.cc.s
 .PHONY : __/sql/hash_filo.cc.s
 
 __/sql/hostname.o: __/sql/hostname.cc.o
@@ -802,7 +792,7 @@ __/sql/hostname.o: __/sql/hostname.cc.o
 
 # target to build an object file
 __/sql/hostname.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/hostname.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/hostname.cc.o
 .PHONY : __/sql/hostname.cc.o
 
 __/sql/hostname.i: __/sql/hostname.cc.i
@@ -810,7 +800,7 @@ __/sql/hostname.i: __/sql/hostname.cc.i
 
 # target to preprocess a source file
 __/sql/hostname.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/hostname.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/hostname.cc.i
 .PHONY : __/sql/hostname.cc.i
 
 __/sql/hostname.s: __/sql/hostname.cc.s
@@ -818,7 +808,7 @@ __/sql/hostname.s: __/sql/hostname.cc.s
 
 # target to generate assembly for a file
 __/sql/hostname.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/hostname.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/hostname.cc.s
 .PHONY : __/sql/hostname.cc.s
 
 __/sql/init.o: __/sql/init.cc.o
@@ -826,7 +816,7 @@ __/sql/init.o: __/sql/init.cc.o
 
 # target to build an object file
 __/sql/init.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/init.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/init.cc.o
 .PHONY : __/sql/init.cc.o
 
 __/sql/init.i: __/sql/init.cc.i
@@ -834,7 +824,7 @@ __/sql/init.i: __/sql/init.cc.i
 
 # target to preprocess a source file
 __/sql/init.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/init.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/init.cc.i
 .PHONY : __/sql/init.cc.i
 
 __/sql/init.s: __/sql/init.cc.s
@@ -842,7 +832,7 @@ __/sql/init.s: __/sql/init.cc.s
 
 # target to generate assembly for a file
 __/sql/init.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/init.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/init.cc.s
 .PHONY : __/sql/init.cc.s
 
 __/sql/item.o: __/sql/item.cc.o
@@ -850,7 +840,7 @@ __/sql/item.o: __/sql/item.cc.o
 
 # target to build an object file
 __/sql/item.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item.cc.o
 .PHONY : __/sql/item.cc.o
 
 __/sql/item.i: __/sql/item.cc.i
@@ -858,7 +848,7 @@ __/sql/item.i: __/sql/item.cc.i
 
 # target to preprocess a source file
 __/sql/item.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item.cc.i
 .PHONY : __/sql/item.cc.i
 
 __/sql/item.s: __/sql/item.cc.s
@@ -866,7 +856,7 @@ __/sql/item.s: __/sql/item.cc.s
 
 # target to generate assembly for a file
 __/sql/item.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item.cc.s
 .PHONY : __/sql/item.cc.s
 
 __/sql/item_buff.o: __/sql/item_buff.cc.o
@@ -874,7 +864,7 @@ __/sql/item_buff.o: __/sql/item_buff.cc.o
 
 # target to build an object file
 __/sql/item_buff.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_buff.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_buff.cc.o
 .PHONY : __/sql/item_buff.cc.o
 
 __/sql/item_buff.i: __/sql/item_buff.cc.i
@@ -882,7 +872,7 @@ __/sql/item_buff.i: __/sql/item_buff.cc.i
 
 # target to preprocess a source file
 __/sql/item_buff.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_buff.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_buff.cc.i
 .PHONY : __/sql/item_buff.cc.i
 
 __/sql/item_buff.s: __/sql/item_buff.cc.s
@@ -890,7 +880,7 @@ __/sql/item_buff.s: __/sql/item_buff.cc.s
 
 # target to generate assembly for a file
 __/sql/item_buff.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_buff.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_buff.cc.s
 .PHONY : __/sql/item_buff.cc.s
 
 __/sql/item_cmpfunc.o: __/sql/item_cmpfunc.cc.o
@@ -898,7 +888,7 @@ __/sql/item_cmpfunc.o: __/sql/item_cmpfunc.cc.o
 
 # target to build an object file
 __/sql/item_cmpfunc.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_cmpfunc.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_cmpfunc.cc.o
 .PHONY : __/sql/item_cmpfunc.cc.o
 
 __/sql/item_cmpfunc.i: __/sql/item_cmpfunc.cc.i
@@ -906,7 +896,7 @@ __/sql/item_cmpfunc.i: __/sql/item_cmpfunc.cc.i
 
 # target to preprocess a source file
 __/sql/item_cmpfunc.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_cmpfunc.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_cmpfunc.cc.i
 .PHONY : __/sql/item_cmpfunc.cc.i
 
 __/sql/item_cmpfunc.s: __/sql/item_cmpfunc.cc.s
@@ -914,7 +904,7 @@ __/sql/item_cmpfunc.s: __/sql/item_cmpfunc.cc.s
 
 # target to generate assembly for a file
 __/sql/item_cmpfunc.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_cmpfunc.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_cmpfunc.cc.s
 .PHONY : __/sql/item_cmpfunc.cc.s
 
 __/sql/item_create.o: __/sql/item_create.cc.o
@@ -922,7 +912,7 @@ __/sql/item_create.o: __/sql/item_create.cc.o
 
 # target to build an object file
 __/sql/item_create.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_create.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_create.cc.o
 .PHONY : __/sql/item_create.cc.o
 
 __/sql/item_create.i: __/sql/item_create.cc.i
@@ -930,7 +920,7 @@ __/sql/item_create.i: __/sql/item_create.cc.i
 
 # target to preprocess a source file
 __/sql/item_create.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_create.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_create.cc.i
 .PHONY : __/sql/item_create.cc.i
 
 __/sql/item_create.s: __/sql/item_create.cc.s
@@ -938,7 +928,7 @@ __/sql/item_create.s: __/sql/item_create.cc.s
 
 # target to generate assembly for a file
 __/sql/item_create.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_create.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_create.cc.s
 .PHONY : __/sql/item_create.cc.s
 
 __/sql/item_func.o: __/sql/item_func.cc.o
@@ -946,7 +936,7 @@ __/sql/item_func.o: __/sql/item_func.cc.o
 
 # target to build an object file
 __/sql/item_func.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_func.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_func.cc.o
 .PHONY : __/sql/item_func.cc.o
 
 __/sql/item_func.i: __/sql/item_func.cc.i
@@ -954,7 +944,7 @@ __/sql/item_func.i: __/sql/item_func.cc.i
 
 # target to preprocess a source file
 __/sql/item_func.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_func.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_func.cc.i
 .PHONY : __/sql/item_func.cc.i
 
 __/sql/item_func.s: __/sql/item_func.cc.s
@@ -962,7 +952,7 @@ __/sql/item_func.s: __/sql/item_func.cc.s
 
 # target to generate assembly for a file
 __/sql/item_func.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_func.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_func.cc.s
 .PHONY : __/sql/item_func.cc.s
 
 __/sql/item_geofunc.o: __/sql/item_geofunc.cc.o
@@ -970,7 +960,7 @@ __/sql/item_geofunc.o: __/sql/item_geofunc.cc.o
 
 # target to build an object file
 __/sql/item_geofunc.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_geofunc.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_geofunc.cc.o
 .PHONY : __/sql/item_geofunc.cc.o
 
 __/sql/item_geofunc.i: __/sql/item_geofunc.cc.i
@@ -978,7 +968,7 @@ __/sql/item_geofunc.i: __/sql/item_geofunc.cc.i
 
 # target to preprocess a source file
 __/sql/item_geofunc.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_geofunc.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_geofunc.cc.i
 .PHONY : __/sql/item_geofunc.cc.i
 
 __/sql/item_geofunc.s: __/sql/item_geofunc.cc.s
@@ -986,7 +976,7 @@ __/sql/item_geofunc.s: __/sql/item_geofunc.cc.s
 
 # target to generate assembly for a file
 __/sql/item_geofunc.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_geofunc.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_geofunc.cc.s
 .PHONY : __/sql/item_geofunc.cc.s
 
 __/sql/item_inetfunc.o: __/sql/item_inetfunc.cc.o
@@ -994,7 +984,7 @@ __/sql/item_inetfunc.o: __/sql/item_inetfunc.cc.o
 
 # target to build an object file
 __/sql/item_inetfunc.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_inetfunc.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_inetfunc.cc.o
 .PHONY : __/sql/item_inetfunc.cc.o
 
 __/sql/item_inetfunc.i: __/sql/item_inetfunc.cc.i
@@ -1002,7 +992,7 @@ __/sql/item_inetfunc.i: __/sql/item_inetfunc.cc.i
 
 # target to preprocess a source file
 __/sql/item_inetfunc.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_inetfunc.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_inetfunc.cc.i
 .PHONY : __/sql/item_inetfunc.cc.i
 
 __/sql/item_inetfunc.s: __/sql/item_inetfunc.cc.s
@@ -1010,7 +1000,7 @@ __/sql/item_inetfunc.s: __/sql/item_inetfunc.cc.s
 
 # target to generate assembly for a file
 __/sql/item_inetfunc.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_inetfunc.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_inetfunc.cc.s
 .PHONY : __/sql/item_inetfunc.cc.s
 
 __/sql/item_row.o: __/sql/item_row.cc.o
@@ -1018,7 +1008,7 @@ __/sql/item_row.o: __/sql/item_row.cc.o
 
 # target to build an object file
 __/sql/item_row.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_row.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_row.cc.o
 .PHONY : __/sql/item_row.cc.o
 
 __/sql/item_row.i: __/sql/item_row.cc.i
@@ -1026,7 +1016,7 @@ __/sql/item_row.i: __/sql/item_row.cc.i
 
 # target to preprocess a source file
 __/sql/item_row.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_row.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_row.cc.i
 .PHONY : __/sql/item_row.cc.i
 
 __/sql/item_row.s: __/sql/item_row.cc.s
@@ -1034,7 +1024,7 @@ __/sql/item_row.s: __/sql/item_row.cc.s
 
 # target to generate assembly for a file
 __/sql/item_row.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_row.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_row.cc.s
 .PHONY : __/sql/item_row.cc.s
 
 __/sql/item_strfunc.o: __/sql/item_strfunc.cc.o
@@ -1042,7 +1032,7 @@ __/sql/item_strfunc.o: __/sql/item_strfunc.cc.o
 
 # target to build an object file
 __/sql/item_strfunc.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_strfunc.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_strfunc.cc.o
 .PHONY : __/sql/item_strfunc.cc.o
 
 __/sql/item_strfunc.i: __/sql/item_strfunc.cc.i
@@ -1050,7 +1040,7 @@ __/sql/item_strfunc.i: __/sql/item_strfunc.cc.i
 
 # target to preprocess a source file
 __/sql/item_strfunc.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_strfunc.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_strfunc.cc.i
 .PHONY : __/sql/item_strfunc.cc.i
 
 __/sql/item_strfunc.s: __/sql/item_strfunc.cc.s
@@ -1058,7 +1048,7 @@ __/sql/item_strfunc.s: __/sql/item_strfunc.cc.s
 
 # target to generate assembly for a file
 __/sql/item_strfunc.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_strfunc.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_strfunc.cc.s
 .PHONY : __/sql/item_strfunc.cc.s
 
 __/sql/item_subselect.o: __/sql/item_subselect.cc.o
@@ -1066,7 +1056,7 @@ __/sql/item_subselect.o: __/sql/item_subselect.cc.o
 
 # target to build an object file
 __/sql/item_subselect.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_subselect.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_subselect.cc.o
 .PHONY : __/sql/item_subselect.cc.o
 
 __/sql/item_subselect.i: __/sql/item_subselect.cc.i
@@ -1074,7 +1064,7 @@ __/sql/item_subselect.i: __/sql/item_subselect.cc.i
 
 # target to preprocess a source file
 __/sql/item_subselect.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_subselect.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_subselect.cc.i
 .PHONY : __/sql/item_subselect.cc.i
 
 __/sql/item_subselect.s: __/sql/item_subselect.cc.s
@@ -1082,7 +1072,7 @@ __/sql/item_subselect.s: __/sql/item_subselect.cc.s
 
 # target to generate assembly for a file
 __/sql/item_subselect.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_subselect.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_subselect.cc.s
 .PHONY : __/sql/item_subselect.cc.s
 
 __/sql/item_sum.o: __/sql/item_sum.cc.o
@@ -1090,7 +1080,7 @@ __/sql/item_sum.o: __/sql/item_sum.cc.o
 
 # target to build an object file
 __/sql/item_sum.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_sum.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_sum.cc.o
 .PHONY : __/sql/item_sum.cc.o
 
 __/sql/item_sum.i: __/sql/item_sum.cc.i
@@ -1098,7 +1088,7 @@ __/sql/item_sum.i: __/sql/item_sum.cc.i
 
 # target to preprocess a source file
 __/sql/item_sum.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_sum.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_sum.cc.i
 .PHONY : __/sql/item_sum.cc.i
 
 __/sql/item_sum.s: __/sql/item_sum.cc.s
@@ -1106,7 +1096,7 @@ __/sql/item_sum.s: __/sql/item_sum.cc.s
 
 # target to generate assembly for a file
 __/sql/item_sum.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_sum.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_sum.cc.s
 .PHONY : __/sql/item_sum.cc.s
 
 __/sql/item_timefunc.o: __/sql/item_timefunc.cc.o
@@ -1114,7 +1104,7 @@ __/sql/item_timefunc.o: __/sql/item_timefunc.cc.o
 
 # target to build an object file
 __/sql/item_timefunc.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_timefunc.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_timefunc.cc.o
 .PHONY : __/sql/item_timefunc.cc.o
 
 __/sql/item_timefunc.i: __/sql/item_timefunc.cc.i
@@ -1122,7 +1112,7 @@ __/sql/item_timefunc.i: __/sql/item_timefunc.cc.i
 
 # target to preprocess a source file
 __/sql/item_timefunc.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_timefunc.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_timefunc.cc.i
 .PHONY : __/sql/item_timefunc.cc.i
 
 __/sql/item_timefunc.s: __/sql/item_timefunc.cc.s
@@ -1130,7 +1120,7 @@ __/sql/item_timefunc.s: __/sql/item_timefunc.cc.s
 
 # target to generate assembly for a file
 __/sql/item_timefunc.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_timefunc.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_timefunc.cc.s
 .PHONY : __/sql/item_timefunc.cc.s
 
 __/sql/item_xmlfunc.o: __/sql/item_xmlfunc.cc.o
@@ -1138,7 +1128,7 @@ __/sql/item_xmlfunc.o: __/sql/item_xmlfunc.cc.o
 
 # target to build an object file
 __/sql/item_xmlfunc.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_xmlfunc.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_xmlfunc.cc.o
 .PHONY : __/sql/item_xmlfunc.cc.o
 
 __/sql/item_xmlfunc.i: __/sql/item_xmlfunc.cc.i
@@ -1146,7 +1136,7 @@ __/sql/item_xmlfunc.i: __/sql/item_xmlfunc.cc.i
 
 # target to preprocess a source file
 __/sql/item_xmlfunc.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_xmlfunc.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_xmlfunc.cc.i
 .PHONY : __/sql/item_xmlfunc.cc.i
 
 __/sql/item_xmlfunc.s: __/sql/item_xmlfunc.cc.s
@@ -1154,7 +1144,7 @@ __/sql/item_xmlfunc.s: __/sql/item_xmlfunc.cc.s
 
 # target to generate assembly for a file
 __/sql/item_xmlfunc.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_xmlfunc.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/item_xmlfunc.cc.s
 .PHONY : __/sql/item_xmlfunc.cc.s
 
 __/sql/key.o: __/sql/key.cc.o
@@ -1162,7 +1152,7 @@ __/sql/key.o: __/sql/key.cc.o
 
 # target to build an object file
 __/sql/key.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/key.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/key.cc.o
 .PHONY : __/sql/key.cc.o
 
 __/sql/key.i: __/sql/key.cc.i
@@ -1170,7 +1160,7 @@ __/sql/key.i: __/sql/key.cc.i
 
 # target to preprocess a source file
 __/sql/key.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/key.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/key.cc.i
 .PHONY : __/sql/key.cc.i
 
 __/sql/key.s: __/sql/key.cc.s
@@ -1178,7 +1168,7 @@ __/sql/key.s: __/sql/key.cc.s
 
 # target to generate assembly for a file
 __/sql/key.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/key.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/key.cc.s
 .PHONY : __/sql/key.cc.s
 
 __/sql/keycaches.o: __/sql/keycaches.cc.o
@@ -1186,7 +1176,7 @@ __/sql/keycaches.o: __/sql/keycaches.cc.o
 
 # target to build an object file
 __/sql/keycaches.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/keycaches.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/keycaches.cc.o
 .PHONY : __/sql/keycaches.cc.o
 
 __/sql/keycaches.i: __/sql/keycaches.cc.i
@@ -1194,7 +1184,7 @@ __/sql/keycaches.i: __/sql/keycaches.cc.i
 
 # target to preprocess a source file
 __/sql/keycaches.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/keycaches.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/keycaches.cc.i
 .PHONY : __/sql/keycaches.cc.i
 
 __/sql/keycaches.s: __/sql/keycaches.cc.s
@@ -1202,7 +1192,7 @@ __/sql/keycaches.s: __/sql/keycaches.cc.s
 
 # target to generate assembly for a file
 __/sql/keycaches.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/keycaches.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/keycaches.cc.s
 .PHONY : __/sql/keycaches.cc.s
 
 __/sql/lock.o: __/sql/lock.cc.o
@@ -1210,7 +1200,7 @@ __/sql/lock.o: __/sql/lock.cc.o
 
 # target to build an object file
 __/sql/lock.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/lock.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/lock.cc.o
 .PHONY : __/sql/lock.cc.o
 
 __/sql/lock.i: __/sql/lock.cc.i
@@ -1218,7 +1208,7 @@ __/sql/lock.i: __/sql/lock.cc.i
 
 # target to preprocess a source file
 __/sql/lock.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/lock.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/lock.cc.i
 .PHONY : __/sql/lock.cc.i
 
 __/sql/lock.s: __/sql/lock.cc.s
@@ -1226,7 +1216,7 @@ __/sql/lock.s: __/sql/lock.cc.s
 
 # target to generate assembly for a file
 __/sql/lock.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/lock.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/lock.cc.s
 .PHONY : __/sql/lock.cc.s
 
 __/sql/log.o: __/sql/log.cc.o
@@ -1234,7 +1224,7 @@ __/sql/log.o: __/sql/log.cc.o
 
 # target to build an object file
 __/sql/log.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/log.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/log.cc.o
 .PHONY : __/sql/log.cc.o
 
 __/sql/log.i: __/sql/log.cc.i
@@ -1242,7 +1232,7 @@ __/sql/log.i: __/sql/log.cc.i
 
 # target to preprocess a source file
 __/sql/log.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/log.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/log.cc.i
 .PHONY : __/sql/log.cc.i
 
 __/sql/log.s: __/sql/log.cc.s
@@ -1250,7 +1240,7 @@ __/sql/log.s: __/sql/log.cc.s
 
 # target to generate assembly for a file
 __/sql/log.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/log.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/log.cc.s
 .PHONY : __/sql/log.cc.s
 
 __/sql/log_event.o: __/sql/log_event.cc.o
@@ -1258,7 +1248,7 @@ __/sql/log_event.o: __/sql/log_event.cc.o
 
 # target to build an object file
 __/sql/log_event.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/log_event.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/log_event.cc.o
 .PHONY : __/sql/log_event.cc.o
 
 __/sql/log_event.i: __/sql/log_event.cc.i
@@ -1266,7 +1256,7 @@ __/sql/log_event.i: __/sql/log_event.cc.i
 
 # target to preprocess a source file
 __/sql/log_event.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/log_event.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/log_event.cc.i
 .PHONY : __/sql/log_event.cc.i
 
 __/sql/log_event.s: __/sql/log_event.cc.s
@@ -1274,7 +1264,7 @@ __/sql/log_event.s: __/sql/log_event.cc.s
 
 # target to generate assembly for a file
 __/sql/log_event.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/log_event.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/log_event.cc.s
 .PHONY : __/sql/log_event.cc.s
 
 __/sql/mdl.o: __/sql/mdl.cc.o
@@ -1282,7 +1272,7 @@ __/sql/mdl.o: __/sql/mdl.cc.o
 
 # target to build an object file
 __/sql/mdl.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/mdl.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/mdl.cc.o
 .PHONY : __/sql/mdl.cc.o
 
 __/sql/mdl.i: __/sql/mdl.cc.i
@@ -1290,7 +1280,7 @@ __/sql/mdl.i: __/sql/mdl.cc.i
 
 # target to preprocess a source file
 __/sql/mdl.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/mdl.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/mdl.cc.i
 .PHONY : __/sql/mdl.cc.i
 
 __/sql/mdl.s: __/sql/mdl.cc.s
@@ -1298,7 +1288,7 @@ __/sql/mdl.s: __/sql/mdl.cc.s
 
 # target to generate assembly for a file
 __/sql/mdl.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/mdl.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/mdl.cc.s
 .PHONY : __/sql/mdl.cc.s
 
 __/sql/mf_iocache.o: __/sql/mf_iocache.cc.o
@@ -1306,7 +1296,7 @@ __/sql/mf_iocache.o: __/sql/mf_iocache.cc.o
 
 # target to build an object file
 __/sql/mf_iocache.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/mf_iocache.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/mf_iocache.cc.o
 .PHONY : __/sql/mf_iocache.cc.o
 
 __/sql/mf_iocache.i: __/sql/mf_iocache.cc.i
@@ -1314,7 +1304,7 @@ __/sql/mf_iocache.i: __/sql/mf_iocache.cc.i
 
 # target to preprocess a source file
 __/sql/mf_iocache.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/mf_iocache.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/mf_iocache.cc.i
 .PHONY : __/sql/mf_iocache.cc.i
 
 __/sql/mf_iocache.s: __/sql/mf_iocache.cc.s
@@ -1322,7 +1312,7 @@ __/sql/mf_iocache.s: __/sql/mf_iocache.cc.s
 
 # target to generate assembly for a file
 __/sql/mf_iocache.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/mf_iocache.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/mf_iocache.cc.s
 .PHONY : __/sql/mf_iocache.cc.s
 
 __/sql/my_decimal.o: __/sql/my_decimal.cc.o
@@ -1330,7 +1320,7 @@ __/sql/my_decimal.o: __/sql/my_decimal.cc.o
 
 # target to build an object file
 __/sql/my_decimal.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/my_decimal.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/my_decimal.cc.o
 .PHONY : __/sql/my_decimal.cc.o
 
 __/sql/my_decimal.i: __/sql/my_decimal.cc.i
@@ -1338,7 +1328,7 @@ __/sql/my_decimal.i: __/sql/my_decimal.cc.i
 
 # target to preprocess a source file
 __/sql/my_decimal.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/my_decimal.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/my_decimal.cc.i
 .PHONY : __/sql/my_decimal.cc.i
 
 __/sql/my_decimal.s: __/sql/my_decimal.cc.s
@@ -1346,7 +1336,7 @@ __/sql/my_decimal.s: __/sql/my_decimal.cc.s
 
 # target to generate assembly for a file
 __/sql/my_decimal.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/my_decimal.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/my_decimal.cc.s
 .PHONY : __/sql/my_decimal.cc.s
 
 __/sql/net_serv.o: __/sql/net_serv.cc.o
@@ -1354,7 +1344,7 @@ __/sql/net_serv.o: __/sql/net_serv.cc.o
 
 # target to build an object file
 __/sql/net_serv.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/net_serv.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/net_serv.cc.o
 .PHONY : __/sql/net_serv.cc.o
 
 __/sql/net_serv.i: __/sql/net_serv.cc.i
@@ -1362,7 +1352,7 @@ __/sql/net_serv.i: __/sql/net_serv.cc.i
 
 # target to preprocess a source file
 __/sql/net_serv.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/net_serv.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/net_serv.cc.i
 .PHONY : __/sql/net_serv.cc.i
 
 __/sql/net_serv.s: __/sql/net_serv.cc.s
@@ -1370,7 +1360,7 @@ __/sql/net_serv.s: __/sql/net_serv.cc.s
 
 # target to generate assembly for a file
 __/sql/net_serv.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/net_serv.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/net_serv.cc.s
 .PHONY : __/sql/net_serv.cc.s
 
 __/sql/opt_explain.o: __/sql/opt_explain.cc.o
@@ -1378,7 +1368,7 @@ __/sql/opt_explain.o: __/sql/opt_explain.cc.o
 
 # target to build an object file
 __/sql/opt_explain.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain.cc.o
 .PHONY : __/sql/opt_explain.cc.o
 
 __/sql/opt_explain.i: __/sql/opt_explain.cc.i
@@ -1386,7 +1376,7 @@ __/sql/opt_explain.i: __/sql/opt_explain.cc.i
 
 # target to preprocess a source file
 __/sql/opt_explain.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain.cc.i
 .PHONY : __/sql/opt_explain.cc.i
 
 __/sql/opt_explain.s: __/sql/opt_explain.cc.s
@@ -1394,7 +1384,7 @@ __/sql/opt_explain.s: __/sql/opt_explain.cc.s
 
 # target to generate assembly for a file
 __/sql/opt_explain.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain.cc.s
 .PHONY : __/sql/opt_explain.cc.s
 
 __/sql/opt_explain_json.o: __/sql/opt_explain_json.cc.o
@@ -1402,7 +1392,7 @@ __/sql/opt_explain_json.o: __/sql/opt_explain_json.cc.o
 
 # target to build an object file
 __/sql/opt_explain_json.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain_json.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain_json.cc.o
 .PHONY : __/sql/opt_explain_json.cc.o
 
 __/sql/opt_explain_json.i: __/sql/opt_explain_json.cc.i
@@ -1410,7 +1400,7 @@ __/sql/opt_explain_json.i: __/sql/opt_explain_json.cc.i
 
 # target to preprocess a source file
 __/sql/opt_explain_json.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain_json.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain_json.cc.i
 .PHONY : __/sql/opt_explain_json.cc.i
 
 __/sql/opt_explain_json.s: __/sql/opt_explain_json.cc.s
@@ -1418,7 +1408,7 @@ __/sql/opt_explain_json.s: __/sql/opt_explain_json.cc.s
 
 # target to generate assembly for a file
 __/sql/opt_explain_json.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain_json.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain_json.cc.s
 .PHONY : __/sql/opt_explain_json.cc.s
 
 __/sql/opt_explain_traditional.o: __/sql/opt_explain_traditional.cc.o
@@ -1426,7 +1416,7 @@ __/sql/opt_explain_traditional.o: __/sql/opt_explain_traditional.cc.o
 
 # target to build an object file
 __/sql/opt_explain_traditional.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain_traditional.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain_traditional.cc.o
 .PHONY : __/sql/opt_explain_traditional.cc.o
 
 __/sql/opt_explain_traditional.i: __/sql/opt_explain_traditional.cc.i
@@ -1434,7 +1424,7 @@ __/sql/opt_explain_traditional.i: __/sql/opt_explain_traditional.cc.i
 
 # target to preprocess a source file
 __/sql/opt_explain_traditional.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain_traditional.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain_traditional.cc.i
 .PHONY : __/sql/opt_explain_traditional.cc.i
 
 __/sql/opt_explain_traditional.s: __/sql/opt_explain_traditional.cc.s
@@ -1442,7 +1432,7 @@ __/sql/opt_explain_traditional.s: __/sql/opt_explain_traditional.cc.s
 
 # target to generate assembly for a file
 __/sql/opt_explain_traditional.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain_traditional.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_explain_traditional.cc.s
 .PHONY : __/sql/opt_explain_traditional.cc.s
 
 __/sql/opt_range.o: __/sql/opt_range.cc.o
@@ -1450,7 +1440,7 @@ __/sql/opt_range.o: __/sql/opt_range.cc.o
 
 # target to build an object file
 __/sql/opt_range.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_range.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_range.cc.o
 .PHONY : __/sql/opt_range.cc.o
 
 __/sql/opt_range.i: __/sql/opt_range.cc.i
@@ -1458,7 +1448,7 @@ __/sql/opt_range.i: __/sql/opt_range.cc.i
 
 # target to preprocess a source file
 __/sql/opt_range.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_range.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_range.cc.i
 .PHONY : __/sql/opt_range.cc.i
 
 __/sql/opt_range.s: __/sql/opt_range.cc.s
@@ -1466,7 +1456,7 @@ __/sql/opt_range.s: __/sql/opt_range.cc.s
 
 # target to generate assembly for a file
 __/sql/opt_range.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_range.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_range.cc.s
 .PHONY : __/sql/opt_range.cc.s
 
 __/sql/opt_sum.o: __/sql/opt_sum.cc.o
@@ -1474,7 +1464,7 @@ __/sql/opt_sum.o: __/sql/opt_sum.cc.o
 
 # target to build an object file
 __/sql/opt_sum.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_sum.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_sum.cc.o
 .PHONY : __/sql/opt_sum.cc.o
 
 __/sql/opt_sum.i: __/sql/opt_sum.cc.i
@@ -1482,7 +1472,7 @@ __/sql/opt_sum.i: __/sql/opt_sum.cc.i
 
 # target to preprocess a source file
 __/sql/opt_sum.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_sum.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_sum.cc.i
 .PHONY : __/sql/opt_sum.cc.i
 
 __/sql/opt_sum.s: __/sql/opt_sum.cc.s
@@ -1490,7 +1480,7 @@ __/sql/opt_sum.s: __/sql/opt_sum.cc.s
 
 # target to generate assembly for a file
 __/sql/opt_sum.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_sum.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_sum.cc.s
 .PHONY : __/sql/opt_sum.cc.s
 
 __/sql/opt_trace.o: __/sql/opt_trace.cc.o
@@ -1498,7 +1488,7 @@ __/sql/opt_trace.o: __/sql/opt_trace.cc.o
 
 # target to build an object file
 __/sql/opt_trace.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_trace.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_trace.cc.o
 .PHONY : __/sql/opt_trace.cc.o
 
 __/sql/opt_trace.i: __/sql/opt_trace.cc.i
@@ -1506,7 +1496,7 @@ __/sql/opt_trace.i: __/sql/opt_trace.cc.i
 
 # target to preprocess a source file
 __/sql/opt_trace.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_trace.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_trace.cc.i
 .PHONY : __/sql/opt_trace.cc.i
 
 __/sql/opt_trace.s: __/sql/opt_trace.cc.s
@@ -1514,7 +1504,7 @@ __/sql/opt_trace.s: __/sql/opt_trace.cc.s
 
 # target to generate assembly for a file
 __/sql/opt_trace.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_trace.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_trace.cc.s
 .PHONY : __/sql/opt_trace.cc.s
 
 __/sql/opt_trace2server.o: __/sql/opt_trace2server.cc.o
@@ -1522,7 +1512,7 @@ __/sql/opt_trace2server.o: __/sql/opt_trace2server.cc.o
 
 # target to build an object file
 __/sql/opt_trace2server.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_trace2server.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_trace2server.cc.o
 .PHONY : __/sql/opt_trace2server.cc.o
 
 __/sql/opt_trace2server.i: __/sql/opt_trace2server.cc.i
@@ -1530,7 +1520,7 @@ __/sql/opt_trace2server.i: __/sql/opt_trace2server.cc.i
 
 # target to preprocess a source file
 __/sql/opt_trace2server.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_trace2server.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_trace2server.cc.i
 .PHONY : __/sql/opt_trace2server.cc.i
 
 __/sql/opt_trace2server.s: __/sql/opt_trace2server.cc.s
@@ -1538,7 +1528,7 @@ __/sql/opt_trace2server.s: __/sql/opt_trace2server.cc.s
 
 # target to generate assembly for a file
 __/sql/opt_trace2server.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_trace2server.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/opt_trace2server.cc.s
 .PHONY : __/sql/opt_trace2server.cc.s
 
 __/sql/parse_file.o: __/sql/parse_file.cc.o
@@ -1546,7 +1536,7 @@ __/sql/parse_file.o: __/sql/parse_file.cc.o
 
 # target to build an object file
 __/sql/parse_file.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/parse_file.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/parse_file.cc.o
 .PHONY : __/sql/parse_file.cc.o
 
 __/sql/parse_file.i: __/sql/parse_file.cc.i
@@ -1554,7 +1544,7 @@ __/sql/parse_file.i: __/sql/parse_file.cc.i
 
 # target to preprocess a source file
 __/sql/parse_file.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/parse_file.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/parse_file.cc.i
 .PHONY : __/sql/parse_file.cc.i
 
 __/sql/parse_file.s: __/sql/parse_file.cc.s
@@ -1562,7 +1552,7 @@ __/sql/parse_file.s: __/sql/parse_file.cc.s
 
 # target to generate assembly for a file
 __/sql/parse_file.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/parse_file.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/parse_file.cc.s
 .PHONY : __/sql/parse_file.cc.s
 
 __/sql/partition_info.o: __/sql/partition_info.cc.o
@@ -1570,7 +1560,7 @@ __/sql/partition_info.o: __/sql/partition_info.cc.o
 
 # target to build an object file
 __/sql/partition_info.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/partition_info.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/partition_info.cc.o
 .PHONY : __/sql/partition_info.cc.o
 
 __/sql/partition_info.i: __/sql/partition_info.cc.i
@@ -1578,7 +1568,7 @@ __/sql/partition_info.i: __/sql/partition_info.cc.i
 
 # target to preprocess a source file
 __/sql/partition_info.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/partition_info.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/partition_info.cc.i
 .PHONY : __/sql/partition_info.cc.i
 
 __/sql/partition_info.s: __/sql/partition_info.cc.s
@@ -1586,7 +1576,7 @@ __/sql/partition_info.s: __/sql/partition_info.cc.s
 
 # target to generate assembly for a file
 __/sql/partition_info.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/partition_info.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/partition_info.cc.s
 .PHONY : __/sql/partition_info.cc.s
 
 __/sql/password.o: __/sql/password.c.o
@@ -1594,7 +1584,7 @@ __/sql/password.o: __/sql/password.c.o
 
 # target to build an object file
 __/sql/password.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/password.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/password.c.o
 .PHONY : __/sql/password.c.o
 
 __/sql/password.i: __/sql/password.c.i
@@ -1602,7 +1592,7 @@ __/sql/password.i: __/sql/password.c.i
 
 # target to preprocess a source file
 __/sql/password.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/password.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/password.c.i
 .PHONY : __/sql/password.c.i
 
 __/sql/password.s: __/sql/password.c.s
@@ -1610,7 +1600,7 @@ __/sql/password.s: __/sql/password.c.s
 
 # target to generate assembly for a file
 __/sql/password.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/password.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/password.c.s
 .PHONY : __/sql/password.c.s
 
 __/sql/procedure.o: __/sql/procedure.cc.o
@@ -1618,7 +1608,7 @@ __/sql/procedure.o: __/sql/procedure.cc.o
 
 # target to build an object file
 __/sql/procedure.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/procedure.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/procedure.cc.o
 .PHONY : __/sql/procedure.cc.o
 
 __/sql/procedure.i: __/sql/procedure.cc.i
@@ -1626,7 +1616,7 @@ __/sql/procedure.i: __/sql/procedure.cc.i
 
 # target to preprocess a source file
 __/sql/procedure.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/procedure.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/procedure.cc.i
 .PHONY : __/sql/procedure.cc.i
 
 __/sql/procedure.s: __/sql/procedure.cc.s
@@ -1634,7 +1624,7 @@ __/sql/procedure.s: __/sql/procedure.cc.s
 
 # target to generate assembly for a file
 __/sql/procedure.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/procedure.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/procedure.cc.s
 .PHONY : __/sql/procedure.cc.s
 
 __/sql/protocol.o: __/sql/protocol.cc.o
@@ -1642,7 +1632,7 @@ __/sql/protocol.o: __/sql/protocol.cc.o
 
 # target to build an object file
 __/sql/protocol.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/protocol.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/protocol.cc.o
 .PHONY : __/sql/protocol.cc.o
 
 __/sql/protocol.i: __/sql/protocol.cc.i
@@ -1650,7 +1640,7 @@ __/sql/protocol.i: __/sql/protocol.cc.i
 
 # target to preprocess a source file
 __/sql/protocol.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/protocol.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/protocol.cc.i
 .PHONY : __/sql/protocol.cc.i
 
 __/sql/protocol.s: __/sql/protocol.cc.s
@@ -1658,7 +1648,7 @@ __/sql/protocol.s: __/sql/protocol.cc.s
 
 # target to generate assembly for a file
 __/sql/protocol.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/protocol.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/protocol.cc.s
 .PHONY : __/sql/protocol.cc.s
 
 __/sql/records.o: __/sql/records.cc.o
@@ -1666,7 +1656,7 @@ __/sql/records.o: __/sql/records.cc.o
 
 # target to build an object file
 __/sql/records.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/records.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/records.cc.o
 .PHONY : __/sql/records.cc.o
 
 __/sql/records.i: __/sql/records.cc.i
@@ -1674,7 +1664,7 @@ __/sql/records.i: __/sql/records.cc.i
 
 # target to preprocess a source file
 __/sql/records.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/records.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/records.cc.i
 .PHONY : __/sql/records.cc.i
 
 __/sql/records.s: __/sql/records.cc.s
@@ -1682,7 +1672,7 @@ __/sql/records.s: __/sql/records.cc.s
 
 # target to generate assembly for a file
 __/sql/records.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/records.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/records.cc.s
 .PHONY : __/sql/records.cc.s
 
 __/sql/rpl_filter.o: __/sql/rpl_filter.cc.o
@@ -1690,7 +1680,7 @@ __/sql/rpl_filter.o: __/sql/rpl_filter.cc.o
 
 # target to build an object file
 __/sql/rpl_filter.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_filter.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_filter.cc.o
 .PHONY : __/sql/rpl_filter.cc.o
 
 __/sql/rpl_filter.i: __/sql/rpl_filter.cc.i
@@ -1698,7 +1688,7 @@ __/sql/rpl_filter.i: __/sql/rpl_filter.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_filter.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_filter.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_filter.cc.i
 .PHONY : __/sql/rpl_filter.cc.i
 
 __/sql/rpl_filter.s: __/sql/rpl_filter.cc.s
@@ -1706,7 +1696,7 @@ __/sql/rpl_filter.s: __/sql/rpl_filter.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_filter.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_filter.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_filter.cc.s
 .PHONY : __/sql/rpl_filter.cc.s
 
 __/sql/rpl_gtid_cache.o: __/sql/rpl_gtid_cache.cc.o
@@ -1714,7 +1704,7 @@ __/sql/rpl_gtid_cache.o: __/sql/rpl_gtid_cache.cc.o
 
 # target to build an object file
 __/sql/rpl_gtid_cache.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_cache.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_cache.cc.o
 .PHONY : __/sql/rpl_gtid_cache.cc.o
 
 __/sql/rpl_gtid_cache.i: __/sql/rpl_gtid_cache.cc.i
@@ -1722,7 +1712,7 @@ __/sql/rpl_gtid_cache.i: __/sql/rpl_gtid_cache.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_gtid_cache.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_cache.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_cache.cc.i
 .PHONY : __/sql/rpl_gtid_cache.cc.i
 
 __/sql/rpl_gtid_cache.s: __/sql/rpl_gtid_cache.cc.s
@@ -1730,7 +1720,7 @@ __/sql/rpl_gtid_cache.s: __/sql/rpl_gtid_cache.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_gtid_cache.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_cache.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_cache.cc.s
 .PHONY : __/sql/rpl_gtid_cache.cc.s
 
 __/sql/rpl_gtid_execution.o: __/sql/rpl_gtid_execution.cc.o
@@ -1738,7 +1728,7 @@ __/sql/rpl_gtid_execution.o: __/sql/rpl_gtid_execution.cc.o
 
 # target to build an object file
 __/sql/rpl_gtid_execution.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_execution.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_execution.cc.o
 .PHONY : __/sql/rpl_gtid_execution.cc.o
 
 __/sql/rpl_gtid_execution.i: __/sql/rpl_gtid_execution.cc.i
@@ -1746,7 +1736,7 @@ __/sql/rpl_gtid_execution.i: __/sql/rpl_gtid_execution.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_gtid_execution.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_execution.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_execution.cc.i
 .PHONY : __/sql/rpl_gtid_execution.cc.i
 
 __/sql/rpl_gtid_execution.s: __/sql/rpl_gtid_execution.cc.s
@@ -1754,7 +1744,7 @@ __/sql/rpl_gtid_execution.s: __/sql/rpl_gtid_execution.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_gtid_execution.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_execution.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_execution.cc.s
 .PHONY : __/sql/rpl_gtid_execution.cc.s
 
 __/sql/rpl_gtid_misc.o: __/sql/rpl_gtid_misc.cc.o
@@ -1762,7 +1752,7 @@ __/sql/rpl_gtid_misc.o: __/sql/rpl_gtid_misc.cc.o
 
 # target to build an object file
 __/sql/rpl_gtid_misc.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_misc.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_misc.cc.o
 .PHONY : __/sql/rpl_gtid_misc.cc.o
 
 __/sql/rpl_gtid_misc.i: __/sql/rpl_gtid_misc.cc.i
@@ -1770,7 +1760,7 @@ __/sql/rpl_gtid_misc.i: __/sql/rpl_gtid_misc.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_gtid_misc.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_misc.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_misc.cc.i
 .PHONY : __/sql/rpl_gtid_misc.cc.i
 
 __/sql/rpl_gtid_misc.s: __/sql/rpl_gtid_misc.cc.s
@@ -1778,7 +1768,7 @@ __/sql/rpl_gtid_misc.s: __/sql/rpl_gtid_misc.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_gtid_misc.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_misc.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_misc.cc.s
 .PHONY : __/sql/rpl_gtid_misc.cc.s
 
 __/sql/rpl_gtid_mutex_cond_array.o: __/sql/rpl_gtid_mutex_cond_array.cc.o
@@ -1786,7 +1776,7 @@ __/sql/rpl_gtid_mutex_cond_array.o: __/sql/rpl_gtid_mutex_cond_array.cc.o
 
 # target to build an object file
 __/sql/rpl_gtid_mutex_cond_array.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_mutex_cond_array.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_mutex_cond_array.cc.o
 .PHONY : __/sql/rpl_gtid_mutex_cond_array.cc.o
 
 __/sql/rpl_gtid_mutex_cond_array.i: __/sql/rpl_gtid_mutex_cond_array.cc.i
@@ -1794,7 +1784,7 @@ __/sql/rpl_gtid_mutex_cond_array.i: __/sql/rpl_gtid_mutex_cond_array.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_gtid_mutex_cond_array.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_mutex_cond_array.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_mutex_cond_array.cc.i
 .PHONY : __/sql/rpl_gtid_mutex_cond_array.cc.i
 
 __/sql/rpl_gtid_mutex_cond_array.s: __/sql/rpl_gtid_mutex_cond_array.cc.s
@@ -1802,7 +1792,7 @@ __/sql/rpl_gtid_mutex_cond_array.s: __/sql/rpl_gtid_mutex_cond_array.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_gtid_mutex_cond_array.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_mutex_cond_array.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_mutex_cond_array.cc.s
 .PHONY : __/sql/rpl_gtid_mutex_cond_array.cc.s
 
 __/sql/rpl_gtid_owned.o: __/sql/rpl_gtid_owned.cc.o
@@ -1810,7 +1800,7 @@ __/sql/rpl_gtid_owned.o: __/sql/rpl_gtid_owned.cc.o
 
 # target to build an object file
 __/sql/rpl_gtid_owned.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_owned.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_owned.cc.o
 .PHONY : __/sql/rpl_gtid_owned.cc.o
 
 __/sql/rpl_gtid_owned.i: __/sql/rpl_gtid_owned.cc.i
@@ -1818,7 +1808,7 @@ __/sql/rpl_gtid_owned.i: __/sql/rpl_gtid_owned.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_gtid_owned.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_owned.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_owned.cc.i
 .PHONY : __/sql/rpl_gtid_owned.cc.i
 
 __/sql/rpl_gtid_owned.s: __/sql/rpl_gtid_owned.cc.s
@@ -1826,7 +1816,7 @@ __/sql/rpl_gtid_owned.s: __/sql/rpl_gtid_owned.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_gtid_owned.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_owned.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_owned.cc.s
 .PHONY : __/sql/rpl_gtid_owned.cc.s
 
 __/sql/rpl_gtid_set.o: __/sql/rpl_gtid_set.cc.o
@@ -1834,7 +1824,7 @@ __/sql/rpl_gtid_set.o: __/sql/rpl_gtid_set.cc.o
 
 # target to build an object file
 __/sql/rpl_gtid_set.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_set.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_set.cc.o
 .PHONY : __/sql/rpl_gtid_set.cc.o
 
 __/sql/rpl_gtid_set.i: __/sql/rpl_gtid_set.cc.i
@@ -1842,7 +1832,7 @@ __/sql/rpl_gtid_set.i: __/sql/rpl_gtid_set.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_gtid_set.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_set.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_set.cc.i
 .PHONY : __/sql/rpl_gtid_set.cc.i
 
 __/sql/rpl_gtid_set.s: __/sql/rpl_gtid_set.cc.s
@@ -1850,7 +1840,7 @@ __/sql/rpl_gtid_set.s: __/sql/rpl_gtid_set.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_gtid_set.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_set.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_set.cc.s
 .PHONY : __/sql/rpl_gtid_set.cc.s
 
 __/sql/rpl_gtid_sid_map.o: __/sql/rpl_gtid_sid_map.cc.o
@@ -1858,7 +1848,7 @@ __/sql/rpl_gtid_sid_map.o: __/sql/rpl_gtid_sid_map.cc.o
 
 # target to build an object file
 __/sql/rpl_gtid_sid_map.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_sid_map.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_sid_map.cc.o
 .PHONY : __/sql/rpl_gtid_sid_map.cc.o
 
 __/sql/rpl_gtid_sid_map.i: __/sql/rpl_gtid_sid_map.cc.i
@@ -1866,7 +1856,7 @@ __/sql/rpl_gtid_sid_map.i: __/sql/rpl_gtid_sid_map.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_gtid_sid_map.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_sid_map.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_sid_map.cc.i
 .PHONY : __/sql/rpl_gtid_sid_map.cc.i
 
 __/sql/rpl_gtid_sid_map.s: __/sql/rpl_gtid_sid_map.cc.s
@@ -1874,7 +1864,7 @@ __/sql/rpl_gtid_sid_map.s: __/sql/rpl_gtid_sid_map.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_gtid_sid_map.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_sid_map.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_sid_map.cc.s
 .PHONY : __/sql/rpl_gtid_sid_map.cc.s
 
 __/sql/rpl_gtid_specification.o: __/sql/rpl_gtid_specification.cc.o
@@ -1882,7 +1872,7 @@ __/sql/rpl_gtid_specification.o: __/sql/rpl_gtid_specification.cc.o
 
 # target to build an object file
 __/sql/rpl_gtid_specification.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_specification.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_specification.cc.o
 .PHONY : __/sql/rpl_gtid_specification.cc.o
 
 __/sql/rpl_gtid_specification.i: __/sql/rpl_gtid_specification.cc.i
@@ -1890,7 +1880,7 @@ __/sql/rpl_gtid_specification.i: __/sql/rpl_gtid_specification.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_gtid_specification.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_specification.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_specification.cc.i
 .PHONY : __/sql/rpl_gtid_specification.cc.i
 
 __/sql/rpl_gtid_specification.s: __/sql/rpl_gtid_specification.cc.s
@@ -1898,7 +1888,7 @@ __/sql/rpl_gtid_specification.s: __/sql/rpl_gtid_specification.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_gtid_specification.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_specification.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_specification.cc.s
 .PHONY : __/sql/rpl_gtid_specification.cc.s
 
 __/sql/rpl_gtid_state.o: __/sql/rpl_gtid_state.cc.o
@@ -1906,7 +1896,7 @@ __/sql/rpl_gtid_state.o: __/sql/rpl_gtid_state.cc.o
 
 # target to build an object file
 __/sql/rpl_gtid_state.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_state.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_state.cc.o
 .PHONY : __/sql/rpl_gtid_state.cc.o
 
 __/sql/rpl_gtid_state.i: __/sql/rpl_gtid_state.cc.i
@@ -1914,7 +1904,7 @@ __/sql/rpl_gtid_state.i: __/sql/rpl_gtid_state.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_gtid_state.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_state.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_state.cc.i
 .PHONY : __/sql/rpl_gtid_state.cc.i
 
 __/sql/rpl_gtid_state.s: __/sql/rpl_gtid_state.cc.s
@@ -1922,7 +1912,7 @@ __/sql/rpl_gtid_state.s: __/sql/rpl_gtid_state.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_gtid_state.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_state.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_gtid_state.cc.s
 .PHONY : __/sql/rpl_gtid_state.cc.s
 
 __/sql/rpl_handler.o: __/sql/rpl_handler.cc.o
@@ -1930,7 +1920,7 @@ __/sql/rpl_handler.o: __/sql/rpl_handler.cc.o
 
 # target to build an object file
 __/sql/rpl_handler.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_handler.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_handler.cc.o
 .PHONY : __/sql/rpl_handler.cc.o
 
 __/sql/rpl_handler.i: __/sql/rpl_handler.cc.i
@@ -1938,7 +1928,7 @@ __/sql/rpl_handler.i: __/sql/rpl_handler.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_handler.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_handler.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_handler.cc.i
 .PHONY : __/sql/rpl_handler.cc.i
 
 __/sql/rpl_handler.s: __/sql/rpl_handler.cc.s
@@ -1946,7 +1936,7 @@ __/sql/rpl_handler.s: __/sql/rpl_handler.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_handler.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_handler.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_handler.cc.s
 .PHONY : __/sql/rpl_handler.cc.s
 
 __/sql/rpl_injector.o: __/sql/rpl_injector.cc.o
@@ -1954,7 +1944,7 @@ __/sql/rpl_injector.o: __/sql/rpl_injector.cc.o
 
 # target to build an object file
 __/sql/rpl_injector.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_injector.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_injector.cc.o
 .PHONY : __/sql/rpl_injector.cc.o
 
 __/sql/rpl_injector.i: __/sql/rpl_injector.cc.i
@@ -1962,7 +1952,7 @@ __/sql/rpl_injector.i: __/sql/rpl_injector.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_injector.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_injector.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_injector.cc.i
 .PHONY : __/sql/rpl_injector.cc.i
 
 __/sql/rpl_injector.s: __/sql/rpl_injector.cc.s
@@ -1970,7 +1960,7 @@ __/sql/rpl_injector.s: __/sql/rpl_injector.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_injector.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_injector.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_injector.cc.s
 .PHONY : __/sql/rpl_injector.cc.s
 
 __/sql/rpl_record.o: __/sql/rpl_record.cc.o
@@ -1978,7 +1968,7 @@ __/sql/rpl_record.o: __/sql/rpl_record.cc.o
 
 # target to build an object file
 __/sql/rpl_record.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_record.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_record.cc.o
 .PHONY : __/sql/rpl_record.cc.o
 
 __/sql/rpl_record.i: __/sql/rpl_record.cc.i
@@ -1986,7 +1976,7 @@ __/sql/rpl_record.i: __/sql/rpl_record.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_record.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_record.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_record.cc.i
 .PHONY : __/sql/rpl_record.cc.i
 
 __/sql/rpl_record.s: __/sql/rpl_record.cc.s
@@ -1994,7 +1984,7 @@ __/sql/rpl_record.s: __/sql/rpl_record.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_record.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_record.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_record.cc.s
 .PHONY : __/sql/rpl_record.cc.s
 
 __/sql/rpl_reporting.o: __/sql/rpl_reporting.cc.o
@@ -2002,7 +1992,7 @@ __/sql/rpl_reporting.o: __/sql/rpl_reporting.cc.o
 
 # target to build an object file
 __/sql/rpl_reporting.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_reporting.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_reporting.cc.o
 .PHONY : __/sql/rpl_reporting.cc.o
 
 __/sql/rpl_reporting.i: __/sql/rpl_reporting.cc.i
@@ -2010,7 +2000,7 @@ __/sql/rpl_reporting.i: __/sql/rpl_reporting.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_reporting.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_reporting.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_reporting.cc.i
 .PHONY : __/sql/rpl_reporting.cc.i
 
 __/sql/rpl_reporting.s: __/sql/rpl_reporting.cc.s
@@ -2018,7 +2008,7 @@ __/sql/rpl_reporting.s: __/sql/rpl_reporting.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_reporting.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_reporting.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_reporting.cc.s
 .PHONY : __/sql/rpl_reporting.cc.s
 
 __/sql/rpl_utility.o: __/sql/rpl_utility.cc.o
@@ -2026,7 +2016,7 @@ __/sql/rpl_utility.o: __/sql/rpl_utility.cc.o
 
 # target to build an object file
 __/sql/rpl_utility.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_utility.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_utility.cc.o
 .PHONY : __/sql/rpl_utility.cc.o
 
 __/sql/rpl_utility.i: __/sql/rpl_utility.cc.i
@@ -2034,7 +2024,7 @@ __/sql/rpl_utility.i: __/sql/rpl_utility.cc.i
 
 # target to preprocess a source file
 __/sql/rpl_utility.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_utility.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_utility.cc.i
 .PHONY : __/sql/rpl_utility.cc.i
 
 __/sql/rpl_utility.s: __/sql/rpl_utility.cc.s
@@ -2042,7 +2032,7 @@ __/sql/rpl_utility.s: __/sql/rpl_utility.cc.s
 
 # target to generate assembly for a file
 __/sql/rpl_utility.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_utility.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/rpl_utility.cc.s
 .PHONY : __/sql/rpl_utility.cc.s
 
 __/sql/scheduler.o: __/sql/scheduler.cc.o
@@ -2050,7 +2040,7 @@ __/sql/scheduler.o: __/sql/scheduler.cc.o
 
 # target to build an object file
 __/sql/scheduler.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/scheduler.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/scheduler.cc.o
 .PHONY : __/sql/scheduler.cc.o
 
 __/sql/scheduler.i: __/sql/scheduler.cc.i
@@ -2058,7 +2048,7 @@ __/sql/scheduler.i: __/sql/scheduler.cc.i
 
 # target to preprocess a source file
 __/sql/scheduler.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/scheduler.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/scheduler.cc.i
 .PHONY : __/sql/scheduler.cc.i
 
 __/sql/scheduler.s: __/sql/scheduler.cc.s
@@ -2066,7 +2056,7 @@ __/sql/scheduler.s: __/sql/scheduler.cc.s
 
 # target to generate assembly for a file
 __/sql/scheduler.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/scheduler.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/scheduler.cc.s
 .PHONY : __/sql/scheduler.cc.s
 
 __/sql/set_var.o: __/sql/set_var.cc.o
@@ -2074,7 +2064,7 @@ __/sql/set_var.o: __/sql/set_var.cc.o
 
 # target to build an object file
 __/sql/set_var.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/set_var.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/set_var.cc.o
 .PHONY : __/sql/set_var.cc.o
 
 __/sql/set_var.i: __/sql/set_var.cc.i
@@ -2082,7 +2072,7 @@ __/sql/set_var.i: __/sql/set_var.cc.i
 
 # target to preprocess a source file
 __/sql/set_var.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/set_var.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/set_var.cc.i
 .PHONY : __/sql/set_var.cc.i
 
 __/sql/set_var.s: __/sql/set_var.cc.s
@@ -2090,7 +2080,7 @@ __/sql/set_var.s: __/sql/set_var.cc.s
 
 # target to generate assembly for a file
 __/sql/set_var.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/set_var.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/set_var.cc.s
 .PHONY : __/sql/set_var.cc.s
 
 __/sql/signal_handler.o: __/sql/signal_handler.cc.o
@@ -2098,7 +2088,7 @@ __/sql/signal_handler.o: __/sql/signal_handler.cc.o
 
 # target to build an object file
 __/sql/signal_handler.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/signal_handler.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/signal_handler.cc.o
 .PHONY : __/sql/signal_handler.cc.o
 
 __/sql/signal_handler.i: __/sql/signal_handler.cc.i
@@ -2106,7 +2096,7 @@ __/sql/signal_handler.i: __/sql/signal_handler.cc.i
 
 # target to preprocess a source file
 __/sql/signal_handler.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/signal_handler.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/signal_handler.cc.i
 .PHONY : __/sql/signal_handler.cc.i
 
 __/sql/signal_handler.s: __/sql/signal_handler.cc.s
@@ -2114,7 +2104,7 @@ __/sql/signal_handler.s: __/sql/signal_handler.cc.s
 
 # target to generate assembly for a file
 __/sql/signal_handler.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/signal_handler.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/signal_handler.cc.s
 .PHONY : __/sql/signal_handler.cc.s
 
 __/sql/sp.o: __/sql/sp.cc.o
@@ -2122,7 +2112,7 @@ __/sql/sp.o: __/sql/sp.cc.o
 
 # target to build an object file
 __/sql/sp.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp.cc.o
 .PHONY : __/sql/sp.cc.o
 
 __/sql/sp.i: __/sql/sp.cc.i
@@ -2130,7 +2120,7 @@ __/sql/sp.i: __/sql/sp.cc.i
 
 # target to preprocess a source file
 __/sql/sp.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp.cc.i
 .PHONY : __/sql/sp.cc.i
 
 __/sql/sp.s: __/sql/sp.cc.s
@@ -2138,7 +2128,7 @@ __/sql/sp.s: __/sql/sp.cc.s
 
 # target to generate assembly for a file
 __/sql/sp.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp.cc.s
 .PHONY : __/sql/sp.cc.s
 
 __/sql/sp_cache.o: __/sql/sp_cache.cc.o
@@ -2146,7 +2136,7 @@ __/sql/sp_cache.o: __/sql/sp_cache.cc.o
 
 # target to build an object file
 __/sql/sp_cache.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_cache.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_cache.cc.o
 .PHONY : __/sql/sp_cache.cc.o
 
 __/sql/sp_cache.i: __/sql/sp_cache.cc.i
@@ -2154,7 +2144,7 @@ __/sql/sp_cache.i: __/sql/sp_cache.cc.i
 
 # target to preprocess a source file
 __/sql/sp_cache.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_cache.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_cache.cc.i
 .PHONY : __/sql/sp_cache.cc.i
 
 __/sql/sp_cache.s: __/sql/sp_cache.cc.s
@@ -2162,7 +2152,7 @@ __/sql/sp_cache.s: __/sql/sp_cache.cc.s
 
 # target to generate assembly for a file
 __/sql/sp_cache.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_cache.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_cache.cc.s
 .PHONY : __/sql/sp_cache.cc.s
 
 __/sql/sp_head.o: __/sql/sp_head.cc.o
@@ -2170,7 +2160,7 @@ __/sql/sp_head.o: __/sql/sp_head.cc.o
 
 # target to build an object file
 __/sql/sp_head.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_head.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_head.cc.o
 .PHONY : __/sql/sp_head.cc.o
 
 __/sql/sp_head.i: __/sql/sp_head.cc.i
@@ -2178,7 +2168,7 @@ __/sql/sp_head.i: __/sql/sp_head.cc.i
 
 # target to preprocess a source file
 __/sql/sp_head.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_head.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_head.cc.i
 .PHONY : __/sql/sp_head.cc.i
 
 __/sql/sp_head.s: __/sql/sp_head.cc.s
@@ -2186,7 +2176,7 @@ __/sql/sp_head.s: __/sql/sp_head.cc.s
 
 # target to generate assembly for a file
 __/sql/sp_head.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_head.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_head.cc.s
 .PHONY : __/sql/sp_head.cc.s
 
 __/sql/sp_instr.o: __/sql/sp_instr.cc.o
@@ -2194,7 +2184,7 @@ __/sql/sp_instr.o: __/sql/sp_instr.cc.o
 
 # target to build an object file
 __/sql/sp_instr.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_instr.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_instr.cc.o
 .PHONY : __/sql/sp_instr.cc.o
 
 __/sql/sp_instr.i: __/sql/sp_instr.cc.i
@@ -2202,7 +2192,7 @@ __/sql/sp_instr.i: __/sql/sp_instr.cc.i
 
 # target to preprocess a source file
 __/sql/sp_instr.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_instr.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_instr.cc.i
 .PHONY : __/sql/sp_instr.cc.i
 
 __/sql/sp_instr.s: __/sql/sp_instr.cc.s
@@ -2210,7 +2200,7 @@ __/sql/sp_instr.s: __/sql/sp_instr.cc.s
 
 # target to generate assembly for a file
 __/sql/sp_instr.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_instr.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_instr.cc.s
 .PHONY : __/sql/sp_instr.cc.s
 
 __/sql/sp_pcontext.o: __/sql/sp_pcontext.cc.o
@@ -2218,7 +2208,7 @@ __/sql/sp_pcontext.o: __/sql/sp_pcontext.cc.o
 
 # target to build an object file
 __/sql/sp_pcontext.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_pcontext.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_pcontext.cc.o
 .PHONY : __/sql/sp_pcontext.cc.o
 
 __/sql/sp_pcontext.i: __/sql/sp_pcontext.cc.i
@@ -2226,7 +2216,7 @@ __/sql/sp_pcontext.i: __/sql/sp_pcontext.cc.i
 
 # target to preprocess a source file
 __/sql/sp_pcontext.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_pcontext.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_pcontext.cc.i
 .PHONY : __/sql/sp_pcontext.cc.i
 
 __/sql/sp_pcontext.s: __/sql/sp_pcontext.cc.s
@@ -2234,7 +2224,7 @@ __/sql/sp_pcontext.s: __/sql/sp_pcontext.cc.s
 
 # target to generate assembly for a file
 __/sql/sp_pcontext.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_pcontext.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_pcontext.cc.s
 .PHONY : __/sql/sp_pcontext.cc.s
 
 __/sql/sp_rcontext.o: __/sql/sp_rcontext.cc.o
@@ -2242,7 +2232,7 @@ __/sql/sp_rcontext.o: __/sql/sp_rcontext.cc.o
 
 # target to build an object file
 __/sql/sp_rcontext.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_rcontext.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_rcontext.cc.o
 .PHONY : __/sql/sp_rcontext.cc.o
 
 __/sql/sp_rcontext.i: __/sql/sp_rcontext.cc.i
@@ -2250,7 +2240,7 @@ __/sql/sp_rcontext.i: __/sql/sp_rcontext.cc.i
 
 # target to preprocess a source file
 __/sql/sp_rcontext.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_rcontext.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_rcontext.cc.i
 .PHONY : __/sql/sp_rcontext.cc.i
 
 __/sql/sp_rcontext.s: __/sql/sp_rcontext.cc.s
@@ -2258,7 +2248,7 @@ __/sql/sp_rcontext.s: __/sql/sp_rcontext.cc.s
 
 # target to generate assembly for a file
 __/sql/sp_rcontext.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_rcontext.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sp_rcontext.cc.s
 .PHONY : __/sql/sp_rcontext.cc.s
 
 __/sql/spatial.o: __/sql/spatial.cc.o
@@ -2266,7 +2256,7 @@ __/sql/spatial.o: __/sql/spatial.cc.o
 
 # target to build an object file
 __/sql/spatial.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/spatial.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/spatial.cc.o
 .PHONY : __/sql/spatial.cc.o
 
 __/sql/spatial.i: __/sql/spatial.cc.i
@@ -2274,7 +2264,7 @@ __/sql/spatial.i: __/sql/spatial.cc.i
 
 # target to preprocess a source file
 __/sql/spatial.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/spatial.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/spatial.cc.i
 .PHONY : __/sql/spatial.cc.i
 
 __/sql/spatial.s: __/sql/spatial.cc.s
@@ -2282,7 +2272,7 @@ __/sql/spatial.s: __/sql/spatial.cc.s
 
 # target to generate assembly for a file
 __/sql/spatial.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/spatial.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/spatial.cc.s
 .PHONY : __/sql/spatial.cc.s
 
 __/sql/sql_acl.o: __/sql/sql_acl.cc.o
@@ -2290,7 +2280,7 @@ __/sql/sql_acl.o: __/sql/sql_acl.cc.o
 
 # target to build an object file
 __/sql/sql_acl.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_acl.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_acl.cc.o
 .PHONY : __/sql/sql_acl.cc.o
 
 __/sql/sql_acl.i: __/sql/sql_acl.cc.i
@@ -2298,7 +2288,7 @@ __/sql/sql_acl.i: __/sql/sql_acl.cc.i
 
 # target to preprocess a source file
 __/sql/sql_acl.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_acl.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_acl.cc.i
 .PHONY : __/sql/sql_acl.cc.i
 
 __/sql/sql_acl.s: __/sql/sql_acl.cc.s
@@ -2306,7 +2296,7 @@ __/sql/sql_acl.s: __/sql/sql_acl.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_acl.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_acl.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_acl.cc.s
 .PHONY : __/sql/sql_acl.cc.s
 
 __/sql/sql_admin.o: __/sql/sql_admin.cc.o
@@ -2314,7 +2304,7 @@ __/sql/sql_admin.o: __/sql/sql_admin.cc.o
 
 # target to build an object file
 __/sql/sql_admin.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_admin.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_admin.cc.o
 .PHONY : __/sql/sql_admin.cc.o
 
 __/sql/sql_admin.i: __/sql/sql_admin.cc.i
@@ -2322,7 +2312,7 @@ __/sql/sql_admin.i: __/sql/sql_admin.cc.i
 
 # target to preprocess a source file
 __/sql/sql_admin.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_admin.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_admin.cc.i
 .PHONY : __/sql/sql_admin.cc.i
 
 __/sql/sql_admin.s: __/sql/sql_admin.cc.s
@@ -2330,7 +2320,7 @@ __/sql/sql_admin.s: __/sql/sql_admin.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_admin.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_admin.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_admin.cc.s
 .PHONY : __/sql/sql_admin.cc.s
 
 __/sql/sql_alloc_error_handler.o: __/sql/sql_alloc_error_handler.cc.o
@@ -2338,7 +2328,7 @@ __/sql/sql_alloc_error_handler.o: __/sql/sql_alloc_error_handler.cc.o
 
 # target to build an object file
 __/sql/sql_alloc_error_handler.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_alloc_error_handler.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_alloc_error_handler.cc.o
 .PHONY : __/sql/sql_alloc_error_handler.cc.o
 
 __/sql/sql_alloc_error_handler.i: __/sql/sql_alloc_error_handler.cc.i
@@ -2346,7 +2336,7 @@ __/sql/sql_alloc_error_handler.i: __/sql/sql_alloc_error_handler.cc.i
 
 # target to preprocess a source file
 __/sql/sql_alloc_error_handler.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_alloc_error_handler.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_alloc_error_handler.cc.i
 .PHONY : __/sql/sql_alloc_error_handler.cc.i
 
 __/sql/sql_alloc_error_handler.s: __/sql/sql_alloc_error_handler.cc.s
@@ -2354,7 +2344,7 @@ __/sql/sql_alloc_error_handler.s: __/sql/sql_alloc_error_handler.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_alloc_error_handler.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_alloc_error_handler.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_alloc_error_handler.cc.s
 .PHONY : __/sql/sql_alloc_error_handler.cc.s
 
 __/sql/sql_alter.o: __/sql/sql_alter.cc.o
@@ -2362,7 +2352,7 @@ __/sql/sql_alter.o: __/sql/sql_alter.cc.o
 
 # target to build an object file
 __/sql/sql_alter.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_alter.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_alter.cc.o
 .PHONY : __/sql/sql_alter.cc.o
 
 __/sql/sql_alter.i: __/sql/sql_alter.cc.i
@@ -2370,7 +2360,7 @@ __/sql/sql_alter.i: __/sql/sql_alter.cc.i
 
 # target to preprocess a source file
 __/sql/sql_alter.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_alter.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_alter.cc.i
 .PHONY : __/sql/sql_alter.cc.i
 
 __/sql/sql_alter.s: __/sql/sql_alter.cc.s
@@ -2378,7 +2368,7 @@ __/sql/sql_alter.s: __/sql/sql_alter.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_alter.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_alter.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_alter.cc.s
 .PHONY : __/sql/sql_alter.cc.s
 
 __/sql/sql_analyse.o: __/sql/sql_analyse.cc.o
@@ -2386,7 +2376,7 @@ __/sql/sql_analyse.o: __/sql/sql_analyse.cc.o
 
 # target to build an object file
 __/sql/sql_analyse.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_analyse.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_analyse.cc.o
 .PHONY : __/sql/sql_analyse.cc.o
 
 __/sql/sql_analyse.i: __/sql/sql_analyse.cc.i
@@ -2394,7 +2384,7 @@ __/sql/sql_analyse.i: __/sql/sql_analyse.cc.i
 
 # target to preprocess a source file
 __/sql/sql_analyse.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_analyse.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_analyse.cc.i
 .PHONY : __/sql/sql_analyse.cc.i
 
 __/sql/sql_analyse.s: __/sql/sql_analyse.cc.s
@@ -2402,7 +2392,7 @@ __/sql/sql_analyse.s: __/sql/sql_analyse.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_analyse.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_analyse.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_analyse.cc.s
 .PHONY : __/sql/sql_analyse.cc.s
 
 __/sql/sql_audit.o: __/sql/sql_audit.cc.o
@@ -2410,7 +2400,7 @@ __/sql/sql_audit.o: __/sql/sql_audit.cc.o
 
 # target to build an object file
 __/sql/sql_audit.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_audit.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_audit.cc.o
 .PHONY : __/sql/sql_audit.cc.o
 
 __/sql/sql_audit.i: __/sql/sql_audit.cc.i
@@ -2418,7 +2408,7 @@ __/sql/sql_audit.i: __/sql/sql_audit.cc.i
 
 # target to preprocess a source file
 __/sql/sql_audit.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_audit.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_audit.cc.i
 .PHONY : __/sql/sql_audit.cc.i
 
 __/sql/sql_audit.s: __/sql/sql_audit.cc.s
@@ -2426,7 +2416,7 @@ __/sql/sql_audit.s: __/sql/sql_audit.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_audit.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_audit.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_audit.cc.s
 .PHONY : __/sql/sql_audit.cc.s
 
 __/sql/sql_base.o: __/sql/sql_base.cc.o
@@ -2434,7 +2424,7 @@ __/sql/sql_base.o: __/sql/sql_base.cc.o
 
 # target to build an object file
 __/sql/sql_base.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_base.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_base.cc.o
 .PHONY : __/sql/sql_base.cc.o
 
 __/sql/sql_base.i: __/sql/sql_base.cc.i
@@ -2442,7 +2432,7 @@ __/sql/sql_base.i: __/sql/sql_base.cc.i
 
 # target to preprocess a source file
 __/sql/sql_base.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_base.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_base.cc.i
 .PHONY : __/sql/sql_base.cc.i
 
 __/sql/sql_base.s: __/sql/sql_base.cc.s
@@ -2450,7 +2440,7 @@ __/sql/sql_base.s: __/sql/sql_base.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_base.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_base.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_base.cc.s
 .PHONY : __/sql/sql_base.cc.s
 
 __/sql/sql_bootstrap.o: __/sql/sql_bootstrap.cc.o
@@ -2458,7 +2448,7 @@ __/sql/sql_bootstrap.o: __/sql/sql_bootstrap.cc.o
 
 # target to build an object file
 __/sql/sql_bootstrap.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_bootstrap.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_bootstrap.cc.o
 .PHONY : __/sql/sql_bootstrap.cc.o
 
 __/sql/sql_bootstrap.i: __/sql/sql_bootstrap.cc.i
@@ -2466,7 +2456,7 @@ __/sql/sql_bootstrap.i: __/sql/sql_bootstrap.cc.i
 
 # target to preprocess a source file
 __/sql/sql_bootstrap.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_bootstrap.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_bootstrap.cc.i
 .PHONY : __/sql/sql_bootstrap.cc.i
 
 __/sql/sql_bootstrap.s: __/sql/sql_bootstrap.cc.s
@@ -2474,7 +2464,7 @@ __/sql/sql_bootstrap.s: __/sql/sql_bootstrap.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_bootstrap.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_bootstrap.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_bootstrap.cc.s
 .PHONY : __/sql/sql_bootstrap.cc.s
 
 __/sql/sql_builtin.o: __/sql/sql_builtin.cc.o
@@ -2482,7 +2472,7 @@ __/sql/sql_builtin.o: __/sql/sql_builtin.cc.o
 
 # target to build an object file
 __/sql/sql_builtin.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_builtin.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_builtin.cc.o
 .PHONY : __/sql/sql_builtin.cc.o
 
 __/sql/sql_builtin.i: __/sql/sql_builtin.cc.i
@@ -2490,7 +2480,7 @@ __/sql/sql_builtin.i: __/sql/sql_builtin.cc.i
 
 # target to preprocess a source file
 __/sql/sql_builtin.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_builtin.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_builtin.cc.i
 .PHONY : __/sql/sql_builtin.cc.i
 
 __/sql/sql_builtin.s: __/sql/sql_builtin.cc.s
@@ -2498,7 +2488,7 @@ __/sql/sql_builtin.s: __/sql/sql_builtin.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_builtin.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_builtin.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_builtin.cc.s
 .PHONY : __/sql/sql_builtin.cc.s
 
 __/sql/sql_cache.o: __/sql/sql_cache.cc.o
@@ -2506,7 +2496,7 @@ __/sql/sql_cache.o: __/sql/sql_cache.cc.o
 
 # target to build an object file
 __/sql/sql_cache.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_cache.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_cache.cc.o
 .PHONY : __/sql/sql_cache.cc.o
 
 __/sql/sql_cache.i: __/sql/sql_cache.cc.i
@@ -2514,7 +2504,7 @@ __/sql/sql_cache.i: __/sql/sql_cache.cc.i
 
 # target to preprocess a source file
 __/sql/sql_cache.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_cache.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_cache.cc.i
 .PHONY : __/sql/sql_cache.cc.i
 
 __/sql/sql_cache.s: __/sql/sql_cache.cc.s
@@ -2522,7 +2512,7 @@ __/sql/sql_cache.s: __/sql/sql_cache.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_cache.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_cache.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_cache.cc.s
 .PHONY : __/sql/sql_cache.cc.s
 
 __/sql/sql_class.o: __/sql/sql_class.cc.o
@@ -2530,7 +2520,7 @@ __/sql/sql_class.o: __/sql/sql_class.cc.o
 
 # target to build an object file
 __/sql/sql_class.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_class.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_class.cc.o
 .PHONY : __/sql/sql_class.cc.o
 
 __/sql/sql_class.i: __/sql/sql_class.cc.i
@@ -2538,7 +2528,7 @@ __/sql/sql_class.i: __/sql/sql_class.cc.i
 
 # target to preprocess a source file
 __/sql/sql_class.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_class.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_class.cc.i
 .PHONY : __/sql/sql_class.cc.i
 
 __/sql/sql_class.s: __/sql/sql_class.cc.s
@@ -2546,7 +2536,7 @@ __/sql/sql_class.s: __/sql/sql_class.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_class.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_class.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_class.cc.s
 .PHONY : __/sql/sql_class.cc.s
 
 __/sql/sql_connect.o: __/sql/sql_connect.cc.o
@@ -2554,7 +2544,7 @@ __/sql/sql_connect.o: __/sql/sql_connect.cc.o
 
 # target to build an object file
 __/sql/sql_connect.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_connect.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_connect.cc.o
 .PHONY : __/sql/sql_connect.cc.o
 
 __/sql/sql_connect.i: __/sql/sql_connect.cc.i
@@ -2562,7 +2552,7 @@ __/sql/sql_connect.i: __/sql/sql_connect.cc.i
 
 # target to preprocess a source file
 __/sql/sql_connect.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_connect.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_connect.cc.i
 .PHONY : __/sql/sql_connect.cc.i
 
 __/sql/sql_connect.s: __/sql/sql_connect.cc.s
@@ -2570,7 +2560,7 @@ __/sql/sql_connect.s: __/sql/sql_connect.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_connect.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_connect.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_connect.cc.s
 .PHONY : __/sql/sql_connect.cc.s
 
 __/sql/sql_crypt.o: __/sql/sql_crypt.cc.o
@@ -2578,7 +2568,7 @@ __/sql/sql_crypt.o: __/sql/sql_crypt.cc.o
 
 # target to build an object file
 __/sql/sql_crypt.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_crypt.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_crypt.cc.o
 .PHONY : __/sql/sql_crypt.cc.o
 
 __/sql/sql_crypt.i: __/sql/sql_crypt.cc.i
@@ -2586,7 +2576,7 @@ __/sql/sql_crypt.i: __/sql/sql_crypt.cc.i
 
 # target to preprocess a source file
 __/sql/sql_crypt.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_crypt.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_crypt.cc.i
 .PHONY : __/sql/sql_crypt.cc.i
 
 __/sql/sql_crypt.s: __/sql/sql_crypt.cc.s
@@ -2594,7 +2584,7 @@ __/sql/sql_crypt.s: __/sql/sql_crypt.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_crypt.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_crypt.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_crypt.cc.s
 .PHONY : __/sql/sql_crypt.cc.s
 
 __/sql/sql_cursor.o: __/sql/sql_cursor.cc.o
@@ -2602,7 +2592,7 @@ __/sql/sql_cursor.o: __/sql/sql_cursor.cc.o
 
 # target to build an object file
 __/sql/sql_cursor.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_cursor.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_cursor.cc.o
 .PHONY : __/sql/sql_cursor.cc.o
 
 __/sql/sql_cursor.i: __/sql/sql_cursor.cc.i
@@ -2610,7 +2600,7 @@ __/sql/sql_cursor.i: __/sql/sql_cursor.cc.i
 
 # target to preprocess a source file
 __/sql/sql_cursor.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_cursor.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_cursor.cc.i
 .PHONY : __/sql/sql_cursor.cc.i
 
 __/sql/sql_cursor.s: __/sql/sql_cursor.cc.s
@@ -2618,7 +2608,7 @@ __/sql/sql_cursor.s: __/sql/sql_cursor.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_cursor.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_cursor.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_cursor.cc.s
 .PHONY : __/sql/sql_cursor.cc.s
 
 __/sql/sql_data_change.o: __/sql/sql_data_change.cc.o
@@ -2626,7 +2616,7 @@ __/sql/sql_data_change.o: __/sql/sql_data_change.cc.o
 
 # target to build an object file
 __/sql/sql_data_change.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_data_change.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_data_change.cc.o
 .PHONY : __/sql/sql_data_change.cc.o
 
 __/sql/sql_data_change.i: __/sql/sql_data_change.cc.i
@@ -2634,7 +2624,7 @@ __/sql/sql_data_change.i: __/sql/sql_data_change.cc.i
 
 # target to preprocess a source file
 __/sql/sql_data_change.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_data_change.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_data_change.cc.i
 .PHONY : __/sql/sql_data_change.cc.i
 
 __/sql/sql_data_change.s: __/sql/sql_data_change.cc.s
@@ -2642,7 +2632,7 @@ __/sql/sql_data_change.s: __/sql/sql_data_change.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_data_change.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_data_change.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_data_change.cc.s
 .PHONY : __/sql/sql_data_change.cc.s
 
 __/sql/sql_db.o: __/sql/sql_db.cc.o
@@ -2650,7 +2640,7 @@ __/sql/sql_db.o: __/sql/sql_db.cc.o
 
 # target to build an object file
 __/sql/sql_db.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_db.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_db.cc.o
 .PHONY : __/sql/sql_db.cc.o
 
 __/sql/sql_db.i: __/sql/sql_db.cc.i
@@ -2658,7 +2648,7 @@ __/sql/sql_db.i: __/sql/sql_db.cc.i
 
 # target to preprocess a source file
 __/sql/sql_db.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_db.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_db.cc.i
 .PHONY : __/sql/sql_db.cc.i
 
 __/sql/sql_db.s: __/sql/sql_db.cc.s
@@ -2666,7 +2656,7 @@ __/sql/sql_db.s: __/sql/sql_db.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_db.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_db.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_db.cc.s
 .PHONY : __/sql/sql_db.cc.s
 
 __/sql/sql_delete.o: __/sql/sql_delete.cc.o
@@ -2674,7 +2664,7 @@ __/sql/sql_delete.o: __/sql/sql_delete.cc.o
 
 # target to build an object file
 __/sql/sql_delete.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_delete.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_delete.cc.o
 .PHONY : __/sql/sql_delete.cc.o
 
 __/sql/sql_delete.i: __/sql/sql_delete.cc.i
@@ -2682,7 +2672,7 @@ __/sql/sql_delete.i: __/sql/sql_delete.cc.i
 
 # target to preprocess a source file
 __/sql/sql_delete.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_delete.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_delete.cc.i
 .PHONY : __/sql/sql_delete.cc.i
 
 __/sql/sql_delete.s: __/sql/sql_delete.cc.s
@@ -2690,7 +2680,7 @@ __/sql/sql_delete.s: __/sql/sql_delete.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_delete.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_delete.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_delete.cc.s
 .PHONY : __/sql/sql_delete.cc.s
 
 __/sql/sql_derived.o: __/sql/sql_derived.cc.o
@@ -2698,7 +2688,7 @@ __/sql/sql_derived.o: __/sql/sql_derived.cc.o
 
 # target to build an object file
 __/sql/sql_derived.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_derived.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_derived.cc.o
 .PHONY : __/sql/sql_derived.cc.o
 
 __/sql/sql_derived.i: __/sql/sql_derived.cc.i
@@ -2706,7 +2696,7 @@ __/sql/sql_derived.i: __/sql/sql_derived.cc.i
 
 # target to preprocess a source file
 __/sql/sql_derived.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_derived.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_derived.cc.i
 .PHONY : __/sql/sql_derived.cc.i
 
 __/sql/sql_derived.s: __/sql/sql_derived.cc.s
@@ -2714,7 +2704,7 @@ __/sql/sql_derived.s: __/sql/sql_derived.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_derived.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_derived.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_derived.cc.s
 .PHONY : __/sql/sql_derived.cc.s
 
 __/sql/sql_do.o: __/sql/sql_do.cc.o
@@ -2722,7 +2712,7 @@ __/sql/sql_do.o: __/sql/sql_do.cc.o
 
 # target to build an object file
 __/sql/sql_do.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_do.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_do.cc.o
 .PHONY : __/sql/sql_do.cc.o
 
 __/sql/sql_do.i: __/sql/sql_do.cc.i
@@ -2730,7 +2720,7 @@ __/sql/sql_do.i: __/sql/sql_do.cc.i
 
 # target to preprocess a source file
 __/sql/sql_do.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_do.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_do.cc.i
 .PHONY : __/sql/sql_do.cc.i
 
 __/sql/sql_do.s: __/sql/sql_do.cc.s
@@ -2738,7 +2728,7 @@ __/sql/sql_do.s: __/sql/sql_do.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_do.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_do.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_do.cc.s
 .PHONY : __/sql/sql_do.cc.s
 
 __/sql/sql_error.o: __/sql/sql_error.cc.o
@@ -2746,7 +2736,7 @@ __/sql/sql_error.o: __/sql/sql_error.cc.o
 
 # target to build an object file
 __/sql/sql_error.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_error.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_error.cc.o
 .PHONY : __/sql/sql_error.cc.o
 
 __/sql/sql_error.i: __/sql/sql_error.cc.i
@@ -2754,7 +2744,7 @@ __/sql/sql_error.i: __/sql/sql_error.cc.i
 
 # target to preprocess a source file
 __/sql/sql_error.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_error.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_error.cc.i
 .PHONY : __/sql/sql_error.cc.i
 
 __/sql/sql_error.s: __/sql/sql_error.cc.s
@@ -2762,7 +2752,7 @@ __/sql/sql_error.s: __/sql/sql_error.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_error.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_error.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_error.cc.s
 .PHONY : __/sql/sql_error.cc.s
 
 __/sql/sql_executor.o: __/sql/sql_executor.cc.o
@@ -2770,7 +2760,7 @@ __/sql/sql_executor.o: __/sql/sql_executor.cc.o
 
 # target to build an object file
 __/sql/sql_executor.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_executor.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_executor.cc.o
 .PHONY : __/sql/sql_executor.cc.o
 
 __/sql/sql_executor.i: __/sql/sql_executor.cc.i
@@ -2778,7 +2768,7 @@ __/sql/sql_executor.i: __/sql/sql_executor.cc.i
 
 # target to preprocess a source file
 __/sql/sql_executor.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_executor.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_executor.cc.i
 .PHONY : __/sql/sql_executor.cc.i
 
 __/sql/sql_executor.s: __/sql/sql_executor.cc.s
@@ -2786,7 +2776,7 @@ __/sql/sql_executor.s: __/sql/sql_executor.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_executor.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_executor.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_executor.cc.s
 .PHONY : __/sql/sql_executor.cc.s
 
 __/sql/sql_get_diagnostics.o: __/sql/sql_get_diagnostics.cc.o
@@ -2794,7 +2784,7 @@ __/sql/sql_get_diagnostics.o: __/sql/sql_get_diagnostics.cc.o
 
 # target to build an object file
 __/sql/sql_get_diagnostics.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_get_diagnostics.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_get_diagnostics.cc.o
 .PHONY : __/sql/sql_get_diagnostics.cc.o
 
 __/sql/sql_get_diagnostics.i: __/sql/sql_get_diagnostics.cc.i
@@ -2802,7 +2792,7 @@ __/sql/sql_get_diagnostics.i: __/sql/sql_get_diagnostics.cc.i
 
 # target to preprocess a source file
 __/sql/sql_get_diagnostics.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_get_diagnostics.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_get_diagnostics.cc.i
 .PHONY : __/sql/sql_get_diagnostics.cc.i
 
 __/sql/sql_get_diagnostics.s: __/sql/sql_get_diagnostics.cc.s
@@ -2810,7 +2800,7 @@ __/sql/sql_get_diagnostics.s: __/sql/sql_get_diagnostics.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_get_diagnostics.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_get_diagnostics.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_get_diagnostics.cc.s
 .PHONY : __/sql/sql_get_diagnostics.cc.s
 
 __/sql/sql_handler.o: __/sql/sql_handler.cc.o
@@ -2818,7 +2808,7 @@ __/sql/sql_handler.o: __/sql/sql_handler.cc.o
 
 # target to build an object file
 __/sql/sql_handler.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_handler.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_handler.cc.o
 .PHONY : __/sql/sql_handler.cc.o
 
 __/sql/sql_handler.i: __/sql/sql_handler.cc.i
@@ -2826,7 +2816,7 @@ __/sql/sql_handler.i: __/sql/sql_handler.cc.i
 
 # target to preprocess a source file
 __/sql/sql_handler.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_handler.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_handler.cc.i
 .PHONY : __/sql/sql_handler.cc.i
 
 __/sql/sql_handler.s: __/sql/sql_handler.cc.s
@@ -2834,7 +2824,7 @@ __/sql/sql_handler.s: __/sql/sql_handler.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_handler.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_handler.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_handler.cc.s
 .PHONY : __/sql/sql_handler.cc.s
 
 __/sql/sql_help.o: __/sql/sql_help.cc.o
@@ -2842,7 +2832,7 @@ __/sql/sql_help.o: __/sql/sql_help.cc.o
 
 # target to build an object file
 __/sql/sql_help.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_help.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_help.cc.o
 .PHONY : __/sql/sql_help.cc.o
 
 __/sql/sql_help.i: __/sql/sql_help.cc.i
@@ -2850,7 +2840,7 @@ __/sql/sql_help.i: __/sql/sql_help.cc.i
 
 # target to preprocess a source file
 __/sql/sql_help.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_help.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_help.cc.i
 .PHONY : __/sql/sql_help.cc.i
 
 __/sql/sql_help.s: __/sql/sql_help.cc.s
@@ -2858,7 +2848,7 @@ __/sql/sql_help.s: __/sql/sql_help.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_help.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_help.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_help.cc.s
 .PHONY : __/sql/sql_help.cc.s
 
 __/sql/sql_insert.o: __/sql/sql_insert.cc.o
@@ -2866,7 +2856,7 @@ __/sql/sql_insert.o: __/sql/sql_insert.cc.o
 
 # target to build an object file
 __/sql/sql_insert.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_insert.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_insert.cc.o
 .PHONY : __/sql/sql_insert.cc.o
 
 __/sql/sql_insert.i: __/sql/sql_insert.cc.i
@@ -2874,7 +2864,7 @@ __/sql/sql_insert.i: __/sql/sql_insert.cc.i
 
 # target to preprocess a source file
 __/sql/sql_insert.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_insert.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_insert.cc.i
 .PHONY : __/sql/sql_insert.cc.i
 
 __/sql/sql_insert.s: __/sql/sql_insert.cc.s
@@ -2882,7 +2872,7 @@ __/sql/sql_insert.s: __/sql/sql_insert.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_insert.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_insert.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_insert.cc.s
 .PHONY : __/sql/sql_insert.cc.s
 
 __/sql/sql_join_buffer.o: __/sql/sql_join_buffer.cc.o
@@ -2890,7 +2880,7 @@ __/sql/sql_join_buffer.o: __/sql/sql_join_buffer.cc.o
 
 # target to build an object file
 __/sql/sql_join_buffer.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_join_buffer.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_join_buffer.cc.o
 .PHONY : __/sql/sql_join_buffer.cc.o
 
 __/sql/sql_join_buffer.i: __/sql/sql_join_buffer.cc.i
@@ -2898,7 +2888,7 @@ __/sql/sql_join_buffer.i: __/sql/sql_join_buffer.cc.i
 
 # target to preprocess a source file
 __/sql/sql_join_buffer.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_join_buffer.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_join_buffer.cc.i
 .PHONY : __/sql/sql_join_buffer.cc.i
 
 __/sql/sql_join_buffer.s: __/sql/sql_join_buffer.cc.s
@@ -2906,7 +2896,7 @@ __/sql/sql_join_buffer.s: __/sql/sql_join_buffer.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_join_buffer.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_join_buffer.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_join_buffer.cc.s
 .PHONY : __/sql/sql_join_buffer.cc.s
 
 __/sql/sql_lex.o: __/sql/sql_lex.cc.o
@@ -2914,7 +2904,7 @@ __/sql/sql_lex.o: __/sql/sql_lex.cc.o
 
 # target to build an object file
 __/sql/sql_lex.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_lex.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_lex.cc.o
 .PHONY : __/sql/sql_lex.cc.o
 
 __/sql/sql_lex.i: __/sql/sql_lex.cc.i
@@ -2922,7 +2912,7 @@ __/sql/sql_lex.i: __/sql/sql_lex.cc.i
 
 # target to preprocess a source file
 __/sql/sql_lex.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_lex.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_lex.cc.i
 .PHONY : __/sql/sql_lex.cc.i
 
 __/sql/sql_lex.s: __/sql/sql_lex.cc.s
@@ -2930,7 +2920,7 @@ __/sql/sql_lex.s: __/sql/sql_lex.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_lex.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_lex.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_lex.cc.s
 .PHONY : __/sql/sql_lex.cc.s
 
 __/sql/sql_list.o: __/sql/sql_list.cc.o
@@ -2938,7 +2928,7 @@ __/sql/sql_list.o: __/sql/sql_list.cc.o
 
 # target to build an object file
 __/sql/sql_list.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_list.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_list.cc.o
 .PHONY : __/sql/sql_list.cc.o
 
 __/sql/sql_list.i: __/sql/sql_list.cc.i
@@ -2946,7 +2936,7 @@ __/sql/sql_list.i: __/sql/sql_list.cc.i
 
 # target to preprocess a source file
 __/sql/sql_list.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_list.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_list.cc.i
 .PHONY : __/sql/sql_list.cc.i
 
 __/sql/sql_list.s: __/sql/sql_list.cc.s
@@ -2954,7 +2944,7 @@ __/sql/sql_list.s: __/sql/sql_list.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_list.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_list.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_list.cc.s
 .PHONY : __/sql/sql_list.cc.s
 
 __/sql/sql_load.o: __/sql/sql_load.cc.o
@@ -2962,7 +2952,7 @@ __/sql/sql_load.o: __/sql/sql_load.cc.o
 
 # target to build an object file
 __/sql/sql_load.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_load.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_load.cc.o
 .PHONY : __/sql/sql_load.cc.o
 
 __/sql/sql_load.i: __/sql/sql_load.cc.i
@@ -2970,7 +2960,7 @@ __/sql/sql_load.i: __/sql/sql_load.cc.i
 
 # target to preprocess a source file
 __/sql/sql_load.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_load.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_load.cc.i
 .PHONY : __/sql/sql_load.cc.i
 
 __/sql/sql_load.s: __/sql/sql_load.cc.s
@@ -2978,7 +2968,7 @@ __/sql/sql_load.s: __/sql/sql_load.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_load.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_load.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_load.cc.s
 .PHONY : __/sql/sql_load.cc.s
 
 __/sql/sql_locale.o: __/sql/sql_locale.cc.o
@@ -2986,7 +2976,7 @@ __/sql/sql_locale.o: __/sql/sql_locale.cc.o
 
 # target to build an object file
 __/sql/sql_locale.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_locale.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_locale.cc.o
 .PHONY : __/sql/sql_locale.cc.o
 
 __/sql/sql_locale.i: __/sql/sql_locale.cc.i
@@ -2994,7 +2984,7 @@ __/sql/sql_locale.i: __/sql/sql_locale.cc.i
 
 # target to preprocess a source file
 __/sql/sql_locale.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_locale.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_locale.cc.i
 .PHONY : __/sql/sql_locale.cc.i
 
 __/sql/sql_locale.s: __/sql/sql_locale.cc.s
@@ -3002,7 +2992,7 @@ __/sql/sql_locale.s: __/sql/sql_locale.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_locale.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_locale.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_locale.cc.s
 .PHONY : __/sql/sql_locale.cc.s
 
 __/sql/sql_manager.o: __/sql/sql_manager.cc.o
@@ -3010,7 +3000,7 @@ __/sql/sql_manager.o: __/sql/sql_manager.cc.o
 
 # target to build an object file
 __/sql/sql_manager.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_manager.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_manager.cc.o
 .PHONY : __/sql/sql_manager.cc.o
 
 __/sql/sql_manager.i: __/sql/sql_manager.cc.i
@@ -3018,7 +3008,7 @@ __/sql/sql_manager.i: __/sql/sql_manager.cc.i
 
 # target to preprocess a source file
 __/sql/sql_manager.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_manager.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_manager.cc.i
 .PHONY : __/sql/sql_manager.cc.i
 
 __/sql/sql_manager.s: __/sql/sql_manager.cc.s
@@ -3026,7 +3016,7 @@ __/sql/sql_manager.s: __/sql/sql_manager.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_manager.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_manager.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_manager.cc.s
 .PHONY : __/sql/sql_manager.cc.s
 
 __/sql/sql_optimizer.o: __/sql/sql_optimizer.cc.o
@@ -3034,7 +3024,7 @@ __/sql/sql_optimizer.o: __/sql/sql_optimizer.cc.o
 
 # target to build an object file
 __/sql/sql_optimizer.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_optimizer.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_optimizer.cc.o
 .PHONY : __/sql/sql_optimizer.cc.o
 
 __/sql/sql_optimizer.i: __/sql/sql_optimizer.cc.i
@@ -3042,7 +3032,7 @@ __/sql/sql_optimizer.i: __/sql/sql_optimizer.cc.i
 
 # target to preprocess a source file
 __/sql/sql_optimizer.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_optimizer.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_optimizer.cc.i
 .PHONY : __/sql/sql_optimizer.cc.i
 
 __/sql/sql_optimizer.s: __/sql/sql_optimizer.cc.s
@@ -3050,7 +3040,7 @@ __/sql/sql_optimizer.s: __/sql/sql_optimizer.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_optimizer.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_optimizer.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_optimizer.cc.s
 .PHONY : __/sql/sql_optimizer.cc.s
 
 __/sql/sql_parse.o: __/sql/sql_parse.cc.o
@@ -3058,7 +3048,7 @@ __/sql/sql_parse.o: __/sql/sql_parse.cc.o
 
 # target to build an object file
 __/sql/sql_parse.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_parse.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_parse.cc.o
 .PHONY : __/sql/sql_parse.cc.o
 
 __/sql/sql_parse.i: __/sql/sql_parse.cc.i
@@ -3066,7 +3056,7 @@ __/sql/sql_parse.i: __/sql/sql_parse.cc.i
 
 # target to preprocess a source file
 __/sql/sql_parse.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_parse.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_parse.cc.i
 .PHONY : __/sql/sql_parse.cc.i
 
 __/sql/sql_parse.s: __/sql/sql_parse.cc.s
@@ -3074,7 +3064,7 @@ __/sql/sql_parse.s: __/sql/sql_parse.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_parse.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_parse.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_parse.cc.s
 .PHONY : __/sql/sql_parse.cc.s
 
 __/sql/sql_partition.o: __/sql/sql_partition.cc.o
@@ -3082,7 +3072,7 @@ __/sql/sql_partition.o: __/sql/sql_partition.cc.o
 
 # target to build an object file
 __/sql/sql_partition.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_partition.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_partition.cc.o
 .PHONY : __/sql/sql_partition.cc.o
 
 __/sql/sql_partition.i: __/sql/sql_partition.cc.i
@@ -3090,7 +3080,7 @@ __/sql/sql_partition.i: __/sql/sql_partition.cc.i
 
 # target to preprocess a source file
 __/sql/sql_partition.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_partition.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_partition.cc.i
 .PHONY : __/sql/sql_partition.cc.i
 
 __/sql/sql_partition.s: __/sql/sql_partition.cc.s
@@ -3098,7 +3088,7 @@ __/sql/sql_partition.s: __/sql/sql_partition.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_partition.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_partition.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_partition.cc.s
 .PHONY : __/sql/sql_partition.cc.s
 
 __/sql/sql_partition_admin.o: __/sql/sql_partition_admin.cc.o
@@ -3106,7 +3096,7 @@ __/sql/sql_partition_admin.o: __/sql/sql_partition_admin.cc.o
 
 # target to build an object file
 __/sql/sql_partition_admin.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_partition_admin.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_partition_admin.cc.o
 .PHONY : __/sql/sql_partition_admin.cc.o
 
 __/sql/sql_partition_admin.i: __/sql/sql_partition_admin.cc.i
@@ -3114,7 +3104,7 @@ __/sql/sql_partition_admin.i: __/sql/sql_partition_admin.cc.i
 
 # target to preprocess a source file
 __/sql/sql_partition_admin.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_partition_admin.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_partition_admin.cc.i
 .PHONY : __/sql/sql_partition_admin.cc.i
 
 __/sql/sql_partition_admin.s: __/sql/sql_partition_admin.cc.s
@@ -3122,7 +3112,7 @@ __/sql/sql_partition_admin.s: __/sql/sql_partition_admin.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_partition_admin.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_partition_admin.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_partition_admin.cc.s
 .PHONY : __/sql/sql_partition_admin.cc.s
 
 __/sql/sql_planner.o: __/sql/sql_planner.cc.o
@@ -3130,7 +3120,7 @@ __/sql/sql_planner.o: __/sql/sql_planner.cc.o
 
 # target to build an object file
 __/sql/sql_planner.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_planner.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_planner.cc.o
 .PHONY : __/sql/sql_planner.cc.o
 
 __/sql/sql_planner.i: __/sql/sql_planner.cc.i
@@ -3138,7 +3128,7 @@ __/sql/sql_planner.i: __/sql/sql_planner.cc.i
 
 # target to preprocess a source file
 __/sql/sql_planner.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_planner.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_planner.cc.i
 .PHONY : __/sql/sql_planner.cc.i
 
 __/sql/sql_planner.s: __/sql/sql_planner.cc.s
@@ -3146,7 +3136,7 @@ __/sql/sql_planner.s: __/sql/sql_planner.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_planner.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_planner.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_planner.cc.s
 .PHONY : __/sql/sql_planner.cc.s
 
 __/sql/sql_plugin.o: __/sql/sql_plugin.cc.o
@@ -3154,7 +3144,7 @@ __/sql/sql_plugin.o: __/sql/sql_plugin.cc.o
 
 # target to build an object file
 __/sql/sql_plugin.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_plugin.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_plugin.cc.o
 .PHONY : __/sql/sql_plugin.cc.o
 
 __/sql/sql_plugin.i: __/sql/sql_plugin.cc.i
@@ -3162,7 +3152,7 @@ __/sql/sql_plugin.i: __/sql/sql_plugin.cc.i
 
 # target to preprocess a source file
 __/sql/sql_plugin.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_plugin.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_plugin.cc.i
 .PHONY : __/sql/sql_plugin.cc.i
 
 __/sql/sql_plugin.s: __/sql/sql_plugin.cc.s
@@ -3170,7 +3160,7 @@ __/sql/sql_plugin.s: __/sql/sql_plugin.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_plugin.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_plugin.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_plugin.cc.s
 .PHONY : __/sql/sql_plugin.cc.s
 
 __/sql/sql_prepare.o: __/sql/sql_prepare.cc.o
@@ -3178,7 +3168,7 @@ __/sql/sql_prepare.o: __/sql/sql_prepare.cc.o
 
 # target to build an object file
 __/sql/sql_prepare.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_prepare.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_prepare.cc.o
 .PHONY : __/sql/sql_prepare.cc.o
 
 __/sql/sql_prepare.i: __/sql/sql_prepare.cc.i
@@ -3186,7 +3176,7 @@ __/sql/sql_prepare.i: __/sql/sql_prepare.cc.i
 
 # target to preprocess a source file
 __/sql/sql_prepare.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_prepare.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_prepare.cc.i
 .PHONY : __/sql/sql_prepare.cc.i
 
 __/sql/sql_prepare.s: __/sql/sql_prepare.cc.s
@@ -3194,7 +3184,7 @@ __/sql/sql_prepare.s: __/sql/sql_prepare.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_prepare.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_prepare.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_prepare.cc.s
 .PHONY : __/sql/sql_prepare.cc.s
 
 __/sql/sql_profile.o: __/sql/sql_profile.cc.o
@@ -3202,7 +3192,7 @@ __/sql/sql_profile.o: __/sql/sql_profile.cc.o
 
 # target to build an object file
 __/sql/sql_profile.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_profile.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_profile.cc.o
 .PHONY : __/sql/sql_profile.cc.o
 
 __/sql/sql_profile.i: __/sql/sql_profile.cc.i
@@ -3210,7 +3200,7 @@ __/sql/sql_profile.i: __/sql/sql_profile.cc.i
 
 # target to preprocess a source file
 __/sql/sql_profile.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_profile.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_profile.cc.i
 .PHONY : __/sql/sql_profile.cc.i
 
 __/sql/sql_profile.s: __/sql/sql_profile.cc.s
@@ -3218,7 +3208,7 @@ __/sql/sql_profile.s: __/sql/sql_profile.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_profile.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_profile.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_profile.cc.s
 .PHONY : __/sql/sql_profile.cc.s
 
 __/sql/sql_reload.o: __/sql/sql_reload.cc.o
@@ -3226,7 +3216,7 @@ __/sql/sql_reload.o: __/sql/sql_reload.cc.o
 
 # target to build an object file
 __/sql/sql_reload.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_reload.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_reload.cc.o
 .PHONY : __/sql/sql_reload.cc.o
 
 __/sql/sql_reload.i: __/sql/sql_reload.cc.i
@@ -3234,7 +3224,7 @@ __/sql/sql_reload.i: __/sql/sql_reload.cc.i
 
 # target to preprocess a source file
 __/sql/sql_reload.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_reload.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_reload.cc.i
 .PHONY : __/sql/sql_reload.cc.i
 
 __/sql/sql_reload.s: __/sql/sql_reload.cc.s
@@ -3242,7 +3232,7 @@ __/sql/sql_reload.s: __/sql/sql_reload.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_reload.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_reload.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_reload.cc.s
 .PHONY : __/sql/sql_reload.cc.s
 
 __/sql/sql_rename.o: __/sql/sql_rename.cc.o
@@ -3250,7 +3240,7 @@ __/sql/sql_rename.o: __/sql/sql_rename.cc.o
 
 # target to build an object file
 __/sql/sql_rename.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_rename.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_rename.cc.o
 .PHONY : __/sql/sql_rename.cc.o
 
 __/sql/sql_rename.i: __/sql/sql_rename.cc.i
@@ -3258,7 +3248,7 @@ __/sql/sql_rename.i: __/sql/sql_rename.cc.i
 
 # target to preprocess a source file
 __/sql/sql_rename.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_rename.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_rename.cc.i
 .PHONY : __/sql/sql_rename.cc.i
 
 __/sql/sql_rename.s: __/sql/sql_rename.cc.s
@@ -3266,7 +3256,7 @@ __/sql/sql_rename.s: __/sql/sql_rename.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_rename.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_rename.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_rename.cc.s
 .PHONY : __/sql/sql_rename.cc.s
 
 __/sql/sql_resolver.o: __/sql/sql_resolver.cc.o
@@ -3274,7 +3264,7 @@ __/sql/sql_resolver.o: __/sql/sql_resolver.cc.o
 
 # target to build an object file
 __/sql/sql_resolver.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_resolver.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_resolver.cc.o
 .PHONY : __/sql/sql_resolver.cc.o
 
 __/sql/sql_resolver.i: __/sql/sql_resolver.cc.i
@@ -3282,7 +3272,7 @@ __/sql/sql_resolver.i: __/sql/sql_resolver.cc.i
 
 # target to preprocess a source file
 __/sql/sql_resolver.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_resolver.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_resolver.cc.i
 .PHONY : __/sql/sql_resolver.cc.i
 
 __/sql/sql_resolver.s: __/sql/sql_resolver.cc.s
@@ -3290,7 +3280,7 @@ __/sql/sql_resolver.s: __/sql/sql_resolver.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_resolver.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_resolver.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_resolver.cc.s
 .PHONY : __/sql/sql_resolver.cc.s
 
 __/sql/sql_rewrite.o: __/sql/sql_rewrite.cc.o
@@ -3298,7 +3288,7 @@ __/sql/sql_rewrite.o: __/sql/sql_rewrite.cc.o
 
 # target to build an object file
 __/sql/sql_rewrite.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_rewrite.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_rewrite.cc.o
 .PHONY : __/sql/sql_rewrite.cc.o
 
 __/sql/sql_rewrite.i: __/sql/sql_rewrite.cc.i
@@ -3306,7 +3296,7 @@ __/sql/sql_rewrite.i: __/sql/sql_rewrite.cc.i
 
 # target to preprocess a source file
 __/sql/sql_rewrite.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_rewrite.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_rewrite.cc.i
 .PHONY : __/sql/sql_rewrite.cc.i
 
 __/sql/sql_rewrite.s: __/sql/sql_rewrite.cc.s
@@ -3314,7 +3304,7 @@ __/sql/sql_rewrite.s: __/sql/sql_rewrite.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_rewrite.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_rewrite.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_rewrite.cc.s
 .PHONY : __/sql/sql_rewrite.cc.s
 
 __/sql/sql_select.o: __/sql/sql_select.cc.o
@@ -3322,7 +3312,7 @@ __/sql/sql_select.o: __/sql/sql_select.cc.o
 
 # target to build an object file
 __/sql/sql_select.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_select.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_select.cc.o
 .PHONY : __/sql/sql_select.cc.o
 
 __/sql/sql_select.i: __/sql/sql_select.cc.i
@@ -3330,7 +3320,7 @@ __/sql/sql_select.i: __/sql/sql_select.cc.i
 
 # target to preprocess a source file
 __/sql/sql_select.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_select.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_select.cc.i
 .PHONY : __/sql/sql_select.cc.i
 
 __/sql/sql_select.s: __/sql/sql_select.cc.s
@@ -3338,7 +3328,7 @@ __/sql/sql_select.s: __/sql/sql_select.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_select.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_select.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_select.cc.s
 .PHONY : __/sql/sql_select.cc.s
 
 __/sql/sql_servers.o: __/sql/sql_servers.cc.o
@@ -3346,7 +3336,7 @@ __/sql/sql_servers.o: __/sql/sql_servers.cc.o
 
 # target to build an object file
 __/sql/sql_servers.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_servers.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_servers.cc.o
 .PHONY : __/sql/sql_servers.cc.o
 
 __/sql/sql_servers.i: __/sql/sql_servers.cc.i
@@ -3354,7 +3344,7 @@ __/sql/sql_servers.i: __/sql/sql_servers.cc.i
 
 # target to preprocess a source file
 __/sql/sql_servers.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_servers.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_servers.cc.i
 .PHONY : __/sql/sql_servers.cc.i
 
 __/sql/sql_servers.s: __/sql/sql_servers.cc.s
@@ -3362,7 +3352,7 @@ __/sql/sql_servers.s: __/sql/sql_servers.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_servers.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_servers.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_servers.cc.s
 .PHONY : __/sql/sql_servers.cc.s
 
 __/sql/sql_show.o: __/sql/sql_show.cc.o
@@ -3370,7 +3360,7 @@ __/sql/sql_show.o: __/sql/sql_show.cc.o
 
 # target to build an object file
 __/sql/sql_show.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_show.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_show.cc.o
 .PHONY : __/sql/sql_show.cc.o
 
 __/sql/sql_show.i: __/sql/sql_show.cc.i
@@ -3378,7 +3368,7 @@ __/sql/sql_show.i: __/sql/sql_show.cc.i
 
 # target to preprocess a source file
 __/sql/sql_show.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_show.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_show.cc.i
 .PHONY : __/sql/sql_show.cc.i
 
 __/sql/sql_show.s: __/sql/sql_show.cc.s
@@ -3386,7 +3376,7 @@ __/sql/sql_show.s: __/sql/sql_show.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_show.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_show.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_show.cc.s
 .PHONY : __/sql/sql_show.cc.s
 
 __/sql/sql_signal.o: __/sql/sql_signal.cc.o
@@ -3394,7 +3384,7 @@ __/sql/sql_signal.o: __/sql/sql_signal.cc.o
 
 # target to build an object file
 __/sql/sql_signal.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_signal.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_signal.cc.o
 .PHONY : __/sql/sql_signal.cc.o
 
 __/sql/sql_signal.i: __/sql/sql_signal.cc.i
@@ -3402,7 +3392,7 @@ __/sql/sql_signal.i: __/sql/sql_signal.cc.i
 
 # target to preprocess a source file
 __/sql/sql_signal.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_signal.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_signal.cc.i
 .PHONY : __/sql/sql_signal.cc.i
 
 __/sql/sql_signal.s: __/sql/sql_signal.cc.s
@@ -3410,7 +3400,7 @@ __/sql/sql_signal.s: __/sql/sql_signal.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_signal.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_signal.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_signal.cc.s
 .PHONY : __/sql/sql_signal.cc.s
 
 __/sql/sql_state.o: __/sql/sql_state.c.o
@@ -3418,7 +3408,7 @@ __/sql/sql_state.o: __/sql/sql_state.c.o
 
 # target to build an object file
 __/sql/sql_state.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_state.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_state.c.o
 .PHONY : __/sql/sql_state.c.o
 
 __/sql/sql_state.i: __/sql/sql_state.c.i
@@ -3426,7 +3416,7 @@ __/sql/sql_state.i: __/sql/sql_state.c.i
 
 # target to preprocess a source file
 __/sql/sql_state.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_state.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_state.c.i
 .PHONY : __/sql/sql_state.c.i
 
 __/sql/sql_state.s: __/sql/sql_state.c.s
@@ -3434,7 +3424,7 @@ __/sql/sql_state.s: __/sql/sql_state.c.s
 
 # target to generate assembly for a file
 __/sql/sql_state.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_state.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_state.c.s
 .PHONY : __/sql/sql_state.c.s
 
 __/sql/sql_string.o: __/sql/sql_string.cc.o
@@ -3442,7 +3432,7 @@ __/sql/sql_string.o: __/sql/sql_string.cc.o
 
 # target to build an object file
 __/sql/sql_string.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_string.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_string.cc.o
 .PHONY : __/sql/sql_string.cc.o
 
 __/sql/sql_string.i: __/sql/sql_string.cc.i
@@ -3450,7 +3440,7 @@ __/sql/sql_string.i: __/sql/sql_string.cc.i
 
 # target to preprocess a source file
 __/sql/sql_string.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_string.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_string.cc.i
 .PHONY : __/sql/sql_string.cc.i
 
 __/sql/sql_string.s: __/sql/sql_string.cc.s
@@ -3458,7 +3448,7 @@ __/sql/sql_string.s: __/sql/sql_string.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_string.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_string.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_string.cc.s
 .PHONY : __/sql/sql_string.cc.s
 
 __/sql/sql_table.o: __/sql/sql_table.cc.o
@@ -3466,7 +3456,7 @@ __/sql/sql_table.o: __/sql/sql_table.cc.o
 
 # target to build an object file
 __/sql/sql_table.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_table.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_table.cc.o
 .PHONY : __/sql/sql_table.cc.o
 
 __/sql/sql_table.i: __/sql/sql_table.cc.i
@@ -3474,7 +3464,7 @@ __/sql/sql_table.i: __/sql/sql_table.cc.i
 
 # target to preprocess a source file
 __/sql/sql_table.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_table.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_table.cc.i
 .PHONY : __/sql/sql_table.cc.i
 
 __/sql/sql_table.s: __/sql/sql_table.cc.s
@@ -3482,7 +3472,7 @@ __/sql/sql_table.s: __/sql/sql_table.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_table.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_table.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_table.cc.s
 .PHONY : __/sql/sql_table.cc.s
 
 __/sql/sql_tablespace.o: __/sql/sql_tablespace.cc.o
@@ -3490,7 +3480,7 @@ __/sql/sql_tablespace.o: __/sql/sql_tablespace.cc.o
 
 # target to build an object file
 __/sql/sql_tablespace.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_tablespace.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_tablespace.cc.o
 .PHONY : __/sql/sql_tablespace.cc.o
 
 __/sql/sql_tablespace.i: __/sql/sql_tablespace.cc.i
@@ -3498,7 +3488,7 @@ __/sql/sql_tablespace.i: __/sql/sql_tablespace.cc.i
 
 # target to preprocess a source file
 __/sql/sql_tablespace.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_tablespace.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_tablespace.cc.i
 .PHONY : __/sql/sql_tablespace.cc.i
 
 __/sql/sql_tablespace.s: __/sql/sql_tablespace.cc.s
@@ -3506,7 +3496,7 @@ __/sql/sql_tablespace.s: __/sql/sql_tablespace.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_tablespace.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_tablespace.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_tablespace.cc.s
 .PHONY : __/sql/sql_tablespace.cc.s
 
 __/sql/sql_test.o: __/sql/sql_test.cc.o
@@ -3514,7 +3504,7 @@ __/sql/sql_test.o: __/sql/sql_test.cc.o
 
 # target to build an object file
 __/sql/sql_test.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_test.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_test.cc.o
 .PHONY : __/sql/sql_test.cc.o
 
 __/sql/sql_test.i: __/sql/sql_test.cc.i
@@ -3522,7 +3512,7 @@ __/sql/sql_test.i: __/sql/sql_test.cc.i
 
 # target to preprocess a source file
 __/sql/sql_test.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_test.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_test.cc.i
 .PHONY : __/sql/sql_test.cc.i
 
 __/sql/sql_test.s: __/sql/sql_test.cc.s
@@ -3530,7 +3520,7 @@ __/sql/sql_test.s: __/sql/sql_test.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_test.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_test.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_test.cc.s
 .PHONY : __/sql/sql_test.cc.s
 
 __/sql/sql_time.o: __/sql/sql_time.cc.o
@@ -3538,7 +3528,7 @@ __/sql/sql_time.o: __/sql/sql_time.cc.o
 
 # target to build an object file
 __/sql/sql_time.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_time.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_time.cc.o
 .PHONY : __/sql/sql_time.cc.o
 
 __/sql/sql_time.i: __/sql/sql_time.cc.i
@@ -3546,7 +3536,7 @@ __/sql/sql_time.i: __/sql/sql_time.cc.i
 
 # target to preprocess a source file
 __/sql/sql_time.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_time.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_time.cc.i
 .PHONY : __/sql/sql_time.cc.i
 
 __/sql/sql_time.s: __/sql/sql_time.cc.s
@@ -3554,7 +3544,7 @@ __/sql/sql_time.s: __/sql/sql_time.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_time.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_time.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_time.cc.s
 .PHONY : __/sql/sql_time.cc.s
 
 __/sql/sql_tmp_table.o: __/sql/sql_tmp_table.cc.o
@@ -3562,7 +3552,7 @@ __/sql/sql_tmp_table.o: __/sql/sql_tmp_table.cc.o
 
 # target to build an object file
 __/sql/sql_tmp_table.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_tmp_table.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_tmp_table.cc.o
 .PHONY : __/sql/sql_tmp_table.cc.o
 
 __/sql/sql_tmp_table.i: __/sql/sql_tmp_table.cc.i
@@ -3570,7 +3560,7 @@ __/sql/sql_tmp_table.i: __/sql/sql_tmp_table.cc.i
 
 # target to preprocess a source file
 __/sql/sql_tmp_table.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_tmp_table.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_tmp_table.cc.i
 .PHONY : __/sql/sql_tmp_table.cc.i
 
 __/sql/sql_tmp_table.s: __/sql/sql_tmp_table.cc.s
@@ -3578,7 +3568,7 @@ __/sql/sql_tmp_table.s: __/sql/sql_tmp_table.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_tmp_table.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_tmp_table.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_tmp_table.cc.s
 .PHONY : __/sql/sql_tmp_table.cc.s
 
 __/sql/sql_trigger.o: __/sql/sql_trigger.cc.o
@@ -3586,7 +3576,7 @@ __/sql/sql_trigger.o: __/sql/sql_trigger.cc.o
 
 # target to build an object file
 __/sql/sql_trigger.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_trigger.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_trigger.cc.o
 .PHONY : __/sql/sql_trigger.cc.o
 
 __/sql/sql_trigger.i: __/sql/sql_trigger.cc.i
@@ -3594,7 +3584,7 @@ __/sql/sql_trigger.i: __/sql/sql_trigger.cc.i
 
 # target to preprocess a source file
 __/sql/sql_trigger.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_trigger.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_trigger.cc.i
 .PHONY : __/sql/sql_trigger.cc.i
 
 __/sql/sql_trigger.s: __/sql/sql_trigger.cc.s
@@ -3602,7 +3592,7 @@ __/sql/sql_trigger.s: __/sql/sql_trigger.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_trigger.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_trigger.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_trigger.cc.s
 .PHONY : __/sql/sql_trigger.cc.s
 
 __/sql/sql_truncate.o: __/sql/sql_truncate.cc.o
@@ -3610,7 +3600,7 @@ __/sql/sql_truncate.o: __/sql/sql_truncate.cc.o
 
 # target to build an object file
 __/sql/sql_truncate.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_truncate.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_truncate.cc.o
 .PHONY : __/sql/sql_truncate.cc.o
 
 __/sql/sql_truncate.i: __/sql/sql_truncate.cc.i
@@ -3618,7 +3608,7 @@ __/sql/sql_truncate.i: __/sql/sql_truncate.cc.i
 
 # target to preprocess a source file
 __/sql/sql_truncate.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_truncate.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_truncate.cc.i
 .PHONY : __/sql/sql_truncate.cc.i
 
 __/sql/sql_truncate.s: __/sql/sql_truncate.cc.s
@@ -3626,7 +3616,7 @@ __/sql/sql_truncate.s: __/sql/sql_truncate.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_truncate.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_truncate.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_truncate.cc.s
 .PHONY : __/sql/sql_truncate.cc.s
 
 __/sql/sql_udf.o: __/sql/sql_udf.cc.o
@@ -3634,7 +3624,7 @@ __/sql/sql_udf.o: __/sql/sql_udf.cc.o
 
 # target to build an object file
 __/sql/sql_udf.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_udf.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_udf.cc.o
 .PHONY : __/sql/sql_udf.cc.o
 
 __/sql/sql_udf.i: __/sql/sql_udf.cc.i
@@ -3642,7 +3632,7 @@ __/sql/sql_udf.i: __/sql/sql_udf.cc.i
 
 # target to preprocess a source file
 __/sql/sql_udf.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_udf.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_udf.cc.i
 .PHONY : __/sql/sql_udf.cc.i
 
 __/sql/sql_udf.s: __/sql/sql_udf.cc.s
@@ -3650,7 +3640,7 @@ __/sql/sql_udf.s: __/sql/sql_udf.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_udf.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_udf.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_udf.cc.s
 .PHONY : __/sql/sql_udf.cc.s
 
 __/sql/sql_union.o: __/sql/sql_union.cc.o
@@ -3658,7 +3648,7 @@ __/sql/sql_union.o: __/sql/sql_union.cc.o
 
 # target to build an object file
 __/sql/sql_union.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_union.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_union.cc.o
 .PHONY : __/sql/sql_union.cc.o
 
 __/sql/sql_union.i: __/sql/sql_union.cc.i
@@ -3666,7 +3656,7 @@ __/sql/sql_union.i: __/sql/sql_union.cc.i
 
 # target to preprocess a source file
 __/sql/sql_union.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_union.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_union.cc.i
 .PHONY : __/sql/sql_union.cc.i
 
 __/sql/sql_union.s: __/sql/sql_union.cc.s
@@ -3674,7 +3664,7 @@ __/sql/sql_union.s: __/sql/sql_union.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_union.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_union.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_union.cc.s
 .PHONY : __/sql/sql_union.cc.s
 
 __/sql/sql_update.o: __/sql/sql_update.cc.o
@@ -3682,7 +3672,7 @@ __/sql/sql_update.o: __/sql/sql_update.cc.o
 
 # target to build an object file
 __/sql/sql_update.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_update.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_update.cc.o
 .PHONY : __/sql/sql_update.cc.o
 
 __/sql/sql_update.i: __/sql/sql_update.cc.i
@@ -3690,7 +3680,7 @@ __/sql/sql_update.i: __/sql/sql_update.cc.i
 
 # target to preprocess a source file
 __/sql/sql_update.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_update.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_update.cc.i
 .PHONY : __/sql/sql_update.cc.i
 
 __/sql/sql_update.s: __/sql/sql_update.cc.s
@@ -3698,7 +3688,7 @@ __/sql/sql_update.s: __/sql/sql_update.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_update.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_update.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_update.cc.s
 .PHONY : __/sql/sql_update.cc.s
 
 __/sql/sql_view.o: __/sql/sql_view.cc.o
@@ -3706,7 +3696,7 @@ __/sql/sql_view.o: __/sql/sql_view.cc.o
 
 # target to build an object file
 __/sql/sql_view.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_view.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_view.cc.o
 .PHONY : __/sql/sql_view.cc.o
 
 __/sql/sql_view.i: __/sql/sql_view.cc.i
@@ -3714,7 +3704,7 @@ __/sql/sql_view.i: __/sql/sql_view.cc.i
 
 # target to preprocess a source file
 __/sql/sql_view.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_view.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_view.cc.i
 .PHONY : __/sql/sql_view.cc.i
 
 __/sql/sql_view.s: __/sql/sql_view.cc.s
@@ -3722,7 +3712,7 @@ __/sql/sql_view.s: __/sql/sql_view.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_view.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_view.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_view.cc.s
 .PHONY : __/sql/sql_view.cc.s
 
 __/sql/sql_yacc.o: __/sql/sql_yacc.cc.o
@@ -3730,7 +3720,7 @@ __/sql/sql_yacc.o: __/sql/sql_yacc.cc.o
 
 # target to build an object file
 __/sql/sql_yacc.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_yacc.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_yacc.cc.o
 .PHONY : __/sql/sql_yacc.cc.o
 
 __/sql/sql_yacc.i: __/sql/sql_yacc.cc.i
@@ -3738,7 +3728,7 @@ __/sql/sql_yacc.i: __/sql/sql_yacc.cc.i
 
 # target to preprocess a source file
 __/sql/sql_yacc.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_yacc.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_yacc.cc.i
 .PHONY : __/sql/sql_yacc.cc.i
 
 __/sql/sql_yacc.s: __/sql/sql_yacc.cc.s
@@ -3746,7 +3736,7 @@ __/sql/sql_yacc.s: __/sql/sql_yacc.cc.s
 
 # target to generate assembly for a file
 __/sql/sql_yacc.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_yacc.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sql_yacc.cc.s
 .PHONY : __/sql/sql_yacc.cc.s
 
 __/sql/strfunc.o: __/sql/strfunc.cc.o
@@ -3754,7 +3744,7 @@ __/sql/strfunc.o: __/sql/strfunc.cc.o
 
 # target to build an object file
 __/sql/strfunc.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/strfunc.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/strfunc.cc.o
 .PHONY : __/sql/strfunc.cc.o
 
 __/sql/strfunc.i: __/sql/strfunc.cc.i
@@ -3762,7 +3752,7 @@ __/sql/strfunc.i: __/sql/strfunc.cc.i
 
 # target to preprocess a source file
 __/sql/strfunc.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/strfunc.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/strfunc.cc.i
 .PHONY : __/sql/strfunc.cc.i
 
 __/sql/strfunc.s: __/sql/strfunc.cc.s
@@ -3770,7 +3760,7 @@ __/sql/strfunc.s: __/sql/strfunc.cc.s
 
 # target to generate assembly for a file
 __/sql/strfunc.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/strfunc.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/strfunc.cc.s
 .PHONY : __/sql/strfunc.cc.s
 
 __/sql/string_service.o: __/sql/string_service.cc.o
@@ -3778,7 +3768,7 @@ __/sql/string_service.o: __/sql/string_service.cc.o
 
 # target to build an object file
 __/sql/string_service.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/string_service.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/string_service.cc.o
 .PHONY : __/sql/string_service.cc.o
 
 __/sql/string_service.i: __/sql/string_service.cc.i
@@ -3786,7 +3776,7 @@ __/sql/string_service.i: __/sql/string_service.cc.i
 
 # target to preprocess a source file
 __/sql/string_service.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/string_service.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/string_service.cc.i
 .PHONY : __/sql/string_service.cc.i
 
 __/sql/string_service.s: __/sql/string_service.cc.s
@@ -3794,7 +3784,7 @@ __/sql/string_service.s: __/sql/string_service.cc.s
 
 # target to generate assembly for a file
 __/sql/string_service.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/string_service.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/string_service.cc.s
 .PHONY : __/sql/string_service.cc.s
 
 __/sql/sys_vars.o: __/sql/sys_vars.cc.o
@@ -3802,7 +3792,7 @@ __/sql/sys_vars.o: __/sql/sys_vars.cc.o
 
 # target to build an object file
 __/sql/sys_vars.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sys_vars.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sys_vars.cc.o
 .PHONY : __/sql/sys_vars.cc.o
 
 __/sql/sys_vars.i: __/sql/sys_vars.cc.i
@@ -3810,7 +3800,7 @@ __/sql/sys_vars.i: __/sql/sys_vars.cc.i
 
 # target to preprocess a source file
 __/sql/sys_vars.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sys_vars.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sys_vars.cc.i
 .PHONY : __/sql/sys_vars.cc.i
 
 __/sql/sys_vars.s: __/sql/sys_vars.cc.s
@@ -3818,7 +3808,7 @@ __/sql/sys_vars.s: __/sql/sys_vars.cc.s
 
 # target to generate assembly for a file
 __/sql/sys_vars.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sys_vars.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/sys_vars.cc.s
 .PHONY : __/sql/sys_vars.cc.s
 
 __/sql/table.o: __/sql/table.cc.o
@@ -3826,7 +3816,7 @@ __/sql/table.o: __/sql/table.cc.o
 
 # target to build an object file
 __/sql/table.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/table.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/table.cc.o
 .PHONY : __/sql/table.cc.o
 
 __/sql/table.i: __/sql/table.cc.i
@@ -3834,7 +3824,7 @@ __/sql/table.i: __/sql/table.cc.i
 
 # target to preprocess a source file
 __/sql/table.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/table.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/table.cc.i
 .PHONY : __/sql/table.cc.i
 
 __/sql/table.s: __/sql/table.cc.s
@@ -3842,7 +3832,7 @@ __/sql/table.s: __/sql/table.cc.s
 
 # target to generate assembly for a file
 __/sql/table.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/table.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/table.cc.s
 .PHONY : __/sql/table.cc.s
 
 __/sql/table_cache.o: __/sql/table_cache.cc.o
@@ -3850,7 +3840,7 @@ __/sql/table_cache.o: __/sql/table_cache.cc.o
 
 # target to build an object file
 __/sql/table_cache.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/table_cache.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/table_cache.cc.o
 .PHONY : __/sql/table_cache.cc.o
 
 __/sql/table_cache.i: __/sql/table_cache.cc.i
@@ -3858,7 +3848,7 @@ __/sql/table_cache.i: __/sql/table_cache.cc.i
 
 # target to preprocess a source file
 __/sql/table_cache.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/table_cache.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/table_cache.cc.i
 .PHONY : __/sql/table_cache.cc.i
 
 __/sql/table_cache.s: __/sql/table_cache.cc.s
@@ -3866,7 +3856,7 @@ __/sql/table_cache.s: __/sql/table_cache.cc.s
 
 # target to generate assembly for a file
 __/sql/table_cache.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/table_cache.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/table_cache.cc.s
 .PHONY : __/sql/table_cache.cc.s
 
 __/sql/thr_malloc.o: __/sql/thr_malloc.cc.o
@@ -3874,7 +3864,7 @@ __/sql/thr_malloc.o: __/sql/thr_malloc.cc.o
 
 # target to build an object file
 __/sql/thr_malloc.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/thr_malloc.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/thr_malloc.cc.o
 .PHONY : __/sql/thr_malloc.cc.o
 
 __/sql/thr_malloc.i: __/sql/thr_malloc.cc.i
@@ -3882,7 +3872,7 @@ __/sql/thr_malloc.i: __/sql/thr_malloc.cc.i
 
 # target to preprocess a source file
 __/sql/thr_malloc.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/thr_malloc.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/thr_malloc.cc.i
 .PHONY : __/sql/thr_malloc.cc.i
 
 __/sql/thr_malloc.s: __/sql/thr_malloc.cc.s
@@ -3890,7 +3880,7 @@ __/sql/thr_malloc.s: __/sql/thr_malloc.cc.s
 
 # target to generate assembly for a file
 __/sql/thr_malloc.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/thr_malloc.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/thr_malloc.cc.s
 .PHONY : __/sql/thr_malloc.cc.s
 
 __/sql/transaction.o: __/sql/transaction.cc.o
@@ -3898,7 +3888,7 @@ __/sql/transaction.o: __/sql/transaction.cc.o
 
 # target to build an object file
 __/sql/transaction.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/transaction.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/transaction.cc.o
 .PHONY : __/sql/transaction.cc.o
 
 __/sql/transaction.i: __/sql/transaction.cc.i
@@ -3906,7 +3896,7 @@ __/sql/transaction.i: __/sql/transaction.cc.i
 
 # target to preprocess a source file
 __/sql/transaction.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/transaction.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/transaction.cc.i
 .PHONY : __/sql/transaction.cc.i
 
 __/sql/transaction.s: __/sql/transaction.cc.s
@@ -3914,7 +3904,7 @@ __/sql/transaction.s: __/sql/transaction.cc.s
 
 # target to generate assembly for a file
 __/sql/transaction.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/transaction.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/transaction.cc.s
 .PHONY : __/sql/transaction.cc.s
 
 __/sql/tztime.o: __/sql/tztime.cc.o
@@ -3922,7 +3912,7 @@ __/sql/tztime.o: __/sql/tztime.cc.o
 
 # target to build an object file
 __/sql/tztime.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/tztime.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/tztime.cc.o
 .PHONY : __/sql/tztime.cc.o
 
 __/sql/tztime.i: __/sql/tztime.cc.i
@@ -3930,7 +3920,7 @@ __/sql/tztime.i: __/sql/tztime.cc.i
 
 # target to preprocess a source file
 __/sql/tztime.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/tztime.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/tztime.cc.i
 .PHONY : __/sql/tztime.cc.i
 
 __/sql/tztime.s: __/sql/tztime.cc.s
@@ -3938,7 +3928,7 @@ __/sql/tztime.s: __/sql/tztime.cc.s
 
 # target to generate assembly for a file
 __/sql/tztime.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/tztime.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/tztime.cc.s
 .PHONY : __/sql/tztime.cc.s
 
 __/sql/uniques.o: __/sql/uniques.cc.o
@@ -3946,7 +3936,7 @@ __/sql/uniques.o: __/sql/uniques.cc.o
 
 # target to build an object file
 __/sql/uniques.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/uniques.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/uniques.cc.o
 .PHONY : __/sql/uniques.cc.o
 
 __/sql/uniques.i: __/sql/uniques.cc.i
@@ -3954,7 +3944,7 @@ __/sql/uniques.i: __/sql/uniques.cc.i
 
 # target to preprocess a source file
 __/sql/uniques.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/uniques.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/uniques.cc.i
 .PHONY : __/sql/uniques.cc.i
 
 __/sql/uniques.s: __/sql/uniques.cc.s
@@ -3962,7 +3952,7 @@ __/sql/uniques.s: __/sql/uniques.cc.s
 
 # target to generate assembly for a file
 __/sql/uniques.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/uniques.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/uniques.cc.s
 .PHONY : __/sql/uniques.cc.s
 
 __/sql/unireg.o: __/sql/unireg.cc.o
@@ -3970,7 +3960,7 @@ __/sql/unireg.o: __/sql/unireg.cc.o
 
 # target to build an object file
 __/sql/unireg.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/unireg.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/unireg.cc.o
 .PHONY : __/sql/unireg.cc.o
 
 __/sql/unireg.i: __/sql/unireg.cc.i
@@ -3978,7 +3968,7 @@ __/sql/unireg.i: __/sql/unireg.cc.i
 
 # target to preprocess a source file
 __/sql/unireg.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/unireg.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/unireg.cc.i
 .PHONY : __/sql/unireg.cc.i
 
 __/sql/unireg.s: __/sql/unireg.cc.s
@@ -3986,7 +3976,7 @@ __/sql/unireg.s: __/sql/unireg.cc.s
 
 # target to generate assembly for a file
 __/sql/unireg.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/unireg.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/unireg.cc.s
 .PHONY : __/sql/unireg.cc.s
 
 __/sql/uuid.o: __/sql/uuid.cc.o
@@ -3994,7 +3984,7 @@ __/sql/uuid.o: __/sql/uuid.cc.o
 
 # target to build an object file
 __/sql/uuid.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/uuid.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/uuid.cc.o
 .PHONY : __/sql/uuid.cc.o
 
 __/sql/uuid.i: __/sql/uuid.cc.i
@@ -4002,7 +3992,7 @@ __/sql/uuid.i: __/sql/uuid.cc.i
 
 # target to preprocess a source file
 __/sql/uuid.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/uuid.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/uuid.cc.i
 .PHONY : __/sql/uuid.cc.i
 
 __/sql/uuid.s: __/sql/uuid.cc.s
@@ -4010,7 +4000,7 @@ __/sql/uuid.s: __/sql/uuid.cc.s
 
 # target to generate assembly for a file
 __/sql/uuid.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/uuid.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/__/sql/uuid.cc.s
 .PHONY : __/sql/uuid.cc.s
 
 emb_qcache.o: emb_qcache.cc.o
@@ -4018,7 +4008,7 @@ emb_qcache.o: emb_qcache.cc.o
 
 # target to build an object file
 emb_qcache.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/emb_qcache.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/emb_qcache.cc.o
 .PHONY : emb_qcache.cc.o
 
 emb_qcache.i: emb_qcache.cc.i
@@ -4026,7 +4016,7 @@ emb_qcache.i: emb_qcache.cc.i
 
 # target to preprocess a source file
 emb_qcache.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/emb_qcache.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/emb_qcache.cc.i
 .PHONY : emb_qcache.cc.i
 
 emb_qcache.s: emb_qcache.cc.s
@@ -4034,7 +4024,7 @@ emb_qcache.s: emb_qcache.cc.s
 
 # target to generate assembly for a file
 emb_qcache.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/emb_qcache.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/emb_qcache.cc.s
 .PHONY : emb_qcache.cc.s
 
 lib_sql.o: lib_sql.cc.o
@@ -4042,7 +4032,7 @@ lib_sql.o: lib_sql.cc.o
 
 # target to build an object file
 lib_sql.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/lib_sql.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/lib_sql.cc.o
 .PHONY : lib_sql.cc.o
 
 lib_sql.i: lib_sql.cc.i
@@ -4050,7 +4040,7 @@ lib_sql.i: lib_sql.cc.i
 
 # target to preprocess a source file
 lib_sql.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/lib_sql.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/lib_sql.cc.i
 .PHONY : lib_sql.cc.i
 
 lib_sql.s: lib_sql.cc.s
@@ -4058,7 +4048,7 @@ lib_sql.s: lib_sql.cc.s
 
 # target to generate assembly for a file
 lib_sql.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/lib_sql.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/lib_sql.cc.s
 .PHONY : lib_sql.cc.s
 
 libmysqld.o: libmysqld.c.o
@@ -4066,7 +4056,7 @@ libmysqld.o: libmysqld.c.o
 
 # target to build an object file
 libmysqld.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/libmysqld.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/libmysqld.c.o
 .PHONY : libmysqld.c.o
 
 libmysqld.i: libmysqld.c.i
@@ -4074,7 +4064,7 @@ libmysqld.i: libmysqld.c.i
 
 # target to preprocess a source file
 libmysqld.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/libmysqld.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/libmysqld.c.i
 .PHONY : libmysqld.c.i
 
 libmysqld.s: libmysqld.c.s
@@ -4082,7 +4072,7 @@ libmysqld.s: libmysqld.c.s
 
 # target to generate assembly for a file
 libmysqld.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/libmysqld.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/sql_embedded.dir/build.make libmysqld/CMakeFiles/sql_embedded.dir/libmysqld.c.s
 .PHONY : libmysqld.c.s
 
 mysqlserver_depends.o: mysqlserver_depends.c.o
@@ -4090,7 +4080,7 @@ mysqlserver_depends.o: mysqlserver_depends.c.o
 
 # target to build an object file
 mysqlserver_depends.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/mysqlserver.dir/build.make libmysqld/CMakeFiles/mysqlserver.dir/mysqlserver_depends.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/mysqlserver.dir/build.make libmysqld/CMakeFiles/mysqlserver.dir/mysqlserver_depends.c.o
 .PHONY : mysqlserver_depends.c.o
 
 mysqlserver_depends.i: mysqlserver_depends.c.i
@@ -4098,7 +4088,7 @@ mysqlserver_depends.i: mysqlserver_depends.c.i
 
 # target to preprocess a source file
 mysqlserver_depends.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/mysqlserver.dir/build.make libmysqld/CMakeFiles/mysqlserver.dir/mysqlserver_depends.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/mysqlserver.dir/build.make libmysqld/CMakeFiles/mysqlserver.dir/mysqlserver_depends.c.i
 .PHONY : mysqlserver_depends.c.i
 
 mysqlserver_depends.s: mysqlserver_depends.c.s
@@ -4106,7 +4096,7 @@ mysqlserver_depends.s: mysqlserver_depends.c.s
 
 # target to generate assembly for a file
 mysqlserver_depends.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysqld/CMakeFiles/mysqlserver.dir/build.make libmysqld/CMakeFiles/mysqlserver.dir/mysqlserver_depends.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysqld/CMakeFiles/mysqlserver.dir/build.make libmysqld/CMakeFiles/mysqlserver.dir/mysqlserver_depends.c.s
 .PHONY : mysqlserver_depends.c.s
 
 # Help Target
@@ -4118,7 +4108,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... mysqlserver"
 	@echo "... package"
@@ -4626,6 +4615,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

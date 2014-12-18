@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/adbms/mysqlsrc/mysql-5.6.21/unittest/mytap
-# Build directory: /home/adbms/mysqlsrc/mysql-5.6.21/unittest/mytap
+# Source directory: /home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/mytap
+# Build directory: /home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/mytap
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

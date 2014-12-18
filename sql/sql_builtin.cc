@@ -23,14 +23,14 @@ extern "C"
 extern
 #endif
 builtin_plugin 
-   builtin_csv_plugin, builtin_myisammrg_plugin, builtin_aby_plugin, builtin_myisam_plugin, builtin_heap_plugin,  builtin_archive_plugin, builtin_blackhole_plugin, builtin_perfschema_plugin, builtin_innobase_plugin, builtin_federated_plugin, builtin_partition_plugin, builtin_binlog_plugin, builtin_mysql_password_plugin;
+   builtin_aby_plugin, builtin_myisam_plugin, builtin_myisammrg_plugin, builtin_heap_plugin, builtin_csv_plugin,  builtin_perfschema_plugin, builtin_archive_plugin, builtin_federated_plugin, builtin_blackhole_plugin, builtin_innobase_plugin, builtin_partition_plugin, builtin_binlog_plugin, builtin_mysql_password_plugin;
 
 struct st_mysql_plugin *mysql_optional_plugins[]=
 {
-   builtin_archive_plugin, builtin_blackhole_plugin, builtin_perfschema_plugin, builtin_innobase_plugin, builtin_federated_plugin, builtin_partition_plugin, 0
+   builtin_perfschema_plugin, builtin_archive_plugin, builtin_federated_plugin, builtin_blackhole_plugin, builtin_innobase_plugin, builtin_partition_plugin, 0
 };
 
 struct st_mysql_plugin *mysql_mandatory_plugins[]=
 {
-  builtin_binlog_plugin, builtin_mysql_password_plugin,  builtin_csv_plugin, builtin_myisammrg_plugin, builtin_aby_plugin, builtin_myisam_plugin, builtin_heap_plugin, 0
+  builtin_binlog_plugin, builtin_mysql_password_plugin,  builtin_aby_plugin, builtin_myisam_plugin, builtin_myisammrg_plugin, builtin_heap_plugin, builtin_csv_plugin, 0
 };

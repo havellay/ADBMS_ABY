@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # Utility rule file for show-dist-name.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
 include sql/CMakeFiles/show-dist-name.dir/progress.make
 
 sql/CMakeFiles/show-dist-name:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/sql && /usr/bin/cmake -E echo mysql-5.6.21-linux-x86_64
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql && /usr/bin/cmake -E echo mysql-5.6.21-linux-x86_64
 
 show-dist-name: sql/CMakeFiles/show-dist-name
 show-dist-name: sql/CMakeFiles/show-dist-name.dir/build.make
@@ -57,10 +57,10 @@ sql/CMakeFiles/show-dist-name.dir/build: show-dist-name
 .PHONY : sql/CMakeFiles/show-dist-name.dir/build
 
 sql/CMakeFiles/show-dist-name.dir/clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/sql && $(CMAKE_COMMAND) -P CMakeFiles/show-dist-name.dir/cmake_clean.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql && $(CMAKE_COMMAND) -P CMakeFiles/show-dist-name.dir/cmake_clean.cmake
 .PHONY : sql/CMakeFiles/show-dist-name.dir/clean
 
 sql/CMakeFiles/show-dist-name.dir/depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/sql /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/sql /home/adbms/mysqlsrc/mysql-5.6.21/sql/CMakeFiles/show-dist-name.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql /home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/CMakeFiles/show-dist-name.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : sql/CMakeFiles/show-dist-name.dir/depend
 

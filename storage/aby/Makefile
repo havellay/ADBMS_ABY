@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,16 +79,6 @@ install/local: preinstall
 install/local/fast: install/local
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Client\" \"DataFiles\" \"DebugBinaries\" \"Development\" \"Documentation\" \"Embedded\" \"Info\" \"IniFiles\" \"ManPages\" \"Readme\" \"Server\" \"Server_Scripts\" \"SharedLibraries\" \"SqlBench\" \"SupportFiles\" \"Test\" \"Unspecified\""
@@ -101,7 +91,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -111,7 +101,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/adbms/mysqlsrc/mysql-5.6.21/CPackSourceConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/hari/ADBMS_PROJECT/ADBMS_ABY/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -140,14 +130,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles /home/adbms/mysqlsrc/mysql-5.6.21/storage/aby/CMakeFiles/progress.marks
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles /home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/aby/CMakeFiles/progress.marks
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/clean
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/clean
 .PHONY : clean
 
 # The main clean target
@@ -156,22 +146,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 storage/aby/CMakeFiles/aby.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/CMakeFiles/aby.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/CMakeFiles/aby.dir/rule
 .PHONY : storage/aby/CMakeFiles/aby.dir/rule
 
 # Convenience name for target.
@@ -180,12 +170,12 @@ aby: storage/aby/CMakeFiles/aby.dir/rule
 
 # fast build rule for target.
 aby/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/build
 .PHONY : aby/fast
 
 # Convenience name for target.
 storage/aby/CMakeFiles/aby_embedded.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/CMakeFiles/aby_embedded.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/CMakeFiles/aby_embedded.dir/rule
 .PHONY : storage/aby/CMakeFiles/aby_embedded.dir/rule
 
 # Convenience name for target.
@@ -194,12 +184,12 @@ aby_embedded: storage/aby/CMakeFiles/aby_embedded.dir/rule
 
 # fast build rule for target.
 aby_embedded/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/build
 .PHONY : aby_embedded/fast
 
 # Convenience name for target.
 storage/aby/CMakeFiles/hpa_aby_test1.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/CMakeFiles/hpa_aby_test1.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/CMakeFiles/hpa_aby_test1.dir/rule
 .PHONY : storage/aby/CMakeFiles/hpa_aby_test1.dir/rule
 
 # Convenience name for target.
@@ -208,12 +198,12 @@ hpa_aby_test1: storage/aby/CMakeFiles/hpa_aby_test1.dir/rule
 
 # fast build rule for target.
 hpa_aby_test1/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test1.dir/build.make storage/aby/CMakeFiles/hpa_aby_test1.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test1.dir/build.make storage/aby/CMakeFiles/hpa_aby_test1.dir/build
 .PHONY : hpa_aby_test1/fast
 
 # Convenience name for target.
 storage/aby/CMakeFiles/hpa_aby_test2.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/CMakeFiles/hpa_aby_test2.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 storage/aby/CMakeFiles/hpa_aby_test2.dir/rule
 .PHONY : storage/aby/CMakeFiles/hpa_aby_test2.dir/rule
 
 # Convenience name for target.
@@ -222,7 +212,7 @@ hpa_aby_test2: storage/aby/CMakeFiles/hpa_aby_test2.dir/rule
 
 # fast build rule for target.
 hpa_aby_test2/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test2.dir/build.make storage/aby/CMakeFiles/hpa_aby_test2.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test2.dir/build.make storage/aby/CMakeFiles/hpa_aby_test2.dir/build
 .PHONY : hpa_aby_test2/fast
 
 _aby_check.o: _aby_check.c.o
@@ -230,8 +220,8 @@ _aby_check.o: _aby_check.c.o
 
 # target to build an object file
 _aby_check.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/_aby_check.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/_aby_check.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/_aby_check.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/_aby_check.c.o
 .PHONY : _aby_check.c.o
 
 _aby_check.i: _aby_check.c.i
@@ -239,8 +229,8 @@ _aby_check.i: _aby_check.c.i
 
 # target to preprocess a source file
 _aby_check.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/_aby_check.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/_aby_check.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/_aby_check.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/_aby_check.c.i
 .PHONY : _aby_check.c.i
 
 _aby_check.s: _aby_check.c.s
@@ -248,8 +238,8 @@ _aby_check.s: _aby_check.c.s
 
 # target to generate assembly for a file
 _aby_check.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/_aby_check.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/_aby_check.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/_aby_check.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/_aby_check.c.s
 .PHONY : _aby_check.c.s
 
 _aby_rectest.o: _aby_rectest.c.o
@@ -257,8 +247,8 @@ _aby_rectest.o: _aby_rectest.c.o
 
 # target to build an object file
 _aby_rectest.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/_aby_rectest.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/_aby_rectest.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/_aby_rectest.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/_aby_rectest.c.o
 .PHONY : _aby_rectest.c.o
 
 _aby_rectest.i: _aby_rectest.c.i
@@ -266,8 +256,8 @@ _aby_rectest.i: _aby_rectest.c.i
 
 # target to preprocess a source file
 _aby_rectest.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/_aby_rectest.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/_aby_rectest.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/_aby_rectest.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/_aby_rectest.c.i
 .PHONY : _aby_rectest.c.i
 
 _aby_rectest.s: _aby_rectest.c.s
@@ -275,8 +265,8 @@ _aby_rectest.s: _aby_rectest.c.s
 
 # target to generate assembly for a file
 _aby_rectest.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/_aby_rectest.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/_aby_rectest.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/_aby_rectest.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/_aby_rectest.c.s
 .PHONY : _aby_rectest.c.s
 
 ha_aby.o: ha_aby.cc.o
@@ -284,8 +274,8 @@ ha_aby.o: ha_aby.cc.o
 
 # target to build an object file
 ha_aby.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/ha_aby.cc.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/ha_aby.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.o
 .PHONY : ha_aby.cc.o
 
 ha_aby.i: ha_aby.cc.i
@@ -293,8 +283,8 @@ ha_aby.i: ha_aby.cc.i
 
 # target to preprocess a source file
 ha_aby.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/ha_aby.cc.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/ha_aby.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.i
 .PHONY : ha_aby.cc.i
 
 ha_aby.s: ha_aby.cc.s
@@ -302,8 +292,8 @@ ha_aby.s: ha_aby.cc.s
 
 # target to generate assembly for a file
 ha_aby.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/ha_aby.cc.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/ha_aby.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/ha_aby.cc.s
 .PHONY : ha_aby.cc.s
 
 hpa_aby_test1.o: hpa_aby_test1.c.o
@@ -311,7 +301,7 @@ hpa_aby_test1.o: hpa_aby_test1.c.o
 
 # target to build an object file
 hpa_aby_test1.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test1.dir/build.make storage/aby/CMakeFiles/hpa_aby_test1.dir/hpa_aby_test1.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test1.dir/build.make storage/aby/CMakeFiles/hpa_aby_test1.dir/hpa_aby_test1.c.o
 .PHONY : hpa_aby_test1.c.o
 
 hpa_aby_test1.i: hpa_aby_test1.c.i
@@ -319,7 +309,7 @@ hpa_aby_test1.i: hpa_aby_test1.c.i
 
 # target to preprocess a source file
 hpa_aby_test1.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test1.dir/build.make storage/aby/CMakeFiles/hpa_aby_test1.dir/hpa_aby_test1.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test1.dir/build.make storage/aby/CMakeFiles/hpa_aby_test1.dir/hpa_aby_test1.c.i
 .PHONY : hpa_aby_test1.c.i
 
 hpa_aby_test1.s: hpa_aby_test1.c.s
@@ -327,7 +317,7 @@ hpa_aby_test1.s: hpa_aby_test1.c.s
 
 # target to generate assembly for a file
 hpa_aby_test1.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test1.dir/build.make storage/aby/CMakeFiles/hpa_aby_test1.dir/hpa_aby_test1.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test1.dir/build.make storage/aby/CMakeFiles/hpa_aby_test1.dir/hpa_aby_test1.c.s
 .PHONY : hpa_aby_test1.c.s
 
 hpa_aby_test2.o: hpa_aby_test2.c.o
@@ -335,7 +325,7 @@ hpa_aby_test2.o: hpa_aby_test2.c.o
 
 # target to build an object file
 hpa_aby_test2.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test2.dir/build.make storage/aby/CMakeFiles/hpa_aby_test2.dir/hpa_aby_test2.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test2.dir/build.make storage/aby/CMakeFiles/hpa_aby_test2.dir/hpa_aby_test2.c.o
 .PHONY : hpa_aby_test2.c.o
 
 hpa_aby_test2.i: hpa_aby_test2.c.i
@@ -343,7 +333,7 @@ hpa_aby_test2.i: hpa_aby_test2.c.i
 
 # target to preprocess a source file
 hpa_aby_test2.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test2.dir/build.make storage/aby/CMakeFiles/hpa_aby_test2.dir/hpa_aby_test2.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test2.dir/build.make storage/aby/CMakeFiles/hpa_aby_test2.dir/hpa_aby_test2.c.i
 .PHONY : hpa_aby_test2.c.i
 
 hpa_aby_test2.s: hpa_aby_test2.c.s
@@ -351,7 +341,7 @@ hpa_aby_test2.s: hpa_aby_test2.c.s
 
 # target to generate assembly for a file
 hpa_aby_test2.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test2.dir/build.make storage/aby/CMakeFiles/hpa_aby_test2.dir/hpa_aby_test2.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/hpa_aby_test2.dir/build.make storage/aby/CMakeFiles/hpa_aby_test2.dir/hpa_aby_test2.c.s
 .PHONY : hpa_aby_test2.c.s
 
 hpa_block.o: hpa_block.c.o
@@ -359,8 +349,8 @@ hpa_block.o: hpa_block.c.o
 
 # target to build an object file
 hpa_block.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_block.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_block.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_block.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_block.c.o
 .PHONY : hpa_block.c.o
 
 hpa_block.i: hpa_block.c.i
@@ -368,8 +358,8 @@ hpa_block.i: hpa_block.c.i
 
 # target to preprocess a source file
 hpa_block.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_block.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_block.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_block.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_block.c.i
 .PHONY : hpa_block.c.i
 
 hpa_block.s: hpa_block.c.s
@@ -377,8 +367,8 @@ hpa_block.s: hpa_block.c.s
 
 # target to generate assembly for a file
 hpa_block.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_block.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_block.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_block.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_block.c.s
 .PHONY : hpa_block.c.s
 
 hpa_clear.o: hpa_clear.c.o
@@ -386,8 +376,8 @@ hpa_clear.o: hpa_clear.c.o
 
 # target to build an object file
 hpa_clear.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_clear.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_clear.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_clear.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_clear.c.o
 .PHONY : hpa_clear.c.o
 
 hpa_clear.i: hpa_clear.c.i
@@ -395,8 +385,8 @@ hpa_clear.i: hpa_clear.c.i
 
 # target to preprocess a source file
 hpa_clear.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_clear.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_clear.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_clear.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_clear.c.i
 .PHONY : hpa_clear.c.i
 
 hpa_clear.s: hpa_clear.c.s
@@ -404,8 +394,8 @@ hpa_clear.s: hpa_clear.c.s
 
 # target to generate assembly for a file
 hpa_clear.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_clear.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_clear.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_clear.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_clear.c.s
 .PHONY : hpa_clear.c.s
 
 hpa_close.o: hpa_close.c.o
@@ -413,8 +403,8 @@ hpa_close.o: hpa_close.c.o
 
 # target to build an object file
 hpa_close.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_close.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_close.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_close.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_close.c.o
 .PHONY : hpa_close.c.o
 
 hpa_close.i: hpa_close.c.i
@@ -422,8 +412,8 @@ hpa_close.i: hpa_close.c.i
 
 # target to preprocess a source file
 hpa_close.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_close.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_close.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_close.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_close.c.i
 .PHONY : hpa_close.c.i
 
 hpa_close.s: hpa_close.c.s
@@ -431,8 +421,8 @@ hpa_close.s: hpa_close.c.s
 
 # target to generate assembly for a file
 hpa_close.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_close.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_close.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_close.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_close.c.s
 .PHONY : hpa_close.c.s
 
 hpa_create.o: hpa_create.c.o
@@ -440,8 +430,8 @@ hpa_create.o: hpa_create.c.o
 
 # target to build an object file
 hpa_create.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_create.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_create.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_create.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_create.c.o
 .PHONY : hpa_create.c.o
 
 hpa_create.i: hpa_create.c.i
@@ -449,8 +439,8 @@ hpa_create.i: hpa_create.c.i
 
 # target to preprocess a source file
 hpa_create.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_create.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_create.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_create.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_create.c.i
 .PHONY : hpa_create.c.i
 
 hpa_create.s: hpa_create.c.s
@@ -458,8 +448,8 @@ hpa_create.s: hpa_create.c.s
 
 # target to generate assembly for a file
 hpa_create.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_create.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_create.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_create.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_create.c.s
 .PHONY : hpa_create.c.s
 
 hpa_delete.o: hpa_delete.c.o
@@ -467,8 +457,8 @@ hpa_delete.o: hpa_delete.c.o
 
 # target to build an object file
 hpa_delete.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_delete.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_delete.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_delete.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_delete.c.o
 .PHONY : hpa_delete.c.o
 
 hpa_delete.i: hpa_delete.c.i
@@ -476,8 +466,8 @@ hpa_delete.i: hpa_delete.c.i
 
 # target to preprocess a source file
 hpa_delete.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_delete.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_delete.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_delete.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_delete.c.i
 .PHONY : hpa_delete.c.i
 
 hpa_delete.s: hpa_delete.c.s
@@ -485,8 +475,8 @@ hpa_delete.s: hpa_delete.c.s
 
 # target to generate assembly for a file
 hpa_delete.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_delete.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_delete.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_delete.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_delete.c.s
 .PHONY : hpa_delete.c.s
 
 hpa_extra.o: hpa_extra.c.o
@@ -494,8 +484,8 @@ hpa_extra.o: hpa_extra.c.o
 
 # target to build an object file
 hpa_extra.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_extra.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_extra.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_extra.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_extra.c.o
 .PHONY : hpa_extra.c.o
 
 hpa_extra.i: hpa_extra.c.i
@@ -503,8 +493,8 @@ hpa_extra.i: hpa_extra.c.i
 
 # target to preprocess a source file
 hpa_extra.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_extra.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_extra.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_extra.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_extra.c.i
 .PHONY : hpa_extra.c.i
 
 hpa_extra.s: hpa_extra.c.s
@@ -512,8 +502,8 @@ hpa_extra.s: hpa_extra.c.s
 
 # target to generate assembly for a file
 hpa_extra.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_extra.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_extra.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_extra.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_extra.c.s
 .PHONY : hpa_extra.c.s
 
 hpa_hash.o: hpa_hash.c.o
@@ -521,8 +511,8 @@ hpa_hash.o: hpa_hash.c.o
 
 # target to build an object file
 hpa_hash.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_hash.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_hash.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_hash.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_hash.c.o
 .PHONY : hpa_hash.c.o
 
 hpa_hash.i: hpa_hash.c.i
@@ -530,8 +520,8 @@ hpa_hash.i: hpa_hash.c.i
 
 # target to preprocess a source file
 hpa_hash.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_hash.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_hash.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_hash.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_hash.c.i
 .PHONY : hpa_hash.c.i
 
 hpa_hash.s: hpa_hash.c.s
@@ -539,8 +529,8 @@ hpa_hash.s: hpa_hash.c.s
 
 # target to generate assembly for a file
 hpa_hash.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_hash.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_hash.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_hash.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_hash.c.s
 .PHONY : hpa_hash.c.s
 
 hpa_info.o: hpa_info.c.o
@@ -548,8 +538,8 @@ hpa_info.o: hpa_info.c.o
 
 # target to build an object file
 hpa_info.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_info.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_info.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_info.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_info.c.o
 .PHONY : hpa_info.c.o
 
 hpa_info.i: hpa_info.c.i
@@ -557,8 +547,8 @@ hpa_info.i: hpa_info.c.i
 
 # target to preprocess a source file
 hpa_info.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_info.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_info.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_info.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_info.c.i
 .PHONY : hpa_info.c.i
 
 hpa_info.s: hpa_info.c.s
@@ -566,8 +556,8 @@ hpa_info.s: hpa_info.c.s
 
 # target to generate assembly for a file
 hpa_info.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_info.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_info.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_info.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_info.c.s
 .PHONY : hpa_info.c.s
 
 hpa_open.o: hpa_open.c.o
@@ -575,8 +565,8 @@ hpa_open.o: hpa_open.c.o
 
 # target to build an object file
 hpa_open.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_open.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_open.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_open.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_open.c.o
 .PHONY : hpa_open.c.o
 
 hpa_open.i: hpa_open.c.i
@@ -584,8 +574,8 @@ hpa_open.i: hpa_open.c.i
 
 # target to preprocess a source file
 hpa_open.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_open.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_open.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_open.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_open.c.i
 .PHONY : hpa_open.c.i
 
 hpa_open.s: hpa_open.c.s
@@ -593,8 +583,8 @@ hpa_open.s: hpa_open.c.s
 
 # target to generate assembly for a file
 hpa_open.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_open.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_open.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_open.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_open.c.s
 .PHONY : hpa_open.c.s
 
 hpa_panic.o: hpa_panic.c.o
@@ -602,8 +592,8 @@ hpa_panic.o: hpa_panic.c.o
 
 # target to build an object file
 hpa_panic.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_panic.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_panic.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_panic.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_panic.c.o
 .PHONY : hpa_panic.c.o
 
 hpa_panic.i: hpa_panic.c.i
@@ -611,8 +601,8 @@ hpa_panic.i: hpa_panic.c.i
 
 # target to preprocess a source file
 hpa_panic.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_panic.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_panic.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_panic.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_panic.c.i
 .PHONY : hpa_panic.c.i
 
 hpa_panic.s: hpa_panic.c.s
@@ -620,8 +610,8 @@ hpa_panic.s: hpa_panic.c.s
 
 # target to generate assembly for a file
 hpa_panic.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_panic.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_panic.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_panic.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_panic.c.s
 .PHONY : hpa_panic.c.s
 
 hpa_rename.o: hpa_rename.c.o
@@ -629,8 +619,8 @@ hpa_rename.o: hpa_rename.c.o
 
 # target to build an object file
 hpa_rename.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rename.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rename.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rename.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rename.c.o
 .PHONY : hpa_rename.c.o
 
 hpa_rename.i: hpa_rename.c.i
@@ -638,8 +628,8 @@ hpa_rename.i: hpa_rename.c.i
 
 # target to preprocess a source file
 hpa_rename.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rename.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rename.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rename.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rename.c.i
 .PHONY : hpa_rename.c.i
 
 hpa_rename.s: hpa_rename.c.s
@@ -647,8 +637,8 @@ hpa_rename.s: hpa_rename.c.s
 
 # target to generate assembly for a file
 hpa_rename.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rename.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rename.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rename.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rename.c.s
 .PHONY : hpa_rename.c.s
 
 hpa_rfirst.o: hpa_rfirst.c.o
@@ -656,8 +646,8 @@ hpa_rfirst.o: hpa_rfirst.c.o
 
 # target to build an object file
 hpa_rfirst.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rfirst.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rfirst.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rfirst.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rfirst.c.o
 .PHONY : hpa_rfirst.c.o
 
 hpa_rfirst.i: hpa_rfirst.c.i
@@ -665,8 +655,8 @@ hpa_rfirst.i: hpa_rfirst.c.i
 
 # target to preprocess a source file
 hpa_rfirst.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rfirst.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rfirst.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rfirst.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rfirst.c.i
 .PHONY : hpa_rfirst.c.i
 
 hpa_rfirst.s: hpa_rfirst.c.s
@@ -674,8 +664,8 @@ hpa_rfirst.s: hpa_rfirst.c.s
 
 # target to generate assembly for a file
 hpa_rfirst.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rfirst.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rfirst.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rfirst.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rfirst.c.s
 .PHONY : hpa_rfirst.c.s
 
 hpa_rkey.o: hpa_rkey.c.o
@@ -683,8 +673,8 @@ hpa_rkey.o: hpa_rkey.c.o
 
 # target to build an object file
 hpa_rkey.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rkey.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rkey.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rkey.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rkey.c.o
 .PHONY : hpa_rkey.c.o
 
 hpa_rkey.i: hpa_rkey.c.i
@@ -692,8 +682,8 @@ hpa_rkey.i: hpa_rkey.c.i
 
 # target to preprocess a source file
 hpa_rkey.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rkey.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rkey.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rkey.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rkey.c.i
 .PHONY : hpa_rkey.c.i
 
 hpa_rkey.s: hpa_rkey.c.s
@@ -701,8 +691,8 @@ hpa_rkey.s: hpa_rkey.c.s
 
 # target to generate assembly for a file
 hpa_rkey.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rkey.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rkey.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rkey.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rkey.c.s
 .PHONY : hpa_rkey.c.s
 
 hpa_rlast.o: hpa_rlast.c.o
@@ -710,8 +700,8 @@ hpa_rlast.o: hpa_rlast.c.o
 
 # target to build an object file
 hpa_rlast.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rlast.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rlast.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rlast.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rlast.c.o
 .PHONY : hpa_rlast.c.o
 
 hpa_rlast.i: hpa_rlast.c.i
@@ -719,8 +709,8 @@ hpa_rlast.i: hpa_rlast.c.i
 
 # target to preprocess a source file
 hpa_rlast.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rlast.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rlast.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rlast.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rlast.c.i
 .PHONY : hpa_rlast.c.i
 
 hpa_rlast.s: hpa_rlast.c.s
@@ -728,8 +718,8 @@ hpa_rlast.s: hpa_rlast.c.s
 
 # target to generate assembly for a file
 hpa_rlast.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rlast.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rlast.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rlast.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rlast.c.s
 .PHONY : hpa_rlast.c.s
 
 hpa_rnext.o: hpa_rnext.c.o
@@ -737,8 +727,8 @@ hpa_rnext.o: hpa_rnext.c.o
 
 # target to build an object file
 hpa_rnext.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rnext.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rnext.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rnext.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rnext.c.o
 .PHONY : hpa_rnext.c.o
 
 hpa_rnext.i: hpa_rnext.c.i
@@ -746,8 +736,8 @@ hpa_rnext.i: hpa_rnext.c.i
 
 # target to preprocess a source file
 hpa_rnext.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rnext.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rnext.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rnext.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rnext.c.i
 .PHONY : hpa_rnext.c.i
 
 hpa_rnext.s: hpa_rnext.c.s
@@ -755,8 +745,8 @@ hpa_rnext.s: hpa_rnext.c.s
 
 # target to generate assembly for a file
 hpa_rnext.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rnext.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rnext.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rnext.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rnext.c.s
 .PHONY : hpa_rnext.c.s
 
 hpa_rprev.o: hpa_rprev.c.o
@@ -764,8 +754,8 @@ hpa_rprev.o: hpa_rprev.c.o
 
 # target to build an object file
 hpa_rprev.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rprev.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rprev.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rprev.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rprev.c.o
 .PHONY : hpa_rprev.c.o
 
 hpa_rprev.i: hpa_rprev.c.i
@@ -773,8 +763,8 @@ hpa_rprev.i: hpa_rprev.c.i
 
 # target to preprocess a source file
 hpa_rprev.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rprev.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rprev.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rprev.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rprev.c.i
 .PHONY : hpa_rprev.c.i
 
 hpa_rprev.s: hpa_rprev.c.s
@@ -782,8 +772,8 @@ hpa_rprev.s: hpa_rprev.c.s
 
 # target to generate assembly for a file
 hpa_rprev.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rprev.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rprev.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rprev.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rprev.c.s
 .PHONY : hpa_rprev.c.s
 
 hpa_rrnd.o: hpa_rrnd.c.o
@@ -791,8 +781,8 @@ hpa_rrnd.o: hpa_rrnd.c.o
 
 # target to build an object file
 hpa_rrnd.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rrnd.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rrnd.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rrnd.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rrnd.c.o
 .PHONY : hpa_rrnd.c.o
 
 hpa_rrnd.i: hpa_rrnd.c.i
@@ -800,8 +790,8 @@ hpa_rrnd.i: hpa_rrnd.c.i
 
 # target to preprocess a source file
 hpa_rrnd.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rrnd.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rrnd.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rrnd.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rrnd.c.i
 .PHONY : hpa_rrnd.c.i
 
 hpa_rrnd.s: hpa_rrnd.c.s
@@ -809,8 +799,8 @@ hpa_rrnd.s: hpa_rrnd.c.s
 
 # target to generate assembly for a file
 hpa_rrnd.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rrnd.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rrnd.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rrnd.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rrnd.c.s
 .PHONY : hpa_rrnd.c.s
 
 hpa_rsame.o: hpa_rsame.c.o
@@ -818,8 +808,8 @@ hpa_rsame.o: hpa_rsame.c.o
 
 # target to build an object file
 hpa_rsame.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rsame.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rsame.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rsame.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rsame.c.o
 .PHONY : hpa_rsame.c.o
 
 hpa_rsame.i: hpa_rsame.c.i
@@ -827,8 +817,8 @@ hpa_rsame.i: hpa_rsame.c.i
 
 # target to preprocess a source file
 hpa_rsame.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rsame.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rsame.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rsame.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rsame.c.i
 .PHONY : hpa_rsame.c.i
 
 hpa_rsame.s: hpa_rsame.c.s
@@ -836,8 +826,8 @@ hpa_rsame.s: hpa_rsame.c.s
 
 # target to generate assembly for a file
 hpa_rsame.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rsame.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rsame.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_rsame.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_rsame.c.s
 .PHONY : hpa_rsame.c.s
 
 hpa_scan.o: hpa_scan.c.o
@@ -845,8 +835,8 @@ hpa_scan.o: hpa_scan.c.o
 
 # target to build an object file
 hpa_scan.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_scan.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_scan.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_scan.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_scan.c.o
 .PHONY : hpa_scan.c.o
 
 hpa_scan.i: hpa_scan.c.i
@@ -854,8 +844,8 @@ hpa_scan.i: hpa_scan.c.i
 
 # target to preprocess a source file
 hpa_scan.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_scan.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_scan.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_scan.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_scan.c.i
 .PHONY : hpa_scan.c.i
 
 hpa_scan.s: hpa_scan.c.s
@@ -863,8 +853,8 @@ hpa_scan.s: hpa_scan.c.s
 
 # target to generate assembly for a file
 hpa_scan.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_scan.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_scan.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_scan.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_scan.c.s
 .PHONY : hpa_scan.c.s
 
 hpa_static.o: hpa_static.c.o
@@ -872,8 +862,8 @@ hpa_static.o: hpa_static.c.o
 
 # target to build an object file
 hpa_static.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_static.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_static.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.o
 .PHONY : hpa_static.c.o
 
 hpa_static.i: hpa_static.c.i
@@ -881,8 +871,8 @@ hpa_static.i: hpa_static.c.i
 
 # target to preprocess a source file
 hpa_static.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_static.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_static.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.i
 .PHONY : hpa_static.c.i
 
 hpa_static.s: hpa_static.c.s
@@ -890,8 +880,8 @@ hpa_static.s: hpa_static.c.s
 
 # target to generate assembly for a file
 hpa_static.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_static.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_static.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_static.c.s
 .PHONY : hpa_static.c.s
 
 hpa_update.o: hpa_update.c.o
@@ -899,8 +889,8 @@ hpa_update.o: hpa_update.c.o
 
 # target to build an object file
 hpa_update.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_update.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_update.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.o
 .PHONY : hpa_update.c.o
 
 hpa_update.i: hpa_update.c.i
@@ -908,8 +898,8 @@ hpa_update.i: hpa_update.c.i
 
 # target to preprocess a source file
 hpa_update.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_update.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_update.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.i
 .PHONY : hpa_update.c.i
 
 hpa_update.s: hpa_update.c.s
@@ -917,8 +907,8 @@ hpa_update.s: hpa_update.c.s
 
 # target to generate assembly for a file
 hpa_update.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_update.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_update.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_update.c.s
 .PHONY : hpa_update.c.s
 
 hpa_write.o: hpa_write.c.o
@@ -926,8 +916,8 @@ hpa_write.o: hpa_write.c.o
 
 # target to build an object file
 hpa_write.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_write.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_write.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.o
 .PHONY : hpa_write.c.o
 
 hpa_write.i: hpa_write.c.i
@@ -935,8 +925,8 @@ hpa_write.i: hpa_write.c.i
 
 # target to preprocess a source file
 hpa_write.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_write.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_write.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.i
 .PHONY : hpa_write.c.i
 
 hpa_write.s: hpa_write.c.s
@@ -944,8 +934,8 @@ hpa_write.s: hpa_write.c.s
 
 # target to generate assembly for a file
 hpa_write.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_write.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/hpa_write.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/hpa_write.c.s
 .PHONY : hpa_write.c.s
 
 lock_store.o: lock_store.c.o
@@ -953,8 +943,8 @@ lock_store.o: lock_store.c.o
 
 # target to build an object file
 lock_store.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/lock_store.c.o
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/lock_store.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.o
 .PHONY : lock_store.c.o
 
 lock_store.i: lock_store.c.i
@@ -962,8 +952,8 @@ lock_store.i: lock_store.c.i
 
 # target to preprocess a source file
 lock_store.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/lock_store.c.i
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/lock_store.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.i
 .PHONY : lock_store.c.i
 
 lock_store.s: lock_store.c.s
@@ -971,8 +961,8 @@ lock_store.s: lock_store.c.s
 
 # target to generate assembly for a file
 lock_store.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/lock_store.c.s
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby.dir/build.make storage/aby/CMakeFiles/aby.dir/lock_store.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f storage/aby/CMakeFiles/aby_embedded.dir/build.make storage/aby/CMakeFiles/aby_embedded.dir/lock_store.c.s
 .PHONY : lock_store.c.s
 
 # Help Target
@@ -988,7 +978,6 @@ help:
 	@echo "... hpa_aby_test2"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... package"
 	@echo "... package_source"
@@ -1089,6 +1078,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

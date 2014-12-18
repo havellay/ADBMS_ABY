@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,16 +79,6 @@ install/local: preinstall
 install/local/fast: install/local
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Client\" \"DataFiles\" \"DebugBinaries\" \"Development\" \"Documentation\" \"Embedded\" \"Info\" \"IniFiles\" \"ManPages\" \"Readme\" \"Server\" \"Server_Scripts\" \"SharedLibraries\" \"SqlBench\" \"SupportFiles\" \"Test\" \"Unspecified\""
@@ -101,7 +91,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -111,7 +101,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/adbms/mysqlsrc/mysql-5.6.21/CPackSourceConfig.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/hari/ADBMS_PROJECT/ADBMS_ABY/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -140,14 +130,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles /home/adbms/mysqlsrc/mysql-5.6.21/libmysql/CMakeFiles/progress.marks
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysql/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles /home/hari/ADBMS_PROJECT/ADBMS_ABY/libmysql/CMakeFiles/progress.marks
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysql/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysql/clean
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysql/clean
 .PHONY : clean
 
 # The main clean target
@@ -156,22 +146,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysql/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysql/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysql/preinstall
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysql/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 libmysql/CMakeFiles/clientlib.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/clientlib.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/clientlib.dir/rule
 .PHONY : libmysql/CMakeFiles/clientlib.dir/rule
 
 # Convenience name for target.
@@ -180,12 +170,12 @@ clientlib: libmysql/CMakeFiles/clientlib.dir/rule
 
 # fast build rule for target.
 clientlib/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/build
 .PHONY : clientlib/fast
 
 # Convenience name for target.
 libmysql/CMakeFiles/libmysql.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/libmysql.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/libmysql.dir/rule
 .PHONY : libmysql/CMakeFiles/libmysql.dir/rule
 
 # Convenience name for target.
@@ -194,12 +184,17 @@ libmysql: libmysql/CMakeFiles/libmysql.dir/rule
 
 # fast build rule for target.
 libmysql/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/libmysql.dir/build.make libmysql/CMakeFiles/libmysql.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/libmysql.dir/build.make libmysql/CMakeFiles/libmysql.dir/build
 .PHONY : libmysql/fast
+
+# Manual pre-install relink rule for target.
+libmysql/preinstall:
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/libmysql.dir/preinstall
+.PHONY : libmysql/preinstall
 
 # Convenience name for target.
 libmysql/CMakeFiles/mysqlclient.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/mysqlclient.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/mysqlclient.dir/rule
 .PHONY : libmysql/CMakeFiles/mysqlclient.dir/rule
 
 # Convenience name for target.
@@ -208,12 +203,12 @@ mysqlclient: libmysql/CMakeFiles/mysqlclient.dir/rule
 
 # fast build rule for target.
 mysqlclient/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/mysqlclient.dir/build.make libmysql/CMakeFiles/mysqlclient.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/mysqlclient.dir/build.make libmysql/CMakeFiles/mysqlclient.dir/build
 .PHONY : mysqlclient/fast
 
 # Convenience name for target.
 libmysql/CMakeFiles/symlink_libmysqlclient_r.a.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/symlink_libmysqlclient_r.a.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/symlink_libmysqlclient_r.a.dir/rule
 .PHONY : libmysql/CMakeFiles/symlink_libmysqlclient_r.a.dir/rule
 
 # Convenience name for target.
@@ -222,12 +217,12 @@ symlink_libmysqlclient_r.a: libmysql/CMakeFiles/symlink_libmysqlclient_r.a.dir/r
 
 # fast build rule for target.
 symlink_libmysqlclient_r.a/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/symlink_libmysqlclient_r.a.dir/build.make libmysql/CMakeFiles/symlink_libmysqlclient_r.a.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/symlink_libmysqlclient_r.a.dir/build.make libmysql/CMakeFiles/symlink_libmysqlclient_r.a.dir/build
 .PHONY : symlink_libmysqlclient_r.a/fast
 
 # Convenience name for target.
 libmysql/CMakeFiles/symlink_libmysqlclient_r.so.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/symlink_libmysqlclient_r.so.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/symlink_libmysqlclient_r.so.dir/rule
 .PHONY : libmysql/CMakeFiles/symlink_libmysqlclient_r.so.dir/rule
 
 # Convenience name for target.
@@ -236,12 +231,12 @@ symlink_libmysqlclient_r.so: libmysql/CMakeFiles/symlink_libmysqlclient_r.so.dir
 
 # fast build rule for target.
 symlink_libmysqlclient_r.so/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/symlink_libmysqlclient_r.so.dir/build.make libmysql/CMakeFiles/symlink_libmysqlclient_r.so.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/symlink_libmysqlclient_r.so.dir/build.make libmysql/CMakeFiles/symlink_libmysqlclient_r.so.dir/build
 .PHONY : symlink_libmysqlclient_r.so/fast
 
 # Convenience name for target.
 libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.dir/rule
 .PHONY : libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.dir/rule
 
 # Convenience name for target.
@@ -250,12 +245,12 @@ symlink_libmysqlclient_r.so.18: libmysql/CMakeFiles/symlink_libmysqlclient_r.so.
 
 # fast build rule for target.
 symlink_libmysqlclient_r.so.18/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.dir/build.make libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.dir/build.make libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.dir/build
 .PHONY : symlink_libmysqlclient_r.so.18/fast
 
 # Convenience name for target.
 libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.1.0.dir/rule:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.1.0.dir/rule
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f CMakeFiles/Makefile2 libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.1.0.dir/rule
 .PHONY : libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.1.0.dir/rule
 
 # Convenience name for target.
@@ -264,7 +259,7 @@ symlink_libmysqlclient_r.so.18.1.0: libmysql/CMakeFiles/symlink_libmysqlclient_r
 
 # fast build rule for target.
 symlink_libmysqlclient_r.so.18.1.0/fast:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.1.0.dir/build.make libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.1.0.dir/build
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.1.0.dir/build.make libmysql/CMakeFiles/symlink_libmysqlclient_r.so.18.1.0.dir/build
 .PHONY : symlink_libmysqlclient_r.so.18.1.0/fast
 
 __/sql-common/client.o: __/sql-common/client.c.o
@@ -272,7 +267,7 @@ __/sql-common/client.o: __/sql-common/client.c.o
 
 # target to build an object file
 __/sql-common/client.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client.c.o
 .PHONY : __/sql-common/client.c.o
 
 __/sql-common/client.i: __/sql-common/client.c.i
@@ -280,7 +275,7 @@ __/sql-common/client.i: __/sql-common/client.c.i
 
 # target to preprocess a source file
 __/sql-common/client.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client.c.i
 .PHONY : __/sql-common/client.c.i
 
 __/sql-common/client.s: __/sql-common/client.c.s
@@ -288,7 +283,7 @@ __/sql-common/client.s: __/sql-common/client.c.s
 
 # target to generate assembly for a file
 __/sql-common/client.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client.c.s
 .PHONY : __/sql-common/client.c.s
 
 __/sql-common/client_authentication.o: __/sql-common/client_authentication.cc.o
@@ -296,7 +291,7 @@ __/sql-common/client_authentication.o: __/sql-common/client_authentication.cc.o
 
 # target to build an object file
 __/sql-common/client_authentication.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client_authentication.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client_authentication.cc.o
 .PHONY : __/sql-common/client_authentication.cc.o
 
 __/sql-common/client_authentication.i: __/sql-common/client_authentication.cc.i
@@ -304,7 +299,7 @@ __/sql-common/client_authentication.i: __/sql-common/client_authentication.cc.i
 
 # target to preprocess a source file
 __/sql-common/client_authentication.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client_authentication.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client_authentication.cc.i
 .PHONY : __/sql-common/client_authentication.cc.i
 
 __/sql-common/client_authentication.s: __/sql-common/client_authentication.cc.s
@@ -312,7 +307,7 @@ __/sql-common/client_authentication.s: __/sql-common/client_authentication.cc.s
 
 # target to generate assembly for a file
 __/sql-common/client_authentication.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client_authentication.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client_authentication.cc.s
 .PHONY : __/sql-common/client_authentication.cc.s
 
 __/sql-common/client_plugin.o: __/sql-common/client_plugin.c.o
@@ -320,7 +315,7 @@ __/sql-common/client_plugin.o: __/sql-common/client_plugin.c.o
 
 # target to build an object file
 __/sql-common/client_plugin.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client_plugin.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client_plugin.c.o
 .PHONY : __/sql-common/client_plugin.c.o
 
 __/sql-common/client_plugin.i: __/sql-common/client_plugin.c.i
@@ -328,7 +323,7 @@ __/sql-common/client_plugin.i: __/sql-common/client_plugin.c.i
 
 # target to preprocess a source file
 __/sql-common/client_plugin.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client_plugin.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client_plugin.c.i
 .PHONY : __/sql-common/client_plugin.c.i
 
 __/sql-common/client_plugin.s: __/sql-common/client_plugin.c.s
@@ -336,7 +331,7 @@ __/sql-common/client_plugin.s: __/sql-common/client_plugin.c.s
 
 # target to generate assembly for a file
 __/sql-common/client_plugin.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client_plugin.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/client_plugin.c.s
 .PHONY : __/sql-common/client_plugin.c.s
 
 __/sql-common/my_time.o: __/sql-common/my_time.c.o
@@ -344,7 +339,7 @@ __/sql-common/my_time.o: __/sql-common/my_time.c.o
 
 # target to build an object file
 __/sql-common/my_time.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/my_time.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/my_time.c.o
 .PHONY : __/sql-common/my_time.c.o
 
 __/sql-common/my_time.i: __/sql-common/my_time.c.i
@@ -352,7 +347,7 @@ __/sql-common/my_time.i: __/sql-common/my_time.c.i
 
 # target to preprocess a source file
 __/sql-common/my_time.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/my_time.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/my_time.c.i
 .PHONY : __/sql-common/my_time.c.i
 
 __/sql-common/my_time.s: __/sql-common/my_time.c.s
@@ -360,7 +355,7 @@ __/sql-common/my_time.s: __/sql-common/my_time.c.s
 
 # target to generate assembly for a file
 __/sql-common/my_time.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/my_time.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/my_time.c.s
 .PHONY : __/sql-common/my_time.c.s
 
 __/sql-common/pack.o: __/sql-common/pack.c.o
@@ -368,7 +363,7 @@ __/sql-common/pack.o: __/sql-common/pack.c.o
 
 # target to build an object file
 __/sql-common/pack.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/pack.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/pack.c.o
 .PHONY : __/sql-common/pack.c.o
 
 __/sql-common/pack.i: __/sql-common/pack.c.i
@@ -376,7 +371,7 @@ __/sql-common/pack.i: __/sql-common/pack.c.i
 
 # target to preprocess a source file
 __/sql-common/pack.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/pack.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/pack.c.i
 .PHONY : __/sql-common/pack.c.i
 
 __/sql-common/pack.s: __/sql-common/pack.c.s
@@ -384,7 +379,7 @@ __/sql-common/pack.s: __/sql-common/pack.c.s
 
 # target to generate assembly for a file
 __/sql-common/pack.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/pack.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql-common/pack.c.s
 .PHONY : __/sql-common/pack.c.s
 
 __/sql/net_serv.o: __/sql/net_serv.cc.o
@@ -392,7 +387,7 @@ __/sql/net_serv.o: __/sql/net_serv.cc.o
 
 # target to build an object file
 __/sql/net_serv.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql/net_serv.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql/net_serv.cc.o
 .PHONY : __/sql/net_serv.cc.o
 
 __/sql/net_serv.i: __/sql/net_serv.cc.i
@@ -400,7 +395,7 @@ __/sql/net_serv.i: __/sql/net_serv.cc.i
 
 # target to preprocess a source file
 __/sql/net_serv.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql/net_serv.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql/net_serv.cc.i
 .PHONY : __/sql/net_serv.cc.i
 
 __/sql/net_serv.s: __/sql/net_serv.cc.s
@@ -408,7 +403,7 @@ __/sql/net_serv.s: __/sql/net_serv.cc.s
 
 # target to generate assembly for a file
 __/sql/net_serv.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql/net_serv.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql/net_serv.cc.s
 .PHONY : __/sql/net_serv.cc.s
 
 __/sql/password.o: __/sql/password.c.o
@@ -416,7 +411,7 @@ __/sql/password.o: __/sql/password.c.o
 
 # target to build an object file
 __/sql/password.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql/password.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql/password.c.o
 .PHONY : __/sql/password.c.o
 
 __/sql/password.i: __/sql/password.c.i
@@ -424,7 +419,7 @@ __/sql/password.i: __/sql/password.c.i
 
 # target to preprocess a source file
 __/sql/password.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql/password.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql/password.c.i
 .PHONY : __/sql/password.c.i
 
 __/sql/password.s: __/sql/password.c.s
@@ -432,7 +427,7 @@ __/sql/password.s: __/sql/password.c.s
 
 # target to generate assembly for a file
 __/sql/password.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql/password.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/__/sql/password.c.s
 .PHONY : __/sql/password.c.s
 
 errmsg.o: errmsg.c.o
@@ -440,7 +435,7 @@ errmsg.o: errmsg.c.o
 
 # target to build an object file
 errmsg.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/errmsg.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/errmsg.c.o
 .PHONY : errmsg.c.o
 
 errmsg.i: errmsg.c.i
@@ -448,7 +443,7 @@ errmsg.i: errmsg.c.i
 
 # target to preprocess a source file
 errmsg.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/errmsg.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/errmsg.c.i
 .PHONY : errmsg.c.i
 
 errmsg.s: errmsg.c.s
@@ -456,7 +451,7 @@ errmsg.s: errmsg.c.s
 
 # target to generate assembly for a file
 errmsg.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/errmsg.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/errmsg.c.s
 .PHONY : errmsg.c.s
 
 get_password.o: get_password.c.o
@@ -464,7 +459,7 @@ get_password.o: get_password.c.o
 
 # target to build an object file
 get_password.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/get_password.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/get_password.c.o
 .PHONY : get_password.c.o
 
 get_password.i: get_password.c.i
@@ -472,7 +467,7 @@ get_password.i: get_password.c.i
 
 # target to preprocess a source file
 get_password.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/get_password.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/get_password.c.i
 .PHONY : get_password.c.i
 
 get_password.s: get_password.c.s
@@ -480,7 +475,7 @@ get_password.s: get_password.c.s
 
 # target to generate assembly for a file
 get_password.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/get_password.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/get_password.c.s
 .PHONY : get_password.c.s
 
 libmysql.o: libmysql.c.o
@@ -488,7 +483,7 @@ libmysql.o: libmysql.c.o
 
 # target to build an object file
 libmysql.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/libmysql.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/libmysql.c.o
 .PHONY : libmysql.c.o
 
 libmysql.i: libmysql.c.i
@@ -496,7 +491,7 @@ libmysql.i: libmysql.c.i
 
 # target to preprocess a source file
 libmysql.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/libmysql.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/libmysql.c.i
 .PHONY : libmysql.c.i
 
 libmysql.s: libmysql.c.s
@@ -504,7 +499,7 @@ libmysql.s: libmysql.c.s
 
 # target to generate assembly for a file
 libmysql.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/libmysql.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/clientlib.dir/build.make libmysql/CMakeFiles/clientlib.dir/libmysql.c.s
 .PHONY : libmysql.c.s
 
 libmysql_exports_file.o: libmysql_exports_file.cc.o
@@ -512,7 +507,7 @@ libmysql_exports_file.o: libmysql_exports_file.cc.o
 
 # target to build an object file
 libmysql_exports_file.cc.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/libmysql.dir/build.make libmysql/CMakeFiles/libmysql.dir/libmysql_exports_file.cc.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/libmysql.dir/build.make libmysql/CMakeFiles/libmysql.dir/libmysql_exports_file.cc.o
 .PHONY : libmysql_exports_file.cc.o
 
 libmysql_exports_file.i: libmysql_exports_file.cc.i
@@ -520,7 +515,7 @@ libmysql_exports_file.i: libmysql_exports_file.cc.i
 
 # target to preprocess a source file
 libmysql_exports_file.cc.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/libmysql.dir/build.make libmysql/CMakeFiles/libmysql.dir/libmysql_exports_file.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/libmysql.dir/build.make libmysql/CMakeFiles/libmysql.dir/libmysql_exports_file.cc.i
 .PHONY : libmysql_exports_file.cc.i
 
 libmysql_exports_file.s: libmysql_exports_file.cc.s
@@ -528,7 +523,7 @@ libmysql_exports_file.s: libmysql_exports_file.cc.s
 
 # target to generate assembly for a file
 libmysql_exports_file.cc.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/libmysql.dir/build.make libmysql/CMakeFiles/libmysql.dir/libmysql_exports_file.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/libmysql.dir/build.make libmysql/CMakeFiles/libmysql.dir/libmysql_exports_file.cc.s
 .PHONY : libmysql_exports_file.cc.s
 
 mysqlclient_depends.o: mysqlclient_depends.c.o
@@ -536,7 +531,7 @@ mysqlclient_depends.o: mysqlclient_depends.c.o
 
 # target to build an object file
 mysqlclient_depends.c.o:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/mysqlclient.dir/build.make libmysql/CMakeFiles/mysqlclient.dir/mysqlclient_depends.c.o
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/mysqlclient.dir/build.make libmysql/CMakeFiles/mysqlclient.dir/mysqlclient_depends.c.o
 .PHONY : mysqlclient_depends.c.o
 
 mysqlclient_depends.i: mysqlclient_depends.c.i
@@ -544,7 +539,7 @@ mysqlclient_depends.i: mysqlclient_depends.c.i
 
 # target to preprocess a source file
 mysqlclient_depends.c.i:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/mysqlclient.dir/build.make libmysql/CMakeFiles/mysqlclient.dir/mysqlclient_depends.c.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/mysqlclient.dir/build.make libmysql/CMakeFiles/mysqlclient.dir/mysqlclient_depends.c.i
 .PHONY : mysqlclient_depends.c.i
 
 mysqlclient_depends.s: mysqlclient_depends.c.s
@@ -552,7 +547,7 @@ mysqlclient_depends.s: mysqlclient_depends.c.s
 
 # target to generate assembly for a file
 mysqlclient_depends.c.s:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(MAKE) -f libmysql/CMakeFiles/mysqlclient.dir/build.make libmysql/CMakeFiles/mysqlclient.dir/mysqlclient_depends.c.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(MAKE) -f libmysql/CMakeFiles/mysqlclient.dir/build.make libmysql/CMakeFiles/mysqlclient.dir/mysqlclient_depends.c.s
 .PHONY : mysqlclient_depends.c.s
 
 # Help Target
@@ -565,7 +560,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... libmysql"
 	@echo "... list_install_components"
 	@echo "... mysqlclient"
@@ -624,6 +618,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

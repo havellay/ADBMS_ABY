@@ -2,6 +2,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/perror.dir/perror.c.o"
   "perror.pdb"
   "perror"
+  "perror.pdb"
+  "CMakeFiles/CMakeRelink.dir/perror"
 )
 
 # Per-language clean rules from dependency scanning.

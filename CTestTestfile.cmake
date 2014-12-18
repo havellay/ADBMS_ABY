@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/adbms/mysqlsrc/mysql-5.6.21
-# Build directory: /home/adbms/mysqlsrc/mysql-5.6.21
+# Source directory: /home/hari/ADBMS_PROJECT/ADBMS_ABY
+# Build directory: /home/hari/ADBMS_PROJECT/ADBMS_ABY
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
@@ -9,23 +9,23 @@ SUBDIRS(extra/yassl)
 SUBDIRS(extra/yassl/taocrypt)
 SUBDIRS(cmd-line-utils/libedit)
 SUBDIRS(libevent)
-SUBDIRS(storage/archive)
-SUBDIRS(storage/blackhole)
-SUBDIRS(storage/example)
-SUBDIRS(storage/csv)
-SUBDIRS(storage/ndb)
-SUBDIRS(storage/myisammrg)
-SUBDIRS(storage/perfschema)
-SUBDIRS(storage/innobase)
 SUBDIRS(storage/aby)
-SUBDIRS(storage/federated)
 SUBDIRS(storage/myisam)
+SUBDIRS(storage/perfschema)
+SUBDIRS(storage/archive)
+SUBDIRS(storage/example)
+SUBDIRS(storage/federated)
+SUBDIRS(storage/myisammrg)
+SUBDIRS(storage/blackhole)
 SUBDIRS(storage/heap)
+SUBDIRS(storage/innobase)
+SUBDIRS(storage/ndb)
+SUBDIRS(storage/csv)
 SUBDIRS(plugin/fulltext)
-SUBDIRS(plugin/semisync)
-SUBDIRS(plugin/innodb_memcached)
-SUBDIRS(plugin/audit_null)
 SUBDIRS(plugin/password_validation)
+SUBDIRS(plugin/audit_null)
+SUBDIRS(plugin/innodb_memcached)
+SUBDIRS(plugin/semisync)
 SUBDIRS(plugin/daemon_example)
 SUBDIRS(plugin/auth)
 SUBDIRS(include)

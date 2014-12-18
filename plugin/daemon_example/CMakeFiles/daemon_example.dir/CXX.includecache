@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/daemon_example/daemon_example.cc
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/daemon_example/daemon_example.cc
 my_global.h
 -
 sql_priv.h
@@ -22,13 +22,13 @@ mysql/plugin.h
 my_dir.h
 -
 my_pthread.h
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/daemon_example/my_pthread.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/daemon_example/my_pthread.h
 my_sys.h
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/daemon_example/my_sys.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/daemon_example/my_sys.h
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/daemon_example/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/daemon_example/m_string.h
 sql_plugin.h
-/home/adbms/mysqlsrc/mysql-5.6.21/plugin/daemon_example/sql_plugin.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/daemon_example/sql_plugin.h
 
 include/big_endian.h
 

@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/unittest/mytap/tap.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/mytap/tap.c
 tap.h
-/home/adbms/mysqlsrc/mysql-5.6.21/unittest/mytap/tap.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/mytap/tap.h
 my_global.h
-/home/adbms/mysqlsrc/mysql-5.6.21/unittest/mytap/my_global.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/mytap/my_global.h
 my_stacktrace.h
-/home/adbms/mysqlsrc/mysql-5.6.21/unittest/mytap/my_stacktrace.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/mytap/my_stacktrace.h
 stdlib.h
 -
 stdarg.h
@@ -24,9 +24,9 @@ string.h
 signal.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/unittest/mytap/tap.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/mytap/tap.h
 my_global.h
-/home/adbms/mysqlsrc/mysql-5.6.21/unittest/mytap/my_global.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/unittest/mytap/my_global.h
 
 include/big_endian.h
 

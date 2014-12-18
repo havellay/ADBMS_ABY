@@ -5,6 +5,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/mysql.dir/sql_string.cc.o"
   "mysql.pdb"
   "mysql"
+  "mysql.pdb"
+  "CMakeFiles/CMakeRelink.dir/mysql"
 )
 
 # Per-language clean rules from dependency scanning.

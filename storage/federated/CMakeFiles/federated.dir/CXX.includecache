@@ -6,31 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/federated/ha_federated.cc
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/federated/ha_federated.cc
 sql_priv.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/federated/sql_priv.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/federated/sql_priv.h
 sql_servers.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/federated/sql_servers.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/federated/sql_servers.h
 sql_class.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/federated/sql_class.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/federated/sql_class.h
 sql_analyse.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/federated/sql_analyse.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/federated/sql_analyse.h
 mysql/plugin.h
 -
 ha_federated.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/federated/ha_federated.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/federated/ha_federated.h
 probes_mysql.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/federated/probes_mysql.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/federated/probes_mysql.h
 m_string.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/federated/m_string.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/federated/m_string.h
 key.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/federated/key.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/federated/key.h
 mysql/plugin.h
 -
 algorithm
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/federated/ha_federated.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/federated/ha_federated.h
 mysql.h
 -
 

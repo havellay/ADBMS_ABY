@@ -2,6 +2,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/mysql_upgrade.dir/mysql_upgrade.c.o"
   "mysql_upgrade.pdb"
   "mysql_upgrade"
+  "mysql_upgrade.pdb"
+  "CMakeFiles/CMakeRelink.dir/mysql_upgrade"
 )
 
 # Per-language clean rules from dependency scanning.

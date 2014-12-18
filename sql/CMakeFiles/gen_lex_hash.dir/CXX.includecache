@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/gen_lex_hash.cc
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/gen_lex_hash.cc
 my_global.h
 -
 mysql_version.h
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/mysql_version.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/mysql_version.h
 lex.h
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/lex.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/lex.h
 stdlib.h
 -
 stdio.h
@@ -22,11 +22,11 @@ string.h
 welcome_copyright_notice.h
 -
 
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/lex.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/lex.h
 lex_symbol.h
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/lex_symbol.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/lex_symbol.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/sql/lex_symbol.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/sql/lex_symbol.h
 
 include/big_endian.h
 

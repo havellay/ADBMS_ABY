@@ -2,6 +2,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/ftexample.dir/plugin_example.c.o"
   "mypluglib.pdb"
   "mypluglib.so"
+  "mypluglib.pdb"
+  "CMakeFiles/CMakeRelink.dir/mypluglib.so"
 )
 
 # Per-language clean rules from dependency scanning.

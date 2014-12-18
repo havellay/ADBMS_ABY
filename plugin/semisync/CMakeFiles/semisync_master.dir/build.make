@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_SOURCE_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adbms/mysqlsrc/mysql-5.6.21
+CMAKE_BINARY_DIR = /home/hari/ADBMS_PROJECT/ADBMS_ABY
 
 # Include any dependencies generated for this target.
 include plugin/semisync/CMakeFiles/semisync_master.dir/depend.make
@@ -51,17 +51,17 @@ include plugin/semisync/CMakeFiles/semisync_master.dir/flags.make
 
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync.cc.o: plugin/semisync/CMakeFiles/semisync_master.dir/flags.make
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync.cc.o: plugin/semisync/semisync.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object plugin/semisync/CMakeFiles/semisync_master.dir/semisync.cc.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/semisync_master.dir/semisync.cc.o -c /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync.cc
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/semisync_master.dir/semisync.cc.o -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync.cc
 
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/semisync_master.dir/semisync.cc.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync.cc > CMakeFiles/semisync_master.dir/semisync.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync.cc > CMakeFiles/semisync_master.dir/semisync.cc.i
 
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/semisync_master.dir/semisync.cc.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync.cc -o CMakeFiles/semisync_master.dir/semisync.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync.cc -o CMakeFiles/semisync_master.dir/semisync.cc.s
 
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync.cc.o.requires:
 .PHONY : plugin/semisync/CMakeFiles/semisync_master.dir/semisync.cc.o.requires
@@ -74,17 +74,17 @@ plugin/semisync/CMakeFiles/semisync_master.dir/semisync.cc.o.provides.build: plu
 
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master.cc.o: plugin/semisync/CMakeFiles/semisync_master.dir/flags.make
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master.cc.o: plugin/semisync/semisync_master.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master.cc.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/semisync_master.dir/semisync_master.cc.o -c /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync_master.cc
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/semisync_master.dir/semisync_master.cc.o -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync_master.cc
 
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/semisync_master.dir/semisync_master.cc.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync_master.cc > CMakeFiles/semisync_master.dir/semisync_master.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync_master.cc > CMakeFiles/semisync_master.dir/semisync_master.cc.i
 
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/semisync_master.dir/semisync_master.cc.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync_master.cc -o CMakeFiles/semisync_master.dir/semisync_master.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync_master.cc -o CMakeFiles/semisync_master.dir/semisync_master.cc.s
 
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master.cc.o.requires:
 .PHONY : plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master.cc.o.requires
@@ -97,17 +97,17 @@ plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master.cc.o.provides.bui
 
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.o: plugin/semisync/CMakeFiles/semisync_master.dir/flags.make
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.o: plugin/semisync/semisync_master_plugin.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/adbms/mysqlsrc/mysql-5.6.21/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hari/ADBMS_PROJECT/ADBMS_ABY/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.o"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.o -c /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync_master_plugin.cc
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.o -c /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync_master_plugin.cc
 
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.i"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync_master_plugin.cc > CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.i
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync_master_plugin.cc > CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.i
 
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.s"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/semisync_master_plugin.cc -o CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.s
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/semisync_master_plugin.cc -o CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.s
 
 plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.o.requires:
 .PHONY : plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.o.requires
@@ -134,11 +134,33 @@ plugin/semisync/semisync_master.so: plugin/semisync/CMakeFiles/semisync_master.d
 plugin/semisync/semisync_master.so: libservices/libmysqlservices.a
 plugin/semisync/semisync_master.so: plugin/semisync/CMakeFiles/semisync_master.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared module semisync_master.so"
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/semisync_master.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/semisync_master.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 plugin/semisync/CMakeFiles/semisync_master.dir/build: plugin/semisync/semisync_master.so
 .PHONY : plugin/semisync/CMakeFiles/semisync_master.dir/build
+
+# Object files for target semisync_master
+semisync_master_OBJECTS = \
+"CMakeFiles/semisync_master.dir/semisync.cc.o" \
+"CMakeFiles/semisync_master.dir/semisync_master.cc.o" \
+"CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.o"
+
+# External object files for target semisync_master
+semisync_master_EXTERNAL_OBJECTS =
+
+plugin/semisync/CMakeFiles/CMakeRelink.dir/semisync_master.so: plugin/semisync/CMakeFiles/semisync_master.dir/semisync.cc.o
+plugin/semisync/CMakeFiles/CMakeRelink.dir/semisync_master.so: plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master.cc.o
+plugin/semisync/CMakeFiles/CMakeRelink.dir/semisync_master.so: plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master_plugin.cc.o
+plugin/semisync/CMakeFiles/CMakeRelink.dir/semisync_master.so: plugin/semisync/CMakeFiles/semisync_master.dir/build.make
+plugin/semisync/CMakeFiles/CMakeRelink.dir/semisync_master.so: libservices/libmysqlservices.a
+plugin/semisync/CMakeFiles/CMakeRelink.dir/semisync_master.so: plugin/semisync/CMakeFiles/semisync_master.dir/relink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared module CMakeFiles/CMakeRelink.dir/semisync_master.so"
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/semisync_master.dir/relink.txt --verbose=$(VERBOSE)
+
+# Rule to relink during preinstall.
+plugin/semisync/CMakeFiles/semisync_master.dir/preinstall: plugin/semisync/CMakeFiles/CMakeRelink.dir/semisync_master.so
+.PHONY : plugin/semisync/CMakeFiles/semisync_master.dir/preinstall
 
 plugin/semisync/CMakeFiles/semisync_master.dir/requires: plugin/semisync/CMakeFiles/semisync_master.dir/semisync.cc.o.requires
 plugin/semisync/CMakeFiles/semisync_master.dir/requires: plugin/semisync/CMakeFiles/semisync_master.dir/semisync_master.cc.o.requires
@@ -146,10 +168,10 @@ plugin/semisync/CMakeFiles/semisync_master.dir/requires: plugin/semisync/CMakeFi
 .PHONY : plugin/semisync/CMakeFiles/semisync_master.dir/requires
 
 plugin/semisync/CMakeFiles/semisync_master.dir/clean:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync && $(CMAKE_COMMAND) -P CMakeFiles/semisync_master.dir/cmake_clean.cmake
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync && $(CMAKE_COMMAND) -P CMakeFiles/semisync_master.dir/cmake_clean.cmake
 .PHONY : plugin/semisync/CMakeFiles/semisync_master.dir/clean
 
 plugin/semisync/CMakeFiles/semisync_master.dir/depend:
-	cd /home/adbms/mysqlsrc/mysql-5.6.21 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync /home/adbms/mysqlsrc/mysql-5.6.21 /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync /home/adbms/mysqlsrc/mysql-5.6.21/plugin/semisync/CMakeFiles/semisync_master.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hari/ADBMS_PROJECT/ADBMS_ABY && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync /home/hari/ADBMS_PROJECT/ADBMS_ABY /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync /home/hari/ADBMS_PROJECT/ADBMS_ABY/plugin/semisync/CMakeFiles/semisync_master.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : plugin/semisync/CMakeFiles/semisync_master.dir/depend
 

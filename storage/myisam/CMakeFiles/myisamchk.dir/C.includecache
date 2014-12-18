@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/fulltext.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/fulltext.h
 myisamdef.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisamdef.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisamdef.h
 ft_global.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/ft_global.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/ft_global.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/mi_extrafunc.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/mi_extrafunc.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisamchk.c
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisamchk.c
 fulltext.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/fulltext.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/fulltext.h
 my_default.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/my_default.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/my_default.h
 m_ctype.h
 -
 stdarg.h
@@ -32,13 +32,13 @@ sys/vadvise.h
 sys/mman.h
 -
 mi_extrafunc.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/mi_extrafunc.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/mi_extrafunc.h
 
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisamdef.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisamdef.h
 myisam.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisam.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisam.h
 myisampack.h
-/home/adbms/mysqlsrc/mysql-5.6.21/storage/myisam/myisampack.h
+/home/hari/ADBMS_PROJECT/ADBMS_ABY/storage/myisam/myisampack.h
 my_tree.h
 -
 my_pthread.h

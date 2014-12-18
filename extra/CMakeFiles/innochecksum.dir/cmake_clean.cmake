@@ -5,6 +5,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/innochecksum.dir/__/storage/innobase/ut/ut0ut.cc.o"
   "innochecksum.pdb"
   "innochecksum"
+  "innochecksum.pdb"
+  "CMakeFiles/CMakeRelink.dir/innochecksum"
 )
 
 # Per-language clean rules from dependency scanning.

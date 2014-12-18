@@ -3,9 +3,11 @@
 import MySQLdb as mdb
 import sys
 import threading
+import random
 
 # open a database connection
 con = mdb.connect(
+        unix_socket = '/var/run/mysqld/mysqld.sock',
         host = 'localhost',
         user = 'root', passwd = '',
         db = 'test'
@@ -14,12 +16,11 @@ con = mdb.connect(
 # prepare a cursor object using cursor() method
 cursor = con.cursor ()
 
-# table = 'new_tab_aby'
-table = 'new_tab_heap'
+table = 'new_tab_aby'
 
 input_data      = 1     # 1 -> input data;
                         # 0 -> use data that already exists
-number_of_rows  = 3
+number_of_rows  = 50000
 commit_after    = number_of_rows
 
 if input_data == 1 :
@@ -33,7 +34,7 @@ if input_data == 1 :
 
 perform_update  = 1      # 1 -> perform update on the data
 update_by       = str(1) # all the values are incremented by this number
-threads         = number_of_rows*50
+threads         = int(number_of_rows*0.001)
 maximum_id      = 0
 
 def update_method():
@@ -41,6 +42,7 @@ def update_method():
     # we want each thread to perfom an update on
     # each row of the table
     small_con = mdb.connect(
+            unix_socket = '/var/run/mysqld/mysqld.sock',
             host = 'localhost',
             user = 'root', passwd = '',
             db = 'test'
@@ -49,16 +51,26 @@ def update_method():
     small_cursor = small_con.cursor()
     # finding the largest 'id' in the table
 
-    for x in xrange(int(maximum_id)):
+    for x in xrange(int(maximum_id)+1):
         query = 'update '+table+' set id=id+'+update_by+' where s = '+str(x)
         small_cursor.execute(query)
+
+        rand_row = random.randint(0, maximum_id)
+        query = 'select s, id from '+table+' where s = '+str(rand_row)
+        small_cursor.execute(query)
+
+        # if x%100 == 0:
+        #     print data
+        #     print small_cursor.fetchall()
+
         if x%10 == 0:
             small_con.commit()
+    small_con.close()
 
 if perform_update == 1 :
     thread_set = []
 
-    cursor.execute ('select max(s) from '+table)
+    cursor.execute ('select max(convert(s, unsigned integer)) from '+table)
     data = cursor.fetchall()
     maximum_id = data[0][0]
 
